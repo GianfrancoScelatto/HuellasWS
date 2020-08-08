@@ -1,0 +1,9 @@
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\BusinessRules.dll
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\BusinessRules.pdb
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\DataAccess.dll
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\DataAccess.pdb
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CoreCompileInputs.cache
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.dll
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.pdb
