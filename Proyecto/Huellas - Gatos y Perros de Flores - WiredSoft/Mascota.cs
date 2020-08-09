@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarMascotas : Form
+    public partial class Mascota : Form
     {
-        public ListarMascotas()
+        public Mascota()
         {
             InitializeComponent();
         }
 
-        private void ListarMascotas_Load(object sender, EventArgs e)
+        private void Mascota_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form Mascota = new Mascota();
-            Mascota.Show();
         }
     }
 }

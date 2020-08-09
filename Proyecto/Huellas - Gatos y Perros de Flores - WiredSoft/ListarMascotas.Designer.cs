@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarMascotas));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.chxFallecidos = new System.Windows.Forms.CheckBox();
             this.chxTransito = new System.Windows.Forms.CheckBox();
             this.chxNoAdoptados = new System.Windows.Forms.CheckBox();
             this.chxAdoptados = new System.Windows.Forms.CheckBox();
-            this.lblFiltrar = new System.Windows.Forms.Label();
             this.dataMascotas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataMascotas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +79,7 @@
             this.chxFallecidos.AutoSize = true;
             this.chxFallecidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxFallecidos.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxFallecidos.Location = new System.Drawing.Point(405, 34);
+            this.chxFallecidos.Location = new System.Drawing.Point(366, 36);
             this.chxFallecidos.Name = "chxFallecidos";
             this.chxFallecidos.Size = new System.Drawing.Size(90, 21);
             this.chxFallecidos.TabIndex = 25;
@@ -88,7 +91,7 @@
             this.chxTransito.AutoSize = true;
             this.chxTransito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxTransito.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxTransito.Location = new System.Drawing.Point(405, 10);
+            this.chxTransito.Location = new System.Drawing.Point(366, 12);
             this.chxTransito.Name = "chxTransito";
             this.chxTransito.Size = new System.Drawing.Size(94, 21);
             this.chxTransito.TabIndex = 24;
@@ -100,7 +103,7 @@
             this.chxNoAdoptados.AutoSize = true;
             this.chxNoAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxNoAdoptados.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxNoAdoptados.Location = new System.Drawing.Point(269, 34);
+            this.chxNoAdoptados.Location = new System.Drawing.Point(230, 36);
             this.chxNoAdoptados.Name = "chxNoAdoptados";
             this.chxNoAdoptados.Size = new System.Drawing.Size(123, 21);
             this.chxNoAdoptados.TabIndex = 23;
@@ -112,23 +115,12 @@
             this.chxAdoptados.AutoSize = true;
             this.chxAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxAdoptados.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxAdoptados.Location = new System.Drawing.Point(269, 10);
+            this.chxAdoptados.Location = new System.Drawing.Point(230, 12);
             this.chxAdoptados.Name = "chxAdoptados";
             this.chxAdoptados.Size = new System.Drawing.Size(100, 21);
             this.chxAdoptados.TabIndex = 22;
             this.chxAdoptados.Text = "Adoptados";
             this.chxAdoptados.UseVisualStyleBackColor = true;
-            // 
-            // lblFiltrar
-            // 
-            this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFiltrar.Location = new System.Drawing.Point(222, 22);
-            this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(42, 17);
-            this.lblFiltrar.TabIndex = 21;
-            this.lblFiltrar.Text = "Filtrar";
             // 
             // dataMascotas
             // 
@@ -228,18 +220,57 @@
             this.Column9.HeaderText = "Estado";
             this.Column9.Name = "Column9";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(484, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 27;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(545, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 40);
+            this.button2.TabIndex = 28;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(606, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(40, 40);
+            this.button3.TabIndex = 29;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // ListarMascotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(668, 572);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataMascotas);
             this.Controls.Add(this.chxFallecidos);
             this.Controls.Add(this.chxTransito);
             this.Controls.Add(this.chxNoAdoptados);
             this.Controls.Add(this.chxAdoptados);
-            this.Controls.Add(this.lblFiltrar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -260,7 +291,6 @@
         private System.Windows.Forms.CheckBox chxTransito;
         private System.Windows.Forms.CheckBox chxNoAdoptados;
         private System.Windows.Forms.CheckBox chxAdoptados;
-        private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.DataGridView dataMascotas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -276,5 +306,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
