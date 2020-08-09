@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListarAdoptantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarAdoptantes.Designer.cs">
+      <DependentUpon>ListarAdoptantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarMascotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarMascotas.Designer.cs">
+      <DependentUpon>ListarMascotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ListarAdoptantes.resx">
+      <DependentUpon>ListarAdoptantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarMascotas.resx">
+      <DependentUpon>ListarMascotas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

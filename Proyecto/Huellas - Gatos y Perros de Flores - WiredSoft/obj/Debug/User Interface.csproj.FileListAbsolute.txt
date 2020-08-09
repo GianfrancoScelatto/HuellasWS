@@ -12,3 +12,5 @@ C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.exe
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.pdb
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.MenuInicial.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarAdoptantes.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarMascotas.resources

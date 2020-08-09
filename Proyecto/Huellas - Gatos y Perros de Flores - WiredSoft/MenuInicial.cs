@@ -16,5 +16,53 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             InitializeComponent();
         }
+
+        private void btnMascotas_Click(object sender, EventArgs e)
+        {
+            AbirFormHijo(new Form());
+        }
+
+        private void btnTransito_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListaNegra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMenuLateral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnVeterinaria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdoptantes_Click(object sender, EventArgs e)
+        {
+            AbirFormHijo(new Form());
+        }
+        
+        private Form ActivarForm = null;
+        private void AbirFormHijo(Form FormHijo)
+        {
+            if (ActivarForm != null)
+                ActivarForm.Close();
+            ActivarForm = FormHijo;
+            FormHijo.TopLevel = false;
+            FormHijo.FormBorderStyle = FormBorderStyle.None;
+            FormHijo.Dock = DockStyle.Fill;
+            panelFormHijo.Controls.Add(FormHijo);
+            panelFormHijo.Tag = FormHijo;
+            FormHijo.BringToFront();
+            FormHijo.Show();
+
+
+        }
+
     }
 }
