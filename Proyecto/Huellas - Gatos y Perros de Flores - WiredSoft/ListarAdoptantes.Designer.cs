@@ -40,14 +40,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(634, 499);
+            this.dataGridView1.Size = new System.Drawing.Size(598, 282);
             this.dataGridView1.TabIndex = 0;
             // 
             // ListarAdoptantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 572);
+            this.ClientSize = new System.Drawing.Size(632, 355);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListarAdoptantes";
             this.Text = "ListarAdoptantes";
