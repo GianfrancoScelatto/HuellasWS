@@ -166,6 +166,7 @@
             this.Controls.Add(this.panelMenuLateral);
             this.MinimumSize = new System.Drawing.Size(900, 650);
             this.Name = "MenuInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adoptantes";
             this.panelMenuLateral.ResumeLayout(false);
             this.ResumeLayout(false);
