@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListarAdoptantes.cs">
+    <Compile Include="ListadoTransito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarAdoptantes.Designer.cs">
-      <DependentUpon>ListarAdoptantes.cs</DependentUpon>
+    <Compile Include="ListadoTransito.Designer.cs">
+      <DependentUpon>ListadoTransito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarTransito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarTransito.Designer.cs">
+      <DependentUpon>ListarTransito.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarMascotas.cs">
       <SubType>Form</SubType>
@@ -78,8 +84,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ListarAdoptantes.resx">
-      <DependentUpon>ListarAdoptantes.cs</DependentUpon>
+    <EmbeddedResource Include="ListarTransito.resx">
+      <DependentUpon>ListarTransito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarMascotas.resx">
       <DependentUpon>ListarMascotas.cs</DependentUpon>
