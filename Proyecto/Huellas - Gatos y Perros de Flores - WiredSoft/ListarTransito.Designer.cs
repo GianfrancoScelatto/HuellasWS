@@ -66,7 +66,7 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            this.dgwTransito.Location = new System.Drawing.Point(-3, 61);
+            this.dgwTransito.Location = new System.Drawing.Point(1, 58);
             this.dgwTransito.Name = "dgwTransito";
             this.dgwTransito.Size = new System.Drawing.Size(669, 510);
             this.dgwTransito.TabIndex = 14;
