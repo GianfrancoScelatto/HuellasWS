@@ -21,5 +21,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
 
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

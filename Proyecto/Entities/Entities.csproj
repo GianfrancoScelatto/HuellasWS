@@ -42,20 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessRules\BusinessRules.csproj">
-      <Project>{967e7943-7479-4ba3-b2e9-2afd49cea74b}</Project>
-      <Name>BusinessRules</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{799c28d5-2128-4c9c-bf79-0fa2262968f0}</Project>
-      <Name>DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Huellas - Gatos y Perros de Flores - WiredSoft\User Interface.csproj">
-      <Project>{e8af9637-2429-4eee-bbf2-158a70ee498f}</Project>
-      <Name>User Interface</Name>
-    </ProjectReference>
+    <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
