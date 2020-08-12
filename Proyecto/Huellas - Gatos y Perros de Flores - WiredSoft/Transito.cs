@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListadoTransito : Form
+    public partial class Transito : Form
     {
-        public ListadoTransito()
+        public Transito()
         {
             InitializeComponent();
         }

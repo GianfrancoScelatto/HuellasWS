@@ -168,6 +168,7 @@
             this.Name = "MenuInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adoptantes";
+            this.Load += new System.EventHandler(this.MenuInicial_Load);
             this.panelMenuLateral.ResumeLayout(false);
             this.ResumeLayout(false);
 

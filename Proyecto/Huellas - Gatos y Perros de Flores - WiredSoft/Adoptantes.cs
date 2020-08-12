@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarTransito : Form
+    public partial class Adoptantes : Form
     {
-        public ListarTransito()
+        public Adoptantes()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form Transito = new Transito();
-            Transito.Show();
         }
     }
 }

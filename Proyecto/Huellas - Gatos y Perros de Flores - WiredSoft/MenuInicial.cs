@@ -66,5 +66,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         }
 
+        private void MenuInicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

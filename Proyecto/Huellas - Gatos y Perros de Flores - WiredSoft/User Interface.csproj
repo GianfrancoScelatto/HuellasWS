@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListadoTransito.cs">
+    <Compile Include="Adoptantes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoTransito.Designer.cs">
-      <DependentUpon>ListadoTransito.cs</DependentUpon>
+    <Compile Include="Adoptantes.Designer.cs">
+      <DependentUpon>Adoptantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarAdoptante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarAdoptante.Designer.cs">
+      <DependentUpon>ListarAdoptante.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarTransito.cs">
       <SubType>Form</SubType>
@@ -84,6 +90,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transito.Designer.cs">
+      <DependentUpon>Transito.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adoptantes.resx">
+      <DependentUpon>Adoptantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarAdoptante.resx">
+      <DependentUpon>ListarAdoptante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListarTransito.resx">
       <DependentUpon>ListarTransito.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Transito.resx">
+      <DependentUpon>Transito.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
