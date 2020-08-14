@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+
 namespace DataAccess
 {
-    public class Da_Crud_Mascota : Da_Connection
+    public class DA_Mascota : DA_Connection
     {
         public DataTable ListarAnimal()
         {

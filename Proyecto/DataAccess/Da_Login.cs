@@ -7,9 +7,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using Entities;
+
 namespace DataAccess
 {
-    public class Da_Login : Da_Connection
+    public class DA_Login : DA_Connection
     {
         public bool InicioSesion(string Username, string pw)
         {
@@ -39,5 +40,4 @@ namespace DataAccess
                 }
             }
         }
-    }
 }

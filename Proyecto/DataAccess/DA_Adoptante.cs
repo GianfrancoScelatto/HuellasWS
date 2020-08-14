@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+
 namespace DataAccess
 {
-    public class Da_Crud_Transitante : Da_Connection
+    public class DA_Adoptante : DA_Connection
     {
-        public DataTable ListarAnimal()
+        public DataTable ListarAdoptante()
         {
             using (var connection = GetConnection())
             {
@@ -18,7 +19,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_Historial";
+                    command.CommandText = "prc_ListarAdoptante";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);
@@ -27,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AM_Transitante(int idTransitante, string Nombre, string Apellido, int Edad, int DNI, string Localidad, string Domicilio, int Codigo_Postal, string Calles, int Altura, bool Sexo, int Telefono, int Celular, string Email, byte Deshabilitado)
+        public void AM_Adoptante(int IdAdoptante, string Nombre, string Apellido, int Edad, int DNI, string Localidad, string Domicilio, int Codigo_Postal, string Calles, int Altura, bool Sexo, int Telefono, int Celular, string Email, byte Deshabilitado)
         {
             using (var connection = GetConnection())
             {
@@ -35,7 +36,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@idAdoptante", idTransitante);
+                    command.Parameters.AddWithValue("@idAdoptante", IdAdoptante);
                     command.Parameters.AddWithValue("@Nombre", Nombre);
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Edad", Edad);
@@ -56,7 +57,7 @@ namespace DataAccess
                 }
             }
         }
-        public void BajaTransitante(int IdTransitante, int IdUsuario, int IdMovimiento)
+        public void BajaAdoptante(int IdAdoptante, int IdUsuario, int IdMovimiento)
         {
             using (var connection = GetConnection())
             {
@@ -65,17 +66,17 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdTransitante", IdTransitante);
+                    command.Parameters.AddWithValue("@IdAdoptante", IdAnimal);
                     command.Parameters.AddWithValue("@Id_Usuario", IdUsuario);
                     command.Parameters.AddWithValue("@IdMovimiento", IdMovimiento);
-                    command.CommandText = "prc_ABM_Transitante";
+                    command.CommandText = "prc_ABM_Adoptante";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }
             }
         }
 
-        public DataTable FiltrarTransitante(string busqueda)
+        public DataTable FiltrarAdoptante(string busqueda)
         {
             using (var connection = GetConnection())
             {
@@ -85,7 +86,7 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Busqueda", busqueda);
-                    command.CommandText = "prc_Busqueda_Transitante";
+                    command.CommandText = "prc_Busqueda_Adoptante";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
@@ -94,5 +95,7 @@ namespace DataAccess
                 }
             }
         }
+    }
+    {
     }
 }

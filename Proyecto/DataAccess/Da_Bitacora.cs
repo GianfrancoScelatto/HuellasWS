@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+
 namespace DataAccess
 {
-    public class Da_Bitacora : Da_Connection
+    public class DA_Bitacora : DA_Connection
     {
         public DataTable ListarBitacora()
         {
@@ -29,3 +30,4 @@ namespace DataAccess
         }
     }
 }
+
