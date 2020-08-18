@@ -46,6 +46,7 @@
     <Compile Include="Mascota.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguimiento.cs" />
     <Compile Include="User.cs" />
     <Compile Include="VacunaMascota.cs" />
     <Compile Include="Veterinaria.cs" />
