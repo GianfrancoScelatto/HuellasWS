@@ -70,6 +70,12 @@
     <Compile Include="ListarMascotas.Designer.cs">
       <DependentUpon>ListarMascotas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarVeterinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarVeterinaria.Designer.cs">
+      <DependentUpon>ListarVeterinaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     <Compile Include="Transito.Designer.cs">
       <DependentUpon>Transito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Veterinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Veterinaria.Designer.cs">
+      <DependentUpon>Veterinaria.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Adoptantes.resx">
       <DependentUpon>Adoptantes.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListarMascotas.resx">
       <DependentUpon>ListarMascotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarVeterinaria.resx">
+      <DependentUpon>ListarVeterinaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -128,6 +143,9 @@
     </Compile>
     <EmbeddedResource Include="Transito.resx">
       <DependentUpon>Transito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Veterinaria.resx">
+      <DependentUpon>Veterinaria.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

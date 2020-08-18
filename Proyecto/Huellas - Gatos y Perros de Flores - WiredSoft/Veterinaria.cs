@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarAdoptante : Form
+    public partial class Veterinaria : Form
     {
-        public ListarAdoptante()
+        public Veterinaria()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form Adoptante = new Adoptantes();
-            Adoptante.Show();
         }
     }
 }
