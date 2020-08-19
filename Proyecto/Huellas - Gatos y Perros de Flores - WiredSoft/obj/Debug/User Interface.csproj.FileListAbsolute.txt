@@ -19,3 +19,6 @@ C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Adoptantes.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarAdoptante.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarVeterinaria.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListaNegra.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarListaNegra.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Veterinaria.resources
