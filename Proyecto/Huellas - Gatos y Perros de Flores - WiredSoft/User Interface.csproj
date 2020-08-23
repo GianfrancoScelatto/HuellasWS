@@ -76,11 +76,11 @@
     <Compile Include="ListarTransito.Designer.cs">
       <DependentUpon>ListarTransito.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarMascotas.cs">
+    <Compile Include="ListarAnimales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarMascotas.Designer.cs">
-      <DependentUpon>ListarMascotas.cs</DependentUpon>
+    <Compile Include="ListarAnimales.Designer.cs">
+      <DependentUpon>ListarAnimales.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarVeterinaria.cs">
       <SubType>Form</SubType>
@@ -94,11 +94,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mascota.cs">
+    <Compile Include="Animales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mascota.Designer.cs">
-      <DependentUpon>Mascota.cs</DependentUpon>
+    <Compile Include="Animales.Designer.cs">
+      <DependentUpon>Animales.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuInicial.cs">
       <SubType>Form</SubType>
@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="Transito.Designer.cs">
       <DependentUpon>Transito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerMasAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMasAnimal.Designer.cs">
+      <DependentUpon>VerMasAnimal.cs</DependentUpon>
     </Compile>
     <Compile Include="Veterinaria.cs">
       <SubType>Form</SubType>
@@ -135,8 +141,8 @@
     <EmbeddedResource Include="ListarTransito.resx">
       <DependentUpon>ListarTransito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarMascotas.resx">
-      <DependentUpon>ListarMascotas.cs</DependentUpon>
+    <EmbeddedResource Include="ListarAnimales.resx">
+      <DependentUpon>ListarAnimales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarVeterinaria.resx">
       <DependentUpon>ListarVeterinaria.cs</DependentUpon>
@@ -144,8 +150,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mascota.resx">
-      <DependentUpon>Mascota.cs</DependentUpon>
+    <EmbeddedResource Include="Animales.resx">
+      <DependentUpon>Animales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuInicial.resx">
       <DependentUpon>MenuInicial.cs</DependentUpon>
@@ -161,6 +167,9 @@
     </Compile>
     <EmbeddedResource Include="Transito.resx">
       <DependentUpon>Transito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMasAnimal.resx">
+      <DependentUpon>VerMasAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Veterinaria.resx">
       <DependentUpon>Veterinaria.cs</DependentUpon>

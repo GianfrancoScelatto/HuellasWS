@@ -10,27 +10,27 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarMascotas : Form
+    public partial class Animales : Form
     {
-        public ListarMascotas()
+        public Animales()
         {
             InitializeComponent();
         }
 
-        private void ListarMascotas_Load(object sender, EventArgs e)
+        private void Mascota_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnVerMas_Click(object sender, EventArgs e)
         {
-            Form Mascota = new Mascota();
-            Mascota.Show();
+            Form VerMas = new VerMasAnimal();
+            VerMas.Show();
         }
     }
 }
