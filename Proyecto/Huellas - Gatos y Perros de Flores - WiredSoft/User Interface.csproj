@@ -114,6 +114,12 @@
     <Compile Include="Transito.Designer.cs">
       <DependentUpon>Transito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vacunas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vacunas.Designer.cs">
+      <DependentUpon>Vacunas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerMasAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="Transito.resx">
       <DependentUpon>Transito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vacunas.resx">
+      <DependentUpon>Vacunas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerMasAnimal.resx">
       <DependentUpon>VerMasAnimal.cs</DependentUpon>
