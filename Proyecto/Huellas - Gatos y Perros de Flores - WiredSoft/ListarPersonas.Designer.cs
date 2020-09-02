@@ -1,6 +1,6 @@
 ﻿namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    partial class ListarTransito
+    partial class ListarPersonas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarTransito));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarPersonas));
             this.dgwTransito = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,13 +52,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsuarioIG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsuarioFB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTransito)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             this.dgwTransito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwTransito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.TipoP,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -79,76 +81,6 @@
             this.dgwTransito.Name = "dgwTransito";
             this.dgwTransito.Size = new System.Drawing.Size(669, 509);
             this.dgwTransito.TabIndex = 14;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "DNI";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Nombre";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Apellido";
-            this.Column4.Name = "Column4";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Calle";
-            this.Column8.Name = "Column8";
-            // 
-            // Altura
-            // 
-            this.Altura.HeaderText = "Altura";
-            this.Altura.Name = "Altura";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Localidad";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Provincia";
-            this.Column11.Name = "Column11";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Celular";
-            this.Column7.Name = "Column7";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Mail";
-            this.Column5.Name = "Column5";
-            // 
-            // Sexo
-            // 
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.Name = "Sexo";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Telefono";
-            this.Column6.Name = "Column6";
-            // 
-            // UsuarioIG
-            // 
-            this.UsuarioIG.HeaderText = "UsuarioInstagram";
-            this.UsuarioIG.Name = "UsuarioIG";
-            // 
-            // UsuarioFB
-            // 
-            this.UsuarioFB.HeaderText = "Usuario de Facebook";
-            this.UsuarioFB.Name = "UsuarioFB";
             // 
             // textBox1
             // 
@@ -221,7 +153,82 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ListarTransito
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            // 
+            // TipoP
+            // 
+            this.TipoP.HeaderText = "Tipo de Persona";
+            this.TipoP.Name = "TipoP";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "DNI";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Nombre";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Apellido";
+            this.Column4.Name = "Column4";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Calle";
+            this.Column8.Name = "Column8";
+            // 
+            // Altura
+            // 
+            this.Altura.HeaderText = "Altura";
+            this.Altura.Name = "Altura";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Localidad";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Provincia";
+            this.Column11.Name = "Column11";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Celular";
+            this.Column7.Name = "Column7";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Mail";
+            this.Column5.Name = "Column5";
+            // 
+            // Sexo
+            // 
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Telefono";
+            this.Column6.Name = "Column6";
+            // 
+            // UsuarioIG
+            // 
+            this.UsuarioIG.HeaderText = "UsuarioInstagram";
+            this.UsuarioIG.Name = "UsuarioIG";
+            // 
+            // UsuarioFB
+            // 
+            this.UsuarioFB.HeaderText = "Usuario de Facebook";
+            this.UsuarioFB.Name = "UsuarioFB";
+            // 
+            // ListarPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,7 +243,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ListarTransito";
+            this.Name = "ListarPersonas";
             this.Text = "ListarAdoptantes";
             ((System.ComponentModel.ISupportInitialize)(this.dgwTransito)).EndInit();
             this.ResumeLayout(false);
@@ -255,6 +262,7 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

@@ -46,23 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adoptantes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Adoptantes.Designer.cs">
-      <DependentUpon>Adoptantes.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListaNegra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListaNegra.Designer.cs">
       <DependentUpon>ListaNegra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListarAdoptante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListarAdoptante.Designer.cs">
-      <DependentUpon>ListarAdoptante.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarListaNegra.cs">
       <SubType>Form</SubType>
@@ -70,11 +58,11 @@
     <Compile Include="ListarListaNegra.Designer.cs">
       <DependentUpon>ListarListaNegra.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarTransito.cs">
+    <Compile Include="ListarPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarTransito.Designer.cs">
-      <DependentUpon>ListarTransito.cs</DependentUpon>
+    <Compile Include="ListarPersonas.Designer.cs">
+      <DependentUpon>ListarPersonas.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarAnimales.cs">
       <SubType>Form</SubType>
@@ -138,20 +126,14 @@
     <Compile Include="Veterinaria.Designer.cs">
       <DependentUpon>Veterinaria.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Adoptantes.resx">
-      <DependentUpon>Adoptantes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ListaNegra.resx">
       <DependentUpon>ListaNegra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListarAdoptante.resx">
-      <DependentUpon>ListarAdoptante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarListaNegra.resx">
       <DependentUpon>ListarListaNegra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarTransito.resx">
-      <DependentUpon>ListarTransito.cs</DependentUpon>
+    <EmbeddedResource Include="ListarPersonas.resx">
+      <DependentUpon>ListarPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarAnimales.resx">
       <DependentUpon>ListarAnimales.cs</DependentUpon>

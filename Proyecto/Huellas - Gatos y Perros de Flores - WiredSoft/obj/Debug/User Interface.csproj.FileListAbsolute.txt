@@ -12,13 +12,14 @@ C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.exe
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.pdb
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.MenuInicial.resources
-C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarMascotas.resources
-C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Mascota.resources
-C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarTransito.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Transito.resources
-C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Adoptantes.resources
-C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarAdoptante.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarVeterinaria.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListaNegra.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarListaNegra.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Veterinaria.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarPersonas.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarAnimales.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Animales.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Recuperar.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Vacunas.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.VerMasAnimal.resources
