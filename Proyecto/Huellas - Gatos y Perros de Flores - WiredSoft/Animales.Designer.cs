@@ -37,6 +37,20 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.dtpParasito = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkCasNo = new System.Windows.Forms.CheckBox();
+            this.chkCasSi = new System.Windows.Forms.CheckBox();
+            this.chkParasitoNo = new System.Windows.Forms.CheckBox();
+            this.chkParasitoSi = new System.Windows.Forms.CheckBox();
+            this.dtpCas = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnFrmVacuna = new System.Windows.Forms.Button();
             this.dgvGastos = new System.Windows.Forms.DataGridView();
             this.idFichaMedica = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +59,11 @@
             this.Restante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label26 = new System.Windows.Forms.Label();
             this.lblVacuna = new System.Windows.Forms.Label();
+            this.lblNombVet = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
+            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnVerMas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
@@ -72,24 +90,6 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
-            this.dtpParasito = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.chkCasNo = new System.Windows.Forms.CheckBox();
-            this.chkCasSi = new System.Windows.Forms.CheckBox();
-            this.chkParasitoNo = new System.Windows.Forms.CheckBox();
-            this.chkParasitoSi = new System.Windows.Forms.CheckBox();
-            this.dtpCas = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblNombVet = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
@@ -211,6 +211,147 @@
             this.tabFichaMed.Text = "Ficha Medica";
             this.tabFichaMed.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(809, 216);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(28, 29);
+            this.btnEliminar.TabIndex = 45;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Location = new System.Drawing.Point(717, 216);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(28, 29);
+            this.btnNuevo.TabIndex = 44;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Location = new System.Drawing.Point(763, 216);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(28, 29);
+            this.btnModificar.TabIndex = 43;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(80, 225);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(158, 20);
+            this.txtBuscar.TabIndex = 42;
+            // 
+            // dtpParasito
+            // 
+            this.dtpParasito.Location = new System.Drawing.Point(591, 75);
+            this.dtpParasito.Name = "dtpParasito";
+            this.dtpParasito.Size = new System.Drawing.Size(200, 20);
+            this.dtpParasito.TabIndex = 41;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(366, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(219, 19);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Fecha de Desparacitación:";
+            // 
+            // chkCasNo
+            // 
+            this.chkCasNo.AutoSize = true;
+            this.chkCasNo.Location = new System.Drawing.Point(277, 139);
+            this.chkCasNo.Name = "chkCasNo";
+            this.chkCasNo.Size = new System.Drawing.Size(42, 17);
+            this.chkCasNo.TabIndex = 39;
+            this.chkCasNo.Text = "NO";
+            this.chkCasNo.UseVisualStyleBackColor = true;
+            // 
+            // chkCasSi
+            // 
+            this.chkCasSi.AutoSize = true;
+            this.chkCasSi.Location = new System.Drawing.Point(192, 137);
+            this.chkCasSi.Name = "chkCasSi";
+            this.chkCasSi.Size = new System.Drawing.Size(36, 17);
+            this.chkCasSi.TabIndex = 38;
+            this.chkCasSi.Text = "SI";
+            this.chkCasSi.UseVisualStyleBackColor = true;
+            // 
+            // chkParasitoNo
+            // 
+            this.chkParasitoNo.AutoSize = true;
+            this.chkParasitoNo.Location = new System.Drawing.Point(277, 80);
+            this.chkParasitoNo.Name = "chkParasitoNo";
+            this.chkParasitoNo.Size = new System.Drawing.Size(42, 17);
+            this.chkParasitoNo.TabIndex = 37;
+            this.chkParasitoNo.Text = "NO";
+            this.chkParasitoNo.UseVisualStyleBackColor = true;
+            // 
+            // chkParasitoSi
+            // 
+            this.chkParasitoSi.AutoSize = true;
+            this.chkParasitoSi.Location = new System.Drawing.Point(192, 78);
+            this.chkParasitoSi.Name = "chkParasitoSi";
+            this.chkParasitoSi.Size = new System.Drawing.Size(36, 17);
+            this.chkParasitoSi.TabIndex = 36;
+            this.chkParasitoSi.Text = "SI";
+            this.chkParasitoSi.UseVisualStyleBackColor = true;
+            // 
+            // dtpCas
+            // 
+            this.dtpCas.Location = new System.Drawing.Point(591, 132);
+            this.dtpCas.Name = "dtpCas";
+            this.dtpCas.Size = new System.Drawing.Size(200, 20);
+            this.dtpCas.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(366, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 19);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Fecha de castración:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(34, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 19);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Castración:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(34, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 19);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Desparacitación:";
+            // 
             // btnFrmVacuna
             // 
             this.btnFrmVacuna.Location = new System.Drawing.Point(452, 180);
@@ -275,6 +416,17 @@
             this.lblVacuna.TabIndex = 10;
             this.lblVacuna.Text = "Vacunas:";
             // 
+            // lblNombVet
+            // 
+            this.lblNombVet.AutoSize = true;
+            this.lblNombVet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombVet.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombVet.Location = new System.Drawing.Point(6, 222);
+            this.lblNombVet.Name = "lblNombVet";
+            this.lblNombVet.Size = new System.Drawing.Size(64, 19);
+            this.lblNombVet.TabIndex = 9;
+            this.lblNombVet.Text = "Buscar:";
+            // 
             // tabDatosAnimal
             // 
             this.tabDatosAnimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -312,6 +464,34 @@
             this.tabDatosAnimal.Size = new System.Drawing.Size(849, 568);
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
+            // 
+            // dtpFechaNac
+            // 
+            this.dtpFechaNac.Location = new System.Drawing.Point(400, 257);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(122, 20);
+            this.dtpFechaNac.TabIndex = 103;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(224, 259);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(157, 19);
+            this.label6.TabIndex = 102;
+            this.label6.Text = "Fecha Nacimiento:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(426, 454);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 101;
+            this.label8.Text = "label8";
             // 
             // btnVerMas
             // 
@@ -564,186 +744,6 @@
             this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
             this.tbcDatosMasc.TabIndex = 0;
             // 
-            // dtpParasito
-            // 
-            this.dtpParasito.Location = new System.Drawing.Point(591, 75);
-            this.dtpParasito.Name = "dtpParasito";
-            this.dtpParasito.Size = new System.Drawing.Size(200, 20);
-            this.dtpParasito.TabIndex = 41;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(366, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(219, 19);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Fecha de Desparacitación:";
-            // 
-            // chkCasNo
-            // 
-            this.chkCasNo.AutoSize = true;
-            this.chkCasNo.Location = new System.Drawing.Point(277, 139);
-            this.chkCasNo.Name = "chkCasNo";
-            this.chkCasNo.Size = new System.Drawing.Size(42, 17);
-            this.chkCasNo.TabIndex = 39;
-            this.chkCasNo.Text = "NO";
-            this.chkCasNo.UseVisualStyleBackColor = true;
-            // 
-            // chkCasSi
-            // 
-            this.chkCasSi.AutoSize = true;
-            this.chkCasSi.Location = new System.Drawing.Point(192, 137);
-            this.chkCasSi.Name = "chkCasSi";
-            this.chkCasSi.Size = new System.Drawing.Size(36, 17);
-            this.chkCasSi.TabIndex = 38;
-            this.chkCasSi.Text = "SI";
-            this.chkCasSi.UseVisualStyleBackColor = true;
-            // 
-            // chkParasitoNo
-            // 
-            this.chkParasitoNo.AutoSize = true;
-            this.chkParasitoNo.Location = new System.Drawing.Point(277, 80);
-            this.chkParasitoNo.Name = "chkParasitoNo";
-            this.chkParasitoNo.Size = new System.Drawing.Size(42, 17);
-            this.chkParasitoNo.TabIndex = 37;
-            this.chkParasitoNo.Text = "NO";
-            this.chkParasitoNo.UseVisualStyleBackColor = true;
-            // 
-            // chkParasitoSi
-            // 
-            this.chkParasitoSi.AutoSize = true;
-            this.chkParasitoSi.Location = new System.Drawing.Point(192, 78);
-            this.chkParasitoSi.Name = "chkParasitoSi";
-            this.chkParasitoSi.Size = new System.Drawing.Size(36, 17);
-            this.chkParasitoSi.TabIndex = 36;
-            this.chkParasitoSi.Text = "SI";
-            this.chkParasitoSi.UseVisualStyleBackColor = true;
-            // 
-            // dtpCas
-            // 
-            this.dtpCas.Location = new System.Drawing.Point(591, 132);
-            this.dtpCas.Name = "dtpCas";
-            this.dtpCas.Size = new System.Drawing.Size(200, 20);
-            this.dtpCas.TabIndex = 35;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(366, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(172, 19);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Fecha de castración:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(34, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 19);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Castración:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(34, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 19);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Desparacitación:";
-            // 
-            // lblNombVet
-            // 
-            this.lblNombVet.AutoSize = true;
-            this.lblNombVet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombVet.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombVet.Location = new System.Drawing.Point(6, 222);
-            this.lblNombVet.Name = "lblNombVet";
-            this.lblNombVet.Size = new System.Drawing.Size(64, 19);
-            this.lblNombVet.TabIndex = 9;
-            this.lblNombVet.Text = "Buscar:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(80, 225);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(158, 20);
-            this.txtBuscar.TabIndex = 42;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(809, 216);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(28, 29);
-            this.btnEliminar.TabIndex = 45;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(717, 216);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(28, 29);
-            this.btnNuevo.TabIndex = 44;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(763, 216);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(28, 29);
-            this.btnModificar.TabIndex = 43;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(426, 454);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 101;
-            this.label8.Text = "label8";
-            // 
-            // dtpFechaNac
-            // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(400, 257);
-            this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(122, 20);
-            this.dtpFechaNac.TabIndex = 103;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(224, 259);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 19);
-            this.label6.TabIndex = 102;
-            this.label6.Text = "Fecha Nacimiento:";
-            // 
             // Animales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -756,7 +756,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Animales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mascota";
+            this.Text = "Animal";
             this.Load += new System.EventHandler(this.Mascota_Load);
             this.tabSeguimiento.ResumeLayout(false);
             this.tabSeguimiento.PerformLayout();

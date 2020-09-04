@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichaMedica.Designer.cs">
+      <DependentUpon>FichaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaNegra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <Compile Include="Veterinaria.Designer.cs">
       <DependentUpon>Veterinaria.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FichaMedica.resx">
+      <DependentUpon>FichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaNegra.resx">
       <DependentUpon>ListaNegra.cs</DependentUpon>
     </EmbeddedResource>
