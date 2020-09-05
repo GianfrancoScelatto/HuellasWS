@@ -58,6 +58,12 @@
     <Compile Include="ListaNegra.Designer.cs">
       <DependentUpon>ListaNegra.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarFichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarFichaMedica.Designer.cs">
+      <DependentUpon>ListarFichaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarListaNegra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="Transito.Designer.cs">
       <DependentUpon>Transito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacunaDesparacitacion_Animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacunaDesparacitacion_Animal.Designer.cs">
+      <DependentUpon>VacunaDesparacitacion_Animal.cs</DependentUpon>
     </Compile>
     <Compile Include="Vacunas.cs">
       <SubType>Form</SubType>
