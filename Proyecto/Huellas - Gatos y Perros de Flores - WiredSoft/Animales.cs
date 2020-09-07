@@ -29,6 +29,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnVerMas_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void tabDatosAnimal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llblPersona_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
             Form VerMas = new VerMasAnimal();
             VerMas.Show();
         }

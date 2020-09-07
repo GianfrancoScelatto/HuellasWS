@@ -61,8 +61,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnVerMas = new System.Windows.Forms.Button();
+            this.lblPersona = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
@@ -88,6 +87,7 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
+            this.llblPersona = new System.Windows.Forms.LinkLabel();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
@@ -388,12 +388,12 @@
             // tabDatosAnimal
             // 
             this.tabDatosAnimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.tabDatosAnimal.Controls.Add(this.llblPersona);
             this.tabDatosAnimal.Controls.Add(this.dateTimePicker1);
             this.tabDatosAnimal.Controls.Add(this.label7);
             this.tabDatosAnimal.Controls.Add(this.dtpFechaNac);
             this.tabDatosAnimal.Controls.Add(this.label6);
-            this.tabDatosAnimal.Controls.Add(this.label8);
-            this.tabDatosAnimal.Controls.Add(this.btnVerMas);
+            this.tabDatosAnimal.Controls.Add(this.lblPersona);
             this.tabDatosAnimal.Controls.Add(this.label1);
             this.tabDatosAnimal.Controls.Add(this.cbxEstado);
             this.tabDatosAnimal.Controls.Add(this.cbxSexo);
@@ -424,6 +424,7 @@
             this.tabDatosAnimal.Size = new System.Drawing.Size(849, 568);
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
+            this.tabDatosAnimal.Click += new System.EventHandler(this.tabDatosAnimal_Click);
             // 
             // dateTimePicker1
             // 
@@ -461,25 +462,14 @@
             this.label6.TabIndex = 102;
             this.label6.Text = "Fecha Nacimiento:";
             // 
-            // label8
+            // lblPersona
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(425, 488);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 101;
-            this.label8.Text = "label8";
-            // 
-            // btnVerMas
-            // 
-            this.btnVerMas.Location = new System.Drawing.Point(368, 504);
-            this.btnVerMas.Name = "btnVerMas";
-            this.btnVerMas.Size = new System.Drawing.Size(75, 23);
-            this.btnVerMas.TabIndex = 100;
-            this.btnVerMas.Text = "...";
-            this.btnVerMas.UseVisualStyleBackColor = true;
-            this.btnVerMas.Click += new System.EventHandler(this.btnVerMas_Click);
+            this.lblPersona.AutoSize = true;
+            this.lblPersona.BackColor = System.Drawing.Color.White;
+            this.lblPersona.Location = new System.Drawing.Point(425, 488);
+            this.lblPersona.Name = "lblPersona";
+            this.lblPersona.Size = new System.Drawing.Size(0, 13);
+            this.lblPersona.TabIndex = 101;
             // 
             // label1
             // 
@@ -722,6 +712,17 @@
             this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
             this.tbcDatosMasc.TabIndex = 0;
             // 
+            // llblPersona
+            // 
+            this.llblPersona.AutoSize = true;
+            this.llblPersona.Location = new System.Drawing.Point(394, 516);
+            this.llblPersona.Name = "llblPersona";
+            this.llblPersona.Size = new System.Drawing.Size(168, 13);
+            this.llblPersona.TabIndex = 106;
+            this.llblPersona.TabStop = true;
+            this.llblPersona.Text = "Acerca del Adoptante/Transitante";
+            this.llblPersona.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblPersona_LinkClicked);
+            // 
             // Animales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -760,7 +761,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label lblVacuna;
         private System.Windows.Forms.TabPage tabDatosAnimal;
-        private System.Windows.Forms.Button btnVerMas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.ComboBox cbxSexo;
@@ -803,11 +803,12 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblPersona;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.LinkLabel llblPersona;
     }
 }

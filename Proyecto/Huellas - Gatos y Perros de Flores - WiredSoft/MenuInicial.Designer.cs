@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicial));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnFichasMedicas = new System.Windows.Forms.Button();
+            this.btnVacunas = new System.Windows.Forms.Button();
             this.lUsuario = new System.Windows.Forms.LinkLabel();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnListaNegra = new System.Windows.Forms.Button();
             this.btnVeterinaria = new System.Windows.Forms.Button();
             this.btnPersonas = new System.Windows.Forms.Button();
             this.btnAnimal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
-            this.btnListaNegra = new System.Windows.Forms.Button();
-            this.btnVacunas = new System.Windows.Forms.Button();
-            this.btnFichasMedicas = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,55 @@
             this.panelMenuLateral.Size = new System.Drawing.Size(250, 670);
             this.panelMenuLateral.TabIndex = 0;
             this.panelMenuLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenuLateral_Paint);
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnHistorial.Location = new System.Drawing.Point(0, 374);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHistorial.Size = new System.Drawing.Size(250, 45);
+            this.btnHistorial.TabIndex = 12;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.UseVisualStyleBackColor = true;
+            // 
+            // btnFichasMedicas
+            // 
+            this.btnFichasMedicas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFichasMedicas.FlatAppearance.BorderSize = 0;
+            this.btnFichasMedicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFichasMedicas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFichasMedicas.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnFichasMedicas.Location = new System.Drawing.Point(0, 329);
+            this.btnFichasMedicas.Name = "btnFichasMedicas";
+            this.btnFichasMedicas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnFichasMedicas.Size = new System.Drawing.Size(250, 45);
+            this.btnFichasMedicas.TabIndex = 11;
+            this.btnFichasMedicas.Text = "Fichas Medicas";
+            this.btnFichasMedicas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFichasMedicas.UseVisualStyleBackColor = true;
+            this.btnFichasMedicas.Click += new System.EventHandler(this.btnFichasMedicas_Click);
+            // 
+            // btnVacunas
+            // 
+            this.btnVacunas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVacunas.FlatAppearance.BorderSize = 0;
+            this.btnVacunas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVacunas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVacunas.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnVacunas.Location = new System.Drawing.Point(0, 284);
+            this.btnVacunas.Name = "btnVacunas";
+            this.btnVacunas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnVacunas.Size = new System.Drawing.Size(250, 45);
+            this.btnVacunas.TabIndex = 10;
+            this.btnVacunas.Text = "Vacunas";
+            this.btnVacunas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVacunas.UseVisualStyleBackColor = true;
             // 
             // lUsuario
             // 
@@ -98,6 +147,23 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnListaNegra
+            // 
+            this.btnListaNegra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListaNegra.FlatAppearance.BorderSize = 0;
+            this.btnListaNegra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaNegra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaNegra.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListaNegra.Location = new System.Drawing.Point(0, 239);
+            this.btnListaNegra.Name = "btnListaNegra";
+            this.btnListaNegra.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnListaNegra.Size = new System.Drawing.Size(250, 45);
+            this.btnListaNegra.TabIndex = 5;
+            this.btnListaNegra.Text = "Lista negra";
+            this.btnListaNegra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaNegra.UseVisualStyleBackColor = true;
+            this.btnListaNegra.Click += new System.EventHandler(this.btnListaNegra_Click);
             // 
             // btnVeterinaria
             // 
@@ -165,71 +231,6 @@
             this.panelFormHijo.Name = "panelFormHijo";
             this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
             this.panelFormHijo.TabIndex = 1;
-            // 
-            // btnListaNegra
-            // 
-            this.btnListaNegra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListaNegra.FlatAppearance.BorderSize = 0;
-            this.btnListaNegra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaNegra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaNegra.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnListaNegra.Location = new System.Drawing.Point(0, 239);
-            this.btnListaNegra.Name = "btnListaNegra";
-            this.btnListaNegra.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnListaNegra.Size = new System.Drawing.Size(250, 45);
-            this.btnListaNegra.TabIndex = 5;
-            this.btnListaNegra.Text = "Lista negra";
-            this.btnListaNegra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListaNegra.UseVisualStyleBackColor = true;
-            this.btnListaNegra.Click += new System.EventHandler(this.btnListaNegra_Click);
-            // 
-            // btnVacunas
-            // 
-            this.btnVacunas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVacunas.FlatAppearance.BorderSize = 0;
-            this.btnVacunas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVacunas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVacunas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnVacunas.Location = new System.Drawing.Point(0, 284);
-            this.btnVacunas.Name = "btnVacunas";
-            this.btnVacunas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnVacunas.Size = new System.Drawing.Size(250, 45);
-            this.btnVacunas.TabIndex = 10;
-            this.btnVacunas.Text = "Vacunas";
-            this.btnVacunas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVacunas.UseVisualStyleBackColor = true;
-            // 
-            // btnFichasMedicas
-            // 
-            this.btnFichasMedicas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFichasMedicas.FlatAppearance.BorderSize = 0;
-            this.btnFichasMedicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFichasMedicas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFichasMedicas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnFichasMedicas.Location = new System.Drawing.Point(0, 329);
-            this.btnFichasMedicas.Name = "btnFichasMedicas";
-            this.btnFichasMedicas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnFichasMedicas.Size = new System.Drawing.Size(250, 45);
-            this.btnFichasMedicas.TabIndex = 11;
-            this.btnFichasMedicas.Text = "Fichas Medicas";
-            this.btnFichasMedicas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFichasMedicas.UseVisualStyleBackColor = true;
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistorial.FlatAppearance.BorderSize = 0;
-            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHistorial.Location = new System.Drawing.Point(0, 374);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHistorial.Size = new System.Drawing.Size(250, 45);
-            this.btnHistorial.TabIndex = 12;
-            this.btnHistorial.Text = "Historial";
-            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.UseVisualStyleBackColor = true;
             // 
             // MenuInicial
             // 
