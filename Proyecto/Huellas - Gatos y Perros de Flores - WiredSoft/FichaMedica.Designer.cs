@@ -32,11 +32,9 @@
             this.lblUbicacion = new System.Windows.Forms.Label();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.lblEspecie = new System.Windows.Forms.Label();
-            this.lblEdad = new System.Windows.Forms.Label();
             this.lblDFichaMed = new System.Windows.Forms.Label();
             this.lblMascota = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -50,7 +48,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(13, 553);
+            this.label6.Location = new System.Drawing.Point(13, 520);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 19);
             this.label6.TabIndex = 109;
@@ -89,17 +87,6 @@
             this.lblEspecie.TabIndex = 106;
             this.lblEspecie.Text = "Informe:";
             // 
-            // lblEdad
-            // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEdad.Location = new System.Drawing.Point(13, 519);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(138, 19);
-            this.lblEdad.TabIndex = 105;
-            this.lblEdad.Text = "Nombre Animal:";
-            // 
             // lblDFichaMed
             // 
             this.lblDFichaMed.AutoSize = true;
@@ -129,13 +116,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
             this.dateTimePicker1.TabIndex = 110;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(189, 518);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
-            this.textBox1.TabIndex = 111;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(189, 483);
@@ -145,7 +125,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(189, 555);
+            this.textBox3.Location = new System.Drawing.Point(189, 519);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(197, 20);
             this.textBox3.TabIndex = 113;
@@ -210,18 +190,17 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.lblIngreso);
             this.Controls.Add(this.lblEspecie);
-            this.Controls.Add(this.lblEdad);
             this.Controls.Add(this.lblDFichaMed);
             this.Controls.Add(this.lblMascota);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FichaMedica";
             this.Text = "FichaMedica";
+            this.Load += new System.EventHandler(this.FichaMedica_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,11 +212,9 @@
         private System.Windows.Forms.Label lblUbicacion;
         private System.Windows.Forms.Label lblIngreso;
         private System.Windows.Forms.Label lblEspecie;
-        private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblDFichaMed;
         private System.Windows.Forms.Label lblMascota;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.RichTextBox richTextBox1;

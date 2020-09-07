@@ -114,11 +114,11 @@
     <Compile Include="Recuperar.Designer.cs">
       <DependentUpon>Recuperar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transito.cs">
+    <Compile Include="Persona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transito.Designer.cs">
-      <DependentUpon>Transito.cs</DependentUpon>
+    <Compile Include="Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
     </Compile>
     <Compile Include="VacunaDesparacitacion_Animal.cs">
       <SubType>Form</SubType>
@@ -183,8 +183,8 @@
     <EmbeddedResource Include="Recuperar.resx">
       <DependentUpon>Recuperar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transito.resx">
-      <DependentUpon>Transito.cs</DependentUpon>
+    <EmbeddedResource Include="Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vacunas.resx">
       <DependentUpon>Vacunas.cs</DependentUpon>

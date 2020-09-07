@@ -21,5 +21,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
 
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Form Veterinaria = new Veterinaria();
+            Veterinaria.Show();
+        }
     }
 }

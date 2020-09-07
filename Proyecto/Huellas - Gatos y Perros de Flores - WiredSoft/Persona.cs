@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarPersonas : Form
+    public partial class Persona : Form
     {
-        public ListarPersonas()
+        public Persona()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form Transito = new Persona();
-            Transito.Show();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

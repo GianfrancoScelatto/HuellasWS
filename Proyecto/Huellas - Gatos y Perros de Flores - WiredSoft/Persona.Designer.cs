@@ -1,6 +1,6 @@
 ﻿namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    partial class Transito
+    partial class Persona
     {
         /// <summary>
         /// Required designer variable.
