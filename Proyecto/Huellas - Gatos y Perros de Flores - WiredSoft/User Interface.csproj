@@ -82,6 +82,12 @@
     <Compile Include="ListarAnimales.Designer.cs">
       <DependentUpon>ListarAnimales.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarVacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarVacuna.Designer.cs">
+      <DependentUpon>ListarVacuna.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarVeterinaria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListarAnimales.resx">
       <DependentUpon>ListarAnimales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarVacuna.resx">
+      <DependentUpon>ListarVacuna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarVeterinaria.resx">
       <DependentUpon>ListarVeterinaria.cs</DependentUpon>
