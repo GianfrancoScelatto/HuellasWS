@@ -37,7 +37,6 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@
             this.lblVacuna = new System.Windows.Forms.Label();
             this.lblNombVet = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
+            this.llblPersona = new System.Windows.Forms.LinkLabel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
@@ -87,7 +87,7 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
-            this.llblPersona = new System.Windows.Forms.LinkLabel();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
@@ -182,7 +182,7 @@
             // tabFichaMed
             // 
             this.tabFichaMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
-            this.tabFichaMed.Controls.Add(this.button2);
+            this.tabFichaMed.Controls.Add(this.btnExportar);
             this.tabFichaMed.Controls.Add(this.btnEliminar);
             this.tabFichaMed.Controls.Add(this.btnNuevo);
             this.tabFichaMed.Controls.Add(this.btnModificar);
@@ -204,19 +204,6 @@
             this.tabFichaMed.TabIndex = 2;
             this.tabFichaMed.Text = "Ficha Medica";
             this.tabFichaMed.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(645, 143);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 29);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Excel";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
             // 
@@ -425,6 +412,17 @@
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
             this.tabDatosAnimal.Click += new System.EventHandler(this.tabDatosAnimal_Click);
+            // 
+            // llblPersona
+            // 
+            this.llblPersona.AutoSize = true;
+            this.llblPersona.Location = new System.Drawing.Point(394, 516);
+            this.llblPersona.Name = "llblPersona";
+            this.llblPersona.Size = new System.Drawing.Size(168, 13);
+            this.llblPersona.TabIndex = 106;
+            this.llblPersona.TabStop = true;
+            this.llblPersona.Text = "Acerca del Adoptante/Transitante";
+            this.llblPersona.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblPersona_LinkClicked);
             // 
             // dateTimePicker1
             // 
@@ -712,16 +710,17 @@
             this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
             this.tbcDatosMasc.TabIndex = 0;
             // 
-            // llblPersona
+            // btnExportar
             // 
-            this.llblPersona.AutoSize = true;
-            this.llblPersona.Location = new System.Drawing.Point(394, 516);
-            this.llblPersona.Name = "llblPersona";
-            this.llblPersona.Size = new System.Drawing.Size(168, 13);
-            this.llblPersona.TabIndex = 106;
-            this.llblPersona.TabStop = true;
-            this.llblPersona.Text = "Acerca del Adoptante/Transitante";
-            this.llblPersona.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblPersona_LinkClicked);
+            this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
+            this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Location = new System.Drawing.Point(673, 143);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(28, 29);
+            this.btnExportar.TabIndex = 48;
+            this.btnExportar.UseVisualStyleBackColor = true;
             // 
             // Animales
             // 
@@ -808,7 +807,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.LinkLabel llblPersona;
+        private System.Windows.Forms.Button btnExportar;
     }
 }

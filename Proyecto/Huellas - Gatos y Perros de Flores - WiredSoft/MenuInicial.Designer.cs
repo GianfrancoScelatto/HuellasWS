@@ -231,6 +231,7 @@
             this.panelFormHijo.Name = "panelFormHijo";
             this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
             this.panelFormHijo.TabIndex = 1;
+            this.panelFormHijo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormHijo_Paint);
             // 
             // MenuInicial
             // 

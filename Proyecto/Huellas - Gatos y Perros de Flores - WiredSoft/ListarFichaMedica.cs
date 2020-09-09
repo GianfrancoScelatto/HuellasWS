@@ -16,5 +16,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Form FichaMedica = new FichaMedica();
+            FichaMedica.Show();
+        }
     }
 }

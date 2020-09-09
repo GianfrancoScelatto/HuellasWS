@@ -156,6 +156,9 @@
     <EmbeddedResource Include="ListaNegra.resx">
       <DependentUpon>ListaNegra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListarFichaMedica.resx">
+      <DependentUpon>ListarFichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListarListaNegra.resx">
       <DependentUpon>ListarListaNegra.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Persona.resx">
       <DependentUpon>Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacunaDesparacitacion_Animal.resx">
+      <DependentUpon>VacunaDesparacitacion_Animal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vacunas.resx">
       <DependentUpon>Vacunas.cs</DependentUpon>

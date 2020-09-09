@@ -41,6 +41,8 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -48,7 +50,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(13, 520);
+            this.label6.Location = new System.Drawing.Point(13, 546);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 19);
             this.label6.TabIndex = 109;
@@ -59,7 +61,7 @@
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUbicacion.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUbicacion.Location = new System.Drawing.Point(12, 484);
+            this.lblUbicacion.Location = new System.Drawing.Point(12, 510);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(166, 19);
             this.lblUbicacion.TabIndex = 108;
@@ -70,7 +72,7 @@
             this.lblIngreso.AutoSize = true;
             this.lblIngreso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngreso.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblIngreso.Location = new System.Drawing.Point(13, 294);
+            this.lblIngreso.Location = new System.Drawing.Point(13, 320);
             this.lblIngreso.Name = "lblIngreso";
             this.lblIngreso.Size = new System.Drawing.Size(105, 19);
             this.lblIngreso.TabIndex = 107;
@@ -81,7 +83,7 @@
             this.lblEspecie.AutoSize = true;
             this.lblEspecie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecie.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEspecie.Location = new System.Drawing.Point(13, 115);
+            this.lblEspecie.Location = new System.Drawing.Point(13, 141);
             this.lblEspecie.Name = "lblEspecie";
             this.lblEspecie.Size = new System.Drawing.Size(72, 19);
             this.lblEspecie.TabIndex = 106;
@@ -103,7 +105,7 @@
             this.lblMascota.AutoSize = true;
             this.lblMascota.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMascota.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMascota.Location = new System.Drawing.Point(12, 80);
+            this.lblMascota.Location = new System.Drawing.Point(12, 106);
             this.lblMascota.Name = "lblMascota";
             this.lblMascota.Size = new System.Drawing.Size(136, 19);
             this.lblMascota.TabIndex = 103;
@@ -111,28 +113,28 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(154, 80);
+            this.dateTimePicker1.Location = new System.Drawing.Point(181, 106);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
             this.dateTimePicker1.TabIndex = 110;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(189, 483);
+            this.textBox2.Location = new System.Drawing.Point(198, 509);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(197, 20);
             this.textBox2.TabIndex = 112;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(189, 519);
+            this.textBox3.Location = new System.Drawing.Point(198, 546);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(197, 20);
             this.textBox3.TabIndex = 113;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(17, 316);
+            this.richTextBox1.Location = new System.Drawing.Point(17, 342);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(545, 142);
             this.richTextBox1.TabIndex = 114;
@@ -140,7 +142,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(17, 138);
+            this.richTextBox2.Location = new System.Drawing.Point(17, 164);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(545, 140);
             this.richTextBox2.TabIndex = 115;
@@ -178,12 +180,32 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(13, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 19);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "Nombre de animal:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(181, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 20);
+            this.textBox1.TabIndex = 119;
+            // 
             // FichaMedica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(574, 682);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.richTextBox2);
@@ -221,5 +243,7 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
