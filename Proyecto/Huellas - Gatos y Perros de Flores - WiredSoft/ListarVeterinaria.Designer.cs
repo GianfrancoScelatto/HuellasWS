@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarVeterinaria));
             this.panelBoton = new System.Windows.Forms.Panel();
-            this.panelListar = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.panelListar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,8 +50,8 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBoton.SuspendLayout();
-            this.panelListar.SuspendLayout();
             this.panelBotones.SuspendLayout();
+            this.panelListar.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -64,15 +64,6 @@
             this.panelBoton.Name = "panelBoton";
             this.panelBoton.Size = new System.Drawing.Size(1083, 55);
             this.panelBoton.TabIndex = 36;
-            // 
-            // panelListar
-            // 
-            this.panelListar.Controls.Add(this.panel3);
-            this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelListar.Location = new System.Drawing.Point(0, 55);
-            this.panelListar.Name = "panelListar";
-            this.panelListar.Size = new System.Drawing.Size(1083, 615);
-            this.panelListar.TabIndex = 37;
             // 
             // panelBotones
             // 
@@ -154,6 +145,15 @@
             this.lblBuscar.Size = new System.Drawing.Size(53, 17);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
+            // 
+            // panelListar
+            // 
+            this.panelListar.Controls.Add(this.panel3);
+            this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelListar.Location = new System.Drawing.Point(0, 55);
+            this.panelListar.Name = "panelListar";
+            this.panelListar.Size = new System.Drawing.Size(1083, 615);
+            this.panelListar.TabIndex = 37;
             // 
             // panel3
             // 
@@ -240,9 +240,9 @@
             this.Name = "ListarVeterinaria";
             this.Text = "ListarVeterinaria";
             this.panelBoton.ResumeLayout(false);
-            this.panelListar.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
+            this.panelListar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
