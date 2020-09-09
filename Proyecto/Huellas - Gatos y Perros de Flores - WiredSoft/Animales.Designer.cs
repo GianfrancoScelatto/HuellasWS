@@ -37,6 +37,7 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.dtpCas = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnFrmVacuna = new System.Windows.Forms.Button();
             this.dgvGastos = new System.Windows.Forms.DataGridView();
             this.idFichaMedica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,7 +87,7 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
-            this.btnExportar = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
@@ -182,6 +182,7 @@
             // tabFichaMed
             // 
             this.tabFichaMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
+            this.tabFichaMed.Controls.Add(this.linkLabel1);
             this.tabFichaMed.Controls.Add(this.btnExportar);
             this.tabFichaMed.Controls.Add(this.btnEliminar);
             this.tabFichaMed.Controls.Add(this.btnNuevo);
@@ -192,7 +193,6 @@
             this.tabFichaMed.Controls.Add(this.dtpCas);
             this.tabFichaMed.Controls.Add(this.label4);
             this.tabFichaMed.Controls.Add(this.label3);
-            this.tabFichaMed.Controls.Add(this.btnFrmVacuna);
             this.tabFichaMed.Controls.Add(this.dgvGastos);
             this.tabFichaMed.Controls.Add(this.label26);
             this.tabFichaMed.Controls.Add(this.lblVacuna);
@@ -204,6 +204,18 @@
             this.tabFichaMed.TabIndex = 2;
             this.tabFichaMed.Text = "Ficha Medica";
             this.tabFichaMed.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
+            this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Location = new System.Drawing.Point(673, 143);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(28, 29);
+            this.btnExportar.TabIndex = 48;
+            this.btnExportar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
@@ -243,7 +255,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(127, 152);
+            this.txtBuscar.Location = new System.Drawing.Point(76, 152);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(158, 20);
             this.txtBuscar.TabIndex = 42;
@@ -251,26 +263,30 @@
             // chkCasNo
             // 
             this.chkCasNo.AutoSize = true;
-            this.chkCasNo.Location = new System.Drawing.Point(275, 73);
+            this.chkCasNo.BackColor = System.Drawing.Color.Transparent;
+            this.chkCasNo.ForeColor = System.Drawing.Color.White;
+            this.chkCasNo.Location = new System.Drawing.Point(161, 68);
             this.chkCasNo.Name = "chkCasNo";
             this.chkCasNo.Size = new System.Drawing.Size(42, 17);
             this.chkCasNo.TabIndex = 39;
             this.chkCasNo.Text = "NO";
-            this.chkCasNo.UseVisualStyleBackColor = true;
+            this.chkCasNo.UseVisualStyleBackColor = false;
             // 
             // chkCasSi
             // 
             this.chkCasSi.AutoSize = true;
-            this.chkCasSi.Location = new System.Drawing.Point(190, 71);
+            this.chkCasSi.BackColor = System.Drawing.Color.Transparent;
+            this.chkCasSi.ForeColor = System.Drawing.Color.White;
+            this.chkCasSi.Location = new System.Drawing.Point(108, 68);
             this.chkCasSi.Name = "chkCasSi";
             this.chkCasSi.Size = new System.Drawing.Size(36, 17);
             this.chkCasSi.TabIndex = 38;
             this.chkCasSi.Text = "SI";
-            this.chkCasSi.UseVisualStyleBackColor = true;
+            this.chkCasSi.UseVisualStyleBackColor = false;
             // 
             // dtpCas
             // 
-            this.dtpCas.Location = new System.Drawing.Point(589, 66);
+            this.dtpCas.Location = new System.Drawing.Point(638, 68);
             this.dtpCas.Name = "dtpCas";
             this.dtpCas.Size = new System.Drawing.Size(200, 20);
             this.dtpCas.TabIndex = 35;
@@ -280,7 +296,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(364, 69);
+            this.label4.Location = new System.Drawing.Point(457, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(172, 19);
             this.label4.TabIndex = 34;
@@ -291,20 +307,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(32, 66);
+            this.label3.Location = new System.Drawing.Point(6, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 19);
             this.label3.TabIndex = 33;
             this.label3.Text = "Castración:";
-            // 
-            // btnFrmVacuna
-            // 
-            this.btnFrmVacuna.Location = new System.Drawing.Point(274, 104);
-            this.btnFrmVacuna.Name = "btnFrmVacuna";
-            this.btnFrmVacuna.Size = new System.Drawing.Size(75, 23);
-            this.btnFrmVacuna.TabIndex = 31;
-            this.btnFrmVacuna.Text = "+";
-            this.btnFrmVacuna.UseVisualStyleBackColor = true;
             // 
             // dgvGastos
             // 
@@ -355,7 +362,7 @@
             this.lblVacuna.AutoSize = true;
             this.lblVacuna.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVacuna.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblVacuna.Location = new System.Drawing.Point(32, 108);
+            this.lblVacuna.Location = new System.Drawing.Point(6, 108);
             this.lblVacuna.Name = "lblVacuna";
             this.lblVacuna.Size = new System.Drawing.Size(217, 19);
             this.lblVacuna.TabIndex = 10;
@@ -366,7 +373,7 @@
             this.lblNombVet.AutoSize = true;
             this.lblNombVet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombVet.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombVet.Location = new System.Drawing.Point(32, 153);
+            this.lblNombVet.Location = new System.Drawing.Point(6, 153);
             this.lblNombVet.Name = "lblNombVet";
             this.lblNombVet.Size = new System.Drawing.Size(64, 19);
             this.lblNombVet.TabIndex = 9;
@@ -416,7 +423,7 @@
             // llblPersona
             // 
             this.llblPersona.AutoSize = true;
-            this.llblPersona.Location = new System.Drawing.Point(394, 516);
+            this.llblPersona.Location = new System.Drawing.Point(227, 510);
             this.llblPersona.Name = "llblPersona";
             this.llblPersona.Size = new System.Drawing.Size(168, 13);
             this.llblPersona.TabIndex = 106;
@@ -463,11 +470,13 @@
             // lblPersona
             // 
             this.lblPersona.AutoSize = true;
-            this.lblPersona.BackColor = System.Drawing.Color.White;
+            this.lblPersona.BackColor = System.Drawing.Color.Black;
+            this.lblPersona.ForeColor = System.Drawing.Color.White;
             this.lblPersona.Location = new System.Drawing.Point(425, 488);
             this.lblPersona.Name = "lblPersona";
-            this.lblPersona.Size = new System.Drawing.Size(0, 13);
+            this.lblPersona.Size = new System.Drawing.Size(16, 13);
             this.lblPersona.TabIndex = 101;
+            this.lblPersona.Text = "...";
             // 
             // label1
             // 
@@ -626,9 +635,9 @@
             this.lblEspecie.ForeColor = System.Drawing.SystemColors.Control;
             this.lblEspecie.Location = new System.Drawing.Point(224, 122);
             this.lblEspecie.Name = "lblEspecie";
-            this.lblEspecie.Size = new System.Drawing.Size(68, 19);
+            this.lblEspecie.Size = new System.Drawing.Size(72, 19);
             this.lblEspecie.TabIndex = 59;
-            this.lblEspecie.Text = "Especie";
+            this.lblEspecie.Text = "Especie:";
             // 
             // lblSexo
             // 
@@ -710,17 +719,15 @@
             this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
             this.tbcDatosMasc.TabIndex = 0;
             // 
-            // btnExportar
+            // linkLabel1
             // 
-            this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
-            this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(673, 143);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(28, 29);
-            this.btnExportar.TabIndex = 48;
-            this.btnExportar.UseVisualStyleBackColor = true;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(229, 114);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(23, 13);
+            this.linkLabel1.TabIndex = 49;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Ver";
             // 
             // Animales
             // 
@@ -791,7 +798,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Restante;
-        private System.Windows.Forms.Button btnFrmVacuna;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.CheckBox chkCasNo;
         private System.Windows.Forms.CheckBox chkCasSi;
@@ -809,5 +815,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.LinkLabel llblPersona;
         private System.Windows.Forms.Button btnExportar;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

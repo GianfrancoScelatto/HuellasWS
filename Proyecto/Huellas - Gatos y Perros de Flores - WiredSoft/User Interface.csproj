@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Desparasitacion_Vacunascs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desparasitacion_Vacunascs.Designer.cs">
+      <DependentUpon>Desparasitacion_Vacunascs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FichaMedica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="Veterinaria.Designer.cs">
       <DependentUpon>Veterinaria.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Desparasitacion_Vacunascs.resx">
+      <DependentUpon>Desparasitacion_Vacunascs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FichaMedica.resx">
       <DependentUpon>FichaMedica.cs</DependentUpon>
     </EmbeddedResource>
