@@ -57,6 +57,8 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsuarioIG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsuarioFB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chxTransitantes = new System.Windows.Forms.CheckBox();
+            this.chxAadoptantes = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -91,6 +93,8 @@
             // 
             // panelBotones
             // 
+            this.panelBotones.Controls.Add(this.chxTransitantes);
+            this.panelBotones.Controls.Add(this.chxAadoptantes);
             this.panelBotones.Controls.Add(this.btnExportar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
@@ -288,6 +292,30 @@
             this.UsuarioFB.HeaderText = "Usuario de Facebook";
             this.UsuarioFB.Name = "UsuarioFB";
             // 
+            // chxTransitantes
+            // 
+            this.chxTransitantes.AutoSize = true;
+            this.chxTransitantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxTransitantes.ForeColor = System.Drawing.SystemColors.Control;
+            this.chxTransitantes.Location = new System.Drawing.Point(227, 28);
+            this.chxTransitantes.Name = "chxTransitantes";
+            this.chxTransitantes.Size = new System.Drawing.Size(101, 21);
+            this.chxTransitantes.TabIndex = 49;
+            this.chxTransitantes.Text = "Transitantes";
+            this.chxTransitantes.UseVisualStyleBackColor = true;
+            // 
+            // chxAadoptantes
+            // 
+            this.chxAadoptantes.AutoSize = true;
+            this.chxAadoptantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxAadoptantes.ForeColor = System.Drawing.SystemColors.Control;
+            this.chxAadoptantes.Location = new System.Drawing.Point(227, 5);
+            this.chxAadoptantes.Name = "chxAadoptantes";
+            this.chxAadoptantes.Size = new System.Drawing.Size(103, 21);
+            this.chxAadoptantes.TabIndex = 48;
+            this.chxAadoptantes.Text = "Adoptantes";
+            this.chxAadoptantes.UseVisualStyleBackColor = true;
+            // 
             // ListarPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +369,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioIG;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioFB;
+        private System.Windows.Forms.CheckBox chxTransitantes;
+        private System.Windows.Forms.CheckBox chxAadoptantes;
     }
 }

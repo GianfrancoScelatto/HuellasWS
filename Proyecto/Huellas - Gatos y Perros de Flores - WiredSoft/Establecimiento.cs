@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class Veterinaria : Form
+    public partial class Establecimiento : Form
     {
-        public Veterinaria()
+        public Establecimiento()
         {
             InitializeComponent();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

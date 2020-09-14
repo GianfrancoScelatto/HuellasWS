@@ -94,11 +94,11 @@
     <Compile Include="ListarVacuna.Designer.cs">
       <DependentUpon>ListarVacuna.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarVeterinaria.cs">
+    <Compile Include="ListarEstablecimient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarVeterinaria.Designer.cs">
-      <DependentUpon>ListarVeterinaria.cs</DependentUpon>
+    <Compile Include="ListarEstablecimient.Designer.cs">
+      <DependentUpon>ListarEstablecimient.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -144,11 +144,11 @@
     <Compile Include="VerMasAnimal.Designer.cs">
       <DependentUpon>VerMasAnimal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Veterinaria.cs">
+    <Compile Include="Establecimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Veterinaria.Designer.cs">
-      <DependentUpon>Veterinaria.cs</DependentUpon>
+    <Compile Include="Establecimiento.Designer.cs">
+      <DependentUpon>Establecimiento.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Desparasitacion_Vacunascs.resx">
       <DependentUpon>Desparasitacion_Vacunascs.cs</DependentUpon>
@@ -174,8 +174,8 @@
     <EmbeddedResource Include="ListarVacuna.resx">
       <DependentUpon>ListarVacuna.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarVeterinaria.resx">
-      <DependentUpon>ListarVeterinaria.cs</DependentUpon>
+    <EmbeddedResource Include="ListarEstablecimient.resx">
+      <DependentUpon>ListarEstablecimient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -207,8 +207,8 @@
     <EmbeddedResource Include="VerMasAnimal.resx">
       <DependentUpon>VerMasAnimal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Veterinaria.resx">
-      <DependentUpon>Veterinaria.cs</DependentUpon>
+    <EmbeddedResource Include="Establecimiento.resx">
+      <DependentUpon>Establecimiento.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

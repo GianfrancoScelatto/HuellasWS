@@ -37,6 +37,7 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Restante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label26 = new System.Windows.Forms.Label();
-            this.lblVacuna = new System.Windows.Forms.Label();
             this.lblNombVet = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
             this.llblPersona = new System.Windows.Forms.LinkLabel();
@@ -61,7 +61,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblPersona = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
@@ -87,7 +86,6 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
@@ -195,7 +193,6 @@
             this.tabFichaMed.Controls.Add(this.label3);
             this.tabFichaMed.Controls.Add(this.dgvGastos);
             this.tabFichaMed.Controls.Add(this.label26);
-            this.tabFichaMed.Controls.Add(this.lblVacuna);
             this.tabFichaMed.Controls.Add(this.lblNombVet);
             this.tabFichaMed.Location = new System.Drawing.Point(4, 22);
             this.tabFichaMed.Name = "tabFichaMed";
@@ -204,6 +201,17 @@
             this.tabFichaMed.TabIndex = 2;
             this.tabFichaMed.Text = "Ficha Medica";
             this.tabFichaMed.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(7, 109);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(152, 13);
+            this.linkLabel1.TabIndex = 49;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Ver Vacunas/Desparasitación:";
             // 
             // btnExportar
             // 
@@ -357,17 +365,6 @@
             this.label26.TabIndex = 13;
             this.label26.Text = "Ficha Medica";
             // 
-            // lblVacuna
-            // 
-            this.lblVacuna.AutoSize = true;
-            this.lblVacuna.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVacuna.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblVacuna.Location = new System.Drawing.Point(6, 108);
-            this.lblVacuna.Name = "lblVacuna";
-            this.lblVacuna.Size = new System.Drawing.Size(217, 19);
-            this.lblVacuna.TabIndex = 10;
-            this.lblVacuna.Text = "Vacunas/Desparacitacion:";
-            // 
             // lblNombVet
             // 
             this.lblNombVet.AutoSize = true;
@@ -387,7 +384,6 @@
             this.tabDatosAnimal.Controls.Add(this.label7);
             this.tabDatosAnimal.Controls.Add(this.dtpFechaNac);
             this.tabDatosAnimal.Controls.Add(this.label6);
-            this.tabDatosAnimal.Controls.Add(this.lblPersona);
             this.tabDatosAnimal.Controls.Add(this.label1);
             this.tabDatosAnimal.Controls.Add(this.cbxEstado);
             this.tabDatosAnimal.Controls.Add(this.cbxSexo);
@@ -423,12 +419,13 @@
             // llblPersona
             // 
             this.llblPersona.AutoSize = true;
-            this.llblPersona.Location = new System.Drawing.Point(227, 510);
+            this.llblPersona.LinkColor = System.Drawing.Color.White;
+            this.llblPersona.Location = new System.Drawing.Point(410, 487);
             this.llblPersona.Name = "llblPersona";
-            this.llblPersona.Size = new System.Drawing.Size(168, 13);
+            this.llblPersona.Size = new System.Drawing.Size(109, 13);
             this.llblPersona.TabIndex = 106;
             this.llblPersona.TabStop = true;
-            this.llblPersona.Text = "Acerca del Adoptante/Transitante";
+            this.llblPersona.Text = "Acerca de la Persona";
             this.llblPersona.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblPersona_LinkClicked);
             // 
             // dateTimePicker1
@@ -466,17 +463,6 @@
             this.label6.Size = new System.Drawing.Size(157, 19);
             this.label6.TabIndex = 102;
             this.label6.Text = "Fecha Nacimiento:";
-            // 
-            // lblPersona
-            // 
-            this.lblPersona.AutoSize = true;
-            this.lblPersona.BackColor = System.Drawing.Color.Black;
-            this.lblPersona.ForeColor = System.Drawing.Color.White;
-            this.lblPersona.Location = new System.Drawing.Point(425, 488);
-            this.lblPersona.Name = "lblPersona";
-            this.lblPersona.Size = new System.Drawing.Size(16, 13);
-            this.lblPersona.TabIndex = 101;
-            this.lblPersona.Text = "...";
             // 
             // label1
             // 
@@ -719,16 +705,6 @@
             this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
             this.tbcDatosMasc.TabIndex = 0;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(229, 114);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(23, 13);
-            this.linkLabel1.TabIndex = 49;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Ver";
-            // 
             // Animales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,7 +741,6 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TabPage tabFichaMed;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label lblVacuna;
         private System.Windows.Forms.TabPage tabDatosAnimal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxEstado;
@@ -808,7 +783,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Label lblPersona;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

@@ -34,10 +34,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.chxFallecidos = new System.Windows.Forms.CheckBox();
-            this.chxTransito = new System.Windows.Forms.CheckBox();
-            this.chxNoAdoptados = new System.Windows.Forms.CheckBox();
-            this.chxAdoptados = new System.Windows.Forms.CheckBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
@@ -60,10 +56,6 @@
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
             this.panelBotones.Controls.Add(this.btnModificar);
-            this.panelBotones.Controls.Add(this.chxFallecidos);
-            this.panelBotones.Controls.Add(this.chxTransito);
-            this.panelBotones.Controls.Add(this.chxNoAdoptados);
-            this.panelBotones.Controls.Add(this.chxAdoptados);
             this.panelBotones.Controls.Add(this.txtBuscar);
             this.panelBotones.Controls.Add(this.lblBuscar);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -120,54 +112,6 @@
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // chxFallecidos
-            // 
-            this.chxFallecidos.AutoSize = true;
-            this.chxFallecidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxFallecidos.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxFallecidos.Location = new System.Drawing.Point(371, 29);
-            this.chxFallecidos.Name = "chxFallecidos";
-            this.chxFallecidos.Size = new System.Drawing.Size(90, 21);
-            this.chxFallecidos.TabIndex = 43;
-            this.chxFallecidos.Text = "Fallecidos";
-            this.chxFallecidos.UseVisualStyleBackColor = true;
-            // 
-            // chxTransito
-            // 
-            this.chxTransito.AutoSize = true;
-            this.chxTransito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTransito.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxTransito.Location = new System.Drawing.Point(371, 5);
-            this.chxTransito.Name = "chxTransito";
-            this.chxTransito.Size = new System.Drawing.Size(94, 21);
-            this.chxTransito.TabIndex = 42;
-            this.chxTransito.Text = "En transito";
-            this.chxTransito.UseVisualStyleBackColor = true;
-            // 
-            // chxNoAdoptados
-            // 
-            this.chxNoAdoptados.AutoSize = true;
-            this.chxNoAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxNoAdoptados.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxNoAdoptados.Location = new System.Drawing.Point(235, 29);
-            this.chxNoAdoptados.Name = "chxNoAdoptados";
-            this.chxNoAdoptados.Size = new System.Drawing.Size(123, 21);
-            this.chxNoAdoptados.TabIndex = 41;
-            this.chxNoAdoptados.Text = "No adoptados";
-            this.chxNoAdoptados.UseVisualStyleBackColor = true;
-            // 
-            // chxAdoptados
-            // 
-            this.chxAdoptados.AutoSize = true;
-            this.chxAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxAdoptados.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxAdoptados.Location = new System.Drawing.Point(235, 5);
-            this.chxAdoptados.Name = "chxAdoptados";
-            this.chxAdoptados.Size = new System.Drawing.Size(100, 21);
-            this.chxAdoptados.TabIndex = 40;
-            this.chxAdoptados.Text = "Adoptados";
-            this.chxAdoptados.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
@@ -240,7 +184,7 @@
             // 
             // Costo
             // 
-            this.Costo.HeaderText = "Costo*";
+            this.Costo.HeaderText = "Costo";
             this.Costo.Name = "Costo";
             // 
             // ListarFichaMedica
@@ -269,10 +213,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.CheckBox chxFallecidos;
-        private System.Windows.Forms.CheckBox chxTransito;
-        private System.Windows.Forms.CheckBox chxNoAdoptados;
-        private System.Windows.Forms.CheckBox chxAdoptados;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelListar;
