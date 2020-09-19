@@ -48,7 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguimiento.cs" />
     <Compile Include="Usuario.cs" />
-    <Compile Include="VacunaMascota.cs" />
+    <Compile Include="Vacuna.cs" />
     <Compile Include="Veterinaria.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
