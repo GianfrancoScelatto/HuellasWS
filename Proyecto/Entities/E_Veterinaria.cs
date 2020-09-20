@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Veterinaria
+    public class E_Veterinaria
     {
         public int IdVeterinaria { get; set; }
         public string Nombre { get; set; }
@@ -18,4 +18,5 @@ namespace Entities
         public bool Internacion { get; set; }
         public bool Desabilitado { get; set; }
     }
+}
 }

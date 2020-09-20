@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Mascota
+    public class E_Animal
     {
-        public int IdMascota { get; set; }
-        public string NombreMascota { get; set; }
+        public int IdAnimal { get; set; }
+        public string NombreAnimal { get; set; }
         public int IdEspecie { get; set; }
         public DateTime FechaIngreso { get; set; }
         public string LugarRescate { get; set; }

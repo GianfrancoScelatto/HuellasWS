@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Vacuna
+    public class E_Seguimiento
     {
-        public int IdVM { get; set; }
-        public int IdVacuna { get; set; }
+        public int IdSeguimiento { get; set; }
         public int IdMascota { get; set; }
-        public DateTime FechaRevacunacion { get; set; }
+        public string Comentario { get; set; }
+        public DateTime Fecha { get; set; }
     }
 }
