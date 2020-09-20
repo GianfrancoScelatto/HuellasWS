@@ -49,11 +49,58 @@ namespace DataAccess
                     command.CommandText = "prc_Vacunas";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
-                        
+
                 }
             }
 
         }
 
+        //Procedure para Baja logica de Vacunas
+        public void BajaVacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.Parameters.AddWithValue("@IdVacuna", Vacuna);
+                    command.Parameters.AddWithValue("@Vacuna", Vacuna);
+                    command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
+                    command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                    command.CommandText = "prc_";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.ExecuteNonQuery();
+
+                }
+                                
+            }
+
+        }
+
+        private DataTable ListarVacunas(string Busqueda)
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.Parameters.AddWithValue("@Busqueda", Busqueda);
+                    command.CommandText = "prc_";
+                    command.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = command.ExecuteReader();
+                    tabla.Load(reader);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        
+        }
+           
+
+      
     }
 }
