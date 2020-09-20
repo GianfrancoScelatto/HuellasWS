@@ -37,7 +37,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataFichaMedica = new System.Windows.Forms.DataGridView();
             this.IDFicha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Informe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,7 @@
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFichaMedica)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -75,6 +75,7 @@
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnEliminar
             // 
@@ -133,29 +134,29 @@
             // 
             // panelListar
             // 
-            this.panelListar.Controls.Add(this.dataGridView1);
+            this.panelListar.Controls.Add(this.dataFichaMedica);
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelListar.Location = new System.Drawing.Point(0, 55);
             this.panelListar.Name = "panelListar";
             this.panelListar.Size = new System.Drawing.Size(1083, 615);
             this.panelListar.TabIndex = 29;
             // 
-            // dataGridView1
+            // dataFichaMedica
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataFichaMedica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDFicha,
             this.FechaAten,
             this.Informe,
             this.Tratamiento,
             this.NombreVet,
             this.Costo});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1083, 615);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataFichaMedica.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataFichaMedica.Location = new System.Drawing.Point(0, 0);
+            this.dataFichaMedica.Name = "dataFichaMedica";
+            this.dataFichaMedica.Size = new System.Drawing.Size(1083, 615);
+            this.dataFichaMedica.TabIndex = 0;
+            this.dataFichaMedica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // IDFicha
             // 
@@ -201,7 +202,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelListar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFichaMedica)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,7 +217,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelListar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataFichaMedica;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDFicha;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAten;
         private System.Windows.Forms.DataGridViewTextBoxColumn Informe;

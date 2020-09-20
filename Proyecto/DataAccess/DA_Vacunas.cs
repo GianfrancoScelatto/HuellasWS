@@ -12,6 +12,7 @@ namespace DataAccess
     {
         public DataTable ListarVacunas()
         {
+            //procedure para listar vacunas
             using (var connection = GetConnection())
             {
                 DataTable tabla = new DataTable();
@@ -31,6 +32,7 @@ namespace DataAccess
 
         }
 
+        //Alta y modificacion de vacunas
         public void AM_Vacunas(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
         {
             using (var connection = GetConnection())

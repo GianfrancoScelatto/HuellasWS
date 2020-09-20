@@ -7,3 +7,6 @@ C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.Co
 C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
 C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.dll
 C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.dll
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.pdb

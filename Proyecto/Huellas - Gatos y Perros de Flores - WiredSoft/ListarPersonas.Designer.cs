@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.chxTransitantes = new System.Windows.Forms.CheckBox();
+            this.chxAadoptantes = new System.Windows.Forms.CheckBox();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -41,7 +43,7 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgwTransito = new System.Windows.Forms.DataGridView();
+            this.dataPersona = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,13 +59,11 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsuarioIG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsuarioFB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chxTransitantes = new System.Windows.Forms.CheckBox();
-            this.chxAadoptantes = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwTransito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPersona)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -107,6 +107,30 @@
             this.panelBotones.Size = new System.Drawing.Size(1083, 55);
             this.panelBotones.TabIndex = 28;
             // 
+            // chxTransitantes
+            // 
+            this.chxTransitantes.AutoSize = true;
+            this.chxTransitantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxTransitantes.ForeColor = System.Drawing.SystemColors.Control;
+            this.chxTransitantes.Location = new System.Drawing.Point(227, 28);
+            this.chxTransitantes.Name = "chxTransitantes";
+            this.chxTransitantes.Size = new System.Drawing.Size(101, 21);
+            this.chxTransitantes.TabIndex = 49;
+            this.chxTransitantes.Text = "Transitantes";
+            this.chxTransitantes.UseVisualStyleBackColor = true;
+            // 
+            // chxAadoptantes
+            // 
+            this.chxAadoptantes.AutoSize = true;
+            this.chxAadoptantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxAadoptantes.ForeColor = System.Drawing.SystemColors.Control;
+            this.chxAadoptantes.Location = new System.Drawing.Point(227, 5);
+            this.chxAadoptantes.Name = "chxAadoptantes";
+            this.chxAadoptantes.Size = new System.Drawing.Size(103, 21);
+            this.chxAadoptantes.TabIndex = 48;
+            this.chxAadoptantes.Text = "Adoptantes";
+            this.chxAadoptantes.UseVisualStyleBackColor = true;
+            // 
             // btnExportar
             // 
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -118,6 +142,7 @@
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnEliminar
             // 
@@ -185,17 +210,17 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dgwTransito);
+            this.panel3.Controls.Add(this.dataPersona);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1083, 615);
             this.panel3.TabIndex = 0;
             // 
-            // dgwTransito
+            // dataPersona
             // 
-            this.dgwTransito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwTransito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataPersona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.TipoP,
             this.Column2,
@@ -211,11 +236,11 @@
             this.Column6,
             this.UsuarioIG,
             this.UsuarioFB});
-            this.dgwTransito.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgwTransito.Location = new System.Drawing.Point(0, 0);
-            this.dgwTransito.Name = "dgwTransito";
-            this.dgwTransito.Size = new System.Drawing.Size(1083, 615);
-            this.dgwTransito.TabIndex = 16;
+            this.dataPersona.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataPersona.Location = new System.Drawing.Point(0, 0);
+            this.dataPersona.Name = "dataPersona";
+            this.dataPersona.Size = new System.Drawing.Size(1083, 615);
+            this.dataPersona.TabIndex = 16;
             // 
             // Column1
             // 
@@ -292,30 +317,6 @@
             this.UsuarioFB.HeaderText = "Usuario de Facebook";
             this.UsuarioFB.Name = "UsuarioFB";
             // 
-            // chxTransitantes
-            // 
-            this.chxTransitantes.AutoSize = true;
-            this.chxTransitantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxTransitantes.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxTransitantes.Location = new System.Drawing.Point(227, 28);
-            this.chxTransitantes.Name = "chxTransitantes";
-            this.chxTransitantes.Size = new System.Drawing.Size(101, 21);
-            this.chxTransitantes.TabIndex = 49;
-            this.chxTransitantes.Text = "Transitantes";
-            this.chxTransitantes.UseVisualStyleBackColor = true;
-            // 
-            // chxAadoptantes
-            // 
-            this.chxAadoptantes.AutoSize = true;
-            this.chxAadoptantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxAadoptantes.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxAadoptantes.Location = new System.Drawing.Point(227, 5);
-            this.chxAadoptantes.Name = "chxAadoptantes";
-            this.chxAadoptantes.Size = new System.Drawing.Size(103, 21);
-            this.chxAadoptantes.TabIndex = 48;
-            this.chxAadoptantes.Text = "Adoptantes";
-            this.chxAadoptantes.UseVisualStyleBackColor = true;
-            // 
             // ListarPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,7 +335,7 @@
             this.panelBotones.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwTransito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPersona)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,7 +354,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgwTransito;
+        private System.Windows.Forms.DataGridView dataPersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

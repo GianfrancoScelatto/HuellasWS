@@ -30,8 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarListaNegra));
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.panelListar = new System.Windows.Forms.Panel();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
             this.panelLista = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataListaNegra = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,17 +49,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelListar = new System.Windows.Forms.Panel();
-            this.btnExportar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
             this.panelBotones.SuspendLayout();
-            this.panelLista.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelListar.SuspendLayout();
+            this.panelLista.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListaNegra)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -63,90 +63,6 @@
             this.panelBotones.Name = "panelBotones";
             this.panelBotones.Size = new System.Drawing.Size(1083, 55);
             this.panelBotones.TabIndex = 37;
-            // 
-            // panelLista
-            // 
-            this.panelLista.Controls.Add(this.dataGridView1);
-            this.panelLista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLista.Location = new System.Drawing.Point(0, 55);
-            this.panelLista.Name = "panelLista";
-            this.panelLista.Size = new System.Drawing.Size(1083, 615);
-            this.panelLista.TabIndex = 38;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Apellido,
-            this.Column1,
-            this.Celular,
-            this.d,
-            this.Direccion,
-            this.Entre,
-            this.Column3,
-            this.Column2,
-            this.Column4});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1083, 615);
-            this.dataGridView1.TabIndex = 37;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Telefono Fijo";
-            this.Column1.Name = "Column1";
-            // 
-            // Celular
-            // 
-            this.Celular.HeaderText = "Celular";
-            this.Celular.Name = "Celular";
-            // 
-            // d
-            // 
-            this.d.HeaderText = "Correo Electronico";
-            this.d.Name = "d";
-            this.d.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            // 
-            // Entre
-            // 
-            this.Entre.HeaderText = "Entre Calles";
-            this.Entre.Name = "Entre";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Localidad";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Provincia";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Motivo";
-            this.Column4.Name = "Column4";
             // 
             // panelListar
             // 
@@ -173,6 +89,7 @@
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnEliminar
             // 
@@ -229,6 +146,90 @@
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
+            // panelLista
+            // 
+            this.panelLista.Controls.Add(this.dataListaNegra);
+            this.panelLista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLista.Location = new System.Drawing.Point(0, 55);
+            this.panelLista.Name = "panelLista";
+            this.panelLista.Size = new System.Drawing.Size(1083, 615);
+            this.panelLista.TabIndex = 38;
+            // 
+            // dataListaNegra
+            // 
+            this.dataListaNegra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListaNegra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido,
+            this.Column1,
+            this.Celular,
+            this.d,
+            this.Direccion,
+            this.Entre,
+            this.Column3,
+            this.Column2,
+            this.Column4});
+            this.dataListaNegra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataListaNegra.Location = new System.Drawing.Point(0, 0);
+            this.dataListaNegra.Name = "dataListaNegra";
+            this.dataListaNegra.Size = new System.Drawing.Size(1083, 615);
+            this.dataListaNegra.TabIndex = 37;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Telefono Fijo";
+            this.Column1.Name = "Column1";
+            // 
+            // Celular
+            // 
+            this.Celular.HeaderText = "Celular";
+            this.Celular.Name = "Celular";
+            // 
+            // d
+            // 
+            this.d.HeaderText = "Correo Electronico";
+            this.d.Name = "d";
+            this.d.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            // 
+            // Entre
+            // 
+            this.Entre.HeaderText = "Entre Calles";
+            this.Entre.Name = "Entre";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Localidad";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Provincia";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Motivo";
+            this.Column4.Name = "Column4";
+            // 
             // ListarListaNegra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,10 +243,10 @@
             this.Text = "ListarListaNegra";
             this.Load += new System.EventHandler(this.ListarListaNegra_Load);
             this.panelBotones.ResumeLayout(false);
-            this.panelLista.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelListar.ResumeLayout(false);
             this.panelListar.PerformLayout();
+            this.panelLista.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataListaNegra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,7 +255,7 @@
 
         private System.Windows.Forms.Panel panelBotones;
         private System.Windows.Forms.Panel panelLista;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataListaNegra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
