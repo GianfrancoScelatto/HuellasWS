@@ -21,5 +21,10 @@ namespace BusinessRules
             tabla = VacunasDA.ListarVacunas();
             return tabla;
         }
+
+        public void AM_vacunas(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        {
+            VacunasDA.AM_Vacunas(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
+        }
     }
 }
