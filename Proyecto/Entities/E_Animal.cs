@@ -25,6 +25,7 @@ namespace Entities
         public bool Desparacitacion { get; set; }
         public string Comentario { get; set; }
         public string Salud { get; set; }
+        public string Estado { get; set; }
         public int FKEstadoMascota { get; set; }
         public int FKIdTransitante { get; set; }
         public bool Deshabilitado { get; set; }

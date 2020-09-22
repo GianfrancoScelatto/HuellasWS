@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Data;
 using DataAccess;
-
-
 namespace BusinessRules
 {
-    class Vacunas
+   public  class BR_Vacunas
     {
         private DA_Vacunas VacunasDA = new DA_Vacunas();
 

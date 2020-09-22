@@ -56,7 +56,7 @@ namespace DataAccess
                 }
             }
         }
-        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento)
+        public void Baja_Animal(int IdAnimal, int IdUsuario, int IdMovimiento)
         {
             using (var connection = GetConnection())
             {
@@ -75,7 +75,7 @@ namespace DataAccess
             }
         }
         //Confirmacion De aj sobre el tema del filtrado.
-        public DataTable FiltrarAnimal(string busqueda)
+        public DataTable Filtrar_Animal(string busqueda)
         {
             using (var connection = GetConnection())
             {

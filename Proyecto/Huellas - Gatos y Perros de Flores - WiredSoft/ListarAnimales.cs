@@ -69,13 +69,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             exportarexcel.Visible = true;
         }
-        public void LimpiarDatosAnimal()
-        {
-           
-        }
         public void MostrarRegistroAnimal()
         {
-            dataMascotas.DataSource = BR_Animal.MostrarRegistroAnimal;
+            dataMascotas.DataSource = BR_Animal.ListarAnimal();
         }
         private void BtnModificar_Click(object sender, EventArgs e)
         {
@@ -84,6 +80,23 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            if (dataMascotas.SelectedRows.Count > 0)
+            {
+                DialogResult opcion;
+                opcion = MessageBox.Show("Quiere eliminar al animal?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if(opcion== DialogResult.OK)
+                {
+                    ObjEntities.IdAnimal = Convert.ToInt32(dataMascotas.CurrentRow.Cells[0].Value.ToString());
+                    //ObjBusinessRules.Borrar_Animal(ObjEntities);
+                    MensajeConfirmacion("Se elimino correctamente al animal");
+                    MostrarRegistroAnimal();
+                }
+            }
+            else
+            {
+                MensajeError("Seleccione el animal a borrar");
+            }
 
         }
 
@@ -96,5 +109,18 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
 
         }
+
+        private void BtnModificar_Click_1(object sender, EventArgs e)
+        {
+        }
+        public void MensajeConfirmacion(string Mensaje)
+        {
+            MessageBox.Show(Mensaje, "WiredSoft",MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public void MensajeError(string Mensaje)
+        {
+            MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
+    
 }
