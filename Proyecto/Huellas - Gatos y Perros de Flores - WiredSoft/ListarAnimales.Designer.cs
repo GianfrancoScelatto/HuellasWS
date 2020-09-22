@@ -78,9 +78,8 @@
             this.panelBotones.Controls.Add(this.lblBuscar);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
-            this.panelBotones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1444, 68);
+            this.panelBotones.Size = new System.Drawing.Size(1273, 55);
             this.panelBotones.TabIndex = 27;
             // 
             // btnExportar
@@ -89,10 +88,9 @@
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(1173, 6);
-            this.btnExportar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExportar.Location = new System.Drawing.Point(1070, 5);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(52, 49);
+            this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
             // 
@@ -102,10 +100,9 @@
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1368, 6);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(1216, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(53, 49);
+            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
@@ -115,10 +112,9 @@
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(1245, 6);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Location = new System.Drawing.Point(1124, 5);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(53, 49);
+            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -129,10 +125,9 @@
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(1307, 6);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Location = new System.Drawing.Point(1170, 5);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(53, 49);
+            this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click_1);
@@ -142,10 +137,9 @@
             this.chxFallecidos.AutoSize = true;
             this.chxFallecidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxFallecidos.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxFallecidos.Location = new System.Drawing.Point(495, 36);
-            this.chxFallecidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chxFallecidos.Location = new System.Drawing.Point(371, 29);
             this.chxFallecidos.Name = "chxFallecidos";
-            this.chxFallecidos.Size = new System.Drawing.Size(113, 25);
+            this.chxFallecidos.Size = new System.Drawing.Size(90, 21);
             this.chxFallecidos.TabIndex = 43;
             this.chxFallecidos.Text = "Fallecidos";
             this.chxFallecidos.UseVisualStyleBackColor = true;
@@ -155,10 +149,9 @@
             this.chxTransito.AutoSize = true;
             this.chxTransito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxTransito.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxTransito.Location = new System.Drawing.Point(495, 6);
-            this.chxTransito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chxTransito.Location = new System.Drawing.Point(371, 5);
             this.chxTransito.Name = "chxTransito";
-            this.chxTransito.Size = new System.Drawing.Size(118, 25);
+            this.chxTransito.Size = new System.Drawing.Size(94, 21);
             this.chxTransito.TabIndex = 42;
             this.chxTransito.Text = "En transito";
             this.chxTransito.UseVisualStyleBackColor = true;
@@ -168,10 +161,9 @@
             this.chxNoAdoptados.AutoSize = true;
             this.chxNoAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxNoAdoptados.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxNoAdoptados.Location = new System.Drawing.Point(313, 36);
-            this.chxNoAdoptados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chxNoAdoptados.Location = new System.Drawing.Point(235, 29);
             this.chxNoAdoptados.Name = "chxNoAdoptados";
-            this.chxNoAdoptados.Size = new System.Drawing.Size(157, 25);
+            this.chxNoAdoptados.Size = new System.Drawing.Size(123, 21);
             this.chxNoAdoptados.TabIndex = 41;
             this.chxNoAdoptados.Text = "No adoptados";
             this.chxNoAdoptados.UseVisualStyleBackColor = true;
@@ -181,20 +173,18 @@
             this.chxAdoptados.AutoSize = true;
             this.chxAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxAdoptados.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxAdoptados.Location = new System.Drawing.Point(313, 6);
-            this.chxAdoptados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chxAdoptados.Location = new System.Drawing.Point(235, 5);
             this.chxAdoptados.Name = "chxAdoptados";
-            this.chxAdoptados.Size = new System.Drawing.Size(129, 25);
+            this.chxAdoptados.Size = new System.Drawing.Size(100, 21);
             this.chxAdoptados.TabIndex = 40;
             this.chxAdoptados.Text = "Adoptados";
             this.chxAdoptados.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(101, 14);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Location = new System.Drawing.Point(76, 11);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(180, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(136, 20);
             this.txtBuscar.TabIndex = 39;
             // 
             // lblBuscar
@@ -202,10 +192,9 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBuscar.Location = new System.Drawing.Point(23, 15);
-            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBuscar.Location = new System.Drawing.Point(17, 12);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(70, 21);
+            this.lblBuscar.Size = new System.Drawing.Size(53, 17);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -213,10 +202,9 @@
             // 
             this.panelFormListar.Controls.Add(this.dataMascotas);
             this.panelFormListar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormListar.Location = new System.Drawing.Point(0, 68);
-            this.panelFormListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFormListar.Location = new System.Drawing.Point(0, 55);
             this.panelFormListar.Name = "panelFormListar";
-            this.panelFormListar.Size = new System.Drawing.Size(1444, 757);
+            this.panelFormListar.Size = new System.Drawing.Size(1273, 615);
             this.panelFormListar.TabIndex = 28;
             // 
             // dataMascotas
@@ -259,8 +247,7 @@
             this.dataMascotas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataMascotas.EnableHeadersVisualStyles = false;
             this.dataMascotas.GridColor = System.Drawing.Color.Snow;
-            this.dataMascotas.Location = new System.Drawing.Point(1, 11);
-            this.dataMascotas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataMascotas.Location = new System.Drawing.Point(1, 9);
             this.dataMascotas.Name = "dataMascotas";
             this.dataMascotas.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -269,7 +256,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dataMascotas.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataMascotas.Size = new System.Drawing.Size(1444, 757);
+            this.dataMascotas.Size = new System.Drawing.Size(1273, 615);
             this.dataMascotas.TabIndex = 27;
             // 
             // ID
@@ -372,14 +359,13 @@
             // 
             // ListarAnimales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1444, 825);
+            this.ClientSize = new System.Drawing.Size(1273, 670);
             this.Controls.Add(this.panelFormListar);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ListarAnimales";
             this.Text = "ListarMascotas";
             this.Load += new System.EventHandler(this.ListarMascotas_Load);

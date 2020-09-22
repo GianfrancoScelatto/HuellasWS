@@ -61,7 +61,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             {
                 {
-                    if (txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && dtpIngreso.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && dtpFechaNac.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "")
+                    if (txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && dtpIngreso.Value.Date("dd/MM/yyyy") != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && dtpFechaNac.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "")
                     {
                         if (Program.Evento == 0)//Preguntar tema fecha de nacimiento, los datatime
                         {
@@ -69,7 +69,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                             {
                                 ObjEntities.NombreAnimal = txtNombre.Text.ToUpper();
                                 ObjEntities.IdEspecie = Convert.ToInt32(cbxEspecie.SelectedValue);
-                                ObjEntities.FechaIngreso = dtpIngreso.Text.ToUpper();
+                                ObjEntities.FechaIngreso = dtpIngreso.Value.ToString("dd/MM/yyyy"); //string.Format("{0:d})", dtpIngreso.Value);
                                 ObjEntities.LugarRescate = txtUbicacion.Text.ToUpper();
                                 ObjEntities.Edad = Convert.ToInt32(txtEdad.SelectedText);
                                 ObjEntities.Peso = Convert.ToInt32(txtPeso.SelectedText);
