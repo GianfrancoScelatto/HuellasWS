@@ -61,7 +61,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             {
                 {
-                    if (txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && dtpIngreso.Value.Date("dd/MM/yyyy") != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && dtpFechaNac.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "")
+                    if (txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != ""  && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "")
                     {
                         if (Program.Evento == 0)//Preguntar tema fecha de nacimiento, los datatime
                         {
@@ -69,12 +69,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                             {
                                 ObjEntities.NombreAnimal = txtNombre.Text.ToUpper();
                                 ObjEntities.IdEspecie = Convert.ToInt32(cbxEspecie.SelectedValue);
-                                ObjEntities.FechaIngreso = dtpIngreso.Value.ToString("dd/MM/yyyy"); //string.Format("{0:d})", dtpIngreso.Value);
+                                ObjEntities.FechaIngreso = dtpIngreso.Value.Date; //string.Format("{0:d})", dtpIngreso.Value);
+                                ObjEntities.FechaNac = dtpFechaNac.Value.Date;
                                 ObjEntities.LugarRescate = txtUbicacion.Text.ToUpper();
+                                //hace falta ingresar las imagenes aca? son opcionales a su vez en la BD, aunque igualmente falta resolver como vamos a mostrar las img
+                                ObjEntities.Sexo = Convert.ToString(cbxSexo.SelectedValue);
                                 ObjEntities.Edad = Convert.ToInt32(txtEdad.SelectedText);
                                 ObjEntities.Peso = Convert.ToInt32(txtPeso.SelectedText);
                                 ObjEntities.ColorPelo = txtColor.Text.ToUpper();
-                                ObjEntities.Sexo = Convert.ToString(cbxSexo.SelectedValue);
                                 ObjEntities.Estado = Convert.ToString(cbxEstado.SelectedValue);
 
                                 ObjBusinessRules.AM_Animal(ObjEntities);

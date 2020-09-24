@@ -19,7 +19,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prcListarAnimal";
+                    command.CommandText = "prc_ListarAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);
@@ -50,13 +50,13 @@ namespace DataAccess
                     command.Parameters.AddWithValue(" @Desparacitacion", Desparacitacion);
                     command.Parameters.AddWithValue("@Salud", Salud);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
-                    command.CommandText = "prcAltaAnimal";
+                    command.CommandText = "prc_AltaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }
             }
         }
-        public void Baja_Animal(int IdAnimal, int IdUsuario, int IdMovimiento)
+        public void Baja_Animal(int IdAnimal, int IdUsuario, int IdMovimiento,string EstadoAnimal,string Descripcion)
         {
             using (var connection = GetConnection())
             {
@@ -68,7 +68,9 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
                     command.Parameters.AddWithValue("@Id_Usuario", IdUsuario);
                     command.Parameters.AddWithValue("@IdMovimiento", IdMovimiento);
-                    command.CommandText = "prcBajaAnimal";
+                    command.Parameters.AddWithValue("@Estado", EstadoAnimal);
+                    command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                    command.CommandText = "prc_BajaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }
@@ -85,7 +87,7 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Busqueda", busqueda);
-                    command.CommandText = "prcBuscarAnimal";
+                    command.CommandText = "prc_BuscarAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);

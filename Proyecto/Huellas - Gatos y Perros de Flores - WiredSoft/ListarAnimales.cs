@@ -87,6 +87,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if(opcion== DialogResult.OK)
                 {
+
                     ObjEntities.IdAnimal = Convert.ToInt32(dataMascotas.CurrentRow.Cells[0].Value.ToString());
                     //ObjBusinessRules.Borrar_Animal(ObjEntities);
                     MensajeConfirmacion("Se elimino correctamente al animal");
