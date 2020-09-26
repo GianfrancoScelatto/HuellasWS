@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class DA_Animal: DA_Connection
+    public class DA_Animal : DA_Connection
     {
         public DataTable ListarAnimal()
         {
@@ -28,6 +28,34 @@ namespace DataAccess
                 }
             }
         }
+        //public void M_Animal(int IdAnimal, string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
+        
+        //    using (var connection = GetConnection())
+        //        {
+        //            connection.Open();
+        //            using (var command = new SqlCommand())
+        //            {
+        //            command.Connection = connection;
+        //            command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
+        //            command.Parameters.AddWithValue("@TipoAnimal", TipoAnimal);
+        //            command.Parameters.AddWithValue("@FotoIngreso", FotoIngreso);
+        //            command.Parameters.AddWithValue("@FotoAdopcion", FotoAdopcion);
+        //            command.Parameters.AddWithValue("@NombreAnimal", NombreAnimal);
+        //            command.Parameters.AddWithValue("@Edad", Edad);
+        //            command.Parameters.AddWithValue("@Sexo", Sexo);
+        //            command.Parameters.AddWithValue("@Castracion", Castracion);
+        //            command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
+        //            command.Parameters.AddWithValue("@Tamanio", Tamanio);
+        //            command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
+        //            command.Parameters.AddWithValue(" @Desparacitacion", Desparacitacion);
+        //            command.Parameters.AddWithValue("@Salud", Salud);
+        //            command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
+        //            command.CommandText = "prc_ModificarAnimal";
+        //            command.CommandType = CommandType.StoredProcedure;
+        //            command.ExecuteNonQuery();
+        //            }
+        //        }
+        
         public void AM_Animal(int IdAnimal, string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
