@@ -73,13 +73,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-
+            //if todos nulls tire alertas para que complete los campos
+            //Else  ejecute el A_Animal blucle de busqueda para ver si existe dentro de la lista de programacion del datagrid, y si encuentra uno que coincida que ejecute el M_Animal
             //INSERTAR
             if (Editar == false)
             {
                 try
                 {
-                    ObjBusinessRules.AM_Animal(txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "");
+                    ObjBusinessRules.A_Animal(txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "");
                     MessageBox.Show("se inserto correctamente");
                     MostrarRegistroAnimal();
                     limpiarForm();

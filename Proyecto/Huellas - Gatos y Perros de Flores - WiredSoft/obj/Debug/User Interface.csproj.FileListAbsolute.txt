@@ -46,3 +46,27 @@ C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Pr
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\User Interface.csproj.GenerateResource.cache
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.exe
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.pdb
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\User Interface.csprojAssemblyReference.cache
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\User Interface.csproj.ResolveComReference.cache
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Desparasitacion_Vacunascs.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.FichaMedica.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListaNegra.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarFichaMedica.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarListaNegra.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarPersonas.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarAnimales.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarVacuna.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarEstablecimient.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Login.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Animales.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.MenuInicial.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Properties.Resources.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Recuperar.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Persona.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Vacunas.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.VerMasAnimal.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Establecimiento.resources
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\User Interface.csproj.GenerateResource.cache
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\User Interface.csproj.CoreCompileInputs.cache
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.exe
+C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.pdb

@@ -116,16 +116,21 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (dataMascotas.SelectedRows.Count > 0)
             {
+
                 Editar = true;
-                txtNombre.Text = dataMascotas.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtEspecie.Text = dataMascotas.CurrentRow.Cells["Especie"].Value.ToString();
-                txt.UbicacionText = dataMascotas.CurrentRow.Cells["Ubicacion"].Value.ToString();
-                txt.Sexo Text = dataMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
-                txt.Edad Text = dataMascotas.CurrentRow.Cells["Edad"].Value.ToString();
-                txt.Peso = dataMascotas.CurrentRow.Cells["Peso"].Value.ToString();
-                txt.ColorPelo = dataMascotas.CurrentRow.Cells["ColorPelo"].Value.ToString();
-                txt.Estado = dataMascotas.CurrentRow.Cells["Estado"].Value.ToString();
-            }//No me toma los txt porque estan en otro form y el boton esta por fuera
+                ObjEntities.IdAnimal = Convert.ToInt32(dataMascotas.CurrentRow.Cells["ID"].Value);
+                ObjEntities.NombreAnimal = dataMascotas.CurrentRow.Cells["Nombre"].Value.ToString();
+                ObjEntities.IdEspecie =Convert.ToInt32(dataMascotas.CurrentRow.Cells["Especie"].Value);
+                ObjEntities.FechaIngreso = Convert.ToDateTime(dataMascotas.CurrentRow.Cells["Fecha de rescate"].Value).Date;
+                ObjEntities.Castracion= Convert.ToBoolean(dataMascotas.CurrentRow.Cells["Castracion"].Value);
+                ObjEntities.FechaCastracion = Convert.ToDateTime(dataMascotas.CurrentRow.Cells["Fecha de Castracion"].Value);
+                ObjEntities.LugarRescate = dataMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
+                ObjEntities.Sexo = dataMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
+                ObjEntities.Edad =Convert.ToInt32(dataMascotas.CurrentRow.Cells["Edad"].Value);
+                ObjEntities.Peso = Convert.ToDecimal(dataMascotas.CurrentRow.Cells["Peso"].Value);
+                ObjEntities.ColorPelo = dataMascotas.CurrentRow.Cells["Color"].Value.ToString();
+                ObjEntities.Estado = dataMascotas.CurrentRow.Cells["Estado"].Value.ToString();
+            }
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
@@ -136,6 +141,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         public void MensajeError(string Mensaje)
         {
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void dataMascotas_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     
