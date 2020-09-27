@@ -80,7 +80,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    ObjBusinessRules.A_Animal(txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "");
+                    ObjBusinessRules.A_Animal(txtNombre.Text, cbxEspecie.Text,txtUbicacion.Text, txtEdad.Text, txtPeso.Text, txtColor.Text, cbxSexo.Text, cbxEstado.Text, dtpIngreso.Text);
                     MessageBox.Show("se inserto correctamente");
                     MostrarRegistroAnimal();
                     limpiarForm();
