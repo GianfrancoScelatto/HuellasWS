@@ -16,6 +16,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     {
         readonly BR_Animal ObjBusinessRules = new BR_Animal();
         readonly E_Animal ObjEntities = new E_Animal();
+        public bool Editar = false;
         public ListarAnimales()
         {
             InitializeComponent();
@@ -113,6 +114,20 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnModificar_Click_1(object sender, EventArgs e)
         {
+            if (dataMascotas.SelectedRows.Count > 0)
+            {
+                Editar = true;
+                txtNombre.Text = dataMascotas.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtEspecie.Text = dataMascotas.CurrentRow.Cells["Especie"].Value.ToString();
+                txt.UbicacionText = dataMascotas.CurrentRow.Cells["Ubicacion"].Value.ToString();
+                txt.Sexo Text = dataMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
+                txt.Edad Text = dataMascotas.CurrentRow.Cells["Edad"].Value.ToString();
+                txt.Peso = dataMascotas.CurrentRow.Cells["Peso"].Value.ToString();
+                txt.ColorPelo = dataMascotas.CurrentRow.Cells["ColorPelo"].Value.ToString();
+                txt.Estado = dataMascotas.CurrentRow.Cells["Estado"].Value.ToString();
+            }//No me toma los txt porque estan en otro form y el boton esta por fuera
+            else
+                MessageBox.Show("seleccione una fila por favor");
         }
         public void MensajeConfirmacion(string Mensaje)
         {
