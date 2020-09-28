@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BR_Animal.cs" />
+    <Compile Include="BR_Usuario.cs" />
     <Compile Include="BR_Vacunas.cs" />
     <Compile Include="MD5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
