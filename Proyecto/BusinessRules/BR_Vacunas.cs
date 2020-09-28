@@ -19,9 +19,14 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void AM_vacunas(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void Alta_vacunas(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
         {
-            VacunasDA.AM_Vacunas(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
+            VacunasDA.Alta_Vacunas(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
+        }
+
+        public void Modificar_Vacuna (int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        {
+            VacunasDA.Modificar_Vacuna(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
         }
 
         public void Eliminar_Vacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)

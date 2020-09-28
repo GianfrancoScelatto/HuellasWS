@@ -32,8 +32,32 @@ namespace DataAccess
 
         }
 
-        //Alta y modificacion de vacunas
-        public void AM_Vacunas(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        //Alta  de vacunas
+
+        //VER SI IDVACUNA VA COMO PARAMETRO YA QUE ESO LO MANEJA LA BD PREGUNTAR
+        public void Alta_Vacunas(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
+                    command.Parameters.AddWithValue("@Vacuna", Vacuna);
+                    command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
+                    command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                    command.CommandText = "prc_Vacunas";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.ExecuteNonQuery();
+
+                }
+            }
+
+        }
+
+        public void Modificar_Vacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
         {
             using (var connection = GetConnection())
             {
