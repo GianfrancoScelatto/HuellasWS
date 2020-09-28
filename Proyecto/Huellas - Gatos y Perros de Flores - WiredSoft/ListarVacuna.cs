@@ -14,8 +14,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     public partial class ListarVacuna : Form
     {
-        readonly BR_Vacunas ObjBusinessRules = new BR_Vacunas();
-        readonly E_Vacuna ObjEntities = new E_Vacuna();
+        BR_Vacunas brV = new BR_Vacunas();
+        E_Vacuna eV = new E_Vacuna();
         public ListarVacuna()
         {
             InitializeComponent();
@@ -25,12 +25,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             Form Vacunas = new Vacunas();
             Vacunas.Show();
-
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            ExportarDatos(dataVacunas);
+            ExportarDatos(dgvVacunas);
         }
         public void ExportarDatos(DataGridView DatoListado)
         {
@@ -62,26 +61,26 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         }
         public void MostrarRegistroVacuna()
         {
-            dataVacunas.DataSource = BR_Vacunas.
+            dgvVacunas.DataSource = brV.MostrarVacunas();
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataVacunas.SelectedRows.Count > 0)
+            if (dgvVacunas.SelectedRows.Count > 0)
             {
                 DialogResult opcion;
                 opcion = MessageBox.Show("¿Desea eliminar esta vacuna?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (opcion == DialogResult.OK)
                 {
-                    ObjEntities.IdVacuna = Convert.ToInt32(dataVacunas.CurrentRow.Cells[0].Value.ToString());
-                    ObjBusinessRules.Eliminar_Vacuna(ObjEntities);
-                    MensajeConfirmacion("Se elimino correctamente la vacuna");
+                    eV.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells[0].Value.ToString());
+                    brV.Eliminar_Vacuna(eV.IdVacuna);//discutir parametros de funcion eliminar
+                    MensajeConfirmacion("Se elimino correctamente la vacuna.");
                     MostrarRegistroVacuna();
                 }
             }
             else
             {
-                MensajeError("Seleccione la vacuna a borrar");
+                MensajeError("No se ha seleccionado ninguna vacuna.");
             }
         }
         public void MensajeConfirmacion(string Mensaje)
@@ -92,6 +91,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+
     }
 }
 

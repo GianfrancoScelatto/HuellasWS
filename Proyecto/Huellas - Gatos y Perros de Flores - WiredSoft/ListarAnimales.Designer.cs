@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarAnimales));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelFormListar = new System.Windows.Forms.Panel();
-            this.dataMascotas = new System.Windows.Forms.DataGridView();
+            this.dgvMascotas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +60,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBotones.SuspendLayout();
             this.panelFormListar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataMascotas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -129,7 +129,7 @@
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click_1);
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // chxFallecidos
             // 
@@ -199,29 +199,29 @@
             // 
             // panelFormListar
             // 
-            this.panelFormListar.Controls.Add(this.dataMascotas);
+            this.panelFormListar.Controls.Add(this.dgvMascotas);
             this.panelFormListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormListar.Location = new System.Drawing.Point(0, 55);
             this.panelFormListar.Name = "panelFormListar";
             this.panelFormListar.Size = new System.Drawing.Size(1586, 615);
             this.panelFormListar.TabIndex = 28;
             // 
-            // dataMascotas
+            // dgvMascotas
             // 
-            this.dataMascotas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvMascotas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataMascotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(111)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataMascotas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataMascotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMascotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(111)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMascotas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMascotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Column1,
             this.Column2,
@@ -235,28 +235,28 @@
             this.Column13,
             this.Column8,
             this.Column9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataMascotas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataMascotas.EnableHeadersVisualStyles = false;
-            this.dataMascotas.GridColor = System.Drawing.Color.Snow;
-            this.dataMascotas.Location = new System.Drawing.Point(0, 6);
-            this.dataMascotas.Name = "dataMascotas";
-            this.dataMascotas.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataMascotas.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataMascotas.Size = new System.Drawing.Size(1675, 615);
-            this.dataMascotas.TabIndex = 27;
-            this.dataMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMascotas_CellContentClick_1);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMascotas.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvMascotas.EnableHeadersVisualStyles = false;
+            this.dgvMascotas.GridColor = System.Drawing.Color.Snow;
+            this.dgvMascotas.Location = new System.Drawing.Point(0, 6);
+            this.dgvMascotas.Name = "dgvMascotas";
+            this.dgvMascotas.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvMascotas.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvMascotas.Size = new System.Drawing.Size(1675, 615);
+            this.dgvMascotas.TabIndex = 27;
+            this.dgvMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMascotas_CellContentClick_1);
             // 
             // ID
             // 
@@ -363,7 +363,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelFormListar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataMascotas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,7 +382,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelFormListar;
-        private System.Windows.Forms.DataGridView dataMascotas;
+        private System.Windows.Forms.DataGridView dgvMascotas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

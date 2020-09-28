@@ -19,9 +19,9 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void Alta_vacunas(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void Alta_vacunas(string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
         {
-            VacunasDA.Alta_Vacunas(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
+            VacunasDA.Alta_Vacunas(Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
         }
 
         public void Modificar_Vacuna (int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
@@ -34,9 +34,7 @@ namespace BusinessRules
             VacunasDA.BajaVacuna(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
 
         }
-
-
-
+       
     }
 
 }

@@ -11,6 +11,6 @@ namespace Entities
         public int IdVM { get; set; }
         public int IdVacuna { get; set; }
         public int IdMascota { get; set; }
-        public DateTime FechaRevacunacion { get; set; }
+        public DateTime FrecuenciaRevacunacion { get; set; }
     }
 }

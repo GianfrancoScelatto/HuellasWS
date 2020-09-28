@@ -37,13 +37,13 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
-            this.dataVacunas = new System.Windows.Forms.DataGridView();
+            this.dgvVacunas = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Animal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVacunas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -130,25 +130,25 @@
             // 
             // panelListar
             // 
-            this.panelListar.Controls.Add(this.dataVacunas);
+            this.panelListar.Controls.Add(this.dgvVacunas);
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelListar.Location = new System.Drawing.Point(0, 55);
             this.panelListar.Name = "panelListar";
             this.panelListar.Size = new System.Drawing.Size(1083, 615);
             this.panelListar.TabIndex = 29;
             // 
-            // dataVacunas
+            // dgvVacunas
             // 
-            this.dataVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataVacunas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVacunas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Animal,
             this.Descripcion});
-            this.dataVacunas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataVacunas.Location = new System.Drawing.Point(0, 0);
-            this.dataVacunas.Name = "dataVacunas";
-            this.dataVacunas.Size = new System.Drawing.Size(1083, 615);
-            this.dataVacunas.TabIndex = 0;
+            this.dgvVacunas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvVacunas.Location = new System.Drawing.Point(0, 0);
+            this.dgvVacunas.Name = "dgvVacunas";
+            this.dgvVacunas.Size = new System.Drawing.Size(1083, 615);
+            this.dgvVacunas.TabIndex = 0;
             // 
             // Column1
             // 
@@ -180,7 +180,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelListar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataVacunas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,7 +195,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelListar;
-        private System.Windows.Forms.DataGridView dataVacunas;
+        private System.Windows.Forms.DataGridView dgvVacunas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Animal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
