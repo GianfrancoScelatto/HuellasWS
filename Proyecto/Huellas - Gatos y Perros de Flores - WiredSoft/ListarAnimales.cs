@@ -16,6 +16,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     {
         readonly BR_Animal ObjBusinessRules = new BR_Animal();
         readonly E_Animal ObjEntities = new E_Animal();
+        public bool Editar = false;
         public ListarAnimales()
         {
             InitializeComponent();
@@ -113,6 +114,25 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnModificar_Click_1(object sender, EventArgs e)
         {
+            if (dataMascotas.SelectedRows.Count > 0)
+            {
+
+                Editar = true;
+                ObjEntities.IdAnimal = Convert.ToInt32(dataMascotas.CurrentRow.Cells["ID"].Value);
+                ObjEntities.NombreAnimal = dataMascotas.CurrentRow.Cells["Nombre"].Value.ToString();
+                ObjEntities.IdEspecie =Convert.ToInt32(dataMascotas.CurrentRow.Cells["Especie"].Value);
+                ObjEntities.FechaIngreso = Convert.ToDateTime(dataMascotas.CurrentRow.Cells["Fecha de rescate"].Value).Date;
+                ObjEntities.Castracion= Convert.ToBoolean(dataMascotas.CurrentRow.Cells["Castracion"].Value);
+                ObjEntities.FechaCastracion = Convert.ToDateTime(dataMascotas.CurrentRow.Cells["Fecha de Castracion"].Value);
+                ObjEntities.LugarRescate = dataMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
+                ObjEntities.Sexo = dataMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
+                ObjEntities.Edad =Convert.ToInt32(dataMascotas.CurrentRow.Cells["Edad"].Value);
+                ObjEntities.Peso = Convert.ToDecimal(dataMascotas.CurrentRow.Cells["Peso"].Value);
+                ObjEntities.ColorPelo = dataMascotas.CurrentRow.Cells["Color"].Value.ToString();
+                ObjEntities.Estado = dataMascotas.CurrentRow.Cells["Estado"].Value.ToString();
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
         }
         public void MensajeConfirmacion(string Mensaje)
         {
@@ -121,6 +141,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         public void MensajeError(string Mensaje)
         {
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void dataMascotas_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     

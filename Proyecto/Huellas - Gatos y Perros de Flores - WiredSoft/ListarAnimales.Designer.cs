@@ -56,7 +56,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBotones.SuspendLayout();
@@ -79,7 +78,7 @@
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1273, 55);
+            this.panelBotones.Size = new System.Drawing.Size(1586, 55);
             this.panelBotones.TabIndex = 27;
             // 
             // btnExportar
@@ -88,7 +87,7 @@
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(1070, 5);
+            this.btnExportar.Location = new System.Drawing.Point(1383, 5);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -100,7 +99,7 @@
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1216, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1529, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
@@ -112,7 +111,7 @@
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(1124, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(1437, 5);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -125,7 +124,7 @@
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(1170, 5);
+            this.btnModificar.Location = new System.Drawing.Point(1483, 5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
@@ -204,7 +203,7 @@
             this.panelFormListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormListar.Location = new System.Drawing.Point(0, 55);
             this.panelFormListar.Name = "panelFormListar";
-            this.panelFormListar.Size = new System.Drawing.Size(1273, 615);
+            this.panelFormListar.Size = new System.Drawing.Size(1586, 615);
             this.panelFormListar.TabIndex = 28;
             // 
             // dataMascotas
@@ -234,7 +233,6 @@
             this.Column7,
             this.Column6,
             this.Column13,
-            this.Column5,
             this.Column8,
             this.Column9});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -247,7 +245,7 @@
             this.dataMascotas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataMascotas.EnableHeadersVisualStyles = false;
             this.dataMascotas.GridColor = System.Drawing.Color.Snow;
-            this.dataMascotas.Location = new System.Drawing.Point(1, 9);
+            this.dataMascotas.Location = new System.Drawing.Point(0, 6);
             this.dataMascotas.Name = "dataMascotas";
             this.dataMascotas.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -256,8 +254,9 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dataMascotas.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataMascotas.Size = new System.Drawing.Size(1273, 615);
+            this.dataMascotas.Size = new System.Drawing.Size(1675, 615);
             this.dataMascotas.TabIndex = 27;
+            this.dataMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMascotas_CellContentClick_1);
             // 
             // ID
             // 
@@ -299,14 +298,13 @@
             this.Column3.HeaderText = "Edad";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.Column3.Width = 75;
             // 
             // Column12
             // 
             this.Column12.HeaderText = "Peso";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
-            this.Column12.Width = 125;
             // 
             // Column4
             // 
@@ -336,13 +334,6 @@
             this.Column13.Name = "Column13";
             this.Column13.Width = 125;
             // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Raza";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
             // Column8
             // 
             this.Column8.HeaderText = "Fecha de castración";
@@ -362,7 +353,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1273, 670);
+            this.ClientSize = new System.Drawing.Size(1586, 670);
             this.Controls.Add(this.panelFormListar);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -403,7 +394,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
