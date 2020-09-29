@@ -26,7 +26,7 @@ namespace BusinessRules
         }
         public void Borrar_Animal(int IdAnimal, int IdUsuario, int IdMovimiento, string EstadoAnimal, string Descripcion)
         {
-            ObjAnimal.Baja_Animal(IdAnimal, IdUsuario,  IdMovimiento,  EstadoAnimal, Descripcion);
+            ObjAnimal.B_Animal(IdAnimal, IdUsuario,  IdMovimiento,  EstadoAnimal, Descripcion);
         }
         public void Filtrar_Animal(string Busqueda)
         {

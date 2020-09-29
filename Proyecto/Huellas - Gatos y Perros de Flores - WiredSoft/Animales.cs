@@ -73,6 +73,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            
             //if todos nulls tire alertas para que complete los campos
             //Else  ejecute el A_Animal blucle de busqueda para ver si existe dentro de la lista de programacion del datagrid, y si encuentra uno que coincida que ejecute el M_Animal
             //INSERTAR
@@ -80,7 +81,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    ObjBusinessRules.A_Animal(txtNombre.Text, cbxEspecie.Text,txtUbicacion.Text, txtEdad.Text, txtPeso.Text, txtColor.Text, cbxSexo.Text, cbxEstado.Text, dtpIngreso.Text);
+                    //ObjBusinessRules.A_Animal(cbxEspecie.Text,txtNombre.Text, txtUbicacion.Text, txtEdad.Text, txtPeso.Text, txtColor.Text, cbxSexo.Text, cbxEstado.Text, dtpIngreso.Text);
+                    //ObjEntities.FotoIngreso = picB1.GetBuffer()
+                    //ObjEntities.FotoIngreso = byte.Parse(picB1.ImageLocation) revisar de que otra forma puede realizarse
+                    ObjBusinessRules.A_Animal(ObjEntities.IdEspecie= int.Parse(cbxEspecie.Text),ObjEntities.FotoIngreso=byte.Parse(picB1.ImageLocation), ObjEntities.FotoAdopcion = byte.Parse(picB2.ImageLocation),ObjEntities.ColorPelo = txtColor.Text);
                     MessageBox.Show("se inserto correctamente");
                     MostrarRegistroAnimal();
                     limpiarForm();
@@ -142,9 +146,27 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             //        }
             //    }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog faI = new OpenFileDialog();
+            OpenFileDialog faA = new OpenFileDialog();
+            DialogResult rsI = faI.ShowDialog();
+            DialogResult rsA = faA.ShowDialog();
+            if (rsA == DialogResult.OK && rsI == DialogResult.OK)
+            {
+                picB1.Image = Image.FromFile(faI.FileName);
+                picB1.Image = Image.FromFile(faA.FileName);
+            }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-
             
 
 

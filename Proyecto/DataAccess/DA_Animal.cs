@@ -81,7 +81,7 @@ namespace DataAccess
             }
 
         }
-        public void Baja_Animal(int IdAnimal, int IdUsuario, int IdMovimiento,string EstadoAnimal,string Descripcion)
+        public void B_Animal(int IdAnimal, int IdUsuario, int IdMovimiento,string EstadoAnimal,string Descripcion)
         {
             using (var connection = GetConnection())
             {
