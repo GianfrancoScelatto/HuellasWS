@@ -56,14 +56,15 @@
             this.label26 = new System.Windows.Forms.Label();
             this.lblNombVet = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
+            this.picB2 = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.llblPersona = new System.Windows.Forms.LinkLabel();
             this.dtpFechaF = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxEstado = new System.Windows.Forms.ComboBox();
+            this.lblIdAnimal = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
@@ -87,14 +88,13 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
-            this.picB2 = new System.Windows.Forms.PictureBox();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
             this.tabDatosAnimal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB1)).BeginInit();
             this.tbcDatosMasc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picB2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -399,8 +399,8 @@
             this.tabDatosAnimal.Controls.Add(this.label7);
             this.tabDatosAnimal.Controls.Add(this.dtpFechaNac);
             this.tabDatosAnimal.Controls.Add(this.label6);
-            this.tabDatosAnimal.Controls.Add(this.label1);
-            this.tabDatosAnimal.Controls.Add(this.cbxEstado);
+            this.tabDatosAnimal.Controls.Add(this.lblIdAnimal);
+            this.tabDatosAnimal.Controls.Add(this.cmbEstado);
             this.tabDatosAnimal.Controls.Add(this.cmbSexo);
             this.tabDatosAnimal.Controls.Add(this.txtColor);
             this.tabDatosAnimal.Controls.Add(this.txtPeso);
@@ -430,6 +430,15 @@
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
             this.tabDatosAnimal.Click += new System.EventHandler(this.tabDatosAnimal_Click);
+            // 
+            // picB2
+            // 
+            this.picB2.Location = new System.Drawing.Point(22, 294);
+            this.picB2.Name = "picB2";
+            this.picB2.Size = new System.Drawing.Size(182, 159);
+            this.picB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picB2.TabIndex = 108;
+            this.picB2.TabStop = false;
             // 
             // linkLabel2
             // 
@@ -490,23 +499,23 @@
             this.label6.TabIndex = 102;
             this.label6.Text = "Fecha Nacimiento:";
             // 
-            // label1
+            // lblIdAnimal
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(399, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 99;
-            this.label1.Text = "label1";
+            this.lblIdAnimal.AutoSize = true;
+            this.lblIdAnimal.ForeColor = System.Drawing.Color.White;
+            this.lblIdAnimal.Location = new System.Drawing.Point(399, 50);
+            this.lblIdAnimal.Name = "lblIdAnimal";
+            this.lblIdAnimal.Size = new System.Drawing.Size(35, 13);
+            this.lblIdAnimal.TabIndex = 99;
+            this.lblIdAnimal.Text = "label1";
             // 
-            // cbxEstado
+            // cmbEstado
             // 
-            this.cbxEstado.FormattingEnabled = true;
-            this.cbxEstado.Location = new System.Drawing.Point(398, 408);
-            this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(121, 21);
-            this.cbxEstado.TabIndex = 98;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(398, 408);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cmbEstado.TabIndex = 98;
             // 
             // cmbSexo
             // 
@@ -733,15 +742,6 @@
             this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
             this.tbcDatosMasc.TabIndex = 0;
             // 
-            // picB2
-            // 
-            this.picB2.Location = new System.Drawing.Point(22, 294);
-            this.picB2.Name = "picB2";
-            this.picB2.Size = new System.Drawing.Size(182, 159);
-            this.picB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picB2.TabIndex = 108;
-            this.picB2.TabStop = false;
-            // 
             // Animales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -763,9 +763,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).EndInit();
             this.tabDatosAnimal.ResumeLayout(false);
             this.tabDatosAnimal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB1)).EndInit();
             this.tbcDatosMasc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picB2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -780,8 +780,8 @@
         private System.Windows.Forms.TabPage tabFichaMed;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TabPage tabDatosAnimal;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxEstado;
+        private System.Windows.Forms.Label lblIdAnimal;
+        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.TextBox txtPeso;

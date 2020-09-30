@@ -81,10 +81,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    ObjBusinessRules.AltaAnimal(cmbEspecie.SelectedValue, txtUbicacion.Text,picB1.ImageLocation,picB2.ImageLocation,txtNombre.Text, txtEdad.Text, cmbSexo.SelectedValue,chkSi.C, txtPeso.Text, txtColor.Text, cbxEstado.Text, dtpIngreso.Text);
+                    ObjBusinessRules.AltaAnimal(cmbEspecie.SelectedValue, txtUbicacion.Text,picB1.ImageLocation,picB2.ImageLocation,txtNombre.Text, txtEdad.Text, cmbSexo.SelectedValue,chkSi.C, txtPeso.Text, txtColor.Text, cmbEstado.Text, dtpIngreso.Text);
                     //ObjEntities.FotoIngreso = picB1.GetBuffer()
-                    //ObjEntities.FotoIngreso = byte.Parse(picB1.ImageLocation) revisar de que otra forma puede realizarse                                                                                                                                                                                                   ver problema               que onda esto?                                                                            
-                    //ObjBusinessRules.AltaAnimal(ObjEntities.IdEspecie= int.Parse(cmbEspecie.Value),ObjEntities.FotoIngreso=byte.Parse(picB1.ImageLocation), ObjEntities.FotoAdopcion = byte.Parse(picB2.ImageLocation),ObjEntities.NombreAnimal=txtNombre.Text,ObjEntities.Edad=Convert.ToInt32(txtEdad.Text),ObjEntities.Sexo= int.Parse(cmbSexo.string),ObjEntities.Castracion=chkCasSi.Checked,ObjEntities.ColorPelo = txtColor.Text,);
+                    //ObjEntities.FotoIngreso = byte.Parse(picB1.ImageLocation) revisar de que otra forma puede realizarse
                     MessageBox.Show("se inserto correctamente");
                     MostrarRegistroAnimal();
                     limpiarForm();
@@ -99,8 +98,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
 
                 try
-                {
-                    ObjBusinessRules.ModificarAnimal(txtNombre.Text.Trim() != "" && cmbEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cmbSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "");
+                {   //observar el error que tiene esto que esta entre ()
+                    ObjBusinessRules.ModificarAnimal(int.Parse(lblIdAnimal.ToString()), cmbEspecie.SelectedValue, txtUbicacion.Text, picB1.ImageLocation, picB2.ImageLocation, txtNombre.Text, txtEdad.Text, cmbSexo.SelectedValue, chkCasSi, txtPeso.Text, txtColor.Text, cmbEstado.SelectedValue, dtpFechaF.Text);
                     MessageBox.Show("se edito correctamente");
                     MostrarRegistroAnimal();
                     limpiarForm();
@@ -110,41 +109,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     MessageBox.Show("No se pudo editar los datos por el siguiente motivo: " + ex);
                 }
-            }//Errores que tuve por el momento: AM y M animal, no me toma los parametros
-
-            //    {
-            //        {
-            //            if (txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != ""  && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "")
-            //            {
-            //                if (Program.Evento == 0)//Preguntar tema fecha de nacimiento, los datatime
-            //                {
-            //                    try
-            //                    {
-            //                        ObjEntities.NombreAnimal = txtNombre.Text.ToUpper();
-            //                        ObjEntities.IdEspecie = Convert.ToInt32(cbxEspecie.SelectedValue);
-            //                        ObjEntities.FechaIngreso = dtpIngreso.Value.Date; //string.Format("{0:d})", dtpIngreso.Value);
-            //                        ObjEntities.FechaNac = dtpFechaNac.Value.Date;
-            //                        ObjEntities.LugarRescate = txtUbicacion.Text.ToUpper();
-            //                        //hace falta ingresar las imagenes aca? son opcionales a su vez en la BD, aunque igualmente falta resolver como vamos a mostrar las img
-            //                        ObjEntities.Sexo = Convert.ToString(cbxSexo.SelectedValue);
-            //                        ObjEntities.Edad = Convert.ToInt32(txtEdad.SelectedText);
-            //                        ObjEntities.Peso = Convert.ToInt32(txtPeso.SelectedText);
-            //                        ObjEntities.ColorPelo = txtColor.Text.ToUpper();
-            //                        ObjEntities.Estado = Convert.ToString(cbxEstado.SelectedValue);
-
-            //                        ObjBusinessRules.AM_Animal(ObjEntities);
-            //                        MensajeConfirmacion("Se Guardo correctamente al animal");
-            //                        Program.Evento = 0;
-            //                        Close();
-            //                    }
-            //                    catch (Exception)
-            //                    {
-            //                        MensajeError("No se guardo el animal");
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

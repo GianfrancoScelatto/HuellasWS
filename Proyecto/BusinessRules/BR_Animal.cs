@@ -16,13 +16,13 @@ namespace BusinessRules
         {
             return new DA_Animal().ListarAnimal();
         }
-        public void AltaAnimal( int TipoAnimal,string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, DateTime FechaIngreso)
+        public void AltaAnimal( int TipoAnimal,string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo,int Estado, DateTime FechaIngreso)
         {
-            ObjAnimal.AltaAnimal(  TipoAnimal, LugarRescate,FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, FechaIngreso) ;
+            ObjAnimal.AltaAnimal(  TipoAnimal, LugarRescate,FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Estado, FechaIngreso) ;
         }
-        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate,byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate,byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Salud,int Estado, DateTime FechaIngreso)
         {
-            ObjAnimal.ModificarAnimal(IdAnimal,TipoAnimal, LugarRescate,FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, IdVacuna, Desparacitacion, Salud, FechaIngreso);
+            ObjAnimal.ModificarAnimal(IdAnimal,TipoAnimal, LugarRescate,FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Salud, Estado, FechaIngreso);
         }
         public void BorrarAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, string EstadoAnimal, string Descripcion)
         {

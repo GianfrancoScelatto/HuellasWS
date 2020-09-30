@@ -52,7 +52,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarAnimal(int IdAnimal, int TipoAnimal,string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int TipoAnimal,string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion ,string ColorPelo, string Salud,int Estado, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
             {
@@ -70,9 +70,8 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Sexo", Sexo);
                     command.Parameters.AddWithValue("@Castracion", Castracion);
                     command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
-                    command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
-                    command.Parameters.AddWithValue(" @Desparacitacion", Desparacitacion);
                     command.Parameters.AddWithValue("@Salud", Salud);
+                    command.Parameters.AddWithValue("@Estado", Estado);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
                     command.CommandText = "prc_ModificarAnimal";
                     command.CommandType = CommandType.StoredProcedure;
