@@ -64,14 +64,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
-            this.cbxSexo = new System.Windows.Forms.ComboBox();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtUbicacion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
-            this.cbxEspecie = new System.Windows.Forms.ComboBox();
+            this.cmbEspecie = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.picB1 = new System.Windows.Forms.PictureBox();
             this.lblTranAdopt = new System.Windows.Forms.Label();
@@ -401,14 +401,14 @@
             this.tabDatosAnimal.Controls.Add(this.label6);
             this.tabDatosAnimal.Controls.Add(this.label1);
             this.tabDatosAnimal.Controls.Add(this.cbxEstado);
-            this.tabDatosAnimal.Controls.Add(this.cbxSexo);
+            this.tabDatosAnimal.Controls.Add(this.cmbSexo);
             this.tabDatosAnimal.Controls.Add(this.txtColor);
             this.tabDatosAnimal.Controls.Add(this.txtPeso);
             this.tabDatosAnimal.Controls.Add(this.txtEdad);
             this.tabDatosAnimal.Controls.Add(this.txtUbicacion);
             this.tabDatosAnimal.Controls.Add(this.txtNombre);
             this.tabDatosAnimal.Controls.Add(this.dtpIngreso);
-            this.tabDatosAnimal.Controls.Add(this.cbxEspecie);
+            this.tabDatosAnimal.Controls.Add(this.cmbEspecie);
             this.tabDatosAnimal.Controls.Add(this.button1);
             this.tabDatosAnimal.Controls.Add(this.picB1);
             this.tabDatosAnimal.Controls.Add(this.lblTranAdopt);
@@ -508,13 +508,13 @@
             this.cbxEstado.Size = new System.Drawing.Size(121, 21);
             this.cbxEstado.TabIndex = 98;
             // 
-            // cbxSexo
+            // cmbSexo
             // 
-            this.cbxSexo.FormattingEnabled = true;
-            this.cbxSexo.Location = new System.Drawing.Point(399, 372);
-            this.cbxSexo.Name = "cbxSexo";
-            this.cbxSexo.Size = new System.Drawing.Size(121, 21);
-            this.cbxSexo.TabIndex = 94;
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Location = new System.Drawing.Point(399, 372);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(121, 21);
+            this.cmbSexo.TabIndex = 94;
             // 
             // txtColor
             // 
@@ -558,13 +558,13 @@
             this.dtpIngreso.Size = new System.Drawing.Size(122, 20);
             this.dtpIngreso.TabIndex = 86;
             // 
-            // cbxEspecie
+            // cmbEspecie
             // 
-            this.cbxEspecie.FormattingEnabled = true;
-            this.cbxEspecie.Location = new System.Drawing.Point(399, 120);
-            this.cbxEspecie.Name = "cbxEspecie";
-            this.cbxEspecie.Size = new System.Drawing.Size(121, 21);
-            this.cbxEspecie.TabIndex = 85;
+            this.cmbEspecie.FormattingEnabled = true;
+            this.cmbEspecie.Location = new System.Drawing.Point(399, 120);
+            this.cmbEspecie.Name = "cmbEspecie";
+            this.cmbEspecie.Size = new System.Drawing.Size(121, 21);
+            this.cmbEspecie.TabIndex = 85;
             // 
             // button1
             // 
@@ -782,14 +782,14 @@
         private System.Windows.Forms.TabPage tabDatosAnimal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxEstado;
-        private System.Windows.Forms.ComboBox cbxSexo;
+        private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.TextBox txtUbicacion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dtpIngreso;
-        private System.Windows.Forms.ComboBox cbxEspecie;
+        private System.Windows.Forms.ComboBox cmbEspecie;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox picB1;
         private System.Windows.Forms.Label lblTranAdopt;

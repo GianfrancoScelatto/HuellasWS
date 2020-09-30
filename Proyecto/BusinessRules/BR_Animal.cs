@@ -16,21 +16,21 @@ namespace BusinessRules
         {
             return new DA_Animal().ListarAnimal();
         }
-        public void A_Animal( string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, DateTime FechaIngreso)
+        public void AltaAnimal( int TipoAnimal,string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, DateTime FechaIngreso)
         {
-            ObjAnimal.A_Animal(  TipoAnimal, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Tamanio, FechaIngreso) ;
+            ObjAnimal.AltaAnimal(  TipoAnimal, LugarRescate,FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, FechaIngreso) ;
         }
-        public void M_Animal(int IdAnimal, string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate,byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
         {
-            ObjAnimal.M_Animal(IdAnimal, TipoAnimal, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Tamanio, IdVacuna, Desparacitacion, Salud, FechaIngreso);
+            ObjAnimal.ModificarAnimal(IdAnimal,TipoAnimal, LugarRescate,FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, IdVacuna, Desparacitacion, Salud, FechaIngreso);
         }
-        public void Borrar_Animal(int IdAnimal, int IdUsuario, int IdMovimiento, string EstadoAnimal, string Descripcion)
+        public void BorrarAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, string EstadoAnimal, string Descripcion)
         {
-            ObjAnimal.B_Animal(IdAnimal, IdUsuario,  IdMovimiento,  EstadoAnimal, Descripcion);
+            ObjAnimal.BajaAnimal(IdAnimal, IdUsuario,  IdMovimiento,  EstadoAnimal, Descripcion);
         }
-        public void Filtrar_Animal(string Busqueda)
+        public void FiltrarAnimal(string Busqueda)
         {
-            ObjAnimal.Filtrar_Animal(Busqueda);
+            ObjAnimal.FiltrarAnimal(Busqueda);
         }
     }
 }

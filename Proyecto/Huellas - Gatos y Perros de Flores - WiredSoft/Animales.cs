@@ -81,10 +81,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    //ObjBusinessRules.A_Animal(cbxEspecie.Text,txtNombre.Text, txtUbicacion.Text, txtEdad.Text, txtPeso.Text, txtColor.Text, cbxSexo.Text, cbxEstado.Text, dtpIngreso.Text);
+                    ObjBusinessRules.AltaAnimal(cmbEspecie.SelectedValue, txtUbicacion.Text,picB1.ImageLocation,picB2.ImageLocation,txtNombre.Text, txtEdad.Text, cmbSexo.SelectedValue,chkSi.C, txtPeso.Text, txtColor.Text, cbxEstado.Text, dtpIngreso.Text);
                     //ObjEntities.FotoIngreso = picB1.GetBuffer()
-                    //ObjEntities.FotoIngreso = byte.Parse(picB1.ImageLocation) revisar de que otra forma puede realizarse
-                    ObjBusinessRules.A_Animal(ObjEntities.IdEspecie= int.Parse(cbxEspecie.Text),ObjEntities.FotoIngreso=byte.Parse(picB1.ImageLocation), ObjEntities.FotoAdopcion = byte.Parse(picB2.ImageLocation),ObjEntities.ColorPelo = txtColor.Text);
+                    //ObjEntities.FotoIngreso = byte.Parse(picB1.ImageLocation) revisar de que otra forma puede realizarse                                                                                                                                                                                                   ver problema               que onda esto?                                                                            
+                    //ObjBusinessRules.AltaAnimal(ObjEntities.IdEspecie= int.Parse(cmbEspecie.Value),ObjEntities.FotoIngreso=byte.Parse(picB1.ImageLocation), ObjEntities.FotoAdopcion = byte.Parse(picB2.ImageLocation),ObjEntities.NombreAnimal=txtNombre.Text,ObjEntities.Edad=Convert.ToInt32(txtEdad.Text),ObjEntities.Sexo= int.Parse(cmbSexo.string),ObjEntities.Castracion=chkCasSi.Checked,ObjEntities.ColorPelo = txtColor.Text,);
                     MessageBox.Show("se inserto correctamente");
                     MostrarRegistroAnimal();
                     limpiarForm();
@@ -100,7 +100,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 try
                 {
-                    ObjBusinessRules.M_Animal(txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "");
+                    ObjBusinessRules.ModificarAnimal(txtNombre.Text.Trim() != "" && cmbEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cmbSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "");
                     MessageBox.Show("se edito correctamente");
                     MostrarRegistroAnimal();
                     limpiarForm();
