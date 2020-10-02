@@ -73,7 +73,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
             this.cmbEspecie = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnImagen = new System.Windows.Forms.Button();
             this.picB1 = new System.Windows.Forms.PictureBox();
             this.lblTranAdopt = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
@@ -88,6 +88,8 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
+            this.txtComentario = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
@@ -204,7 +206,6 @@
             this.tabFichaMed.Size = new System.Drawing.Size(849, 568);
             this.tabFichaMed.TabIndex = 2;
             this.tabFichaMed.Text = "Ficha Medica";
-            this.tabFichaMed.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // linkLabel1
             // 
@@ -392,6 +393,8 @@
             // tabDatosAnimal
             // 
             this.tabDatosAnimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.tabDatosAnimal.Controls.Add(this.label1);
+            this.tabDatosAnimal.Controls.Add(this.txtComentario);
             this.tabDatosAnimal.Controls.Add(this.picB2);
             this.tabDatosAnimal.Controls.Add(this.linkLabel2);
             this.tabDatosAnimal.Controls.Add(this.llblPersona);
@@ -409,7 +412,7 @@
             this.tabDatosAnimal.Controls.Add(this.txtNombre);
             this.tabDatosAnimal.Controls.Add(this.dtpIngreso);
             this.tabDatosAnimal.Controls.Add(this.cmbEspecie);
-            this.tabDatosAnimal.Controls.Add(this.button1);
+            this.tabDatosAnimal.Controls.Add(this.btnImagen);
             this.tabDatosAnimal.Controls.Add(this.picB1);
             this.tabDatosAnimal.Controls.Add(this.lblTranAdopt);
             this.tabDatosAnimal.Controls.Add(this.lblPeso);
@@ -429,7 +432,6 @@
             this.tabDatosAnimal.Size = new System.Drawing.Size(849, 568);
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
-            this.tabDatosAnimal.Click += new System.EventHandler(this.tabDatosAnimal_Click);
             // 
             // picB2
             // 
@@ -575,16 +577,16 @@
             this.cmbEspecie.Size = new System.Drawing.Size(121, 21);
             this.cmbEspecie.TabIndex = 85;
             // 
-            // button1
+            // btnImagen
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(44, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 23);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "Seleccionar Imagen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnImagen.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImagen.Location = new System.Drawing.Point(44, 265);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.Size = new System.Drawing.Size(135, 23);
+            this.btnImagen.TabIndex = 82;
+            this.btnImagen.Text = "Seleccionar Imagen";
+            this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
             // 
             // picB1
             // 
@@ -594,7 +596,6 @@
             this.picB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picB1.TabIndex = 81;
             this.picB1.TabStop = false;
-            this.picB1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblTranAdopt
             // 
@@ -742,6 +743,25 @@
             this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
             this.tbcDatosMasc.TabIndex = 0;
             // 
+            // txtComentario
+            // 
+            this.txtComentario.Location = new System.Drawing.Point(584, 220);
+            this.txtComentario.Multiline = true;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(237, 173);
+            this.txtComentario.TabIndex = 109;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(651, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 19);
+            this.label1.TabIndex = 110;
+            this.label1.Text = "Comentario:";
+            // 
             // Animales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -790,7 +810,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dtpIngreso;
         private System.Windows.Forms.ComboBox cmbEspecie;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnImagen;
         private System.Windows.Forms.PictureBox picB1;
         private System.Windows.Forms.Label lblTranAdopt;
         private System.Windows.Forms.Label lblPeso;
@@ -830,5 +850,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.PictureBox picB2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtComentario;
     }
 }

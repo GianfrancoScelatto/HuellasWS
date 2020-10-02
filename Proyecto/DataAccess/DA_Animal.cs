@@ -28,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaAnimal(int TipoAnimal,string LugarRescate,byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, DateTime FechaIngreso)
+        public void AltaAnimal(int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
             {
@@ -45,6 +45,9 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Sexo", Sexo);
                     command.Parameters.AddWithValue("@Castracion", Castracion);
                     command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
+                    command.Parameters.AddWithValue("@Peso", Peso);
+                    command.Parameters.AddWithValue("@Comentario", Comentario);
+                    command.Parameters.AddWithValue("@Estado", Estado);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
                     command.CommandText = "prc_AltaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
@@ -52,7 +55,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarAnimal(int IdAnimal, int TipoAnimal,string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion ,string ColorPelo, string Salud,int Estado, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
             {
@@ -70,7 +73,8 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Sexo", Sexo);
                     command.Parameters.AddWithValue("@Castracion", Castracion);
                     command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
-                    command.Parameters.AddWithValue("@Salud", Salud);
+                    command.Parameters.AddWithValue("@Peso", Peso);
+                    command.Parameters.AddWithValue("@Comentario", Comentario);
                     command.Parameters.AddWithValue("@Estado", Estado);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
                     command.CommandText = "prc_ModificarAnimal";
