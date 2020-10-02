@@ -28,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AM_Transitante(int idTransitante, string Nombre, string Apellido, int Edad, int DNI, string Localidad, string Domicilio, int Codigo_Postal, string Calles, int Altura, bool Sexo, int Telefono, int Celular, string Email, byte Deshabilitado)
+        public void AltaPersona(int idPersona,int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI,string Domicilio ,string Localidad, int Codigo_Postal, string Calles, int Altura,string Sexo, int Telefono, int Celular, string Email,string UsuarioFaceIg, bool ListaNegra, string Motivo,byte Deshabilitado)
         {
             using (var connection = GetConnection())
             {
@@ -36,7 +36,8 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@idAdoptante", idTransitante);
+                    command.Parameters.AddWithValue("@idAdoptante", idPersona);
+                    command.Parameters.AddWithValue("@TipoPersona", IdTipoPersona);
                     command.Parameters.AddWithValue("@Nombre", Nombre);
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Edad", Edad);
@@ -50,14 +51,18 @@ namespace DataAccess
                     command.Parameters.AddWithValue(" @Telefono", Telefono);
                     command.Parameters.AddWithValue("@Celular", Celular);
                     command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@UsuarioFaceIg",UsuarioFaceIg);
+                    command.Parameters.AddWithValue("@ListaNegra",ListaNegra);
+                    command.Parameters.AddWithValue("@Motivo", Motivo);
                     command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
-                    command.CommandText = "prc_ABM_Adoptante";
+                    command.CommandText = "prc_AltaPersona";
+                    //falta agregar los que van al historial, falta crear el de modificar. y la BR y dsp funcionalidad, a su vez tambien faltan los prc en Base Datos
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }
             }
         }
-        public void BajaTransitante(int IdTransitante, int IdUsuario, int IdMovimiento)
+        public void BajaPersona(int IdPersona, int IdUsuario, int IdMovimiento,bool Deshabilitado)
         {
             using (var connection = GetConnection())
             {
@@ -66,10 +71,12 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdTransitante", IdTransitante);
-                    command.Parameters.AddWithValue("@Id_Usuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.Parameters.AddWithValue("@IdMovimiento", IdMovimiento);
-                    command.CommandText = "prc_ABM_Transitante";
+                    command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
+                    command.Parameters.AddWithValue("@Descripcion", IdPersona);
+                    command.CommandText = "prc_BajaPersona";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }

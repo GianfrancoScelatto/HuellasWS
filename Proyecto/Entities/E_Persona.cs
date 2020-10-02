@@ -9,7 +9,7 @@ namespace Entities
     public class E_Persona
     {
         public int IdPersona { get; set; }
-        public int FKTipoPersona { get; set; }
+        public int IdTipoPersona { get; set; }
         public string NombrePersona { get; set; }
         public string ApellidoPersona { get; set; }
         public int Edad { get; set; }
@@ -23,6 +23,9 @@ namespace Entities
         public int Telefono { get; set; }
         public int Celular { get; set; }
         public string Email { get; set; }
+        public string UsuarioFaceIg { get; set; }
+        public bool ListaNegra { get; set; }
+        public string Motivo { get; set; }
         public bool Desabilitado { get; set; }
     }
 }
