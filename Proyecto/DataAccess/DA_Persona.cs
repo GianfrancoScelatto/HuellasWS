@@ -62,12 +62,12 @@ namespace DataAccess
                 }
             }
         }
-            public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
+        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
         {
-                using (var connection = GetConnection())
-                {
-                    connection.Open();
-                    using (var command = new SqlCommand())
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@idAdoptante", idPersona);
@@ -91,10 +91,10 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
                     command.CommandText = "prc_ModificarPersona";
                     command.CommandType = CommandType.StoredProcedure;
-                        command.ExecuteNonQuery();
-                    }
+                    command.ExecuteNonQuery();
                 }
             }
+        }
         public void BajaPersona(int IdPersona, int IdUsuario, int IdMovimiento, bool Deshabilitado, string Descripcion)
         {
             using (var connection = GetConnection())
