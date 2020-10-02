@@ -12,25 +12,29 @@ namespace BusinessRules
     {
         readonly DA_Animal ObjAnimal = new DA_Animal();
 
-        public static DataTable ListarAnimal()
+        public DataTable ListarAnimal()
         {
-            return new DA_Animal().ListarAnimal();
+            DataTable tabla = new DataTable();
+            tabla = ObjAnimal.ListarAnimal();
+            return tabla;
         }
-        public void A_Animal( string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, DateTime FechaIngreso)
+        public void AltaAnimal(int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
-            ObjAnimal.A_Animal(  TipoAnimal, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Tamanio, FechaIngreso) ;
+            ObjAnimal.AltaAnimal(TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
         }
-        public void M_Animal(int IdAnimal, string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
-            ObjAnimal.M_Animal(IdAnimal, TipoAnimal, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Tamanio, IdVacuna, Desparacitacion, Salud, FechaIngreso);
+            ObjAnimal.ModificarAnimal(IdAnimal, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
         }
-        public void Borrar_Animal(int IdAnimal, int IdUsuario, int IdMovimiento, string EstadoAnimal, string Descripcion)
+        public void BorrarAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, string EstadoAnimal, string Descripcion)
         {
-            ObjAnimal.Baja_Animal(IdAnimal, IdUsuario,  IdMovimiento,  EstadoAnimal, Descripcion);
+            ObjAnimal.BajaAnimal(IdAnimal, IdUsuario, IdMovimiento, EstadoAnimal, Descripcion);
         }
-        public void Filtrar_Animal(string Busqueda)
+        public DataTable FiltrarAnimal(string Busqueda)
         {
-            ObjAnimal.Filtrar_Animal(Busqueda);
+            DataTable tabla = new DataTable();
+            tabla = ObjAnimal.FiltrarAnimal(Busqueda);
+            return tabla;
         }
     }
 }

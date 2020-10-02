@@ -16,8 +16,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     public partial class Animales : Form
     {
-        readonly BR_Animal ObjBusinessRules = new BR_Animal();
-        readonly E_Animal ObjEntities = new E_Animal();
+        BR_Animal ObjBusinessRules = new BR_Animal();
+        E_Animal ObjEntities = new E_Animal();
         public bool Editar = false;
         public Animales()
         {
@@ -25,21 +25,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         }
 
         private void Mascota_Load(object sender, EventArgs e)
-        {
-            MostrarRegistroAnimal();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVerMas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabDatosAnimal_Click(object sender, EventArgs e)
         {
 
         }
@@ -49,19 +34,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             Form VerMas = new VerMasAnimal();
             VerMas.Show();
         }
-        public void MostrarRegistroAnimal()
-        {
-            dataMascotas.DataSource = BR_Animal.ListarAnimal();
-        }
+
         public void MensajeConfirmacion(string Mensaje)
         {
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        public void MensajeError(string Mensaje)
-        {
-            MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-        private void limpiarForm()
+
+        private void LimpiarForm()
         {
             txtBuscar.Clear();
             txtColor.Text = "";
@@ -73,78 +52,72 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            //if todos nulls tire alertas para que complete los campos
-            //Else  ejecute el A_Animal blucle de busqueda para ver si existe dentro de la lista de programacion del datagrid, y si encuentra uno que coincida que ejecute el M_Animal
-            //INSERTAR
-            if (Editar == false)
+            if (String.IsNullOrWhiteSpace(txtNombre.Text) || String.IsNullOrWhiteSpace(txtUbicacion.Text) || String.IsNullOrWhiteSpace(txtEdad.Text) || String.IsNullOrWhiteSpace(txtPeso.Text) || String.IsNullOrWhiteSpace(txtColor.Text))
             {
-                try
-                {
-                    ObjBusinessRules.A_Animal(txtNombre.Text, cbxEspecie.Text,txtUbicacion.Text, txtEdad.Text, txtPeso.Text, txtColor.Text, cbxSexo.Text, cbxEstado.Text, dtpIngreso.Text);
-                    MessageBox.Show("se inserto correctamente");
-                    MostrarRegistroAnimal();
-                    limpiarForm();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("no se pudo insertar los datos por: " + ex);
-                }
+                MensajeConfirmacion;
             }
-            //EDITAR
-            if (Editar == true)
+            else if (Editar == true)
             {
-
                 try
                 {
-                    ObjBusinessRules.M_Animal(txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != "" && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "");
+                    if (chkCasSi.Checked == true)
+                    {
+                        ObjBusinessRules.ModificarAnimal(Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
+                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToInt64(txtPeso.Text),
+                                                        txtComentario.Text, Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
+                    }
+                    else
+                        ObjBusinessRules.ModificarAnimal(Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
+                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToInt64(txtPeso.Text), txtComentario.Text,
+                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
+
                     MessageBox.Show("se edito correctamente");
-                    MostrarRegistroAnimal();
-                    limpiarForm();
+                    LimpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("No se pudo editar los datos por el siguiente motivo: " + ex);
                 }
-            }//Errores que tuve por el momento: AM y M animal, no me toma los parametros
+            }
+            else
+            {
+                try
+                {
+                    if (chkCasSi.Checked == true)
+                    {
+                        ObjBusinessRules.AltaAnimal(Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
+                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToInt64(txtPeso.Text),
+                                                        txtComentario.Text, Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
+                    }
+                    else
+                        ObjBusinessRules.AltaAnimal(Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
+                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToInt64(txtPeso.Text), txtComentario.Text,
+                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
+                    LimpiarForm();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("no se pudo insertar los datos por: " + ex);
+                }
+            }
+        }
 
-            //    {
-            //        {
-            //            if (txtNombre.Text.Trim() != "" && cbxEspecie.Text.Trim() != "" && txtUbicacion.Text.Trim() != "" && txtEdad.Text.Trim() != ""  && txtPeso.Text.Trim() != "" && txtColor.Text.Trim() != "" && cbxSexo.Text.Trim() != "" && cbxEstado.Text.Trim() != "" && dtpFechaF.Text.Trim() != "")
-            //            {
-            //                if (Program.Evento == 0)//Preguntar tema fecha de nacimiento, los datatime
-            //                {
-            //                    try
-            //                    {
-            //                        ObjEntities.NombreAnimal = txtNombre.Text.ToUpper();
-            //                        ObjEntities.IdEspecie = Convert.ToInt32(cbxEspecie.SelectedValue);
-            //                        ObjEntities.FechaIngreso = dtpIngreso.Value.Date; //string.Format("{0:d})", dtpIngreso.Value);
-            //                        ObjEntities.FechaNac = dtpFechaNac.Value.Date;
-            //                        ObjEntities.LugarRescate = txtUbicacion.Text.ToUpper();
-            //                        //hace falta ingresar las imagenes aca? son opcionales a su vez en la BD, aunque igualmente falta resolver como vamos a mostrar las img
-            //                        ObjEntities.Sexo = Convert.ToString(cbxSexo.SelectedValue);
-            //                        ObjEntities.Edad = Convert.ToInt32(txtEdad.SelectedText);
-            //                        ObjEntities.Peso = Convert.ToInt32(txtPeso.SelectedText);
-            //                        ObjEntities.ColorPelo = txtColor.Text.ToUpper();
-            //                        ObjEntities.Estado = Convert.ToString(cbxEstado.SelectedValue);
+        private void btnImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog faI = new OpenFileDialog();
+            OpenFileDialog faA = new OpenFileDialog();
+            DialogResult rsI = faI.ShowDialog();
+            DialogResult rsA = faA.ShowDialog();
+            if (rsA == DialogResult.OK && rsI == DialogResult.OK)
+            {
+                picB1.Image = Image.FromFile(faI.FileName);
+                picB1.Image = Image.FromFile(faA.FileName);
+            }
 
-            //                        ObjBusinessRules.AM_Animal(ObjEntities);
-            //                        MensajeConfirmacion("Se Guardo correctamente al animal");
-            //                        Program.Evento = 0;
-            //                        Close();
-            //                    }
-            //                    catch (Exception)
-            //                    {
-            //                        MensajeError("No se guardo el animal");
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
         }
     }
 }
-
             
 
 

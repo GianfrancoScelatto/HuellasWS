@@ -28,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void A_Animal(string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, DateTime FechaIngreso)
+        public void AltaAnimal(int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
             {
@@ -37,6 +37,7 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@TipoAnimal", TipoAnimal);
+                    command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
                     command.Parameters.AddWithValue("@FotoIngreso", FotoIngreso);
                     command.Parameters.AddWithValue("@FotoAdopcion", FotoAdopcion);
                     command.Parameters.AddWithValue("@NombreAnimal", NombreAnimal);
@@ -44,7 +45,9 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Sexo", Sexo);
                     command.Parameters.AddWithValue("@Castracion", Castracion);
                     command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
-                    command.Parameters.AddWithValue("@Tamanio", Tamanio);
+                    command.Parameters.AddWithValue("@Peso", Peso);
+                    command.Parameters.AddWithValue("@Comentario", Comentario);
+                    command.Parameters.AddWithValue("@Estado", Estado);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
                     command.CommandText = "prc_AltaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
@@ -52,7 +55,7 @@ namespace DataAccess
                 }
             }
         }
-        public void M_Animal(int IdAnimal, string TipoAnimal, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, string Castracion, string ColorPelo, string Tamanio, int IdVacuna, string Desparacitacion, string Salud, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
             {
@@ -62,6 +65,7 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
                     command.Parameters.AddWithValue("@TipoAnimal", TipoAnimal);
+                    command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
                     command.Parameters.AddWithValue("@FotoIngreso", FotoIngreso);
                     command.Parameters.AddWithValue("@FotoAdopcion", FotoAdopcion);
                     command.Parameters.AddWithValue("@NombreAnimal", NombreAnimal);
@@ -69,10 +73,9 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Sexo", Sexo);
                     command.Parameters.AddWithValue("@Castracion", Castracion);
                     command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
-                    command.Parameters.AddWithValue("@Tamanio", Tamanio);
-                    command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
-                    command.Parameters.AddWithValue(" @Desparacitacion", Desparacitacion);
-                    command.Parameters.AddWithValue("@Salud", Salud);
+                    command.Parameters.AddWithValue("@Peso", Peso);
+                    command.Parameters.AddWithValue("@Comentario", Comentario);
+                    command.Parameters.AddWithValue("@Estado", Estado);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
                     command.CommandText = "prc_ModificarAnimal";
                     command.CommandType = CommandType.StoredProcedure;
@@ -81,7 +84,7 @@ namespace DataAccess
             }
 
         }
-        public void Baja_Animal(int IdAnimal, int IdUsuario, int IdMovimiento,string EstadoAnimal,string Descripcion)
+        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento,string EstadoAnimal,string Descripcion)
         {
             using (var connection = GetConnection())
             {
@@ -102,7 +105,7 @@ namespace DataAccess
             }
         }
         //Confirmacion De aj sobre el tema del filtrado.
-        public DataTable Filtrar_Animal(string busqueda)
+        public DataTable FiltrarAnimal(string busqueda)
         {
             using (var connection = GetConnection())
             {
