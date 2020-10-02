@@ -18,13 +18,13 @@ namespace Entities
         public byte FotoAdopcion { get; set; }
         public string Sexo { get; set; }
         public int Edad { get; set; }
-        public decimal Peso { get; set; }
+        public double Peso { get; set; }
         public string ColorPelo { get; set; }
         public bool Castracion { get; set; }
         public DateTime FechaCastracion { get; set; }
         public string Comentario { get; set; }
         public string Salud { get; set; }
-        public string Estado { get; set; }
+        public int Estado { get; set; }
         public int Persona { get; set; }
         public DateTime FechaDefuncion { get; set; }
         public bool Deshabilitado { get; set; }
