@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using DataAccess;
+
 namespace BusinessRules
 {
     public class BR_Vacunas
@@ -19,17 +20,17 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void Alta_vacunas(string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void Altavacunas(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion)
         {
-            VacunasDA.Alta_Vacunas(Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
+            VacunasDA.AltaVacunas(Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
         }
 
-        public void Modificar_Vacuna (int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void ModificarVacuna (int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
         {
-            VacunasDA.Modificar_Vacuna(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
+            VacunasDA.ModificarVacuna(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
         }
 
-        public void Eliminar_Vacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void EliminarVacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
         {
             VacunasDA.BajaVacuna(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
 

@@ -92,7 +92,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Form Vacunas = new Vacunas();
+            Vacunas.Show();
+        }
     }
 }
 

@@ -40,6 +40,7 @@
             this.cmbEspecie = new System.Windows.Forms.ComboBox();
             this.lblID = new System.Windows.Forms.Label();
             this.txtRevacunacion = new System.Windows.Forms.TextBox();
+            this.cmbRevacunacion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblDescripcion
@@ -123,7 +124,7 @@
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancelar.Location = new System.Drawing.Point(208, 405);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(117, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(131, 33);
             this.btnCancelar.TabIndex = 125;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -138,9 +139,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(52, 405);
+            this.btnGuardar.Location = new System.Drawing.Point(38, 405);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(117, 33);
+            this.btnGuardar.Size = new System.Drawing.Size(131, 33);
             this.btnGuardar.TabIndex = 124;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -150,6 +151,9 @@
             // 
             this.cmbEspecie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEspecie.FormattingEnabled = true;
+            this.cmbEspecie.Items.AddRange(new object[] {
+            "Perro",
+            "Gato"});
             this.cmbEspecie.Location = new System.Drawing.Point(96, 101);
             this.cmbEspecie.Name = "cmbEspecie";
             this.cmbEspecie.Size = new System.Drawing.Size(141, 21);
@@ -168,15 +172,29 @@
             // 
             this.txtRevacunacion.Location = new System.Drawing.Point(229, 144);
             this.txtRevacunacion.Name = "txtRevacunacion";
-            this.txtRevacunacion.Size = new System.Drawing.Size(130, 20);
+            this.txtRevacunacion.Size = new System.Drawing.Size(65, 20);
             this.txtRevacunacion.TabIndex = 126;
+            // 
+            // cmbRevacunacion
+            // 
+            this.cmbRevacunacion.FormattingEnabled = true;
+            this.cmbRevacunacion.Items.AddRange(new object[] {
+            "Año",
+            "Mes",
+            "Semana",
+            "Dia"});
+            this.cmbRevacunacion.Location = new System.Drawing.Point(300, 144);
+            this.cmbRevacunacion.Name = "cmbRevacunacion";
+            this.cmbRevacunacion.Size = new System.Drawing.Size(72, 21);
+            this.cmbRevacunacion.TabIndex = 129;
             // 
             // Vacunas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(371, 450);
+            this.ClientSize = new System.Drawing.Size(385, 450);
+            this.Controls.Add(this.cmbRevacunacion);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.cmbEspecie);
             this.Controls.Add(this.txtRevacunacion);
@@ -211,5 +229,6 @@
         private System.Windows.Forms.ComboBox cmbEspecie;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtRevacunacion;
+        private System.Windows.Forms.ComboBox cmbRevacunacion;
     }
 }

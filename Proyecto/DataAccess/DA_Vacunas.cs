@@ -35,7 +35,7 @@ namespace DataAccess
         //Alta  de vacunas
 
         //VER SI IDVACUNA VA COMO PARAMETRO YA QUE ESO LO MANEJA LA BD PREGUNTAR
-        public void Alta_Vacunas(string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void AltaVacunas(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion)
         {
             using (var connection = GetConnection())
             {
@@ -56,7 +56,7 @@ namespace DataAccess
 
         }
 
-        public void Modificar_Vacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void ModificarVacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
         {
             using (var connection = GetConnection())
             {
@@ -102,7 +102,7 @@ namespace DataAccess
 
         }
 
-        private DataTable ListarVacunas(string Busqueda)
+        private DataTable BuscarVacunas(string Busqueda)
         {
             using (var connection = GetConnection())
             {
