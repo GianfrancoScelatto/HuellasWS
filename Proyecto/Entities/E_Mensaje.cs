@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Entities
 {
-    class E_Mensaje
+    public class E_Mensaje
     {
         public void MensajeConfirmacion(string Mensaje)
         {

@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class DA_FichaMedica : DA_Connection
+    public class DA_Seguimiento : DA_Connection
     {
-        public DataTable ListarFichaMedica()
+        public DataTable ListarSeguimiento()
         {
             using (var connection = GetConnection())
             {
@@ -19,7 +19,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_ListarFichaMedica";
+                    command.CommandText = "prc_ListarSeguimiento";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
@@ -29,7 +29,7 @@ namespace DataAccess
             }
         }
 
-        public DataTable FiltrarFichaMedica(string Nombre, DateTime Fecha)
+        public DataTable FiltrarSeguimiento(DateTime Fecha)
         {
             using (var connection = GetConnection())
             {
@@ -38,14 +38,31 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_FiltrarFichaMedica";
+                    command.CommandText = "prc_FiltrarSeguimiento";
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@NombreAnimal", Nombre);
                     command.Parameters.AddWithValue("@Fecha", Fecha);
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
                     connection.Close();
                     return tabla;
+                }
+            }
+        }
+
+        public void GuardarSeguimiento(string Detalle, DateTime Fecha)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "prc_GuardarSeguimiento";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Detalle", Detalle);
+                    command.Parameters.AddWithValue("@FechaDetalle", Fecha);
+                    command.ExecuteNonQuery();
+                    connection.Close();
                 }
             }
         }

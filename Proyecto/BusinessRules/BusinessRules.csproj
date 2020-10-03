@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BR_Animal.cs" />
+    <Compile Include="BR_FichaMedica.cs" />
     <Compile Include="BR_Persona.cs" />
+    <Compile Include="BR_Seguimiento.cs" />
     <Compile Include="BR_Usuario.cs" />
     <Compile Include="BR_Vacunas.cs" />
     <Compile Include="MD5.cs" />

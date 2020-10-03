@@ -88,7 +88,6 @@ namespace DataAccess
         {
             using (var connection = GetConnection())
             {
-                DataTable tabla = new DataTable();
                 connection.Open();
                 using (var command = new SqlCommand())
                 {

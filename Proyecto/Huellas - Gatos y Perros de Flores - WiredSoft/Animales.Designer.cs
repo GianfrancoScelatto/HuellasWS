@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Animales));
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.tabSeguimiento = new System.Windows.Forms.TabPage();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpAcontecimiento = new System.Windows.Forms.DateTimePicker();
             this.label63 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -48,14 +45,12 @@
             this.dtpCas = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvGastos = new System.Windows.Forms.DataGridView();
-            this.idFichaMedica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Restante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
             this.label26 = new System.Windows.Forms.Label();
             this.lblNombVet = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtComentario = new System.Windows.Forms.TextBox();
             this.picB2 = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.llblPersona = new System.Windows.Forms.LinkLabel();
@@ -88,100 +83,69 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
-            this.txtComentario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.dgvSeguimiento = new System.Windows.Forms.DataGridView();
+            this.dtpFiltro = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCancelarDatos = new System.Windows.Forms.Button();
+            this.btnGuardarDatos = new System.Windows.Forms.Button();
+            this.btnGuardarSeg = new System.Windows.Forms.Button();
             this.tabSeguimiento.SuspendLayout();
             this.tabFichaMed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).BeginInit();
             this.tabDatosAnimal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB1)).BeginInit();
             this.tbcDatosMasc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimiento)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancelar.Location = new System.Drawing.Point(456, 613);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 36);
-            this.btnCancelar.TabIndex = 60;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(300, 613);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(125, 36);
-            this.btnGuardar.TabIndex = 59;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // tabSeguimiento
             // 
             this.tabSeguimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
-            this.tabSeguimiento.Controls.Add(this.dateTimePicker3);
+            this.tabSeguimiento.Controls.Add(this.btnGuardarSeg);
+            this.tabSeguimiento.Controls.Add(this.dtpFiltro);
+            this.tabSeguimiento.Controls.Add(this.label2);
+            this.tabSeguimiento.Controls.Add(this.dgvSeguimiento);
+            this.tabSeguimiento.Controls.Add(this.txtDetalle);
+            this.tabSeguimiento.Controls.Add(this.dtpAcontecimiento);
             this.tabSeguimiento.Controls.Add(this.label63);
-            this.tabSeguimiento.Controls.Add(this.richTextBox2);
             this.tabSeguimiento.Controls.Add(this.label61);
             this.tabSeguimiento.Location = new System.Drawing.Point(4, 22);
             this.tabSeguimiento.Name = "tabSeguimiento";
             this.tabSeguimiento.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSeguimiento.Size = new System.Drawing.Size(849, 568);
+            this.tabSeguimiento.Size = new System.Drawing.Size(849, 545);
             this.tabSeguimiento.TabIndex = 3;
             this.tabSeguimiento.Text = "Seguimiento";
             // 
-            // dateTimePicker3
+            // dtpAcontecimiento
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(241, 47);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 9;
+            this.dtpAcontecimiento.Location = new System.Drawing.Point(235, 17);
+            this.dtpAcontecimiento.Name = "dtpAcontecimiento";
+            this.dtpAcontecimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpAcontecimiento.TabIndex = 9;
             // 
             // label63
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.SystemColors.Control;
-            this.label63.Location = new System.Drawing.Point(6, 134);
+            this.label63.Location = new System.Drawing.Point(28, 51);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(111, 19);
+            this.label63.Size = new System.Drawing.Size(201, 19);
             this.label63.TabIndex = 8;
-            this.label63.Text = "Comentarios:";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(10, 179);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(489, 113);
-            this.richTextBox2.TabIndex = 7;
-            this.richTextBox2.Text = "";
+            this.label63.Text = "Detalles del seguimiento:";
             // 
             // label61
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.SystemColors.Control;
-            this.label61.Location = new System.Drawing.Point(6, 47);
+            this.label61.Location = new System.Drawing.Point(15, 17);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(210, 19);
+            this.label61.Size = new System.Drawing.Size(214, 19);
             this.label61.TabIndex = 6;
-            this.label61.Text = "Fecha de carga de datos:";
+            this.label61.Text = "Fecha de acontecimiento:";
             // 
             // tabFichaMed
             // 
@@ -197,15 +161,15 @@
             this.tabFichaMed.Controls.Add(this.dtpCas);
             this.tabFichaMed.Controls.Add(this.label4);
             this.tabFichaMed.Controls.Add(this.label3);
-            this.tabFichaMed.Controls.Add(this.dgvGastos);
+            this.tabFichaMed.Controls.Add(this.dgvFichaMedica);
             this.tabFichaMed.Controls.Add(this.label26);
             this.tabFichaMed.Controls.Add(this.lblNombVet);
             this.tabFichaMed.Location = new System.Drawing.Point(4, 22);
             this.tabFichaMed.Name = "tabFichaMed";
             this.tabFichaMed.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFichaMed.Size = new System.Drawing.Size(849, 568);
+            this.tabFichaMed.Size = new System.Drawing.Size(849, 545);
             this.tabFichaMed.TabIndex = 2;
-            this.tabFichaMed.Text = "Ficha Medica";
+            this.tabFichaMed.Text = "Ficha Médica";
             // 
             // linkLabel1
             // 
@@ -326,47 +290,23 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Castración:";
             // 
-            // dgvGastos
+            // dgvFichaMedica
             // 
-            this.dgvGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGastos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idFichaMedica,
-            this.Monto,
-            this.Pago,
-            this.Restante});
-            this.dgvGastos.Location = new System.Drawing.Point(6, 178);
-            this.dgvGastos.Name = "dgvGastos";
-            this.dgvGastos.RowHeadersWidth = 51;
-            this.dgvGastos.Size = new System.Drawing.Size(840, 384);
-            this.dgvGastos.TabIndex = 28;
-            // 
-            // idFichaMedica
-            // 
-            this.idFichaMedica.HeaderText = "idFM";
-            this.idFichaMedica.MinimumWidth = 6;
-            this.idFichaMedica.Name = "idFichaMedica";
-            this.idFichaMedica.Width = 125;
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MinimumWidth = 6;
-            this.Monto.Name = "Monto";
-            this.Monto.Width = 125;
-            // 
-            // Pago
-            // 
-            this.Pago.HeaderText = "Pago";
-            this.Pago.MinimumWidth = 6;
-            this.Pago.Name = "Pago";
-            this.Pago.Width = 125;
-            // 
-            // Restante
-            // 
-            this.Restante.HeaderText = "Restante";
-            this.Restante.MinimumWidth = 6;
-            this.Restante.Name = "Restante";
-            this.Restante.Width = 125;
+            this.dgvFichaMedica.AllowUserToAddRows = false;
+            this.dgvFichaMedica.AllowUserToDeleteRows = false;
+            this.dgvFichaMedica.AllowUserToResizeColumns = false;
+            this.dgvFichaMedica.AllowUserToResizeRows = false;
+            this.dgvFichaMedica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFichaMedica.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFichaMedica.Location = new System.Drawing.Point(6, 178);
+            this.dgvFichaMedica.MultiSelect = false;
+            this.dgvFichaMedica.Name = "dgvFichaMedica";
+            this.dgvFichaMedica.ReadOnly = true;
+            this.dgvFichaMedica.RowHeadersWidth = 51;
+            this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFichaMedica.Size = new System.Drawing.Size(840, 361);
+            this.dgvFichaMedica.TabIndex = 28;
             // 
             // label26
             // 
@@ -377,7 +317,7 @@
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(117, 21);
             this.label26.TabIndex = 13;
-            this.label26.Text = "Ficha Medica";
+            this.label26.Text = "Ficha Médica";
             // 
             // lblNombVet
             // 
@@ -429,9 +369,28 @@
             this.tabDatosAnimal.Location = new System.Drawing.Point(4, 22);
             this.tabDatosAnimal.Name = "tabDatosAnimal";
             this.tabDatosAnimal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatosAnimal.Size = new System.Drawing.Size(849, 568);
+            this.tabDatosAnimal.Size = new System.Drawing.Size(849, 545);
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(645, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 19);
+            this.label1.TabIndex = 110;
+            this.label1.Text = "Comentario:";
+            // 
+            // txtComentario
+            // 
+            this.txtComentario.Location = new System.Drawing.Point(584, 220);
+            this.txtComentario.Multiline = true;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(237, 173);
+            this.txtComentario.TabIndex = 109;
             // 
             // picB2
             // 
@@ -446,7 +405,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(41, 56);
+            this.linkLabel2.Location = new System.Drawing.Point(77, 56);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(66, 13);
             this.linkLabel2.TabIndex = 107;
@@ -584,7 +543,7 @@
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(135, 23);
             this.btnImagen.TabIndex = 82;
-            this.btnImagen.Text = "Seleccionar Imagen";
+            this.btnImagen.Text = "Seleccionar imagen";
             this.btnImagen.UseVisualStyleBackColor = true;
             this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
             // 
@@ -723,7 +682,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(424, 3);
+            this.label21.Location = new System.Drawing.Point(424, 14);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 23);
             this.label21.TabIndex = 44;
@@ -740,27 +699,102 @@
             this.tbcDatosMasc.Location = new System.Drawing.Point(12, 12);
             this.tbcDatosMasc.Name = "tbcDatosMasc";
             this.tbcDatosMasc.SelectedIndex = 0;
-            this.tbcDatosMasc.Size = new System.Drawing.Size(857, 594);
+            this.tbcDatosMasc.Size = new System.Drawing.Size(857, 571);
             this.tbcDatosMasc.TabIndex = 0;
+            this.tbcDatosMasc.SelectedIndexChanged += new System.EventHandler(this.tbcDatosMasc_SelectedIndexChanged);
             // 
-            // txtComentario
+            // txtDetalle
             // 
-            this.txtComentario.Location = new System.Drawing.Point(584, 220);
-            this.txtComentario.Multiline = true;
-            this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(237, 173);
-            this.txtComentario.TabIndex = 109;
+            this.txtDetalle.Location = new System.Drawing.Point(235, 53);
+            this.txtDetalle.Multiline = true;
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.Size = new System.Drawing.Size(429, 140);
+            this.txtDetalle.TabIndex = 110;
             // 
-            // label1
+            // dgvSeguimiento
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(651, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 19);
-            this.label1.TabIndex = 110;
-            this.label1.Text = "Comentario:";
+            this.dgvSeguimiento.AllowUserToAddRows = false;
+            this.dgvSeguimiento.AllowUserToDeleteRows = false;
+            this.dgvSeguimiento.AllowUserToResizeColumns = false;
+            this.dgvSeguimiento.AllowUserToResizeRows = false;
+            this.dgvSeguimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSeguimiento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvSeguimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSeguimiento.Location = new System.Drawing.Point(6, 245);
+            this.dgvSeguimiento.MultiSelect = false;
+            this.dgvSeguimiento.Name = "dgvSeguimiento";
+            this.dgvSeguimiento.ReadOnly = true;
+            this.dgvSeguimiento.RowHeadersWidth = 51;
+            this.dgvSeguimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSeguimiento.Size = new System.Drawing.Size(837, 297);
+            this.dgvSeguimiento.TabIndex = 111;
+            // 
+            // dtpFiltro
+            // 
+            this.dtpFiltro.Location = new System.Drawing.Point(155, 220);
+            this.dtpFiltro.Name = "dtpFiltro";
+            this.dtpFiltro.Size = new System.Drawing.Size(200, 20);
+            this.dtpFiltro.TabIndex = 113;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(6, 220);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 19);
+            this.label2.TabIndex = 112;
+            this.label2.Text = "Buscar por fecha:";
+            // 
+            // btnCancelarDatos
+            // 
+            this.btnCancelarDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelarDatos.BackColor = System.Drawing.Color.White;
+            this.btnCancelarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarDatos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarDatos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancelarDatos.Location = new System.Drawing.Point(458, 605);
+            this.btnCancelarDatos.Name = "btnCancelarDatos";
+            this.btnCancelarDatos.Size = new System.Drawing.Size(125, 44);
+            this.btnCancelarDatos.TabIndex = 62;
+            this.btnCancelarDatos.Text = "Cancelar";
+            this.btnCancelarDatos.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardarDatos
+            // 
+            this.btnGuardarDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarDatos.BackColor = System.Drawing.Color.White;
+            this.btnGuardarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarDatos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarDatos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGuardarDatos.Location = new System.Drawing.Point(313, 605);
+            this.btnGuardarDatos.Name = "btnGuardarDatos";
+            this.btnGuardarDatos.Size = new System.Drawing.Size(125, 44);
+            this.btnGuardarDatos.TabIndex = 61;
+            this.btnGuardarDatos.Text = "Guardar";
+            this.btnGuardarDatos.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardarSeg
+            // 
+            this.btnGuardarSeg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarSeg.BackColor = System.Drawing.Color.White;
+            this.btnGuardarSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarSeg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarSeg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGuardarSeg.Location = new System.Drawing.Point(685, 149);
+            this.btnGuardarSeg.Name = "btnGuardarSeg";
+            this.btnGuardarSeg.Size = new System.Drawing.Size(152, 44);
+            this.btnGuardarSeg.TabIndex = 114;
+            this.btnGuardarSeg.Text = "Guardar";
+            this.btnGuardarSeg.UseVisualStyleBackColor = false;
+            this.btnGuardarSeg.Click += new System.EventHandler(this.btnGuardarSeg_Click);
             // 
             // Animales
             // 
@@ -768,8 +802,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(881, 661);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnCancelarDatos);
+            this.Controls.Add(this.btnGuardarDatos);
             this.Controls.Add(this.tbcDatosMasc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Animales";
@@ -780,22 +814,20 @@
             this.tabSeguimiento.PerformLayout();
             this.tabFichaMed.ResumeLayout(false);
             this.tabFichaMed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).EndInit();
             this.tabDatosAnimal.ResumeLayout(false);
             this.tabDatosAnimal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB1)).EndInit();
             this.tbcDatosMasc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimiento)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TabPage tabSeguimiento;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TabPage tabFichaMed;
         private System.Windows.Forms.Label label26;
@@ -825,12 +857,8 @@
         private System.Windows.Forms.Label lblMascota;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabControl tbcDatosMasc;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DataGridView dgvGastos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idFichaMedica;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Restante;
+        private System.Windows.Forms.DateTimePicker dtpAcontecimiento;
+        private System.Windows.Forms.DataGridView dgvFichaMedica;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.CheckBox chkCasNo;
         private System.Windows.Forms.CheckBox chkCasSi;
@@ -852,5 +880,12 @@
         private System.Windows.Forms.PictureBox picB2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtComentario;
+        private System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.DateTimePicker dtpFiltro;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvSeguimiento;
+        private System.Windows.Forms.Button btnCancelarDatos;
+        private System.Windows.Forms.Button btnGuardarDatos;
+        private System.Windows.Forms.Button btnGuardarSeg;
     }
 }
