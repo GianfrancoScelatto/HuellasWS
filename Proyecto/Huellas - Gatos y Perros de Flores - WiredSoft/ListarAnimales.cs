@@ -14,8 +14,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     public partial class ListarAnimales : Form
     {
-        readonly BR_Animal ObjBusinessRules = new BR_Animal();
-        readonly E_Animal ObjEntities = new E_Animal();
+        BR_Animal ObjBusinessRules = new BR_Animal();
+        E_Animal ObjEntities = new E_Animal();
+        E_Usuario usuario = new E_Usuario();
+        E_Bitacora bitacora = new E_Bitacora();
+
         public bool Editar = false;
         public ListarAnimales()
         {
@@ -27,20 +30,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             MostrarRegistroAnimal();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form Mascota = new Animales();
-            Mascota.Show();
-        }
-
+        
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            Form Animales = new Animales();
+            Animales.Show();
         }
 
         private void BtnExportar_Click(object sender, EventArgs e)
@@ -72,7 +66,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         }
         public void MostrarRegistroAnimal()
         {
-            dgvMascotas.DataSource = BR_Animal.ListarAnimal();
+            dgvMascotas.DataSource = ObjBusinessRules.ListarAnimal();
         }
         private void BtnModificar_Click(object sender, EventArgs e)
         {   //esto va en el formulario de animales
@@ -89,9 +83,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 ObjEntities.LugarRescate = dgvMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
                 ObjEntities.Sexo = dgvMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
                 ObjEntities.Edad = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Edad"].Value);
-                ObjEntities.Peso = Convert.ToDecimal(dgvMascotas.CurrentRow.Cells["Peso"].Value);
+                ObjEntities.Peso = Convert.ToDouble(dgvMascotas.CurrentRow.Cells["Peso"].Value);
                 ObjEntities.ColorPelo = dgvMascotas.CurrentRow.Cells["Color"].Value.ToString();
-                ObjEntities.Estado = dgvMascotas.CurrentRow.Cells["Estado"].Value.ToString();
+                ObjEntities.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Estado"].Value);
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
@@ -108,7 +102,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
 
                     ObjEntities.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells[0].Value.ToString());
-                    ObjBusinessRules.Borrar_Animal(ObjEntities);
+                    ObjBusinessRules.BorrarAnimal(ObjEntities.IdAnimal,usuario.IdUsuario,bitacora.IdMovimiento,ObjEntities.Estado,bitacora.Descripcion,ObjEntities.Deshabilitado);
                     MostrarRegistroAnimal();
                 }
             }

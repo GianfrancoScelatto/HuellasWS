@@ -14,7 +14,7 @@ namespace DataAccess
     {
         public bool InicioSesion(string Username, string pw)
         {
-            Usuario user = new Usuario();
+            E_Usuario user = new E_Usuario();
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -40,4 +40,6 @@ namespace DataAccess
                 }
             }
         }
+
+    }
 }

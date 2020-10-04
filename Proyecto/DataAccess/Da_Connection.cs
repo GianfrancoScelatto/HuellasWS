@@ -14,7 +14,7 @@ namespace DataAccess
         public readonly string connection;
         public DA_Connection()
         {
-            connection = ConfigurationManager.ConnectionStrings["Gatos_y_Perros_de_Flores.Properties.Settings.ConexionGPF"].ConnectionString;
+            connection = ConfigurationManager.ConnectionStrings["Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Properties.Settings.Connection"].ConnectionString;
         }
         protected SqlConnection GetConnection()
         {
@@ -22,4 +22,4 @@ namespace DataAccess
         }
     }
 }
-}
+

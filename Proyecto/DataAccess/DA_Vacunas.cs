@@ -47,7 +47,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
                     command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
-                    command.CommandText = "prc_Vacunas";
+                    command.CommandText = "prc_AltaVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
 
@@ -69,7 +69,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
                     command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
-                    command.CommandText = "prc_Vacunas";
+                    command.CommandText = "prc_ModificarVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
 
@@ -79,7 +79,7 @@ namespace DataAccess
         }
 
         //Procedure para Baja logica de Vacunas
-        public void BajaVacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void BajaVacuna(int IdVacuna, bool Deshabilitado)
         {
             using (var connection = GetConnection())
             {
@@ -87,12 +87,9 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdVacuna", Vacuna);
-                    command.Parameters.AddWithValue("@Vacuna", Vacuna);
-                    command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
-                    command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
-                    command.Parameters.AddWithValue("@Descripcion", Descripcion);
-                    command.CommandText = "prc_";
+                    command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
+                    command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
+                    command.CommandText = "prc_BajaVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
 

@@ -84,7 +84,7 @@ namespace DataAccess
             }
 
         }
-        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento,string EstadoAnimal,string Descripcion)
+        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento,int EstadoAnimal,string Descripcion, bool Deshabilitado)
         {
             using (var connection = GetConnection())
             {
@@ -97,6 +97,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdMovimiento", IdMovimiento);
                     command.Parameters.AddWithValue("@Estado", EstadoAnimal);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                    command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
                     command.CommandText = "prc_BajaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();

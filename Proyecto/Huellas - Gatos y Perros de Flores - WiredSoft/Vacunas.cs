@@ -31,7 +31,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            int dias;
+            int dias = 0;
             
             switch (cmbRevacunacion.SelectedItem)
             {
@@ -55,7 +55,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                brV.Altavacunas(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue),Convert.ToInt32(txtRevacunacion.Text),txtDescripcion.Text);
+                brV.Altavacunas(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue),dias,txtDescripcion.Text);
             }
              
         }

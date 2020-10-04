@@ -17,3 +17,5 @@ C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyect
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Entities\obj\Debug\Entities.dll
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Entities\obj\Debug\Entities.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Entities\bin\Debug\Entities.dll
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Entities\bin\Debug\Entities.pdb

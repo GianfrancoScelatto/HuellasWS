@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-
 using DataAccess;
+
 namespace BusinessRules
 {
     public class BR_Animal
@@ -26,9 +26,9 @@ namespace BusinessRules
         {
             ObjAnimal.ModificarAnimal(IdAnimal, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
         }
-        public void BorrarAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, string EstadoAnimal, string Descripcion)
+        public void BorrarAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, int EstadoAnimal, string Descripcion, bool Deshabilitado)
         {
-            ObjAnimal.BajaAnimal(IdAnimal, IdUsuario, IdMovimiento, EstadoAnimal, Descripcion);
+            ObjAnimal.BajaAnimal(IdAnimal, IdUsuario, IdMovimiento, EstadoAnimal, Descripcion, Deshabilitado);
         }
         public DataTable FiltrarAnimal(string Busqueda)
         {

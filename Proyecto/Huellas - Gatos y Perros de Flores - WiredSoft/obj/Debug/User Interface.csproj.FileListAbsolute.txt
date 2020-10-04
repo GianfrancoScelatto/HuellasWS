@@ -70,3 +70,13 @@ C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyect
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\User Interface.csproj.CoreCompileInputs.cache
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.exe
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.exe.config
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.exe
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\Huellas - Gatos y Perros de Flores - WiredSoft.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\BusinessRules.dll
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\DataAccess.dll
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\Entities.dll
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\BusinessRules.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\DataAccess.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Debug\Entities.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\User Interface.csproj.CopyComplete
