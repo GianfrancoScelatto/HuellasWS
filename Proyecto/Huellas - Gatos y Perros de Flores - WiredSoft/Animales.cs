@@ -17,10 +17,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     {
         BR_Animal brA = new BR_Animal();
         BR_Seguimiento brS = new BR_Seguimiento();
+        BR_FichaMedica brFM = new BR_FichaMedica();
         E_Animal eA = new E_Animal();
         E_Mensaje eM = new E_Mensaje();
         public bool Editar = false;
         string comment;
+
         public Animales()
         {
             InitializeComponent();
@@ -28,23 +30,18 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void Mascota_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void llblPersona_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form VerMas = new VerMasAnimal();
-            VerMas.Show();
-        }
-
-        private void LimpiarForm()
-        {
-            txtBuscar.Clear();
-            txtColor.Text = "";
-            txtUbicacion.Text = "";
-            txtPeso.Clear();
-            txtEdad.Clear();
-            txtNombre.Clear();
+            lblIdAnimal.Text = eA.IdAnimal.ToString();
+            txtNombre.Text = eA.NombreAnimal;
+            cmbEspecie.SelectedValue = eA.IdEspecie;
+            dtpIngreso.Value = eA.FechaIngreso.Date;
+            txtUbicacion.Text = eA.LugarRescate;
+            txtEdad.Text = eA.Edad.ToString();
+            dtpFechaNac.Value = eA.FechaNac.Date;
+            txtPeso.Text = eA.Peso.ToString();
+            txtColor.Text = eA.ColorPelo;
+            cmbSexo.SelectedValue = eA.Sexo;
+            cmbEstado.SelectedValue = eA.Estado;
+            dtpFechaF.Value = eA.FechaDefuncion.Date;
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -101,6 +98,55 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
+        private void btnGuardarSeg_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtDetalle.Text))
+            {
+                eM.MensajeError("El campo de detalle se encuentra vacío.");
+            }
+            else
+                brS.GuardarSeguimiento(txtDetalle.Text, dtpAcontecimiento.Value.Date);
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lklblPersona_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form VerMas = new VerMasAnimal();
+            VerMas.Show();
+        }
+
+        private void LimpiarForm()
+        {
+            txtBuscar.Clear();
+            txtColor.Text = "";
+            txtUbicacion.Text = "";
+            txtPeso.Clear();
+            txtEdad.Clear();
+            txtNombre.Clear();
+            cmbEspecie.SelectedIndex = 1;
+            cmbEstado.SelectedIndex = 1;
+            cmbSexo.SelectedIndex = 1;
+        }
+
         private void btnImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog faI = new OpenFileDialog();
@@ -134,15 +180,22 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
-        private void btnGuardarSeg_Click(object sender, EventArgs e)
+        private void dtpFiltro_ValueChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtDetalle.Text))
-            {
-                eM.MensajeError("El campo de detalle se encuentra vacío.");
-            }
-            else
-                brS.GuardarSeguimiento(txtDetalle.Text, dtpAcontecimiento.Value.Date);
+            brS.FiltrarSeguimiento(dtpFiltro.Value.Date);
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
+        }
+
+        private void dtpFichaMedica_ValueChanged(object sender, EventArgs e)
+        {
+            brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
+        }
+
+        
     }
 }
             
