@@ -8,7 +8,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     static class Program
     {
-        public static int Evento;
+        
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

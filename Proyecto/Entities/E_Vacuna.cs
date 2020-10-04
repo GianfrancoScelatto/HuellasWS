@@ -14,5 +14,6 @@ namespace Entities
         public int FrecuenciaRevacunacion { get; set; }
         public string Descripcion { get; set; }
         public bool Deshabilitado { get; set; }
+        
     }
 }

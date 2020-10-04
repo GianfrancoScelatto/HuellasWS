@@ -55,7 +55,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                brV.Altavacunas(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue),dias,txtDescripcion.Text);
+                brV.Altavacunas(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue),dias,txtDescripcion.Text,1);
             }
              
         }

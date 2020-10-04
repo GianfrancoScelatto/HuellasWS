@@ -35,7 +35,7 @@ namespace DataAccess
         //Alta  de vacunas
 
         //VER SI IDVACUNA VA COMO PARAMETRO YA QUE ESO LO MANEJA LA BD PREGUNTAR
-        public void AltaVacunas(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion)
+        public void AltaVacunas(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -47,6 +47,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
                     command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_AltaVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();

@@ -116,6 +116,7 @@
             this.btnVacunas.Text = "Vacunas";
             this.btnVacunas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVacunas.UseVisualStyleBackColor = true;
+            this.btnVacunas.Click += new System.EventHandler(this.btnVacunas_Click);
             // 
             // lUsuario
             // 

@@ -4,9 +4,6 @@ C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csprojAssemblyR
 C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
 C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb
-C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
-C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
@@ -15,4 +12,7 @@ C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Pr
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.dll
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.pdb
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb

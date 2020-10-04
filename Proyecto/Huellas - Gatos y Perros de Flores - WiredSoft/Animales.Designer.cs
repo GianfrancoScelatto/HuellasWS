@@ -553,6 +553,8 @@
             // cmbEstado
             // 
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Adoptado"});
             this.cmbEstado.Location = new System.Drawing.Point(398, 425);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
@@ -561,6 +563,8 @@
             // cmbSexo
             // 
             this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "Macho"});
             this.cmbSexo.Location = new System.Drawing.Point(399, 389);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(121, 21);
@@ -611,6 +615,8 @@
             // cmbEspecie
             // 
             this.cmbEspecie.FormattingEnabled = true;
+            this.cmbEspecie.Items.AddRange(new object[] {
+            "Perro"});
             this.cmbEspecie.Location = new System.Drawing.Point(399, 137);
             this.cmbEspecie.Name = "cmbEspecie";
             this.cmbEspecie.Size = new System.Drawing.Size(121, 21);
@@ -816,6 +822,7 @@
             this.btnGuardarDatos.TabIndex = 61;
             this.btnGuardarDatos.Text = "Guardar";
             this.btnGuardarDatos.UseVisualStyleBackColor = false;
+            this.btnGuardarDatos.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // Animales
             // 

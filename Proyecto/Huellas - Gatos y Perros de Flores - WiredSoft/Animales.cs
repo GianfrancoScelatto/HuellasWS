@@ -30,18 +30,18 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void Mascota_Load(object sender, EventArgs e)
         {
-            lblIdAnimal.Text = eA.IdAnimal.ToString();
-            txtNombre.Text = eA.NombreAnimal;
-            cmbEspecie.SelectedValue = eA.IdEspecie;
-            dtpIngreso.Value = eA.FechaIngreso.Date;
-            txtUbicacion.Text = eA.LugarRescate;
-            txtEdad.Text = eA.Edad.ToString();
-            dtpFechaNac.Value = eA.FechaNac.Date;
-            txtPeso.Text = eA.Peso.ToString();
-            txtColor.Text = eA.ColorPelo;
-            cmbSexo.SelectedValue = eA.Sexo;
-            cmbEstado.SelectedValue = eA.Estado;
-            dtpFechaF.Value = eA.FechaDefuncion.Date;
+            //lblIdAnimal.Text = eA.IdAnimal.ToString();
+            //txtNombre.Text = eA.NombreAnimal;
+            //cmbEspecie.SelectedValue = eA.IdEspecie;
+            //dtpIngreso.Value = eA.FechaIngreso.Date;
+            //txtUbicacion.Text = eA.LugarRescate;
+            //txtEdad.Text = eA.Edad.ToString();
+            //dtpFechaNac.Value = eA.FechaNac.Date;
+            //txtPeso.Text = eA.Peso.ToString();
+            //txtColor.Text = eA.ColorPelo;
+            //cmbSexo.SelectedValue = eA.Sexo;
+            //cmbEstado.SelectedValue = eA.Estado;
+            //dtpFechaF.Value = eA.FechaDefuncion.Date;
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -81,13 +81,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     if (chkCasSi.Checked == true)
                     {
-                        brA.AltaAnimal(Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
-                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToInt64(txtPeso.Text),
+                        brA.AltaAnimal(1,Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
+                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDouble(txtPeso.Text),
                                                         txtComentario.Text, Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
                     }
                     else
-                        brA.AltaAnimal(Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
-                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToInt64(txtPeso.Text), txtComentario.Text,
+                        brA.AltaAnimal(1,Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
+                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDouble(txtPeso.Text), txtComentario.Text,
                                                         Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
                     LimpiarForm();
                 }
