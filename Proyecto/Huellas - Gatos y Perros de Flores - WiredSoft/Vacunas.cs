@@ -33,7 +33,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             int dias = 0;
             
-            switch (cmbRevacunacion.SelectedItem)
+            switch (cmbRevacunacion.SelectedIndex)
             {
                     case 1:
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 365;
@@ -55,7 +55,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                brV.Altavacunas(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue),dias,txtDescripcion.Text,1);
+                brV.Altavacunas(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue),dias,txtDescripcion.Text,1,1);
             }
              
         }

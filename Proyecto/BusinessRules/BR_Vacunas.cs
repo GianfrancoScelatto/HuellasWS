@@ -20,9 +20,9 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void Altavacunas(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario)
+        public void Altavacunas(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario, int Movimiento)
         {
-            VacunasDA.AltaVacunas(Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion, IdUsuario);
+            VacunasDA.AltaVacunas(Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion, IdUsuario, Movimiento);
         }
 
         public void ModificarVacuna (int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
