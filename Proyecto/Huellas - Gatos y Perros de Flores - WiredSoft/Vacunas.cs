@@ -36,16 +36,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             switch (cmbRevacunacion.SelectedIndex)
             {
                     case 1:
-                        dias = Convert.ToInt32(txtRevacunacion.Text) * 365;
-                        break;
-                    case 2:
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 30;
                         break;
-                    case 3:
+                    case 2:
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 7;
                         break;
-                    case 4:
+                    case 3:
                         dias = Convert.ToInt32(txtRevacunacion.Text);
+                        break;
+                    case 4:
+                        dias = Convert.ToInt32(txtRevacunacion.Text) * 365;
                         break;
             }
             
@@ -55,7 +55,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                brV.Altavacunas(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue),dias,txtDescripcion.Text,1,1);
+                brV.Altavacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias,txtDescripcion.Text,1,1);// problema en el combo
             }
              
         }
