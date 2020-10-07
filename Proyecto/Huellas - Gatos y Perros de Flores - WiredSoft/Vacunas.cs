@@ -22,11 +22,20 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             InitializeComponent();
         }
 
+        private void ListarEspecies()
+        {
+            {
+                cmbEspecie.DataSource = brV.ListarEspecie();
+                cmbEspecie.DisplayMember = "Especie";
+                cmbEspecie.ValueMember = "IdEspecie";
+            }
+        }
+
         private void Vacunas_Load(object sender, EventArgs e)
         {
-            cmbEspecie.SelectedIndex = 1;
-            cmbRevacunacion.SelectedIndex = 1;
-            
+            ListarEspecies();
+            cmbEspecie.SelectedIndex = 0;
+            cmbRevacunacion.SelectedIndex = 0;   
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

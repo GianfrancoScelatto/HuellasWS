@@ -14,7 +14,6 @@ namespace BusinessRules
 
         public DataTable MostrarVacunas()
         {
-
             DataTable tabla = new DataTable();
             tabla = VacunasDA.ListarVacunas();
             return tabla;
@@ -35,10 +34,17 @@ namespace BusinessRules
             VacunasDA.BajaVacuna(IdVacuna, Deshabilitado);
 
         }
-       
-    }
 
+        public DataTable ListarEspecie()
+        {
+            DataTable tabla = new DataTable();
+            tabla = VacunasDA.ListarEspecie();
+            return tabla;
+        }
+    }
 }
+
+
 
 
 

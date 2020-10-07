@@ -29,7 +29,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            ExportarDatos(dgvVacunas);
+            ExportarDatos(dgvUsuario);
         }
         public void ExportarDatos(DataGridView DatoListado)
         {
@@ -61,11 +61,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         }
         public void MostrarRegistroVacuna()
         {
-            dgvVacunas.DataSource = brV.MostrarVacunas();
+            dgvUsuario.DataSource = brV.MostrarVacunas();
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvVacunas.SelectedRows.Count > 0)
+            if (dgvUsuario.SelectedRows.Count > 0)
             {
                 DialogResult opcion;
                 opcion = MessageBox.Show("¿Desea eliminar esta vacuna?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -73,7 +73,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 if (opcion == DialogResult.OK)
                 {
                     
-                    eV.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells[0].Value.ToString());
+                    eV.IdVacuna = Convert.ToInt32(dgvUsuario.CurrentRow.Cells[0].Value.ToString());
                     brV.BajaVacuna(eV.IdVacuna, true);//discutir parametros de funcion eliminar
                     MensajeConfirmacion("Se elimino correctamente la vacuna.");
                     MostrarRegistroVacuna();
@@ -97,6 +97,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             Form Vacunas = new Vacunas();
             Vacunas.Show();
+        }
+
+        private void ListarVacuna_Load(object sender, EventArgs e)
+        {
+            MostrarRegistroVacuna();
         }
     }
 }

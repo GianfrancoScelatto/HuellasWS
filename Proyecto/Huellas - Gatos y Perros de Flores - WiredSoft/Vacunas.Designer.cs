@@ -177,6 +177,7 @@
             // 
             // cmbRevacunacion
             // 
+            this.cmbRevacunacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRevacunacion.FormattingEnabled = true;
             this.cmbRevacunacion.Items.AddRange(new object[] {
             "Año",

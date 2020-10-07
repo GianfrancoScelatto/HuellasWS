@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarVacuna));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -38,11 +39,6 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
             this.dgvVacunas = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vacuna = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Animal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FrecuenciaRevacunacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).BeginInit();
@@ -142,42 +138,32 @@
             // 
             // dgvVacunas
             // 
+            this.dgvVacunas.AllowUserToAddRows = false;
+            this.dgvVacunas.AllowUserToDeleteRows = false;
+            this.dgvVacunas.AllowUserToResizeColumns = false;
+            this.dgvVacunas.AllowUserToResizeRows = false;
+            this.dgvVacunas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVacunas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvVacunas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvVacunas.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVacunas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Vacuna,
-            this.Animal,
-            this.FrecuenciaRevacunacion,
-            this.Descripcion});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVacunas.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVacunas.Location = new System.Drawing.Point(0, 0);
+            this.dgvVacunas.MultiSelect = false;
             this.dgvVacunas.Name = "dgvVacunas";
-            this.dgvVacunas.Size = new System.Drawing.Size(1083, 615);
-            this.dgvVacunas.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID Vacuna";
-            this.Column1.Name = "Column1";
-            // 
-            // Vacuna
-            // 
-            this.Vacuna.HeaderText = "Vacuna";
-            this.Vacuna.Name = "Vacuna";
-            // 
-            // Animal
-            // 
-            this.Animal.HeaderText = "Tipo de animal";
-            this.Animal.Name = "Animal";
-            // 
-            // FrecuenciaRevacunacion
-            // 
-            this.FrecuenciaRevacunacion.HeaderText = "Revacunacion";
-            this.FrecuenciaRevacunacion.Name = "FrecuenciaRevacunacion";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
+            this.dgvVacunas.ReadOnly = true;
+            this.dgvVacunas.RowHeadersVisible = false;
+            this.dgvVacunas.RowHeadersWidth = 51;
+            this.dgvVacunas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVacunas.Size = new System.Drawing.Size(1080, 612);
+            this.dgvVacunas.TabIndex = 29;
             // 
             // ListarVacuna
             // 
@@ -191,6 +177,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarVacuna";
             this.Text = "ListarVacuna";
+            this.Load += new System.EventHandler(this.ListarVacuna_Load);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelListar.ResumeLayout(false);
@@ -210,10 +197,5 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelListar;
         private System.Windows.Forms.DataGridView dgvVacunas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vacuna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Animal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FrecuenciaRevacunacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }

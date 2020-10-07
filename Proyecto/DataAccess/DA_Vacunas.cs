@@ -20,7 +20,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_Vacunas";
+                    command.CommandText = "prc_ListarVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);
@@ -45,7 +45,7 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Vacuna", Vacuna);
                     command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
-                    command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@Frecuencia", FrecuenciaVacunacion);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.Parameters.AddWithValue("@IdMovimiento", Movimiento);
@@ -101,7 +101,7 @@ namespace DataAccess
 
         }
 
-        private DataTable BuscarVacunas(string Busqueda)
+        public DataTable BuscarVacunas(string Busqueda)
         {
             using (var connection = GetConnection())
             {
@@ -120,6 +120,24 @@ namespace DataAccess
                 }
             }
         
+        }
+
+        public DataTable ListarEspecie()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboEspecie", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;     
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
         }
     }
 }

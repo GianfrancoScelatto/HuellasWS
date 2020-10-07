@@ -241,10 +241,14 @@
             this.ClientSize = new System.Drawing.Size(1333, 670);
             this.Controls.Add(this.panelFormHijo);
             this.Controls.Add(this.panelMenuLateral);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 650);
             this.Name = "MenuInicial";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Adoptantes";
+            this.Text = "Menú principal";
             this.Load += new System.EventHandler(this.MenuInicial_Load);
             this.panelMenuLateral.ResumeLayout(false);
             this.panelMenuLateral.PerformLayout();
