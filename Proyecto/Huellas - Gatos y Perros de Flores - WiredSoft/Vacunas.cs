@@ -64,13 +64,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                brV.Altavacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias,txtDescripcion.Text,1,1);// problema en el combo
+                brV.Altavacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias,txtDescripcion.Text,1,1);
             }
              
         }
         
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
+         {
             Close();
             lstV.Show();
         }

@@ -45,7 +45,7 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Vacuna", Vacuna);
                     command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
-                    command.Parameters.AddWithValue("@Frecuencia", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.Parameters.AddWithValue("@IdMovimiento", Movimiento);
