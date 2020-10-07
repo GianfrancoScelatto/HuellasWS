@@ -34,7 +34,6 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,7 +44,6 @@
   <ItemGroup>
     <Compile Include="DA_Animal.cs" />
     <Compile Include="DA_Bitacora.cs" />
-    <Compile Include="DA_ComboAnimal.cs" />
     <Compile Include="DA_Connection.cs" />
     <Compile Include="DA_FichaMedica.cs" />
     <Compile Include="DA_Login.cs" />

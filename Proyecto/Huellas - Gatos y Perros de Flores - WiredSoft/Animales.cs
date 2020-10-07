@@ -15,7 +15,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     public partial class Animales : Form
     {
-        BR_ComboAnimal brca = new BR_ComboAnimal();
         BR_Animal brA = new BR_Animal();
         BR_Seguimiento brS = new BR_Seguimiento();
         BR_FichaMedica brFM = new BR_FichaMedica();
@@ -195,11 +194,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
         }
-        private void MostrarEspecie()
-        {
-         brca.RellenarCombo(cmbEspecie, "Especie", "IdEspecie", "Especie");
-        }
 
+        
     }
 }
             
