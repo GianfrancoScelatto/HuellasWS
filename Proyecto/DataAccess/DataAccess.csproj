@@ -45,6 +45,7 @@
     <Compile Include="DA_Animal.cs" />
     <Compile Include="DA_Bitacora.cs" />
     <Compile Include="DA_Connection.cs" />
+    <Compile Include="DA_Establecimiento.cs" />
     <Compile Include="DA_FichaMedica.cs" />
     <Compile Include="DA_Login.cs" />
     <Compile Include="DA_Persona.cs" />

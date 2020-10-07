@@ -1,12 +1,3 @@
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\BusinessRules.dll
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\BusinessRules.pdb
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\DataAccess.dll
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\DataAccess.pdb
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CoreCompileInputs.cache
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.dll
-C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.pdb
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CoreCompileInputs.cache
 C:\Users\alan-\Desktop\programacion\2AÑOCURSADA\3AÑO CURSADA\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.dll
@@ -21,3 +12,14 @@ C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Pr
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.dll
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.pdb
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\BusinessRules.dll
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\BusinessRules.pdb
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\DataAccess.dll
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\Entities.dll
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\DataAccess.pdb
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\bin\Debug\Entities.pdb
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CoreCompileInputs.cache
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.dll
+C:\Desarrollo\HuellasWS\Proyecto\BusinessRules\obj\Debug\BusinessRules.pdb
