@@ -81,7 +81,7 @@ namespace DataAccess
         }
 
         //Procedure para Baja logica de Vacunas
-        public void BajaVacuna(int IdVacuna, bool Deshabilitado)
+        public void BajaVacuna(int IdVacuna,int IdUsuario, int IdMovimiento ,bool Deshabilitado)
         {
             using (var connection = GetConnection())
             {
@@ -90,6 +90,8 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdMovimiento", IdMovimiento);
                     command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
                     command.CommandText = "prc_BajaVacuna";
                     command.CommandType = CommandType.StoredProcedure;

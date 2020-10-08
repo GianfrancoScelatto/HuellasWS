@@ -44,6 +44,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             
             switch (cmbRevacunacion.SelectedIndex)
             {
+                    case 0:
+                        dias = Convert.ToInt32(txtRevacunacion.Text) * 365;
+                        break;
                     case 1:
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 30;
                         break;
@@ -53,9 +56,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     case 3:
                         dias = Convert.ToInt32(txtRevacunacion.Text);
                         break;
-                    case 4:
-                        dias = Convert.ToInt32(txtRevacunacion.Text) * 365;
-                        break;
             }
             
             if (String.IsNullOrWhiteSpace(txtVacuna.Text) || String.IsNullOrWhiteSpace(txtRevacunacion.Text) || String.IsNullOrWhiteSpace(txtDescripcion.Text))
@@ -64,7 +64,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                brV.Altavacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias,txtDescripcion.Text,1,1);
+                brV.Altavacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias,txtDescripcion.Text,1,1);//valores hardcodeados Usuario
+                Close();
+
             }
              
         }
@@ -72,7 +74,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void btnCancelar_Click(object sender, EventArgs e)
          {
             Close();
-            lstV.Show();
+            
         }
     }
 }

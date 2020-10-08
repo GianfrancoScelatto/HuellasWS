@@ -27,6 +27,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             InitializeComponent();
         }
+        //private void ListarEspecies()
+        //{
+        //    {
+        //        cmbEspecie.DataSource = brV.ListarEspecie();
+        //        cmbEspecie.DisplayMember = "Especie";
+        //        cmbEspecie.ValueMember = "IdEspecie";
+        //    }
+        //}
 
         private void Mascota_Load(object sender, EventArgs e)
         {
@@ -42,6 +50,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             //cmbSexo.SelectedValue = eA.Sexo;
             //cmbEstado.SelectedValue = eA.Estado;
             //dtpFechaF.Value = eA.FechaDefuncion.Date;
+            //{
+            //    ListarEspecies();
+            //    cmbEspecie.SelectedIndex = 0;
+            //    cmbRevacunacion.SelectedIndex = 0;
+            //}
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)

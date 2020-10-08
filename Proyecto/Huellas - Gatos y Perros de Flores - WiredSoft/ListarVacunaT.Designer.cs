@@ -1,6 +1,6 @@
 ﻿namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    partial class ListarVacuna
+    partial class ListarVacunaT
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarVacuna));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarVacunaT));
+            this.dgvVacunas = new System.Windows.Forms.DataGridView();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -37,15 +37,22 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
-            this.panelListar = new System.Windows.Forms.Panel();
-            this.dgvVacunas = new System.Windows.Forms.DataGridView();
-            this.panelBotones.SuspendLayout();
-            this.panelListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).BeginInit();
+            this.panelBotones.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dgvVacunas
+            // 
+            this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVacunas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvVacunas.Location = new System.Drawing.Point(0, 0);
+            this.dgvVacunas.Name = "dgvVacunas";
+            this.dgvVacunas.Size = new System.Drawing.Size(1067, 631);
+            this.dgvVacunas.TabIndex = 0;
             // 
             // panelBotones
             // 
+            this.panelBotones.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelBotones.Controls.Add(this.btnExportar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
@@ -55,8 +62,8 @@
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1083, 55);
-            this.panelBotones.TabIndex = 28;
+            this.panelBotones.Size = new System.Drawing.Size(1067, 55);
+            this.panelBotones.TabIndex = 29;
             // 
             // btnExportar
             // 
@@ -64,7 +71,7 @@
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 5);
+            this.btnExportar.Location = new System.Drawing.Point(864, 5);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -77,11 +84,12 @@
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1026, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1010, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -89,7 +97,7 @@
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(934, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(918, 5);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -102,7 +110,7 @@
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 5);
+            this.btnModificar.Location = new System.Drawing.Point(964, 5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
@@ -127,67 +135,26 @@
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
-            // panelListar
-            // 
-            this.panelListar.Controls.Add(this.dgvVacunas);
-            this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelListar.Location = new System.Drawing.Point(0, 55);
-            this.panelListar.Name = "panelListar";
-            this.panelListar.Size = new System.Drawing.Size(1083, 615);
-            this.panelListar.TabIndex = 29;
-            // 
-            // dgvVacunas
-            // 
-            this.dgvVacunas.AllowUserToAddRows = false;
-            this.dgvVacunas.AllowUserToDeleteRows = false;
-            this.dgvVacunas.AllowUserToResizeColumns = false;
-            this.dgvVacunas.AllowUserToResizeRows = false;
-            this.dgvVacunas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVacunas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvVacunas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvVacunas.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVacunas.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvVacunas.Location = new System.Drawing.Point(0, 0);
-            this.dgvVacunas.MultiSelect = false;
-            this.dgvVacunas.Name = "dgvVacunas";
-            this.dgvVacunas.ReadOnly = true;
-            this.dgvVacunas.RowHeadersVisible = false;
-            this.dgvVacunas.RowHeadersWidth = 51;
-            this.dgvVacunas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVacunas.Size = new System.Drawing.Size(1080, 612);
-            this.dgvVacunas.TabIndex = 29;
-            // 
-            // ListarVacuna
+            // ListarVacunaT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1083, 670);
-            this.Controls.Add(this.panelListar);
+            this.ClientSize = new System.Drawing.Size(1067, 631);
             this.Controls.Add(this.panelBotones);
-            this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ListarVacuna";
-            this.Text = "ListarVacuna";
-            this.Load += new System.EventHandler(this.ListarVacuna_Load);
+            this.Controls.Add(this.dgvVacunas);
+            this.Name = "ListarVacunaT";
+            this.Text = "ListarVacunaT";
+            this.Load += new System.EventHandler(this.ListarVacunaT_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).EndInit();
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
-            this.panelListar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgvVacunas;
         private System.Windows.Forms.Panel panelBotones;
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnEliminar;
@@ -195,7 +162,5 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.Panel panelListar;
-        private System.Windows.Forms.DataGridView dgvVacunas;
     }
 }
