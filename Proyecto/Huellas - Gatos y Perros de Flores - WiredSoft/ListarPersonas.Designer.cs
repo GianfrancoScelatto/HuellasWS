@@ -68,17 +68,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(-178, -21);
+            this.textBox1.Location = new System.Drawing.Point(-237, -26);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(12, 20);
+            this.textBox1.Size = new System.Drawing.Size(15, 22);
             this.textBox1.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-224, -18);
+            this.label1.Location = new System.Drawing.Point(-299, -22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Buscar";
             // 
@@ -87,8 +89,9 @@
             this.panel1.Controls.Add(this.panelBotones);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1083, 55);
+            this.panel1.Size = new System.Drawing.Size(1444, 68);
             this.panel1.TabIndex = 28;
             // 
             // panelBotones
@@ -103,8 +106,9 @@
             this.panelBotones.Controls.Add(this.lblBuscar);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
+            this.panelBotones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1083, 55);
+            this.panelBotones.Size = new System.Drawing.Size(1444, 68);
             this.panelBotones.TabIndex = 28;
             // 
             // chxTransitantes
@@ -112,9 +116,10 @@
             this.chxTransitantes.AutoSize = true;
             this.chxTransitantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxTransitantes.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxTransitantes.Location = new System.Drawing.Point(227, 28);
+            this.chxTransitantes.Location = new System.Drawing.Point(303, 34);
+            this.chxTransitantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chxTransitantes.Name = "chxTransitantes";
-            this.chxTransitantes.Size = new System.Drawing.Size(101, 21);
+            this.chxTransitantes.Size = new System.Drawing.Size(131, 25);
             this.chxTransitantes.TabIndex = 49;
             this.chxTransitantes.Text = "Transitantes";
             this.chxTransitantes.UseVisualStyleBackColor = true;
@@ -124,9 +129,10 @@
             this.chxAadoptantes.AutoSize = true;
             this.chxAadoptantes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxAadoptantes.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxAadoptantes.Location = new System.Drawing.Point(227, 5);
+            this.chxAadoptantes.Location = new System.Drawing.Point(303, 6);
+            this.chxAadoptantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chxAadoptantes.Name = "chxAadoptantes";
-            this.chxAadoptantes.Size = new System.Drawing.Size(103, 21);
+            this.chxAadoptantes.Size = new System.Drawing.Size(134, 25);
             this.chxAadoptantes.TabIndex = 48;
             this.chxAadoptantes.Text = "Adoptantes";
             this.chxAadoptantes.UseVisualStyleBackColor = true;
@@ -137,9 +143,10 @@
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 5);
+            this.btnExportar.Location = new System.Drawing.Point(1173, 6);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(39, 40);
+            this.btnExportar.Size = new System.Drawing.Size(52, 49);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
@@ -150,11 +157,13 @@
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1026, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1368, 6);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(53, 49);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -162,9 +171,10 @@
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(934, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(1245, 6);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(53, 49);
             this.btnNuevo.TabIndex = 45;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -175,17 +185,20 @@
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 5);
+            this.btnModificar.Location = new System.Drawing.Point(1307, 6);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(40, 40);
+            this.btnModificar.Size = new System.Drawing.Size(53, 49);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(76, 11);
+            this.txtBuscar.Location = new System.Drawing.Point(101, 14);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(136, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(180, 22);
             this.txtBuscar.TabIndex = 39;
             // 
             // lblBuscar
@@ -193,9 +206,10 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBuscar.Location = new System.Drawing.Point(17, 12);
+            this.lblBuscar.Location = new System.Drawing.Point(23, 15);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(53, 17);
+            this.lblBuscar.Size = new System.Drawing.Size(70, 21);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -203,9 +217,10 @@
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 55);
+            this.panel2.Location = new System.Drawing.Point(0, 68);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1083, 615);
+            this.panel2.Size = new System.Drawing.Size(1444, 757);
             this.panel2.TabIndex = 29;
             // 
             // panel3
@@ -213,8 +228,9 @@
             this.panel3.Controls.Add(this.dataPersona);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1083, 615);
+            this.panel3.Size = new System.Drawing.Size(1444, 757);
             this.panel3.TabIndex = 0;
             // 
             // dataPersona
@@ -238,96 +254,129 @@
             this.UsuarioFB});
             this.dataPersona.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataPersona.Location = new System.Drawing.Point(0, 0);
+            this.dataPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataPersona.Name = "dataPersona";
-            this.dataPersona.Size = new System.Drawing.Size(1083, 615);
+            this.dataPersona.RowHeadersWidth = 51;
+            this.dataPersona.Size = new System.Drawing.Size(1444, 757);
             this.dataPersona.TabIndex = 16;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // TipoP
             // 
             this.TipoP.HeaderText = "Tipo de Persona";
+            this.TipoP.MinimumWidth = 6;
             this.TipoP.Name = "TipoP";
+            this.TipoP.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "DNI";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Nombre";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Apellido";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Calle";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
             // 
             // Altura
             // 
             this.Altura.HeaderText = "Altura";
+            this.Altura.MinimumWidth = 6;
             this.Altura.Name = "Altura";
+            this.Altura.Width = 125;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "Localidad";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
+            this.Column10.Width = 125;
             // 
             // Column11
             // 
             this.Column11.HeaderText = "Provincia";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
+            this.Column11.Width = 125;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Celular";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Mail";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
             // 
             // Sexo
             // 
             this.Sexo.HeaderText = "Sexo";
+            this.Sexo.MinimumWidth = 6;
             this.Sexo.Name = "Sexo";
+            this.Sexo.Width = 125;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Telefono";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
             // UsuarioIG
             // 
             this.UsuarioIG.HeaderText = "UsuarioInstagram";
+            this.UsuarioIG.MinimumWidth = 6;
             this.UsuarioIG.Name = "UsuarioIG";
+            this.UsuarioIG.Width = 125;
             // 
             // UsuarioFB
             // 
             this.UsuarioFB.HeaderText = "Usuario de Facebook";
+            this.UsuarioFB.MinimumWidth = 6;
             this.UsuarioFB.Name = "UsuarioFB";
+            this.UsuarioFB.Width = 125;
             // 
             // ListarPersonas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1083, 670);
+            this.ClientSize = new System.Drawing.Size(1444, 825);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ListarPersonas";
             this.Text = "ListarAdoptantes";
             this.panel1.ResumeLayout(false);

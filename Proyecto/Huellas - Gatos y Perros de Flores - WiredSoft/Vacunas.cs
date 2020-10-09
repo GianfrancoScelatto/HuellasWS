@@ -14,7 +14,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     public partial class Vacunas : Form
     {
-        ListarVacuna lstV = new ListarVacuna();
+        ListarVacunaT lstV = new ListarVacunaT();
         BR_Vacunas brV = new BR_Vacunas();
         
         public Vacunas()

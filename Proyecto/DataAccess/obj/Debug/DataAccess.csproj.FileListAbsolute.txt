@@ -25,3 +25,12 @@ D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CoreCompil
 D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
 D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.dll
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.pdb
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb

@@ -25,7 +25,7 @@ namespace BusinessRules
         {
             ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, Deshabilitado);
         }
-        public void BorrarPersona(int idPersona, int IdUsuario, int IdMovimiento, bool Deshabilitado, string Descripcion)
+        public void BajaPersona(int idPersona, int IdUsuario, int IdMovimiento, bool Deshabilitado, string Descripcion)
         {
             ObjPersona.BajaPersona(idPersona, IdUsuario, IdMovimiento, Deshabilitado, Descripcion);
         }

@@ -19,3 +19,9 @@ C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Pr
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Entities\obj\Debug\Entities.dll
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Entities\obj\Debug\Entities.pdb
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\Entities\bin\Debug\Entities.dll
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\Entities\bin\Debug\Entities.pdb
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\Entities\obj\Debug\Entities.dll
+C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\Entities\obj\Debug\Entities.pdb

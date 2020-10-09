@@ -29,12 +29,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void ListarVacunaT_Load(object sender, EventArgs e)
         {
-
-           
-            MostrarRegistroVacuna();
-            
+            MostrarRegistroVacuna();   
         }
-
 
         public void ExportarDatos(DataGridView DatoListado)
         {
@@ -103,7 +99,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
 
                     eV.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells[0].Value.ToString());
-                    brV.BajaVacuna(eV.IdVacuna, true);//discutir parametros de funcion eliminar
+                    brV.BajaVacuna(eV.IdVacuna,true);//discutir parametros de funcion eliminar
                     MensajeConfirmacion("Se elimino correctamente la vacuna.");
                     MostrarRegistroVacuna();
                 }
