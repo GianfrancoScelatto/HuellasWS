@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
@@ -50,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Desparasitacion_Vacunascs.cs">
+    <Compile Include="DesparasitacionVacuna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Desparasitacion_Vacunascs.Designer.cs">
-      <DependentUpon>Desparasitacion_Vacunascs.cs</DependentUpon>
+    <Compile Include="DesparasitacionVacuna.Designer.cs">
+      <DependentUpon>DesparasitacionVacuna.cs</DependentUpon>
     </Compile>
     <Compile Include="FichaMedica.cs">
       <SubType>Form</SubType>
@@ -124,11 +127,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recuperar.cs">
+    <Compile Include="RecuperarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recuperar.Designer.cs">
-      <DependentUpon>Recuperar.cs</DependentUpon>
+    <Compile Include="RecuperarUsuario.Designer.cs">
+      <DependentUpon>RecuperarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Persona.cs">
       <SubType>Form</SubType>
@@ -154,8 +157,8 @@
     <Compile Include="Establecimiento.Designer.cs">
       <DependentUpon>Establecimiento.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Desparasitacion_Vacunascs.resx">
-      <DependentUpon>Desparasitacion_Vacunascs.cs</DependentUpon>
+    <EmbeddedResource Include="DesparasitacionVacuna.resx">
+      <DependentUpon>DesparasitacionVacuna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FichaMedica.resx">
       <DependentUpon>FichaMedica.cs</DependentUpon>
@@ -199,8 +202,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Recuperar.resx">
-      <DependentUpon>Recuperar.cs</DependentUpon>
+    <EmbeddedResource Include="RecuperarUsuario.resx">
+      <DependentUpon>RecuperarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persona.resx">
       <DependentUpon>Persona.cs</DependentUpon>

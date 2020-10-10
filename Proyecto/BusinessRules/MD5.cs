@@ -9,10 +9,10 @@ namespace BusinessRules
 {
     public class MD5
     {
-        public static string crearMD5(string clave)
+        public static string EncriptrarClave(string Clave)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(clave));
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(Clave));
             byte[] resultado = md5.Hash;
             StringBuilder str = new StringBuilder();
             for (int i = 1; i < resultado.Length; i++)

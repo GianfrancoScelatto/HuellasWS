@@ -9,10 +9,11 @@ namespace Entities
 {
     public class E_Mensaje
     {
-        public void MensajeConfirmacion(string Mensaje)
+        public void MensajeAlerta(string Mensaje)
         {
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         public void MensajeError(string Mensaje)
         {
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);

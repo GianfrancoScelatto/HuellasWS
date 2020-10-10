@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicial));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.lklblCerrarSesion = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnFichasMedicas = new System.Windows.Forms.Button();
             this.btnVacunas = new System.Windows.Forms.Button();
-            this.lUsuario = new System.Windows.Forms.LinkLabel();
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lklblUsuario = new System.Windows.Forms.LinkLabel();
+            this.lblRol = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnListaNegra = new System.Windows.Forms.Button();
             this.btnVeterinaria = new System.Windows.Forms.Button();
@@ -50,11 +52,13 @@
             // 
             this.panelMenuLateral.AutoScroll = true;
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelMenuLateral.Controls.Add(this.lklblCerrarSesion);
+            this.panelMenuLateral.Controls.Add(this.label1);
             this.panelMenuLateral.Controls.Add(this.btnHistorial);
             this.panelMenuLateral.Controls.Add(this.btnFichasMedicas);
             this.panelMenuLateral.Controls.Add(this.btnVacunas);
-            this.panelMenuLateral.Controls.Add(this.lUsuario);
-            this.panelMenuLateral.Controls.Add(this.lblUsuario);
+            this.panelMenuLateral.Controls.Add(this.lklblUsuario);
+            this.panelMenuLateral.Controls.Add(this.lblRol);
             this.panelMenuLateral.Controls.Add(this.pictureBox1);
             this.panelMenuLateral.Controls.Add(this.btnListaNegra);
             this.panelMenuLateral.Controls.Add(this.btnVeterinaria);
@@ -66,7 +70,30 @@
             this.panelMenuLateral.Name = "panelMenuLateral";
             this.panelMenuLateral.Size = new System.Drawing.Size(250, 670);
             this.panelMenuLateral.TabIndex = 0;
-            this.panelMenuLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenuLateral_Paint);
+            // 
+            // lklblCerrarSesion
+            // 
+            this.lklblCerrarSesion.AutoSize = true;
+            this.lklblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklblCerrarSesion.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.lklblCerrarSesion.LinkColor = System.Drawing.Color.White;
+            this.lklblCerrarSesion.Location = new System.Drawing.Point(160, 648);
+            this.lklblCerrarSesion.Name = "lklblCerrarSesion";
+            this.lklblCerrarSesion.Size = new System.Drawing.Size(81, 13);
+            this.lklblCerrarSesion.TabIndex = 14;
+            this.lklblCerrarSesion.TabStop = true;
+            this.lklblCerrarSesion.Text = "Cerrar sesión";
+            this.lklblCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblCerrarSesion_LinkClicked);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 574);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Bienvenido/a:";
             // 
             // btnHistorial
             // 
@@ -118,31 +145,33 @@
             this.btnVacunas.UseVisualStyleBackColor = true;
             this.btnVacunas.Click += new System.EventHandler(this.btnVacunas_Click);
             // 
-            // lUsuario
+            // lklblUsuario
             // 
-            this.lUsuario.AutoSize = true;
-            this.lUsuario.LinkColor = System.Drawing.Color.White;
-            this.lUsuario.Location = new System.Drawing.Point(69, 608);
-            this.lUsuario.Name = "lUsuario";
-            this.lUsuario.Size = new System.Drawing.Size(43, 13);
-            this.lUsuario.TabIndex = 9;
-            this.lUsuario.TabStop = true;
-            this.lUsuario.Text = "Usuario";
+            this.lklblUsuario.AutoSize = true;
+            this.lklblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklblUsuario.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.lklblUsuario.LinkColor = System.Drawing.Color.White;
+            this.lklblUsuario.Location = new System.Drawing.Point(69, 597);
+            this.lklblUsuario.Name = "lklblUsuario";
+            this.lklblUsuario.Size = new System.Drawing.Size(50, 13);
+            this.lklblUsuario.TabIndex = 9;
+            this.lklblUsuario.TabStop = true;
+            this.lklblUsuario.Text = "Usuario";
             // 
-            // lblUsuario
+            // lblRol
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(69, 635);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(78, 13);
-            this.lblUsuario.TabIndex = 8;
-            this.lblUsuario.Text = "TipoDeUsuario";
+            this.lblRol.AutoSize = true;
+            this.lblRol.ForeColor = System.Drawing.Color.White;
+            this.lblRol.Location = new System.Drawing.Point(69, 618);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(78, 13);
+            this.lblRol.TabIndex = 8;
+            this.lblRol.Text = "TipoDeUsuario";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 608);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 590);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,7 +261,6 @@
             this.panelFormHijo.Name = "panelFormHijo";
             this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
             this.panelFormHijo.TabIndex = 1;
-            this.panelFormHijo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormHijo_Paint);
             // 
             // MenuInicial
             // 
@@ -266,11 +294,13 @@
         private System.Windows.Forms.Button btnPersonas;
         private System.Windows.Forms.Panel panelFormHijo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel lUsuario;
-        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.LinkLabel lklblUsuario;
+        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnFichasMedicas;
         private System.Windows.Forms.Button btnVacunas;
         private System.Windows.Forms.Button btnListaNegra;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel lklblCerrarSesion;
     }
 }

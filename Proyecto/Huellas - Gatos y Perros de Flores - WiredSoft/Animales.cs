@@ -27,34 +27,35 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             InitializeComponent();
         }
-        //private void ListarEspecies()
-        //{
-        //    {
-        //        cmbEspecie.DataSource = brV.ListarEspecie();
-        //        cmbEspecie.DisplayMember = "Especie";
-        //        cmbEspecie.ValueMember = "IdEspecie";
-        //    }
-        //}
+
+        private void ListarEspecies()
+        {
+            {
+                //cmbEspecie.DataSource = brV.ListarEspecie();
+                cmbEspecie.DisplayMember = "Especie";
+                cmbEspecie.ValueMember = "IdEspecie";
+            }
+        }
 
         private void Mascota_Load(object sender, EventArgs e)
         {
-            //lblIdAnimal.Text = eA.IdAnimal.ToString();
-            //txtNombre.Text = eA.NombreAnimal;
-            //cmbEspecie.SelectedValue = eA.IdEspecie;
-            //dtpIngreso.Value = eA.FechaIngreso.Date;
-            //txtUbicacion.Text = eA.LugarRescate;
-            //txtEdad.Text = eA.Edad.ToString();
-            //dtpFechaNac.Value = eA.FechaNac.Date;
-            //txtPeso.Text = eA.Peso.ToString();
-            //txtColor.Text = eA.ColorPelo;
-            //cmbSexo.SelectedValue = eA.Sexo;
-            //cmbEstado.SelectedValue = eA.Estado;
-            //dtpFechaF.Value = eA.FechaDefuncion.Date;
-            //{
-            //    ListarEspecies();
-            //    cmbEspecie.SelectedIndex = 0;
-            //    cmbRevacunacion.SelectedIndex = 0;
-            //}
+            lblIdAnimal.Text = eA.IdAnimal.ToString();
+            txtNombre.Text = eA.NombreAnimal;
+            cmbEspecie.SelectedValue = eA.IdEspecie;
+            dtpIngreso.Value = eA.FechaIngreso.Date;
+            txtUbicacion.Text = eA.LugarRescate;
+            txtEdad.Text = eA.Edad.ToString();
+            dtpFechaNac.Value = eA.FechaNac.Date;
+            txtPeso.Text = eA.Peso.ToString();
+            txtColor.Text = eA.ColorPelo;
+            cmbSexo.SelectedValue = eA.Sexo;
+            cmbEstado.SelectedValue = eA.Estado;
+            dtpFechaF.Value = eA.FechaDefuncion.Date;
+            ListarEspecies();
+            cmbEspecie.SelectedIndex = 0;
+            cmbSexo.SelectedIndex = 0;
+            cmbEstado.SelectedIndex = 0;
+            
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -178,15 +179,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             switch (tbcDatosMasc.SelectedIndex)
             {
+                case 0:
+                    btnGuardarDatos.Visible = true;
+                    btnCancelarDatos.Visible = true;
+                    break;
                 case 1:
                     btnGuardarDatos.Visible = true;
                     btnCancelarDatos.Visible = true;
                     break;
                 case 2:
-                    btnGuardarDatos.Visible = true;
-                    btnCancelarDatos.Visible = true;
-                    break;
-                case 3:
                     btnGuardarDatos.Visible = false;
                     btnCancelarDatos.Visible = false;
                     break;

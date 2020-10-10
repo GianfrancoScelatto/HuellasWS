@@ -1,6 +1,6 @@
 ﻿namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    partial class Recuperar
+    partial class RecuperarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -34,11 +34,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.cbbPregunta = new System.Windows.Forms.ComboBox();
+            this.cmbPregunta = new System.Windows.Forms.ComboBox();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtValidarContraseña = new System.Windows.Forms.TextBox();
             this.BtnIngresar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chkContraseña = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label2
@@ -46,7 +48,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 88);
+            this.label2.Location = new System.Drawing.Point(11, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 19);
             this.label2.TabIndex = 62;
@@ -57,18 +59,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 47);
+            this.label1.Location = new System.Drawing.Point(133, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 19);
+            this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 61;
-            this.label1.Text = "Ingrese su usuario: ";
+            this.label1.Text = "Usuario: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 170);
+            this.label3.Location = new System.Drawing.Point(46, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 19);
             this.label3.TabIndex = 64;
@@ -79,7 +81,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 129);
+            this.label4.Location = new System.Drawing.Point(112, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 19);
             this.label4.TabIndex = 63;
@@ -90,7 +92,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 211);
+            this.label5.Location = new System.Drawing.Point(41, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 19);
             this.label5.TabIndex = 65;
@@ -98,72 +100,109 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(252, 46);
+            this.txtUser.Location = new System.Drawing.Point(208, 63);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(187, 20);
+            this.txtUser.Size = new System.Drawing.Size(209, 20);
             this.txtUser.TabIndex = 66;
-            this.txtUser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
-            // cbbPregunta
+            // cmbPregunta
             // 
-            this.cbbPregunta.FormattingEnabled = true;
-            this.cbbPregunta.Location = new System.Drawing.Point(252, 86);
-            this.cbbPregunta.Name = "cbbPregunta";
-            this.cbbPregunta.Size = new System.Drawing.Size(187, 21);
-            this.cbbPregunta.TabIndex = 67;
+            this.cmbPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPregunta.FormattingEnabled = true;
+            this.cmbPregunta.Location = new System.Drawing.Point(208, 103);
+            this.cmbPregunta.Name = "cmbPregunta";
+            this.cmbPregunta.Size = new System.Drawing.Size(209, 21);
+            this.cmbPregunta.TabIndex = 67;
             // 
             // txtRespuesta
             // 
-            this.txtRespuesta.Location = new System.Drawing.Point(252, 128);
+            this.txtRespuesta.Location = new System.Drawing.Point(208, 145);
             this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(187, 20);
+            this.txtRespuesta.Size = new System.Drawing.Size(209, 20);
             this.txtRespuesta.TabIndex = 68;
+            this.txtRespuesta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(252, 169);
+            this.txtContraseña.Location = new System.Drawing.Point(208, 186);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(187, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(209, 20);
             this.txtContraseña.TabIndex = 69;
+            this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtValidarContraseña
             // 
-            this.txtValidarContraseña.Location = new System.Drawing.Point(252, 210);
+            this.txtValidarContraseña.Location = new System.Drawing.Point(208, 227);
             this.txtValidarContraseña.Name = "txtValidarContraseña";
-            this.txtValidarContraseña.Size = new System.Drawing.Size(187, 20);
+            this.txtValidarContraseña.Size = new System.Drawing.Size(209, 20);
             this.txtValidarContraseña.TabIndex = 70;
+            this.txtValidarContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtValidarContraseña.UseSystemPasswordChar = true;
             // 
             // BtnIngresar
             // 
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnIngresar.Location = new System.Drawing.Point(157, 288);
+            this.BtnIngresar.Location = new System.Drawing.Point(137, 303);
             this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(130, 56);
+            this.BtnIngresar.Size = new System.Drawing.Size(190, 56);
             this.BtnIngresar.TabIndex = 71;
             this.BtnIngresar.Text = "Guardar cambios";
             this.BtnIngresar.UseVisualStyleBackColor = true;
+            this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
-            // Recuperar
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(101, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(257, 19);
+            this.label6.TabIndex = 72;
+            this.label6.Text = "Complete los siguientes campos";
+            // 
+            // chkContraseña
+            // 
+            this.chkContraseña.AutoSize = true;
+            this.chkContraseña.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.chkContraseña.ForeColor = System.Drawing.Color.White;
+            this.chkContraseña.Location = new System.Drawing.Point(287, 262);
+            this.chkContraseña.Name = "chkContraseña";
+            this.chkContraseña.Size = new System.Drawing.Size(130, 19);
+            this.chkContraseña.TabIndex = 73;
+            this.chkContraseña.Text = "Mostrar contraseña";
+            this.chkContraseña.UseVisualStyleBackColor = true;
+            this.chkContraseña.CheckedChanged += new System.EventHandler(this.chkContraseña_CheckedChanged);
+            // 
+            // RecuperarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(453, 356);
+            this.ClientSize = new System.Drawing.Size(439, 371);
+            this.Controls.Add(this.chkContraseña);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.txtValidarContraseña);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtRespuesta);
-            this.Controls.Add(this.cbbPregunta);
+            this.Controls.Add(this.cmbPregunta);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Recuperar";
-            this.Text = "Recuperar";
+            this.MaximizeBox = false;
+            this.Name = "RecuperarUsuario";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Recuperar usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,10 +216,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.ComboBox cbbPregunta;
+        private System.Windows.Forms.ComboBox cmbPregunta;
         private System.Windows.Forms.TextBox txtRespuesta;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtValidarContraseña;
         private System.Windows.Forms.Button BtnIngresar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox chkContraseña;
     }
 }

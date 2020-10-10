@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class Recuperar : Form
+    public partial class DesparasitacionVacuna : Form
     {
-        public Recuperar()
+        public DesparasitacionVacuna()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

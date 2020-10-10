@@ -82,8 +82,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
 
                     eP.IdPersona = Convert.ToInt32(dataPersona.CurrentRow.Cells[0].Value.ToString());
-                    brP.BajaPersona(eP.IdPersona,eP,true);//discutir parametros de funcion eliminar
-                    eM.MensajeConfirmacion("Se elimino correctamente la vacuna.");
+                    //brP.BajaPersona(eP.IdPersona,eP,true);//discutir parametros de funcion eliminar
                     MostrarRegistroPersona();
                 }
             }

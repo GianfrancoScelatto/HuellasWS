@@ -40,7 +40,7 @@
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
             this.dtpFichaMedica = new System.Windows.Forms.DateTimePicker();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lklblVacunas = new System.Windows.Forms.LinkLabel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -214,7 +214,7 @@
             // 
             this.tabFichaMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
             this.tabFichaMed.Controls.Add(this.dtpFichaMedica);
-            this.tabFichaMed.Controls.Add(this.linkLabel1);
+            this.tabFichaMed.Controls.Add(this.lklblVacunas);
             this.tabFichaMed.Controls.Add(this.btnExportar);
             this.tabFichaMed.Controls.Add(this.btnEliminar);
             this.tabFichaMed.Controls.Add(this.btnNuevo);
@@ -243,16 +243,16 @@
             this.dtpFichaMedica.TabIndex = 50;
             this.dtpFichaMedica.ValueChanged += new System.EventHandler(this.dtpFichaMedica_ValueChanged);
             // 
-            // linkLabel1
+            // lklblVacunas
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(7, 109);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(152, 13);
-            this.linkLabel1.TabIndex = 49;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Ver Vacunas/Desparasitación:";
+            this.lklblVacunas.AutoSize = true;
+            this.lklblVacunas.LinkColor = System.Drawing.Color.White;
+            this.lklblVacunas.Location = new System.Drawing.Point(7, 109);
+            this.lklblVacunas.Name = "lklblVacunas";
+            this.lklblVacunas.Size = new System.Drawing.Size(152, 13);
+            this.lklblVacunas.TabIndex = 49;
+            this.lklblVacunas.TabStop = true;
+            this.lklblVacunas.Text = "Ver Vacunas/Desparasitación:";
             // 
             // btnExportar
             // 
@@ -494,7 +494,7 @@
             // 
             this.lklblPersona.AutoSize = true;
             this.lklblPersona.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lklblPersona.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lklblPersona.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.lklblPersona.LinkColor = System.Drawing.Color.White;
             this.lklblPersona.Location = new System.Drawing.Point(396, 502);
             this.lklblPersona.Name = "lklblPersona";
@@ -552,6 +552,7 @@
             // 
             // cmbEstado
             // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
             "Adoptado"});
@@ -562,6 +563,7 @@
             // 
             // cmbSexo
             // 
+            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Items.AddRange(new object[] {
             "Macho"});
@@ -614,6 +616,7 @@
             // 
             // cmbEspecie
             // 
+            this.cmbEspecie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEspecie.FormattingEnabled = true;
             this.cmbEspecie.Items.AddRange(new object[] {
             "Perro"});
@@ -903,7 +906,7 @@
         private System.Windows.Forms.DateTimePicker dtpFechaF;
         private System.Windows.Forms.LinkLabel lklblPersona;
         private System.Windows.Forms.Button btnExportar;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lklblVacunas;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.PictureBox picB2;
         private System.Windows.Forms.Label label1;
