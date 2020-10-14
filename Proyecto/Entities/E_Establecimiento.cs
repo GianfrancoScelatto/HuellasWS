@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class E_Establecimiento
+   public class E_Establecimiento
     {
         public int IdEstablecimiento { get; set; }
         public int IdTipoEstablecimiento { get; set; }
@@ -14,10 +14,9 @@ namespace Entities
         public string HorarioAtencion { get; set; }
         public string Localidad { get; set; }
         public string CodigoPostal { get; set; }
-        public string Calle { get; set; }
+        public  string Calle { get; set; }
         public int Altura { get; set; }
         public bool Internacion { get; set; }
         public bool Deshabilitado { get; set; }
-
     }
 }
