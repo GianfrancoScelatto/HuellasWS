@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class DA_Usuario : DA_Connection
     {
-        //E_Usuario eU = new E_Usuario();
+        
         public bool AccesoUsuario(string Usuario, string Contraseña)
         {
             using (var conexion = GetConnection())

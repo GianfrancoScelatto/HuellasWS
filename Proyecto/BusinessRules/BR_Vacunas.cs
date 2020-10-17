@@ -29,9 +29,9 @@ namespace BusinessRules
             VacunasDA.ModificarVacuna(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
         }
 
-        public void BajaVacuna(int IdVacuna, int IdUsuario, int IdMovimiento, bool Deshabilitado)
+        public void BajaVacuna(int IdVacuna, int IdUsuario, int IdMovimiento)//, bool Deshabilitado)
         {
-            VacunasDA.BajaVacuna(IdVacuna, IdUsuario, IdMovimiento , Deshabilitado);
+            VacunasDA.BajaVacuna(IdVacuna, IdUsuario, IdMovimiento);//, Deshabilitado);
 
         }
 

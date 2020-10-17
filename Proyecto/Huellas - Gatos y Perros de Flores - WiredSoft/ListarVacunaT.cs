@@ -16,7 +16,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     {
         BR_Vacunas brV = new BR_Vacunas();
         E_Vacuna eV = new E_Vacuna();
-
+        
+        //aca tenemos que traer la entidad usuario para poder traer los parametros o info?
         public ListarVacunaT()
         {
             InitializeComponent();
@@ -99,7 +100,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
 
                     eV.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells[0].Value.ToString());
-                    //brV.BajaVacuna(eV.IdVacuna,true);//discutir parametros de funcion eliminar
+                    brV.BajaVacuna(eV.IdVacuna,E_Usuario.IdUsuario,2);//discutir parametros de funcion eliminar
                     MensajeConfirmacion("Se elimino correctamente la vacuna.");
                     MostrarRegistroVacuna();
                 }
