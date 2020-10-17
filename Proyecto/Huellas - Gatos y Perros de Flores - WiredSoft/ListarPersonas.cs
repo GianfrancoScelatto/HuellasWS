@@ -17,6 +17,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         BR_Persona brP = new BR_Persona();
         E_Persona eP = new E_Persona();
         E_Mensaje eM = new E_Mensaje();
+        E_Bitacora Eb = new E_Bitacora();
         public ListarPersonas()
         {
             InitializeComponent();
@@ -82,7 +83,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
 
                     eP.IdPersona = Convert.ToInt32(dataPersona.CurrentRow.Cells[0].Value.ToString());
-                    //brP.BajaPersona(eP.IdPersona,eP,true);//discutir parametros de funcion eliminar
+                    brP.BajaPersona(eP.IdPersona, Eb.IdUsuario, Eb.IdMovimiento,Eb.Descripcion,true);//discutir parametros de funcion eliminar// Solucionado 17.10
                     MostrarRegistroPersona();
                 }
             }

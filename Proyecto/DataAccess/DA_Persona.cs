@@ -94,7 +94,7 @@ namespace DataAccess
                 }
             }
         }
-        public void BajaPersona(int IdPersona, int IdUsuario, int IdMovimiento, bool Deshabilitado, string Descripcion)
+        public void BajaPersona(int IdPersona, int IdUsuario, int IdMovimiento, string Descripcion, bool Deshabilitado)
         {
             using (var connection = GetConnection())
             {

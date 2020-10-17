@@ -25,9 +25,9 @@ namespace BusinessRules
         {
             ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, Deshabilitado);
         }
-        public void BajaPersona(int idPersona, int IdUsuario, int IdMovimiento, bool Deshabilitado, string Descripcion)
+        public void BajaPersona(int idPersona, int IdUsuario, int IdMovimiento, string Descripcion, bool Deshabilitado)
         {
-            ObjPersona.BajaPersona(idPersona, IdUsuario, IdMovimiento, Deshabilitado, Descripcion);
+            ObjPersona.BajaPersona(idPersona, IdUsuario, IdMovimiento, Descripcion, Deshabilitado);
         }
         public void FiltrarPersona(string Busqueda)
         {
