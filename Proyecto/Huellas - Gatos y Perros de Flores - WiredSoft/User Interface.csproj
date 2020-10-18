@@ -101,6 +101,12 @@
     <Compile Include="ListarEstablecimient.Designer.cs">
       <DependentUpon>ListarEstablecimient.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarUsuarios.Designer.cs">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarVacunaT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,12 @@
     </Compile>
     <Compile Include="Persona.Designer.cs">
       <DependentUpon>Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Vacunas.cs">
       <SubType>Form</SubType>
@@ -181,6 +193,9 @@
     <EmbeddedResource Include="ListarEstablecimient.resx">
       <DependentUpon>ListarEstablecimient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListarUsuarios.resx">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListarVacunaT.resx">
       <DependentUpon>ListarVacunaT.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Persona.resx">
       <DependentUpon>Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vacunas.resx">
       <DependentUpon>Vacunas.cs</DependentUpon>
