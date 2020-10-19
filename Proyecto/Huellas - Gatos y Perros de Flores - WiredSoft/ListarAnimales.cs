@@ -33,6 +33,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             MostrarRegistroAnimal();
             dgvMascotas.Columns["IdAnimal"].Visible = false;
             dgvMascotas.Columns["IdEspecie"].Visible = false;
+            dgvMascotas.Columns["IdPersona"].Visible = false;
             dgvMascotas.Columns["Castracion"].Visible = false;
         }
 
@@ -75,21 +76,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             if (dgvMascotas.SelectedRows.Count > 0)
             {
                 E_Animal.Editar = true;
-                E_Animal.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdAnimal"].Value);
-                E_Animal.NombreAnimal = dgvMascotas.CurrentRow.Cells["Nombre"].Value.ToString();
-                E_Animal.IdEspecie = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdEspecie"].Value);
-                E_Animal.FechaIngreso = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha ingreso"].Value).Date;
-                E_Animal.Castracion = Convert.ToBoolean(dgvMascotas.CurrentRow.Cells["Castracion"].Value);
-                E_Animal.FechaCastracion = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha castracion"].Value).Date;
-                E_Animal.LugarRescate = dgvMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
-                E_Animal.Sexo = dgvMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
-                E_Animal.Edad = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Edad"].Value);
-                E_Animal.Peso = Convert.ToDouble(dgvMascotas.CurrentRow.Cells["Peso"].Value);
-                E_Animal.ColorPelo = dgvMascotas.CurrentRow.Cells["Color"].Value.ToString();
-                E_Animal.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Estado"].Value);
-                E_Animal.FechaNac = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha nacimiento"].Value).Date;
-                E_Animal.Comentario = dgvMascotas.CurrentRow.Cells["Comentario"].Value.ToString();
-
                 Form Animales = new Animales();
                 Animales.Show();
 
@@ -103,12 +89,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (dgvMascotas.SelectedRows.Count > 0)
             {
-                DialogResult opcion;
-                opcion = MessageBox.Show("Quiere eliminar al animal?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult preg = MessageBox.Show("Quiere eliminar al animal?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                if(opcion== DialogResult.OK)
+                if (preg == DialogResult.OK)
                 {
-                    E_Animal.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells[0].Value.ToString());
+                    E_Animal.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdAnimal"].Value);
                     brA.BorrarAnimal(E_Animal.IdAnimal, E_Usuario.IdUsuario, eB.IdMovimiento, E_Animal.Estado, eB.Descripcion, E_Animal.Deshabilitado);
                     MostrarRegistroAnimal();
                 }
@@ -119,7 +104,25 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
 
         }
-        
+
+        private void DgvMascotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            E_Animal.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdAnimal"].Value);
+            E_Animal.NombreAnimal = dgvMascotas.CurrentRow.Cells["Nombre"].Value.ToString();
+            E_Animal.IdEspecie = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdEspecie"].Value);
+            E_Animal.FechaIngreso = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha ingreso"].Value).Date;
+            E_Animal.Castracion = Convert.ToBoolean(dgvMascotas.CurrentRow.Cells["Castracion"].Value);
+            E_Animal.FechaCastracion = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha castracion"].Value).Date;
+            E_Animal.LugarRescate = dgvMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
+            E_Animal.Sexo = dgvMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
+            E_Animal.Edad = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Edad"].Value);
+            E_Animal.Peso = Convert.ToDouble(dgvMascotas.CurrentRow.Cells["Peso"].Value);
+            E_Animal.ColorPelo = dgvMascotas.CurrentRow.Cells["Color"].Value.ToString();
+            E_Animal.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Estado"].Value);
+            E_Animal.FechaNac = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha nacimiento"].Value).Date;
+            E_Animal.Comentario = dgvMascotas.CurrentRow.Cells["Comentario"].Value.ToString();
+            E_Animal.Persona = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdPersona"].Value);
+        }
     }
     
 }

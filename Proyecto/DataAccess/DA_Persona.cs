@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -115,7 +116,7 @@ namespace DataAccess
             }
         }
 
-        public DataTable FiltrarPersona(string busqueda)
+        public DataTable FiltrarPersona(string Busqueda)
         {
             using (var connection = GetConnection())
             {
@@ -124,11 +125,57 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@Busqueda", busqueda);
+                    command.Parameters.AddWithValue("@Busqueda", Busqueda);
                     command.CommandText = "prc_FiltrarPersona";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
+        public DataTable DetallePersona(int idPersona)
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.Parameters.AddWithValue("@IdPersona", idPersona);
+                    command.CommandText = "prc_DetallePersona";
+                    command.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.HasRows && reader.Read())
+                    {
+                        E_Persona.NombrePersona = reader.GetString(0);
+                        E_Persona.Domicilio = reader.GetString(1);
+                        E_Persona.Localidad = reader.GetString(2);
+                        E_Persona.Celular = reader.GetInt32(3);
+                        E_Persona.Email = reader.GetString(4);
+                    }
+                    tabla.Load(reader);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
+        public DataTable ComboPersona()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboPersona", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
                     connection.Close();
                     return tabla;
                 }

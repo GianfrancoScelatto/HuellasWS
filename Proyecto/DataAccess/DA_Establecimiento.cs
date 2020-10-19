@@ -97,9 +97,7 @@ namespace DataAccess
 					command.CommandType = CommandType.StoredProcedure;
 					command.ExecuteNonQuery();
 				}
-
 			}
-
 		}
 
 
@@ -124,30 +122,27 @@ namespace DataAccess
 
 		}
 
-
-		//Para listar los datos de Especie en el combobox de Establecimiento
-		//public DataTable ListarEstablecimiento()
-		//{
-		//    using (var connection = GetConnection())
-		//    {
-		//        DataTable tabla = new DataTable();
-		//        connection.Open();
-		//        using (var command = new SqlCommand())
-		//        {
-		//            command.Connection = connection;
-		//            command.CommandText = "prc_ListarTipoEstablecimiento";
-		//            command.CommandType = CommandType.StoredProcedure;
-		//            SqlDataAdapter sdA = new SqlDataAdapter();
-		//            sdA.Fill(tabla);
-		//            connection.Close();
-		//            return tabla;
-		//        }
-		//    }
-		//}
+        public DataTable ComboEstablecimiento()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboEstablecimiento", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
 
 
 
 
 
-	}
+    }
 }

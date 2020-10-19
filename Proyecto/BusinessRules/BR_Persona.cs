@@ -17,7 +17,7 @@ namespace BusinessRules
             tabla = ObjPersona.ListarPersona();
             return tabla;
         }
-        public void AltaPersona( int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
+        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
         {
             ObjPersona.AltaPersona(IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, Deshabilitado);
         }
@@ -32,6 +32,20 @@ namespace BusinessRules
         public void FiltrarPersona(string Busqueda)
         {
             ObjPersona.FiltrarPersona(Busqueda);
+        }
+
+        public DataTable DetallePersona(int idPersona)
+        {
+            DataTable tabla = new DataTable();
+            tabla = ObjPersona.DetallePersona(idPersona);
+            return tabla;
+        }
+
+        public DataTable ComboPersona()
+        {
+            DataTable tabla = new DataTable();
+            tabla = ObjPersona.ComboPersona();
+            return tabla;
         }
     }
 }

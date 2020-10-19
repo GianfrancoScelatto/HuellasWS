@@ -24,5 +24,20 @@ namespace BusinessRules
             tabla = daFM.FiltrarFichaMedica(Nombre, Fecha);
             return tabla;
         }
+
+        public void AltaFichaMedica(int idAnimal, int idVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
+        {
+            daFM.AltaFichaMedica(idAnimal, idVeterinaria, Fecha, Informe, Tratamiento, Costo);
+        }
+
+        public void ModificarFichaMedica(int idAnimal, int idVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
+        {
+            daFM.ModificarFichaMedica(idAnimal, idVeterinaria, Fecha, Informe, Tratamiento, Costo);
+        }
+
+        public void BajaFichaMedica(int idFichaMedica, int idRol)
+        {
+            daFM.BajaFichaMedica(idFichaMedica, idRol);
+        }
     }
 }

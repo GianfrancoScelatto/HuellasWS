@@ -16,6 +16,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     {
         ListarVacunaT lstV = new ListarVacunaT();
         BR_Vacunas brV = new BR_Vacunas();
+        E_Mensaje msj = new E_Mensaje();
         
         public Vacunas()
         {
@@ -60,7 +61,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             
             if (String.IsNullOrWhiteSpace(txtVacuna.Text) || String.IsNullOrWhiteSpace(txtRevacunacion.Text) || String.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
-                MessageBox.Show("", "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                msj.MensajeError("Hay campos vacíos.");
             }
             else
             {

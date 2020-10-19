@@ -37,6 +37,13 @@ namespace BusinessRules
             return tabla;
         }
 
+        public DataTable ComboAnimal()
+        {
+            DataTable tabla = new DataTable();
+            tabla = ObjAnimal.ComboAnimal();
+            return tabla;
+        }
+
         public DataTable ListarEstado()
         {
             DataTable tabla = new DataTable();

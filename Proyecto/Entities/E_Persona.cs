@@ -6,26 +6,27 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class E_Persona
+    public static class E_Persona
     {
-        public int IdPersona { get; set; }
-        public int IdTipoPersona { get; set; }
-        public string NombrePersona { get; set; }
-        public string ApellidoPersona { get; set; }
-        public int Edad { get; set; }
-        public string DNI { get; set; }
-        public string Domicilio { get; set; }
-        public string Localidad { get; set; }
-        public string CodigoPostal { get; set; }
-        public string Calles { get; set; }
-        public int Altura { get; set; }
-        public string Sexo { get; set; }
-        public int Telefono { get; set; }
-        public int Celular { get; set; }
-        public string Email { get; set; }
-        public string UsuarioFaceIg { get; set; }
-        public bool ListaNegra { get; set; }
-        public string Motivo { get; set; }
-        public bool Desabilitado { get; set; }
+        public static int IdPersona { get; set; }
+        public static int IdTipoPersona { get; set; }
+        public static string NombrePersona { get; set; }
+        public static string ApellidoPersona { get; set; }
+        public static int Edad { get; set; }
+        public static string DNI { get; set; }
+        public static string Domicilio { get; set; }
+        public static string Localidad { get; set; }
+        public static string CodigoPostal { get; set; }
+        public static string Calles { get; set; }
+        public static int Altura { get; set; }
+        public static string Sexo { get; set; }
+        public static int Telefono { get; set; }
+        public static int Celular { get; set; }
+        public static string Email { get; set; }
+        public static string UsuarioFaceIg { get; set; }
+        public static bool ListaNegra { get; set; }
+        public static string Motivo { get; set; }
+        public static bool Desabilitado { get; set; }
+        public static bool Editar { get; set; }
     }
 }

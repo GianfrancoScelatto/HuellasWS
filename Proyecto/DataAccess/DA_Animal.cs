@@ -127,6 +127,24 @@ namespace DataAccess
             }
         }
 
+        public DataTable ComboAnimal()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboAnimal", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
         public DataTable ListarEstado()
         {
             using (var connection = GetConnection())

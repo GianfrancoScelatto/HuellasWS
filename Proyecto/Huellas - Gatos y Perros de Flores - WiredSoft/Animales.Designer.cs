@@ -259,8 +259,10 @@
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(673, 143);
+            this.btnExportar.Location = new System.Drawing.Point(670, 143);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(28, 29);
             this.btnExportar.TabIndex = 48;
@@ -272,8 +274,10 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(809, 143);
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Location = new System.Drawing.Point(805, 143);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 29);
             this.btnEliminar.TabIndex = 45;
@@ -285,8 +289,9 @@
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(717, 143);
+            this.btnNuevo.Location = new System.Drawing.Point(715, 143);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(28, 29);
             this.btnNuevo.TabIndex = 44;
@@ -298,8 +303,9 @@
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(763, 143);
+            this.btnModificar.Location = new System.Drawing.Point(760, 143);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(28, 29);
             this.btnModificar.TabIndex = 43;
@@ -384,6 +390,7 @@
             this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFichaMedica.Size = new System.Drawing.Size(840, 361);
             this.dgvFichaMedica.TabIndex = 28;
+            this.dgvFichaMedica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFichaMedica_CellContentClick);
             // 
             // label26
             // 
@@ -496,7 +503,7 @@
             this.lklblPersona.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lklblPersona.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.lklblPersona.LinkColor = System.Drawing.Color.White;
-            this.lklblPersona.Location = new System.Drawing.Point(396, 502);
+            this.lklblPersona.Location = new System.Drawing.Point(414, 501);
             this.lklblPersona.Name = "lklblPersona";
             this.lklblPersona.Size = new System.Drawing.Size(109, 13);
             this.lklblPersona.TabIndex = 106;
@@ -508,8 +515,10 @@
             // 
             this.dtpFechaF.Enabled = false;
             this.dtpFechaF.Location = new System.Drawing.Point(397, 462);
+            this.dtpFechaF.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
+            this.dtpFechaF.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaF.Name = "dtpFechaF";
-            this.dtpFechaF.Size = new System.Drawing.Size(122, 20);
+            this.dtpFechaF.Size = new System.Drawing.Size(146, 20);
             this.dtpFechaF.TabIndex = 105;
             // 
             // label7
@@ -526,8 +535,10 @@
             // dtpFechaNac
             // 
             this.dtpFechaNac.Location = new System.Drawing.Point(398, 282);
+            this.dtpFechaNac.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
+            this.dtpFechaNac.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(122, 20);
+            this.dtpFechaNac.Size = new System.Drawing.Size(146, 20);
             this.dtpFechaNac.TabIndex = 103;
             // 
             // label6
@@ -544,12 +555,14 @@
             // lblIdAnimal
             // 
             this.lblIdAnimal.AutoSize = true;
+            this.lblIdAnimal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdAnimal.ForeColor = System.Drawing.Color.White;
-            this.lblIdAnimal.Location = new System.Drawing.Point(434, 69);
+            this.lblIdAnimal.Location = new System.Drawing.Point(453, 63);
             this.lblIdAnimal.Name = "lblIdAnimal";
-            this.lblIdAnimal.Size = new System.Drawing.Size(35, 13);
+            this.lblIdAnimal.Size = new System.Drawing.Size(15, 21);
             this.lblIdAnimal.TabIndex = 99;
-            this.lblIdAnimal.Text = "label1";
+            this.lblIdAnimal.Text = "-";
+            this.lblIdAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmbEstado
             // 
@@ -557,8 +570,9 @@
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Location = new System.Drawing.Point(398, 425);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cmbEstado.Size = new System.Drawing.Size(145, 21);
             this.cmbEstado.TabIndex = 98;
+            this.cmbEstado.TextUpdate += new System.EventHandler(this.CmbEstado_TextUpdate);
             // 
             // cmbSexo
             // 
@@ -569,49 +583,51 @@
             "H"});
             this.cmbSexo.Location = new System.Drawing.Point(399, 389);
             this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(121, 21);
+            this.cmbSexo.Size = new System.Drawing.Size(145, 21);
             this.cmbSexo.TabIndex = 94;
             // 
             // txtColor
             // 
             this.txtColor.Location = new System.Drawing.Point(398, 354);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(122, 20);
+            this.txtColor.Size = new System.Drawing.Size(146, 20);
             this.txtColor.TabIndex = 93;
             // 
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(398, 318);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(122, 20);
+            this.txtPeso.Size = new System.Drawing.Size(146, 20);
             this.txtPeso.TabIndex = 92;
             // 
             // txtEdad
             // 
             this.txtEdad.Location = new System.Drawing.Point(398, 246);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(122, 20);
+            this.txtEdad.Size = new System.Drawing.Size(146, 20);
             this.txtEdad.TabIndex = 91;
             // 
             // txtUbicacion
             // 
             this.txtUbicacion.Location = new System.Drawing.Point(398, 210);
             this.txtUbicacion.Name = "txtUbicacion";
-            this.txtUbicacion.Size = new System.Drawing.Size(122, 20);
+            this.txtUbicacion.Size = new System.Drawing.Size(146, 20);
             this.txtUbicacion.TabIndex = 90;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(398, 102);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(122, 20);
+            this.txtNombre.Size = new System.Drawing.Size(146, 20);
             this.txtNombre.TabIndex = 84;
             // 
             // dtpIngreso
             // 
             this.dtpIngreso.Location = new System.Drawing.Point(398, 174);
+            this.dtpIngreso.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
+            this.dtpIngreso.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpIngreso.Name = "dtpIngreso";
-            this.dtpIngreso.Size = new System.Drawing.Size(122, 20);
+            this.dtpIngreso.Size = new System.Drawing.Size(146, 20);
             this.dtpIngreso.TabIndex = 86;
             // 
             // cmbEspecie
@@ -620,7 +636,7 @@
             this.cmbEspecie.FormattingEnabled = true;
             this.cmbEspecie.Location = new System.Drawing.Point(399, 137);
             this.cmbEspecie.Name = "cmbEspecie";
-            this.cmbEspecie.Size = new System.Drawing.Size(121, 21);
+            this.cmbEspecie.Size = new System.Drawing.Size(145, 21);
             this.cmbEspecie.TabIndex = 85;
             // 
             // btnImagen

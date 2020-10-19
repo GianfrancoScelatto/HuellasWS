@@ -230,6 +230,7 @@
             this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMascotas.Size = new System.Drawing.Size(1586, 609);
             this.dgvMascotas.TabIndex = 27;
+            this.dgvMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMascotas_CellContentClick);
             // 
             // ListarAnimales
             // 

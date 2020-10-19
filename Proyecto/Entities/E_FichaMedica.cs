@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class E_FichaMedica
+    public static class E_FichaMedica
     {
-        public int IdFichaMedica { get; set; }
-        public DateTime Fecha { get; set; }
-        public string Informe { get; set; }
-        public string Tratamiento { get; set; }
-        public int IdVeterinaria { get; set; }
-        public int IdMascota { get; set; }
-        public decimal Costo { get; set; }
+        public static int IdFichaMedica { get; set; }
+        public static DateTime Fecha { get; set; }
+        public static string Informe { get; set; }
+        public static string Tratamiento { get; set; }
+        public static int IdVeterinaria { get; set; }
+        public static int IdMascota { get; set; }
+        public static decimal Costo { get; set; }
+        public static bool Editar { get; set; }
     }
 }

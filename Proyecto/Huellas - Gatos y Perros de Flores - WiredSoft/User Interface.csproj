@@ -157,11 +157,11 @@
     <Compile Include="Vacunas.Designer.cs">
       <DependentUpon>Vacunas.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerMasAnimal.cs">
+    <Compile Include="DetalleTrAd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerMasAnimal.Designer.cs">
-      <DependentUpon>VerMasAnimal.cs</DependentUpon>
+    <Compile Include="DetalleTrAd.Designer.cs">
+      <DependentUpon>DetalleTrAd.cs</DependentUpon>
     </Compile>
     <Compile Include="Establecimiento.cs">
       <SubType>Form</SubType>
@@ -229,8 +229,8 @@
     <EmbeddedResource Include="Vacunas.resx">
       <DependentUpon>Vacunas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerMasAnimal.resx">
-      <DependentUpon>VerMasAnimal.cs</DependentUpon>
+    <EmbeddedResource Include="DetalleTrAd.resx">
+      <DependentUpon>DetalleTrAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Establecimiento.resx">
       <DependentUpon>Establecimiento.cs</DependentUpon>

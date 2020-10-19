@@ -34,15 +34,16 @@
             this.lblEspecie = new System.Windows.Forms.Label();
             this.lblDFichaMed = new System.Windows.Forms.Label();
             this.lblMascota = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.dtpFechaAtencion = new System.Windows.Forms.DateTimePicker();
+            this.txtCosto = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbVet = new System.Windows.Forms.ComboBox();
+            this.cmbAnimal = new System.Windows.Forms.ComboBox();
+            this.lblIdFM = new System.Windows.Forms.Label();
+            this.txtInforme = new System.Windows.Forms.TextBox();
+            this.txtTratamiento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -50,18 +51,18 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(13, 546);
+            this.label6.Location = new System.Drawing.Point(137, 545);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 19);
+            this.label6.Size = new System.Drawing.Size(55, 19);
             this.label6.TabIndex = 109;
-            this.label6.Text = "Costo";
+            this.label6.Text = "Costo:";
             // 
             // lblUbicacion
             // 
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUbicacion.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUbicacion.Location = new System.Drawing.Point(12, 510);
+            this.lblUbicacion.Location = new System.Drawing.Point(26, 509);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(166, 19);
             this.lblUbicacion.TabIndex = 108;
@@ -94,7 +95,7 @@
             this.lblDFichaMed.AutoSize = true;
             this.lblDFichaMed.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDFichaMed.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDFichaMed.Location = new System.Drawing.Point(12, 45);
+            this.lblDFichaMed.Location = new System.Drawing.Point(36, 45);
             this.lblDFichaMed.Name = "lblDFichaMed";
             this.lblDFichaMed.Size = new System.Drawing.Size(139, 19);
             this.lblDFichaMed.TabIndex = 104;
@@ -105,41 +106,27 @@
             this.lblMascota.AutoSize = true;
             this.lblMascota.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMascota.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMascota.Location = new System.Drawing.Point(12, 106);
+            this.lblMascota.Location = new System.Drawing.Point(39, 106);
             this.lblMascota.Name = "lblMascota";
             this.lblMascota.Size = new System.Drawing.Size(136, 19);
             this.lblMascota.TabIndex = 103;
             this.lblMascota.Text = "Fecha Atencion:";
             // 
-            // dateTimePicker1
+            // dtpFechaAtencion
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(181, 106);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
-            this.dateTimePicker1.TabIndex = 110;
+            this.dtpFechaAtencion.Location = new System.Drawing.Point(181, 106);
+            this.dtpFechaAtencion.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
+            this.dtpFechaAtencion.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtpFechaAtencion.Name = "dtpFechaAtencion";
+            this.dtpFechaAtencion.Size = new System.Drawing.Size(198, 20);
+            this.dtpFechaAtencion.TabIndex = 110;
             // 
-            // textBox3
+            // txtCosto
             // 
-            this.textBox3.Location = new System.Drawing.Point(198, 546);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 20);
-            this.textBox3.TabIndex = 113;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(17, 342);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(545, 142);
-            this.richTextBox1.TabIndex = 114;
-            this.richTextBox1.Text = "";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(17, 164);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(545, 140);
-            this.richTextBox2.TabIndex = 115;
-            this.richTextBox2.Text = "";
+            this.txtCosto.Location = new System.Drawing.Point(198, 546);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(197, 20);
+            this.txtCosto.TabIndex = 113;
             // 
             // btnCancelar
             // 
@@ -156,6 +143,7 @@
             this.btnCancelar.TabIndex = 117;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -172,6 +160,7 @@
             this.btnGuardar.TabIndex = 116;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // label1
             // 
@@ -184,21 +173,50 @@
             this.label1.TabIndex = 118;
             this.label1.Text = "Nombre de animal:";
             // 
-            // comboBox1
+            // cmbVet
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(198, 507);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(197, 21);
-            this.comboBox1.TabIndex = 120;
+            this.cmbVet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVet.FormattingEnabled = true;
+            this.cmbVet.Location = new System.Drawing.Point(198, 507);
+            this.cmbVet.Name = "cmbVet";
+            this.cmbVet.Size = new System.Drawing.Size(197, 21);
+            this.cmbVet.TabIndex = 120;
             // 
-            // comboBox2
+            // cmbAnimal
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(181, 73);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(197, 21);
-            this.comboBox2.TabIndex = 121;
+            this.cmbAnimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAnimal.FormattingEnabled = true;
+            this.cmbAnimal.Location = new System.Drawing.Point(181, 73);
+            this.cmbAnimal.Name = "cmbAnimal";
+            this.cmbAnimal.Size = new System.Drawing.Size(197, 21);
+            this.cmbAnimal.TabIndex = 121;
+            // 
+            // lblIdFM
+            // 
+            this.lblIdFM.AutoSize = true;
+            this.lblIdFM.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblIdFM.ForeColor = System.Drawing.Color.White;
+            this.lblIdFM.Location = new System.Drawing.Point(269, 43);
+            this.lblIdFM.Name = "lblIdFM";
+            this.lblIdFM.Size = new System.Drawing.Size(15, 21);
+            this.lblIdFM.TabIndex = 122;
+            this.lblIdFM.Text = "-";
+            // 
+            // txtInforme
+            // 
+            this.txtInforme.Location = new System.Drawing.Point(17, 164);
+            this.txtInforme.Multiline = true;
+            this.txtInforme.Name = "txtInforme";
+            this.txtInforme.Size = new System.Drawing.Size(545, 140);
+            this.txtInforme.TabIndex = 123;
+            // 
+            // txtTratamiento
+            // 
+            this.txtTratamiento.Location = new System.Drawing.Point(18, 342);
+            this.txtTratamiento.Multiline = true;
+            this.txtTratamiento.Name = "txtTratamiento";
+            this.txtTratamiento.Size = new System.Drawing.Size(544, 142);
+            this.txtTratamiento.TabIndex = 124;
             // 
             // FichaMedica
             // 
@@ -206,21 +224,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(574, 682);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblIdFM);
+            this.Controls.Add(this.cmbAnimal);
+            this.Controls.Add(this.cmbVet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtCosto);
+            this.Controls.Add(this.dtpFechaAtencion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.lblIngreso);
             this.Controls.Add(this.lblEspecie);
             this.Controls.Add(this.lblDFichaMed);
             this.Controls.Add(this.lblMascota);
+            this.Controls.Add(this.txtTratamiento);
+            this.Controls.Add(this.txtInforme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FichaMedica";
             this.Text = "FichaMedica";
@@ -238,14 +257,15 @@
         private System.Windows.Forms.Label lblEspecie;
         private System.Windows.Forms.Label lblDFichaMed;
         private System.Windows.Forms.Label lblMascota;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.DateTimePicker dtpFechaAtencion;
+        private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbVet;
+        private System.Windows.Forms.ComboBox cmbAnimal;
+        private System.Windows.Forms.Label lblIdFM;
+        private System.Windows.Forms.TextBox txtInforme;
+        private System.Windows.Forms.TextBox txtTratamiento;
     }
 }
