@@ -506,6 +506,7 @@
             // 
             // dtpFechaF
             // 
+            this.dtpFechaF.Enabled = false;
             this.dtpFechaF.Location = new System.Drawing.Point(397, 462);
             this.dtpFechaF.Name = "dtpFechaF";
             this.dtpFechaF.Size = new System.Drawing.Size(122, 20);
@@ -554,8 +555,6 @@
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Adoptado"});
             this.cmbEstado.Location = new System.Drawing.Point(398, 425);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
@@ -566,7 +565,8 @@
             this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Items.AddRange(new object[] {
-            "Macho"});
+            "M",
+            "H"});
             this.cmbSexo.Location = new System.Drawing.Point(399, 389);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(121, 21);
@@ -618,8 +618,6 @@
             // 
             this.cmbEspecie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEspecie.FormattingEnabled = true;
-            this.cmbEspecie.Items.AddRange(new object[] {
-            "Perro"});
             this.cmbEspecie.Location = new System.Drawing.Point(399, 137);
             this.cmbEspecie.Name = "cmbEspecie";
             this.cmbEspecie.Size = new System.Drawing.Size(121, 21);

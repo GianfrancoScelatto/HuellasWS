@@ -10,7 +10,7 @@ namespace BusinessRules
 {
     public class BR_Animal
     {
-        readonly DA_Animal ObjAnimal = new DA_Animal();
+        DA_Animal ObjAnimal = new DA_Animal();
 
         public DataTable ListarAnimal()
         {
@@ -18,9 +18,9 @@ namespace BusinessRules
             tabla = ObjAnimal.ListarAnimal();
             return tabla;
         }
-        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
+        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso, DateTime FechaNacimiento)
         {
-            ObjAnimal.AltaAnimal(idUsuario, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
+            ObjAnimal.AltaAnimal(idUsuario, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso, FechaNacimiento);
         }
         public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
@@ -34,6 +34,13 @@ namespace BusinessRules
         {
             DataTable tabla = new DataTable();
             tabla = ObjAnimal.FiltrarAnimal(Busqueda);
+            return tabla;
+        }
+
+        public DataTable ListarEstado()
+        {
+            DataTable tabla = new DataTable();
+            tabla = ObjAnimal.ListarEstado();
             return tabla;
         }
     }

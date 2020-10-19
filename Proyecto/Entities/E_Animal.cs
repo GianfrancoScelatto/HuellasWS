@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class E_Animal
+    public static class E_Animal
     {
-        public int IdAnimal { get; set; }
-        public string NombreAnimal { get; set; }
-        public int IdEspecie { get; set; }
-        public DateTime FechaIngreso { get; set; }
-        public DateTime FechaNac { get; set; }
-        public string LugarRescate { get; set; }
-        public byte FotoIngreso { get; set; }
-        public byte FotoAdopcion { get; set; }
-        public string Sexo { get; set; }
-        public int Edad { get; set; }
-        public double Peso { get; set; }
-        public string ColorPelo { get; set; }
-        public bool Castracion { get; set; }
-        public DateTime FechaCastracion { get; set; }
-        public string Comentario { get; set; }
-        public string Salud { get; set; }
-        public int Estado { get; set; }
-        public int Persona { get; set; }
-        public DateTime FechaDefuncion { get; set; }
-        public bool Deshabilitado { get; set; }
+        public static int IdAnimal { get; set; }
+        public static string NombreAnimal { get; set; }
+        public static int IdEspecie { get; set; }
+        public static DateTime FechaIngreso { get; set; }
+        public static DateTime FechaNac { get; set; }
+        public static string LugarRescate { get; set; }
+        public static byte FotoIngreso { get; set; }
+        public static byte FotoAdopcion { get; set; }
+        public static string Sexo { get; set; }
+        public static int Edad { get; set; }
+        public static double Peso { get; set; }
+        public static string ColorPelo { get; set; }
+        public static bool Castracion { get; set; }
+        public static DateTime FechaCastracion { get; set; }
+        public static string Comentario { get; set; }
+        public static string Salud { get; set; }
+        public static int Estado { get; set; }
+        public static int Persona { get; set; }
+        public static DateTime FechaDefuncion { get; set; }
+        public static bool Deshabilitado { get; set; }
+        public static bool Editar { get; set; }
     }
 }

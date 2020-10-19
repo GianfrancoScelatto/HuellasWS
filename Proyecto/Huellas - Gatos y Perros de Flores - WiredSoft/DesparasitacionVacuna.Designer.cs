@@ -133,7 +133,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // Desparasitacion_Vacunascs
+            // DesparasitacionVacuna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -148,8 +148,8 @@
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.lblD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Desparasitacion_Vacunascs";
-            this.Text = "Desparasitacion_Vacunascs";
+            this.Name = "DesparasitacionVacuna";
+            this.Text = "Desparasitación";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso)
+        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, double Peso, string Comentario, int Estado, DateTime FechaIngreso, DateTime FechaNacimiento)
         {
             using (var connection = GetConnection())
             {
@@ -50,6 +50,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Comentario", Comentario);
                     command.Parameters.AddWithValue("@Estado", Estado);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
+                    command.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
                     command.CommandText = "prc_AltaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
@@ -105,7 +106,7 @@ namespace DataAccess
                 }
             }
         }
-        //Confirmacion De aj sobre el tema del filtrado.
+
         public DataTable FiltrarAnimal(string busqueda)
         {
             using (var connection = GetConnection())
@@ -120,6 +121,24 @@ namespace DataAccess
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
+        public DataTable ListarEstado()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboEstado", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
                     connection.Close();
                     return tabla;
                 }
