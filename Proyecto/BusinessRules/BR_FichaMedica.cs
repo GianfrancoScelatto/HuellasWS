@@ -30,9 +30,9 @@ namespace BusinessRules
             daFM.AltaFichaMedica(idAnimal, idVeterinaria, Fecha, Informe, Tratamiento, Costo);
         }
 
-        public void ModificarFichaMedica(int idAnimal, int idVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
+        public void ModificarFichaMedica(int idFichaMedica, int idAnimal, int idVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
         {
-            daFM.ModificarFichaMedica(idAnimal, idVeterinaria, Fecha, Informe, Tratamiento, Costo);
+            daFM.ModificarFichaMedica(idFichaMedica, idAnimal, idVeterinaria, Fecha, Informe, Tratamiento, Costo);
         }
 
         public void BajaFichaMedica(int idFichaMedica, int idRol)

@@ -15,7 +15,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class DetalleTrAd : Form
     {
         BR_Persona brP = new BR_Persona();
-        bool Editar = false;
 
         public DetalleTrAd()
         {

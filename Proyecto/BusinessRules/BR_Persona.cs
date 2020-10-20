@@ -29,9 +29,9 @@ namespace BusinessRules
         {
             ObjPersona.BajaPersona(idPersona, IdUsuario, IdMovimiento, Descripcion, Deshabilitado);
         }
-        public void FiltrarPersona(string Busqueda)
+        public void FiltrarPersona(string Busqueda, string tipoPersona)
         {
-            ObjPersona.FiltrarPersona(Busqueda);
+            ObjPersona.FiltrarPersona(Busqueda, tipoPersona);
         }
 
         public DataTable DetallePersona(int idPersona)

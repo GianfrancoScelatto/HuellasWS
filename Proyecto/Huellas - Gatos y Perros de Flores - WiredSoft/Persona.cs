@@ -14,7 +14,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class Persona : Form
     {
         BR_Persona brP = new BR_Persona();
-        E_Persona eP = new E_Persona();
         E_Mensaje eM = new E_Mensaje();
         public bool Editar = false;
         public Persona()
@@ -25,13 +24,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void LimpiarForm()
         {
             txtNombre.Clear();
-            txtApellido.Text = "";
-            txtAltura.Text = "";
-            txtCelular.Text = "";
-            txtLocalidad.Text = "";
-            txtDNI.Text = "";
-            txtMail.Text = "";
-            cmbSexo.SelectedIndex = 1;
+            txtApellido.Clear();
+            txtAltura.Clear();
+            txtCelular.Clear();
+            txtLocalidad.Clear();
+            txtDNI.Clear();
+            txtMail.Clear();
+            cmbSexo.SelectedIndex = -1;
         }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {

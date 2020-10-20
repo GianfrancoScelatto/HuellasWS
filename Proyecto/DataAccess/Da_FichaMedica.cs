@@ -72,7 +72,7 @@ namespace DataAccess
             }
         }
 
-        public void ModificarFichaMedica(int idAnimal, int idVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
+        public void ModificarFichaMedica(int idFichaMedica, int idAnimal, int idVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
         {
             using (var connection = GetConnection())
             {
@@ -82,6 +82,7 @@ namespace DataAccess
                     command.Connection = connection;
                     command.CommandText = "prc_ModificarFichaMedica";
                     command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@IdFichaMedica", idFichaMedica);
                     command.Parameters.AddWithValue("@IdAnimal", idAnimal);
                     command.Parameters.AddWithValue("@IdVeterinaria", idVeterinaria);
                     command.Parameters.AddWithValue("@Fecha", Fecha);

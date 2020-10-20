@@ -116,7 +116,7 @@ namespace DataAccess
             }
         }
 
-        public DataTable FiltrarPersona(string Busqueda)
+        public DataTable FiltrarPersona(string Busqueda, string tipoPersona)
         {
             using (var connection = GetConnection())
             {
@@ -126,6 +126,7 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Busqueda", Busqueda);
+                    command.Parameters.AddWithValue("@TipoPersona", tipoPersona);
                     command.CommandText = "prc_FiltrarPersona";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();

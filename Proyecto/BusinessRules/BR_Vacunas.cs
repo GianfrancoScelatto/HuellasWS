@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities;
 using System.Data;
 using DataAccess;
 
@@ -10,35 +11,52 @@ namespace BusinessRules
 {
     public class BR_Vacunas
     {
-        private DA_Vacunas VacunasDA = new DA_Vacunas();
+        DA_Vacunas daV = new DA_Vacunas();
+        E_Mensaje msj = new E_Mensaje();
 
         public DataTable MostrarVacunas()
         {
             DataTable tabla = new DataTable();
-            tabla = VacunasDA.ListarVacunas();
+            tabla = daV.ListarVacunas();
             return tabla;
         }
 
-        public void Altavacuna(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario, int Movimiento)
+        public void AltaVacuna(string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario)
         {
-            VacunasDA.AltaVacuna(Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion, IdUsuario, Movimiento);
+            if (msj.MensajeAcceso(E_Usuario.Rol))
+            {
+                daV.AltaVacuna(Vacuna, idEspecie, FrecuenciaVacunacion, Descripcion, IdUsuario);
+            }
+            
         }
 
-        public void ModificarVacuna (int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void ModificarVacuna (int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int idUsuario)
         {
-            VacunasDA.ModificarVacuna(IdVacuna, Vacuna, IdEspecie, FrecuenciaVacunacion, Descripcion);
+            if (msj.MensajeAcceso(E_Usuario.Rol))
+            {
+                daV.ModificarVacuna(idVacuna, Vacuna, idEspecie, FrecuenciaVacunacion, Descripcion, idUsuario);
+            } 
         }
 
-        public void BajaVacuna(int IdVacuna, int IdUsuario, int IdMovimiento)//, bool Deshabilitado)
+        public void BajaVacuna(int idVacuna, int IdUsuario)
         {
-            VacunasDA.BajaVacuna(IdVacuna, IdUsuario, IdMovimiento);//, Deshabilitado);
+            if (msj.MensajeAcceso(E_Usuario.Rol))
+            {
+                daV.BajaVacuna(idVacuna, IdUsuario);
+            }
+        }
 
+        public DataTable BuscarVacuna(string Busqueda)
+        {
+            DataTable tabla = new DataTable();
+            tabla = daV.BuscarVacunas(Busqueda);
+            return tabla;
         }
 
         public DataTable ListarEspecie()
         {
             DataTable tabla = new DataTable();
-            tabla = VacunasDA.ListarEspecie();
+            tabla = daV.ListarEspecie();
             return tabla;
         }
     }

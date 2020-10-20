@@ -88,8 +88,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         tratamiento += txtTratamiento.Text + Environment.NewLine;
                         informe += txtInforme.Text + Environment.NewLine;
 
-                        brFM.ModificarFichaMedica(Convert.ToInt32(cmbAnimal.SelectedValue), dtpFechaAtencion.Value.Date,
-                            informe, tratamiento, Convert.ToInt32(cmbVet.SelectedValue), Convert.ToDecimal(txtCosto.Text));
+                        brFM.ModificarFichaMedica(E_FichaMedica.IdFichaMedica, Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToInt32(cmbVet.SelectedValue), 
+                                                dtpFechaAtencion.Value.Date, informe, tratamiento, Convert.ToDecimal(txtCosto.Text));
 
                         Editar = false;
                     }
@@ -105,8 +105,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         tratamiento += txtTratamiento.Text + Environment.NewLine;
                         informe += txtInforme.Text + Environment.NewLine;
 
-                        brFM.AltaFichaMedica(Convert.ToInt32(cmbAnimal.SelectedValue), dtpFechaAtencion.Value.Date,
-                            informe, tratamiento, Convert.ToInt32(cmbVet.SelectedValue), Convert.ToDecimal(txtCosto.Text));
+                        brFM.AltaFichaMedica(Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToInt32(cmbVet.SelectedValue),
+                                            dtpFechaAtencion.Value.Date, informe, tratamiento, Convert.ToDecimal(txtCosto.Text));
                     }
                     catch
                     {

@@ -12,7 +12,6 @@ namespace DataAccess
     {
         public DataTable ListarVacunas()
         {
-            //procedure para listar vacunas
             using (var connection = GetConnection())
             {
                 DataTable tabla = new DataTable();
@@ -28,14 +27,9 @@ namespace DataAccess
                     return tabla;
                 }
             }
-
-
         }
 
-        //Alta  de vacunas
-
-        //VER SI IDVACUNA VA COMO PARAMETRO YA QUE ESO LO MANEJA LA BD PREGUNTAR
-        public void AltaVacuna(string Vacuna, int IdEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario, int Movimiento)
+        public void AltaVacuna(string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -44,21 +38,19 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Vacuna", Vacuna);
-                    command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
+                    command.Parameters.AddWithValue("@IdEspecie", idEspecie);
                     command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                    command.Parameters.AddWithValue("@IdMovimiento", Movimiento);
                     command.CommandText = "prc_AltaVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
 
                 }
             }
-
         }
 
-        public void ModificarVacuna(int IdVacuna, string Vacuna, int IdEspecie, string FrecuenciaVacunacion, string Descripcion)
+        public void ModificarVacuna(int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int idUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -66,11 +58,12 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
+                    command.Parameters.AddWithValue("@IdVacuna", idVacuna);
                     command.Parameters.AddWithValue("@Vacuna", Vacuna);
-                    command.Parameters.AddWithValue("@IdEspecie", IdEspecie);
+                    command.Parameters.AddWithValue("@IdEspecie", idEspecie);
                     command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
                     command.CommandText = "prc_ModificarVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
@@ -80,8 +73,7 @@ namespace DataAccess
 
         }
 
-        //Procedure para Baja logica de Vacunas
-        public void BajaVacuna(int IdVacuna,int IdUsuario, int IdMovimiento) //,bool Deshabilitado)
+        public void BajaVacuna(int idVacuna, int idUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -89,10 +81,8 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
-                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                    command.Parameters.AddWithValue("@IdMovimiento", IdMovimiento);
-                    //command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
+                    command.Parameters.AddWithValue("@IdVacuna", idVacuna);
+                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
                     command.CommandText = "prc_BajaVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
@@ -113,7 +103,7 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Busqueda", Busqueda);
-                    command.CommandText = "prc_";
+                    command.CommandText = "prc_FiltrarVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);

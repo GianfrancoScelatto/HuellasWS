@@ -26,7 +26,7 @@ namespace Entities
         public static string UsuarioFaceIg { get; set; }
         public static bool ListaNegra { get; set; }
         public static string Motivo { get; set; }
-        public static bool Desabilitado { get; set; }
+        public static bool Deshabilitado { get; set; }
         public static bool Editar { get; set; }
     }
 }

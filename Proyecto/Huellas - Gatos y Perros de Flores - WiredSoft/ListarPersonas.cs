@@ -15,17 +15,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class ListarPersonas : Form
     {
         BR_Persona brP = new BR_Persona();
-        E_Persona eP = new E_Persona();
-        E_Mensaje eM = new E_Mensaje();
-        E_Bitacora Eb = new E_Bitacora();
+        E_Mensaje msj = new E_Mensaje();
+        E_Bitacora eB = new E_Bitacora();
         public ListarPersonas()
         {
             InitializeComponent();
             MostrarRegistroPersona();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {//eliminar void, ya esta en uso
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -35,12 +30,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         }
         public void MostrarRegistroPersona()
         {
-            dataPersona.DataSource = brP.ListarPersona();
+            dgvPersona.DataSource = brP.ListarPersona();
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            ExportarDatos(dataPersona);
+            ExportarDatos(dgvPersona);
         }
         public void ExportarDatos(DataGridView DatoListado)
         {
@@ -68,30 +63,43 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            E_Persona.Editar = true;
             Form Persona = new Persona();
             Persona.Show();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataPersona.SelectedRows.Count > 0)
+            if (dgvPersona.SelectedRows.Count > 0)
             {
-                DialogResult opcion;
-                opcion = MessageBox.Show("¿Desea eliminar esta Persona?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult preg = MessageBox.Show("¿Desea eliminar esta persona?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                if (opcion == DialogResult.OK)
+                if (preg == DialogResult.OK)
                 {
-
-                    eP.IdPersona = Convert.ToInt32(dataPersona.CurrentRow.Cells[0].Value.ToString());
-                    brP.BajaPersona(eP.IdPersona, Eb.IdUsuario, Eb.IdMovimiento,Eb.Descripcion,true);//discutir parametros de funcion eliminar// Solucionado 17.10
+                    brP.BajaPersona(E_Persona.IdPersona, eB.IdUsuario, eB.IdMovimiento, eB.Descripcion, true);//Se discute modificar estos parámetros. 
                     MostrarRegistroPersona();
                 }
             }
             else
             {
-                eM.MensajeError("No se ha seleccionado ninguna vacuna.");
+                msj.MensajeError("No se ha seleccionado ninguna vacuna.");
             }
 
+        }
+
+        private void dgvPersona_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {//Agregar demás parámetros
+            E_Persona.IdPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdPersona"].Value);
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (rbtnAdoptante.Checked == true)
+            {
+                brP.FiltrarPersona(txtBuscar.Text, rbtnAdoptante.Text);
+            }
+            else
+                brP.FiltrarPersona(txtBuscar.Text, rbtnTransitante.Text);
         }
     }
 }

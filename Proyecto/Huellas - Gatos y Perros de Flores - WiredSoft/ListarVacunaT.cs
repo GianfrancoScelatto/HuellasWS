@@ -15,9 +15,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class ListarVacunaT : Form
     {
         BR_Vacunas brV = new BR_Vacunas();
-        E_Vacuna eV = new E_Vacuna();
+        E_Mensaje msj = new E_Mensaje();
         
-        //aca tenemos que traer la entidad usuario para poder traer los parametros o info?
         public ListarVacunaT()
         {
             InitializeComponent();
@@ -57,22 +56,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             exportarexcel.Visible = true;
         }
 
-        
-        public void MensajeConfirmacion(string Mensaje)
-        {
-            MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-
-        public void MensajeError(string Mensaje)
-        {
-            MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            E_Vacuna.Editar = true;
             Form Vacunas = new Vacunas();
             Vacunas.Show();
+            E_Vacuna.Editar = false;
         }
 
 
@@ -93,23 +82,32 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (dgvVacunas.SelectedRows.Count > 0)
             {
-                DialogResult opcion;
-                opcion = MessageBox.Show("¿Desea eliminar esta vacuna?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult preg = MessageBox.Show("¿Desea eliminar esta vacuna?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                if (opcion == DialogResult.OK)
+                if (preg == DialogResult.OK)
                 {
-
-                    eV.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells[0].Value.ToString());
-                    brV.BajaVacuna(eV.IdVacuna,E_Usuario.IdUsuario,2);//discutir parametros de funcion eliminar
-                    MensajeConfirmacion("Se elimino correctamente la vacuna.");
+                    brV.BajaVacuna(E_Vacuna.IdVacuna, E_Usuario.IdUsuario);
                     MostrarRegistroVacuna();
                 }
             }
             else
             {
-                MensajeError("No se ha seleccionado ninguna vacuna.");
+                msj.MensajeError("No se ha seleccionado ninguna vacuna.");
             }
         }
 
+        private void DgvVacunas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            E_Vacuna.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdVacuna"].Value);
+            E_Vacuna.Vacuna = dgvVacunas.CurrentRow.Cells["Vacuna"].Value.ToString();
+            E_Vacuna.IdMascota = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdMascota"].Value);
+            E_Vacuna.FrecuenciaRevacunacion = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["Frecuencia"].Value);
+            E_Vacuna.Descripcion = dgvVacunas.CurrentRow.Cells["Descripcion"].Value.ToString();
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            brV.BuscarVacuna(txtBuscar.Text);
+        }
     }
 }

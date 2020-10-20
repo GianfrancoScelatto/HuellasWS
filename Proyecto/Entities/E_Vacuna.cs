@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class E_Vacuna
+    public static class E_Vacuna
     {
-        public int IdVacuna { get; set; }
-        public string Vacuna { get; set; }
-        public int IdMascota { get; set; }
-        public int FrecuenciaRevacunacion { get; set; }
-        public string Descripcion { get; set; }
-        public bool Deshabilitado { get; set; }
-        
+        public static int IdVacuna { get; set; }
+        public static string Vacuna { get; set; }
+        public static int IdMascota { get; set; }
+        public static int FrecuenciaRevacunacion { get; set; }
+        public static string Descripcion { get; set; }
+        public static bool Deshabilitado { get; set; }
+        public static bool Editar { get; set; }
     }
 }

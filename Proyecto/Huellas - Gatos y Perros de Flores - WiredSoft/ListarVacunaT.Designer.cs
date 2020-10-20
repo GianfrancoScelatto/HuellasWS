@@ -43,12 +43,18 @@
             // 
             // dgvVacunas
             // 
+            this.dgvVacunas.AllowUserToAddRows = false;
+            this.dgvVacunas.AllowUserToDeleteRows = false;
+            this.dgvVacunas.AllowUserToResizeColumns = false;
+            this.dgvVacunas.AllowUserToResizeRows = false;
             this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVacunas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVacunas.Location = new System.Drawing.Point(0, 0);
             this.dgvVacunas.Name = "dgvVacunas";
+            this.dgvVacunas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVacunas.Size = new System.Drawing.Size(1067, 631);
             this.dgvVacunas.TabIndex = 0;
+            this.dgvVacunas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVacunas_CellContentClick);
             // 
             // panelBotones
             // 
@@ -119,17 +125,18 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(76, 11);
+            this.txtBuscar.Location = new System.Drawing.Point(76, 16);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(136, 20);
             this.txtBuscar.TabIndex = 39;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBuscar.Location = new System.Drawing.Point(17, 12);
+            this.lblBuscar.Location = new System.Drawing.Point(17, 17);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(53, 17);
             this.lblBuscar.TabIndex = 38;

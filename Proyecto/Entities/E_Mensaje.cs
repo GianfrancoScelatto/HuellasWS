@@ -18,5 +18,16 @@ namespace Entities
         {
             MessageBox.Show(Mensaje, "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public bool MensajeAcceso(string Rol)
+        {
+            if (Rol != "Administrador")
+            {
+                MessageBox.Show("No tiene acceso para realizar esta acción.", "WiredSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+                return true;
+        }
     }
 }
