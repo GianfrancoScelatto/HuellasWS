@@ -82,5 +82,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             Login login = new Login();
             login.Show();
         }
+
+        private void MenuInicial_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

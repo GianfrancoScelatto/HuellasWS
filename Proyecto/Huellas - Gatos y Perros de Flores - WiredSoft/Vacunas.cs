@@ -44,10 +44,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 txtRevacunacion.Text = E_Vacuna.FrecuenciaRevacunacion.ToString();
                 txtDescripcion.Text += E_Vacuna.Descripcion + Environment.NewLine;
             }
-            cmbEspecie.Items.Insert(-1, "Seleccione un valor");
-            cmbRevacunacion.Items.Insert(-1, "Seleccione un valor");
-            cmbEspecie.SelectedIndex = -1;
-            cmbRevacunacion.SelectedIndex = -1;   
+
+            cmbEspecie.SelectedIndex = 0;
+            cmbRevacunacion.SelectedIndex = 0;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -70,8 +69,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         break;
             }
             
-            if (String.IsNullOrWhiteSpace(txtVacuna.Text) || cmbEspecie.SelectedIndex == -1 || String.IsNullOrWhiteSpace(txtRevacunacion.Text)
-                || cmbRevacunacion.SelectedIndex == -1 || String.IsNullOrWhiteSpace(txtDescripcion.Text))
+            if (String.IsNullOrWhiteSpace(txtVacuna.Text) || String.IsNullOrWhiteSpace(txtRevacunacion.Text) || String.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
                 msj.MensajeAlerta("Hay campos vacíos.");
             }
@@ -85,9 +83,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         brV.ModificarVacuna(E_Vacuna.IdVacuna, txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, descripcion, E_Usuario.IdUsuario);
                         Editar = false;
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        msj.MensajeError("Ha ocurrido un error.");
+                        msj.MensajeError("Ha ocurrido un error." + ex);
                     }
                 }
                 else
@@ -96,9 +94,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     {
                         brV.AltaVacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, descripcion, E_Usuario.IdUsuario);
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        msj.MensajeError("Ha ocurrido un error.");
+                        msj.MensajeError("Ha ocurrido un error." + ex);
                     }
                     
                 }

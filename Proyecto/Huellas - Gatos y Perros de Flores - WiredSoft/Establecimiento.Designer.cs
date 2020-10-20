@@ -54,7 +54,7 @@
             this.lblInternacion.AutoSize = true;
             this.lblInternacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInternacion.ForeColor = System.Drawing.Color.White;
-            this.lblInternacion.Location = new System.Drawing.Point(30, 347);
+            this.lblInternacion.Location = new System.Drawing.Point(58, 345);
             this.lblInternacion.Name = "lblInternacion";
             this.lblInternacion.Size = new System.Drawing.Size(167, 19);
             this.lblInternacion.TabIndex = 43;
@@ -65,7 +65,7 @@
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.Color.White;
-            this.lblCP.Location = new System.Drawing.Point(30, 233);
+            this.lblCP.Location = new System.Drawing.Point(106, 231);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(119, 19);
             this.lblCP.TabIndex = 42;
@@ -76,7 +76,7 @@
             this.lblAltura.AutoSize = true;
             this.lblAltura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAltura.ForeColor = System.Drawing.Color.White;
-            this.lblAltura.Location = new System.Drawing.Point(35, 310);
+            this.lblAltura.Location = new System.Drawing.Point(166, 308);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(59, 19);
             this.lblAltura.TabIndex = 41;
@@ -87,7 +87,7 @@
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.ForeColor = System.Drawing.Color.White;
-            this.lblLocalidad.Location = new System.Drawing.Point(30, 198);
+            this.lblLocalidad.Location = new System.Drawing.Point(133, 196);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(92, 19);
             this.lblLocalidad.TabIndex = 40;
@@ -98,7 +98,7 @@
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalle.ForeColor = System.Drawing.Color.White;
-            this.lblCalle.Location = new System.Drawing.Point(40, 273);
+            this.lblCalle.Location = new System.Drawing.Point(171, 271);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(54, 19);
             this.lblCalle.TabIndex = 39;
@@ -109,7 +109,7 @@
             this.lblAtencion.AutoSize = true;
             this.lblAtencion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtencion.ForeColor = System.Drawing.Color.White;
-            this.lblAtencion.Location = new System.Drawing.Point(30, 162);
+            this.lblAtencion.Location = new System.Drawing.Point(57, 160);
             this.lblAtencion.Name = "lblAtencion";
             this.lblAtencion.Size = new System.Drawing.Size(168, 19);
             this.lblAtencion.TabIndex = 38;
@@ -120,7 +120,7 @@
             this.lblNombVet.AutoSize = true;
             this.lblNombVet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombVet.ForeColor = System.Drawing.Color.White;
-            this.lblNombVet.Location = new System.Drawing.Point(30, 125);
+            this.lblNombVet.Location = new System.Drawing.Point(20, 123);
             this.lblNombVet.Name = "lblNombVet";
             this.lblNombVet.Size = new System.Drawing.Size(205, 19);
             this.lblNombVet.TabIndex = 37;
@@ -213,7 +213,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(30, 93);
+            this.label1.Location = new System.Drawing.Point(52, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 19);
             this.label1.TabIndex = 89;
@@ -224,14 +224,15 @@
             this.IdEstablecimiento.AutoSize = true;
             this.IdEstablecimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdEstablecimiento.ForeColor = System.Drawing.Color.White;
-            this.IdEstablecimiento.Location = new System.Drawing.Point(30, 50);
+            this.IdEstablecimiento.Location = new System.Drawing.Point(197, 57);
             this.IdEstablecimiento.Name = "IdEstablecimiento";
-            this.IdEstablecimiento.Size = new System.Drawing.Size(24, 19);
+            this.IdEstablecimiento.Size = new System.Drawing.Size(28, 19);
             this.IdEstablecimiento.TabIndex = 91;
-            this.IdEstablecimiento.Text = "ID";
+            this.IdEstablecimiento.Text = "ID:";
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(238, 91);
             this.comboBox1.Name = "comboBox1";

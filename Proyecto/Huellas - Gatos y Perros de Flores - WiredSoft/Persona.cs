@@ -30,7 +30,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             txtLocalidad.Clear();
             txtDNI.Clear();
             txtMail.Clear();
-            cmbSexo.SelectedIndex = -1;
+            cmbSexo.SelectedIndex = 0;
         }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {

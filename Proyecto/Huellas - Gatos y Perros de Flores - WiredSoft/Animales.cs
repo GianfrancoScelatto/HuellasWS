@@ -83,12 +83,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             else
             {
                 dgvFichaMedica.Columns["IdFichaMedica"].Visible = false;
-                cmbEspecie.Items.Insert(-1, "Seleccione un valor");
-                cmbSexo.Items.Insert(-1, "Seleccione un valor");
-                cmbEstado.Items.Insert(-1, "Seleccione un valor");
-                cmbEspecie.SelectedIndex = -1;
-                cmbSexo.SelectedIndex = -1;
-                cmbEstado.SelectedIndex = -1;
+                cmbEspecie.SelectedIndex = 0;
+                cmbSexo.SelectedIndex = 0;
+                cmbEstado.SelectedIndex = 0;
             }
 
             
@@ -98,7 +95,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (String.IsNullOrWhiteSpace(txtNombre.Text) || String.IsNullOrWhiteSpace(txtUbicacion.Text) || 
                 String.IsNullOrWhiteSpace(txtEdad.Text) || String.IsNullOrWhiteSpace(txtPeso.Text) || 
-                String.IsNullOrWhiteSpace(txtColor.Text) || cmbEspecie.SelectedIndex == -1 || cmbSexo.SelectedIndex == -1 || cmbEstado.SelectedIndex == -1)
+                String.IsNullOrWhiteSpace(txtColor.Text))
             {
                 eM.MensajeAlerta("Hay espacios vacíos.");
             }
@@ -212,9 +209,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             txtBuscar.Clear();
             txtDetalle.Clear();
 
-            cmbEspecie.SelectedIndex = -1;
-            cmbEstado.SelectedIndex = -1;
-            cmbSexo.SelectedIndex = -1;
+            cmbEspecie.SelectedIndex = 0;
+            cmbEstado.SelectedIndex = 0;
+            cmbSexo.SelectedIndex = 0;
 
             chkCasSi.Checked = false;
             chkCasNo.Checked = false;
@@ -225,7 +222,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             dtpCastracion.Value = DateTime.Now;
             dtpAcontecimiento.Value = DateTime.Now;
             dtpFiltro.Value = DateTime.Now;
-            
         }
 
         private void btnImagen_Click(object sender, EventArgs e)
