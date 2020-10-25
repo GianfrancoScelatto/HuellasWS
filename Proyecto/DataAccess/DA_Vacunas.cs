@@ -73,7 +73,7 @@ namespace DataAccess
 
         }
 
-        public void BajaVacuna(int idVacuna, int idUsuario)
+        public void BajaVacuna(int IdVacuna, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -81,8 +81,8 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdVacuna", idVacuna);
-                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    command.Parameters.AddWithValue("@IdVacuna", IdVacuna);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_BajaVacuna";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();

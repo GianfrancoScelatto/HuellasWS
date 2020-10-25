@@ -42,7 +42,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 txtVacuna.Text = E_Vacuna.Vacuna;
                 cmbEspecie.SelectedValue = E_Vacuna.IdMascota;
                 txtRevacunacion.Text = E_Vacuna.FrecuenciaRevacunacion.ToString();
-                txtDescripcion.Text += E_Vacuna.Descripcion + Environment.NewLine;
+                txtDescripcion.Text += E_Vacuna.Descripcion + Environment.NewLine;// que es el signo +
             }
 
             cmbEspecie.SelectedIndex = 0;

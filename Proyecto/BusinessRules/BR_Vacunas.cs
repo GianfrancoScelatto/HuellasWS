@@ -38,11 +38,11 @@ namespace BusinessRules
             } 
         }
 
-        public void BajaVacuna(int idVacuna, int IdUsuario)
+        public void BajaVacuna(int IdVacuna, int IdUsuario)
         {
             if (msj.MensajeAcceso(E_Usuario.Rol))
             {
-                daV.BajaVacuna(idVacuna, IdUsuario);
+                daV.BajaVacuna(IdVacuna, IdUsuario);
             }
         }
 
