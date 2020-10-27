@@ -29,7 +29,7 @@ namespace DataAccess
             }
         }
 
-        public void AltaVacuna(string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario)
+        public void AltaVacuna(string Vacuna, int idEspecie, int FrecuenciaVacunacion,int IdTiempo ,string Descripcion, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -39,7 +39,8 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Vacuna", Vacuna);
                     command.Parameters.AddWithValue("@IdEspecie", idEspecie);
-                    command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@Frecuencia", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@IdTiempo", IdTiempo);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_AltaVacuna";
@@ -50,7 +51,7 @@ namespace DataAccess
             }
         }
 
-        public void ModificarVacuna(int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int idUsuario)
+        public void ModificarVacuna(int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion,int IdTiempo, string Descripcion, int idUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -61,7 +62,8 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdVacuna", idVacuna);
                     command.Parameters.AddWithValue("@Vacuna", Vacuna);
                     command.Parameters.AddWithValue("@IdEspecie", idEspecie);
-                    command.Parameters.AddWithValue("@FrecuenciaVacunacion", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@Frecuencia", FrecuenciaVacunacion);
+                    command.Parameters.AddWithValue("@IdTiempo", IdTiempo);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
                     command.Parameters.AddWithValue("@IdUsuario", idUsuario);
                     command.CommandText = "prc_ModificarVacuna";
@@ -112,6 +114,24 @@ namespace DataAccess
                 }
             }
         
+        }
+
+        public DataTable ListarTiempo()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboTiempo", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
         }
 
         public DataTable ListarEspecie()

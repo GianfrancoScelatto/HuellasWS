@@ -10,8 +10,10 @@ namespace Entities
     {
         public static int IdVacuna { get; set; }
         public static string Vacuna { get; set; }
-        public static int IdMascota { get; set; }
+        public static string Especie { get; set; }
+        public static int IdEspecie { get; set; }
         public static int FrecuenciaRevacunacion { get; set; }
+        public static int IdTiempo { get; set; }
         public static string Descripcion { get; set; }
         public static bool Deshabilitado { get; set; }
         public static bool Editar { get; set; }

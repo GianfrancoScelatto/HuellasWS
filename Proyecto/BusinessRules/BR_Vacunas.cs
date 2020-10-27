@@ -21,20 +21,20 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void AltaVacuna(string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int IdUsuario)
+        public void AltaVacuna(string Vacuna, int idEspecie, int FrecuenciaVacunacion, int IdTiempo, string Descripcion, int IdUsuario)
         {
             if (msj.MensajeAcceso(E_Usuario.Rol))
             {
-                daV.AltaVacuna(Vacuna, idEspecie, FrecuenciaVacunacion, Descripcion, IdUsuario);
+                daV.AltaVacuna(Vacuna, idEspecie, FrecuenciaVacunacion,IdTiempo ,Descripcion, IdUsuario);
             }
             
         }
 
-        public void ModificarVacuna (int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion, string Descripcion, int idUsuario)
+        public void ModificarVacuna (int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion, int IdTiempo, string Descripcion, int idUsuario)
         {
             if (msj.MensajeAcceso(E_Usuario.Rol))
             {
-                daV.ModificarVacuna(idVacuna, Vacuna, idEspecie, FrecuenciaVacunacion, Descripcion, idUsuario);
+                daV.ModificarVacuna(idVacuna, Vacuna, idEspecie, FrecuenciaVacunacion, IdTiempo, Descripcion, idUsuario);
             } 
         }
 
@@ -57,6 +57,13 @@ namespace BusinessRules
         {
             DataTable tabla = new DataTable();
             tabla = daV.ListarEspecie();
+            return tabla;
+        }
+
+        public DataTable ListarTiempo()
+        {
+            DataTable tabla = new DataTable();
+            tabla = daV.ListarTiempo();
             return tabla;
         }
     }

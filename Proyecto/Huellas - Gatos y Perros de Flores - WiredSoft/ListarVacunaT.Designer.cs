@@ -49,12 +49,12 @@
             this.dgvVacunas.AllowUserToResizeRows = false;
             this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVacunas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvVacunas.Location = new System.Drawing.Point(0, 0);
+            this.dgvVacunas.Location = new System.Drawing.Point(0, 66);
             this.dgvVacunas.Name = "dgvVacunas";
             this.dgvVacunas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVacunas.Size = new System.Drawing.Size(1067, 631);
+            this.dgvVacunas.Size = new System.Drawing.Size(1067, 565);
             this.dgvVacunas.TabIndex = 0;
-            this.dgvVacunas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVacunas_CellContentClick);
+            this.dgvVacunas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvVacunas_CellFormatting);
             // 
             // panelBotones
             // 
@@ -147,8 +147,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 631);
-            this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.dgvVacunas);
+            this.Controls.Add(this.panelBotones);
             this.Name = "ListarVacunaT";
             this.Text = "ListarVacunaT";
             this.Load += new System.EventHandler(this.ListarVacunaT_Load);

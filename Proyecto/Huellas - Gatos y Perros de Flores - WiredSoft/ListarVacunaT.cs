@@ -29,7 +29,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void ListarVacunaT_Load(object sender, EventArgs e)
         {
-            MostrarRegistroVacuna();   
+            MostrarRegistroVacuna();
+            dgvVacunas.Columns["IdEspecie"].Visible = false;
+            dgvVacunas.Columns["IdTiempo"].Visible = false;
         }
 
         public void ExportarDatos(DataGridView DatoListado)
@@ -96,18 +98,20 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
-        private void DgvVacunas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            E_Vacuna.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdVacuna"].Value);
-            E_Vacuna.Vacuna = dgvVacunas.CurrentRow.Cells["Vacuna"].Value.ToString();
-            E_Vacuna.IdMascota = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdMascota"].Value);
-            E_Vacuna.FrecuenciaRevacunacion = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["Frecuencia"].Value);
-            E_Vacuna.Descripcion = dgvVacunas.CurrentRow.Cells["Descripcion"].Value.ToString();
-        }
-
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
             brV.BuscarVacuna(txtBuscar.Text);
+        }
+
+        private void dgvVacunas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            E_Vacuna.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdVacuna"].Value);
+            E_Vacuna.Vacuna = dgvVacunas.CurrentRow.Cells["Vacuna"].Value.ToString();
+            E_Vacuna.FrecuenciaRevacunacion = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["Frecuencia"].Value);
+            E_Vacuna.Especie = dgvVacunas.CurrentRow.Cells["Especie"].Value.ToString();
+            E_Vacuna.IdEspecie = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdEspecie"].Value);
+            E_Vacuna.IdTiempo = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdTIempo"].Value);
+            E_Vacuna.Descripcion = dgvVacunas.CurrentRow.Cells["Descripción"].Value.ToString();
         }
     }
 }

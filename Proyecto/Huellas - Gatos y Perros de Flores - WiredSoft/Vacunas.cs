@@ -24,24 +24,29 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             InitializeComponent();
         }
 
-        private void ListarEspecies()
+        private void ListarCombos()
         {
             cmbEspecie.DataSource = brV.ListarEspecie();
             cmbEspecie.DisplayMember = "Especie";
             cmbEspecie.ValueMember = "IdEspecie";
+
+            cmbRevacunacion.DataSource = brV.ListarTiempo();
+            cmbRevacunacion.DisplayMember = "Tiempo";
+            cmbRevacunacion.ValueMember = "IdTiempo";
         }
 
         private void Vacunas_Load(object sender, EventArgs e)
         {
-            ListarEspecies();
+            ListarCombos();
 
             if (E_Vacuna.Editar == true)
             {
                 Editar = true;
                 lblID.Text = E_Vacuna.IdVacuna.ToString();
                 txtVacuna.Text = E_Vacuna.Vacuna;
-                cmbEspecie.SelectedValue = E_Vacuna.IdMascota;
+                cmbEspecie.SelectedValue = E_Vacuna.IdEspecie;
                 txtRevacunacion.Text = E_Vacuna.FrecuenciaRevacunacion.ToString();
+                cmbRevacunacion.SelectedValue = E_Vacuna.IdTiempo;
                 txtDescripcion.Text += E_Vacuna.Descripcion + Environment.NewLine;// que es el signo +
             }
 
@@ -59,13 +64,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 365;
                         break;
                     case 1:
-                        dias = Convert.ToInt32(txtRevacunacion.Text) * 30;
+                        dias = Convert.ToInt32(txtRevacunacion.Text);
                         break;
                     case 2:
-                        dias = Convert.ToInt32(txtRevacunacion.Text) * 7;
+                        dias = Convert.ToInt32(txtRevacunacion.Text) * 30;
                         break;
                     case 3:
-                        dias = Convert.ToInt32(txtRevacunacion.Text);
+                        dias = Convert.ToInt32(txtRevacunacion.Text) * 7;
                         break;
             }
             
@@ -80,7 +85,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        brV.ModificarVacuna(E_Vacuna.IdVacuna, txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, descripcion, E_Usuario.IdUsuario);
+                        brV.ModificarVacuna(E_Vacuna.IdVacuna, txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
                         Editar = false;
                     }
                     catch (Exception ex)
@@ -92,7 +97,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        brV.AltaVacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, descripcion, E_Usuario.IdUsuario);
+                        brV.AltaVacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
                     }
                     catch (Exception ex)
                     {
