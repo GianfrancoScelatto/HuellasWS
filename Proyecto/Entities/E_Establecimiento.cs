@@ -8,15 +8,16 @@ namespace Entities
 {
    public class E_Establecimiento
     {
-        public int IdEstablecimiento { get; set; }
-        public int IdTipoEstablecimiento { get; set; }
-        public string Nombre { get; set; }
-        public string HorarioAtencion { get; set; }
-        public string Localidad { get; set; }
-        public string CodigoPostal { get; set; }
-        public  string Calle { get; set; }
-        public int Altura { get; set; }
-        public bool Internacion { get; set; }
-        public bool Deshabilitado { get; set; }
+        public static int IdEstablecimiento { get; set; }
+        public static int IdTipoEstablecimiento { get; set; }
+        public static string Nombre { get; set; }
+        public static string HorarioAtencion { get; set; }
+        public static string Localidad { get; set; }
+        public static string CodigoPostal { get; set; }
+        public static string Calle { get; set; }
+        public static int Altura { get; set; }
+        public static bool Internacion { get; set; }
+        public static bool Deshabilitado { get; set; }
+        public static bool Editar { get; set; }
     }
 }

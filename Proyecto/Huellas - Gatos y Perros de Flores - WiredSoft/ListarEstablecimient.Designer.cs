@@ -155,6 +155,7 @@
             this.dataEstablecimiento.Name = "dataEstablecimiento";
             this.dataEstablecimiento.Size = new System.Drawing.Size(1083, 615);
             this.dataEstablecimiento.TabIndex = 0;
+            this.dataEstablecimiento.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataEstablecimiento_CellFormatting);
             // 
             // ListarEstablecimient
             // 

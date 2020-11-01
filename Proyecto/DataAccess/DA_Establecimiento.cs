@@ -33,7 +33,7 @@ namespace DataAccess
 
 		//Alta de Establecimiento
 
-		public void AltaEstablecimiento(int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion)
+		public void AltaEstablecimiento(int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
 		{
 			using (var connection = GetConnection())
 			{
@@ -49,6 +49,7 @@ namespace DataAccess
 					command.Parameters.AddWithValue("@Calle", Calle);
 					command.Parameters.AddWithValue("@Altura", Altura);
 					command.Parameters.AddWithValue("@Internacion", Internacion);
+					command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
 					command.CommandText = "prc_AltaEstablecimiento";
 					command.CommandType = CommandType.StoredProcedure;
 					command.ExecuteNonQuery();
@@ -58,7 +59,7 @@ namespace DataAccess
 
 
 		//Modificacion 
-		public void  ModificarEstablecimiento(int IdEstablecimiento, int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion)
+		public void  ModificarEstablecimiento(int IdEstablecimiento, int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
 		{
 			using (var connection = GetConnection())
 			{
@@ -75,15 +76,17 @@ namespace DataAccess
 					command.Parameters.AddWithValue("@Calle", Calle);
 					command.Parameters.AddWithValue("@Altura", Altura);
 					command.Parameters.AddWithValue("@Internacion", Internacion);
+					command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
 					command.CommandText = "prc_BajaEstablecimiento";
 					command.CommandType = CommandType.StoredProcedure;
+					command.ExecuteNonQuery();
 				}
 			}
 		}
 
 
 		//Baja Establecimiento
-		public void BajaVacuna(int IdVacuna, bool Deshabilitado)
+		public void BajaVacuna(int IdEstablecimiento, int IdUsuario)
 		{
 			using (var connection = GetConnection())
 			{
@@ -91,8 +94,8 @@ namespace DataAccess
 				using (var command = new SqlCommand())
 				{
 					command.Connection = connection;
-					command.Parameters.AddWithValue("@IdEstablecimiento", IdVacuna);
-					command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
+					command.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+					command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
 					command.CommandText = "prc_BajaEstablecimiento";
 					command.CommandType = CommandType.StoredProcedure;
 					command.ExecuteNonQuery();
@@ -111,7 +114,7 @@ namespace DataAccess
 				{
 					command.Connection = connection;
 					command.Parameters.AddWithValue("@Busqueda", Busqueda);
-					command.CommandText = "prc_";
+					command.CommandText = "prc_FiltarEstablecimiento";
 					command.CommandType = CommandType.StoredProcedure;
 					SqlDataReader reader = command.ExecuteReader();
 					tabla.Load(reader);

@@ -58,14 +58,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             exportarexcel.Visible = true;
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            E_Vacuna.Editar = true;
-            Form Vacunas = new Vacunas();
-            Vacunas.Show();
-            E_Vacuna.Editar = false;
-        }
-
+       
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
@@ -77,6 +70,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             Form Vacunas = new Vacunas();
             Vacunas.Show();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            E_Vacuna.Editar = true;
+            Form Vacunas = new Vacunas();
+            Vacunas.Show();
+            E_Vacuna.Editar = false;
         }
 
 
