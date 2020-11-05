@@ -105,6 +105,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Establecimiento.IdEstablecimiento = Convert.ToInt32(dataEstablecimiento.CurrentRow.Cells["IdVacuna"].Value);
             E_Establecimiento.Nombre = dataEstablecimiento.CurrentRow.Cells["Nombre"].Value.ToString();
             E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32 (dataEstablecimiento.CurrentRow.Cells["Id Establecimiento"].Value);
+            //Preguntar si hace falta agregar un campo TipoNombreEstablecimiento para especificar de que rubro es 
             E_Establecimiento.HorarioAtencion = dataEstablecimiento.CurrentRow.Cells["Horario de atención"].Value.ToString();
             E_Establecimiento.Calle = dataEstablecimiento.CurrentRow.Cells["Calle"].Value.ToString();
             E_Establecimiento.Altura = Convert.ToInt32(dataEstablecimiento.CurrentRow.Cells["Altura"].Value);

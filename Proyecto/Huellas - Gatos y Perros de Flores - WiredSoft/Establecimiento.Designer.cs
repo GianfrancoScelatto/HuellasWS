@@ -34,19 +34,20 @@
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.lblCalle = new System.Windows.Forms.Label();
             this.lblAtencion = new System.Windows.Forms.Label();
-            this.lblNombVet = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtHoraAtencion = new System.Windows.Forms.TextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.txtCP = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.txtAltura = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEstablecimiento = new System.Windows.Forms.Label();
+            this.cmbEstablecimiento = new System.Windows.Forms.ComboBox();
             this.IdEstablecimiento = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblD = new System.Windows.Forms.Label();
+            this.cmbInternacion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblInternacion
@@ -115,66 +116,58 @@
             this.lblAtencion.TabIndex = 38;
             this.lblAtencion.Text = "Horario de Atención:";
             // 
-            // lblNombVet
+            // lblNombre
             // 
-            this.lblNombVet.AutoSize = true;
-            this.lblNombVet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombVet.ForeColor = System.Drawing.Color.White;
-            this.lblNombVet.Location = new System.Drawing.Point(20, 123);
-            this.lblNombVet.Name = "lblNombVet";
-            this.lblNombVet.Size = new System.Drawing.Size(205, 19);
-            this.lblNombVet.TabIndex = 37;
-            this.lblNombVet.Text = "Nombre establecimiento:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(20, 123);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(205, 19);
+            this.lblNombre.TabIndex = 37;
+            this.lblNombre.Text = "Nombre establecimiento:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 20);
-            this.textBox1.TabIndex = 44;
+            this.txtNombre.Location = new System.Drawing.Point(238, 124);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(178, 20);
+            this.txtNombre.TabIndex = 44;
             // 
-            // textBox2
+            // txtHoraAtencion
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
-            this.textBox2.TabIndex = 45;
+            this.txtHoraAtencion.Location = new System.Drawing.Point(238, 161);
+            this.txtHoraAtencion.Name = "txtHoraAtencion";
+            this.txtHoraAtencion.Size = new System.Drawing.Size(178, 20);
+            this.txtHoraAtencion.TabIndex = 45;
             // 
-            // textBox3
+            // txtLocalidad
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 20);
-            this.textBox3.TabIndex = 46;
+            this.txtLocalidad.Location = new System.Drawing.Point(238, 198);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(178, 20);
+            this.txtLocalidad.TabIndex = 46;
             // 
-            // textBox4
+            // txtCP
             // 
-            this.textBox4.Location = new System.Drawing.Point(238, 235);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 20);
-            this.textBox4.TabIndex = 47;
+            this.txtCP.Location = new System.Drawing.Point(238, 235);
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(178, 20);
+            this.txtCP.TabIndex = 47;
             // 
-            // textBox5
+            // txtCalle
             // 
-            this.textBox5.Location = new System.Drawing.Point(238, 272);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 20);
-            this.textBox5.TabIndex = 48;
+            this.txtCalle.Location = new System.Drawing.Point(238, 272);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(178, 20);
+            this.txtCalle.TabIndex = 48;
             // 
-            // textBox6
+            // txtAltura
             // 
-            this.textBox6.Location = new System.Drawing.Point(238, 309);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 20);
-            this.textBox6.TabIndex = 49;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(238, 346);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(178, 20);
-            this.textBox7.TabIndex = 50;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtAltura.Location = new System.Drawing.Point(238, 309);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(178, 20);
+            this.txtAltura.TabIndex = 49;
             // 
             // btnCancelar
             // 
@@ -208,16 +201,25 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblEstablecimiento
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(52, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 19);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Tipo establecimiento:";
+            this.lblEstablecimiento.AutoSize = true;
+            this.lblEstablecimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstablecimiento.ForeColor = System.Drawing.Color.White;
+            this.lblEstablecimiento.Location = new System.Drawing.Point(52, 91);
+            this.lblEstablecimiento.Name = "lblEstablecimiento";
+            this.lblEstablecimiento.Size = new System.Drawing.Size(173, 19);
+            this.lblEstablecimiento.TabIndex = 89;
+            this.lblEstablecimiento.Text = "Tipo establecimiento:";
+            // 
+            // cmbEstablecimiento
+            // 
+            this.cmbEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstablecimiento.FormattingEnabled = true;
+            this.cmbEstablecimiento.Location = new System.Drawing.Point(238, 91);
+            this.cmbEstablecimiento.Name = "cmbEstablecimiento";
+            this.cmbEstablecimiento.Size = new System.Drawing.Size(178, 21);
+            this.cmbEstablecimiento.TabIndex = 92;
             // 
             // IdEstablecimiento
             // 
@@ -230,14 +232,25 @@
             this.IdEstablecimiento.TabIndex = 91;
             this.IdEstablecimiento.Text = "ID:";
             // 
-            // comboBox1
+            // lblD
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(238, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 21);
-            this.comboBox1.TabIndex = 92;
+            this.lblD.AutoSize = true;
+            this.lblD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblD.ForeColor = System.Drawing.Color.White;
+            this.lblD.Location = new System.Drawing.Point(306, 57);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(16, 19);
+            this.lblD.TabIndex = 93;
+            this.lblD.Text = "-";
+            // 
+            // cmbInternacion
+            // 
+            this.cmbInternacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInternacion.FormattingEnabled = true;
+            this.cmbInternacion.Location = new System.Drawing.Point(238, 345);
+            this.cmbInternacion.Name = "cmbInternacion";
+            this.cmbInternacion.Size = new System.Drawing.Size(178, 21);
+            this.cmbInternacion.TabIndex = 94;
             // 
             // Establecimiento
             // 
@@ -245,25 +258,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(462, 495);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbInternacion);
+            this.Controls.Add(this.lblD);
+            this.Controls.Add(this.cmbEstablecimiento);
             this.Controls.Add(this.IdEstablecimiento);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEstablecimiento);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAltura);
+            this.Controls.Add(this.txtCalle);
+            this.Controls.Add(this.txtCP);
+            this.Controls.Add(this.txtLocalidad);
+            this.Controls.Add(this.txtHoraAtencion);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblInternacion);
             this.Controls.Add(this.lblCP);
             this.Controls.Add(this.lblAltura);
             this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.lblAtencion);
-            this.Controls.Add(this.lblNombVet);
+            this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Establecimiento";
             this.Text = "Establecimiento";
@@ -280,18 +294,19 @@
         private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.Label lblCalle;
         private System.Windows.Forms.Label lblAtencion;
-        private System.Windows.Forms.Label lblNombVet;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtHoraAtencion;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.TextBox txtCP;
+        private System.Windows.Forms.TextBox txtCalle;
+        private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEstablecimiento;
+        private System.Windows.Forms.ComboBox cmbEstablecimiento;
         private System.Windows.Forms.Label IdEstablecimiento;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblD;
+        private System.Windows.Forms.ComboBox cmbInternacion;
     }
 }
