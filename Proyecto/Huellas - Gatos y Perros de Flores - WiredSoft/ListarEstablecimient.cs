@@ -24,13 +24,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         public void MostrarRegistroEstablecimiento()
         {
-            dataEstablecimiento.DataSource = brE.MostrarEstablecimiento();
+            dgvEstablecimiento.DataSource = brE.MostrarEstablecimiento();
         }
 
         private void ListarEstablecimient_Load(object sender, EventArgs e)
         {
             MostrarRegistroEstablecimiento();
-            dataEstablecimiento.Columns["IdEstablecimiento"].Visible = false;
+            dgvEstablecimiento.Columns["IdEstablecimiento"].Visible = false;
         }
 
 
@@ -60,7 +60,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            ExportarDatos(dataEstablecimiento);
+            ExportarDatos(dgvEstablecimiento);
         }
 
 
@@ -80,7 +80,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataEstablecimiento.SelectedRows.Count > 0)
+            if (dgvEstablecimiento.SelectedRows.Count > 0)
             {
                 DialogResult preg = MessageBox.Show("¿Desea eliminar esta vacuna?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
@@ -100,17 +100,17 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
 
 
-        private void dataEstablecimiento_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvEstablecimiento_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            E_Establecimiento.IdEstablecimiento = Convert.ToInt32(dataEstablecimiento.CurrentRow.Cells["IdVacuna"].Value);
-            E_Establecimiento.Nombre = dataEstablecimiento.CurrentRow.Cells["Nombre"].Value.ToString();
-            E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32 (dataEstablecimiento.CurrentRow.Cells["Id Establecimiento"].Value);
+            E_Establecimiento.IdEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdEstablecimiento"].Value);
+            E_Establecimiento.Nombre = dgvEstablecimiento.CurrentRow.Cells["Nombre"].Value.ToString();
+            E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32 (dgvEstablecimiento.CurrentRow.Cells["IdTipoEstablecimiento"].Value);
             //Preguntar si hace falta agregar un campo TipoNombreEstablecimiento para especificar de que rubro es 
-            E_Establecimiento.HorarioAtencion = dataEstablecimiento.CurrentRow.Cells["Horario de atención"].Value.ToString();
-            E_Establecimiento.Calle = dataEstablecimiento.CurrentRow.Cells["Calle"].Value.ToString();
-            E_Establecimiento.Altura = Convert.ToInt32(dataEstablecimiento.CurrentRow.Cells["Altura"].Value);
-            E_Establecimiento.CodigoPostal = dataEstablecimiento.CurrentRow.Cells["Codigo Postal"].Value.ToString();
-            E_Establecimiento.Localidad = dataEstablecimiento.CurrentRow.Cells["Localidad"].Value.ToString();
+            E_Establecimiento.HorarioAtencion = dgvEstablecimiento.CurrentRow.Cells["Horario de atención"].Value.ToString();
+            E_Establecimiento.Calle = dgvEstablecimiento.CurrentRow.Cells["Calle"].Value.ToString();
+            E_Establecimiento.Altura = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["Altura"].Value);
+            E_Establecimiento.CodigoPostal = dgvEstablecimiento.CurrentRow.Cells["Codigo Postal"].Value.ToString();
+            E_Establecimiento.Localidad = dgvEstablecimiento.CurrentRow.Cells["Localidad"].Value.ToString();
 
         }
     }

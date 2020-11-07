@@ -38,11 +38,11 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
-            this.dataEstablecimiento = new System.Windows.Forms.DataGridView();
+            this.dgvEstablecimiento = new System.Windows.Forms.DataGridView();
             this.panelBoton.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataEstablecimiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstablecimiento)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBoton
@@ -140,22 +140,22 @@
             // 
             // panelListar
             // 
-            this.panelListar.Controls.Add(this.dataEstablecimiento);
+            this.panelListar.Controls.Add(this.dgvEstablecimiento);
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelListar.Location = new System.Drawing.Point(0, 55);
             this.panelListar.Name = "panelListar";
             this.panelListar.Size = new System.Drawing.Size(1083, 615);
             this.panelListar.TabIndex = 37;
             // 
-            // dataEstablecimiento
+            // dgvEstablecimiento
             // 
-            this.dataEstablecimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataEstablecimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataEstablecimiento.Location = new System.Drawing.Point(0, 0);
-            this.dataEstablecimiento.Name = "dataEstablecimiento";
-            this.dataEstablecimiento.Size = new System.Drawing.Size(1083, 615);
-            this.dataEstablecimiento.TabIndex = 0;
-            this.dataEstablecimiento.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataEstablecimiento_CellFormatting);
+            this.dgvEstablecimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstablecimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEstablecimiento.Location = new System.Drawing.Point(0, 0);
+            this.dgvEstablecimiento.Name = "dgvEstablecimiento";
+            this.dgvEstablecimiento.Size = new System.Drawing.Size(1083, 615);
+            this.dgvEstablecimiento.TabIndex = 0;
+            this.dgvEstablecimiento.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstablecimiento_CellFormatting);
             // 
             // ListarEstablecimient
             // 
@@ -173,7 +173,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelListar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataEstablecimiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstablecimiento)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,6 +189,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.DataGridView dataEstablecimiento;
+        private System.Windows.Forms.DataGridView dgvEstablecimiento;
     }
 }

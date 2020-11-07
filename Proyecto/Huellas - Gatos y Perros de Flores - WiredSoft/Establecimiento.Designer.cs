@@ -47,7 +47,7 @@
             this.cmbEstablecimiento = new System.Windows.Forms.ComboBox();
             this.IdEstablecimiento = new System.Windows.Forms.Label();
             this.lblD = new System.Windows.Forms.Label();
-            this.cmbInternacion = new System.Windows.Forms.ComboBox();
+            this.chkInternacion = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblInternacion
@@ -243,14 +243,17 @@
             this.lblD.TabIndex = 93;
             this.lblD.Text = "-";
             // 
-            // cmbInternacion
+            // chkInternacion
             // 
-            this.cmbInternacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbInternacion.FormattingEnabled = true;
-            this.cmbInternacion.Location = new System.Drawing.Point(238, 345);
-            this.cmbInternacion.Name = "cmbInternacion";
-            this.cmbInternacion.Size = new System.Drawing.Size(178, 21);
-            this.cmbInternacion.TabIndex = 94;
+            this.chkInternacion.AutoSize = true;
+            this.chkInternacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkInternacion.ForeColor = System.Drawing.Color.White;
+            this.chkInternacion.Location = new System.Drawing.Point(238, 346);
+            this.chkInternacion.Name = "chkInternacion";
+            this.chkInternacion.Size = new System.Drawing.Size(36, 21);
+            this.chkInternacion.TabIndex = 94;
+            this.chkInternacion.Text = "Si";
+            this.chkInternacion.UseVisualStyleBackColor = true;
             // 
             // Establecimiento
             // 
@@ -258,7 +261,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(462, 495);
-            this.Controls.Add(this.cmbInternacion);
+            this.Controls.Add(this.chkInternacion);
             this.Controls.Add(this.lblD);
             this.Controls.Add(this.cmbEstablecimiento);
             this.Controls.Add(this.IdEstablecimiento);
@@ -307,6 +310,6 @@
         private System.Windows.Forms.ComboBox cmbEstablecimiento;
         private System.Windows.Forms.Label IdEstablecimiento;
         private System.Windows.Forms.Label lblD;
-        private System.Windows.Forms.ComboBox cmbInternacion;
+        private System.Windows.Forms.CheckBox chkInternacion;
     }
 }

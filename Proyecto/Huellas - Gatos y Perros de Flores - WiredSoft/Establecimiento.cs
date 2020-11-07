@@ -15,6 +15,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class Establecimiento : Form
 
     {
+        public bool Editar;
         BR_Establecimiento brE = new BR_Establecimiento();
         E_Mensaje msj = new E_Mensaje();
         public Establecimiento()
@@ -30,29 +31,25 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             cmbEstablecimiento.ValueMember = "IdTipoEstablecimiento";
         }
 
+        
         private void Establecimiento_Load(object sender, EventArgs e)
         {
             ListarCombos();
             if (E_Establecimiento.Editar == true)
             {
-                //Ver porque no toma Editar
-                Editar == true;
+                
+                Editar = true;
                 lblD.Text = E_Establecimiento.IdEstablecimiento.ToString();
                 txtNombre.Text = E_Establecimiento.Nombre;
                 txtHoraAtencion.Text = E_Establecimiento.HorarioAtencion;
                 txtLocalidad.Text = E_Establecimiento.Localidad;
                 txtCP.Text = E_Establecimiento.CodigoPostal;
                 txtAltura.Text = E_Establecimiento.Altura.ToString();
-                //Ver como poner dispone internacion, si cmb o checkbox
+                chkInternacion.Checked = E_Establecimiento.Internacion;
                 
             }
 
             cmbEstablecimiento.SelectedIndex = 0;
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
     }
