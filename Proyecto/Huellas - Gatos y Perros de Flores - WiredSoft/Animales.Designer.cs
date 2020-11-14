@@ -39,21 +39,12 @@
             this.label63 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
-            this.dtpFichaMedica = new System.Windows.Forms.DateTimePicker();
-            this.lklblVacunas = new System.Windows.Forms.LinkLabel();
-            this.btnExportar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.chkCasNo = new System.Windows.Forms.CheckBox();
             this.chkCasSi = new System.Windows.Forms.CheckBox();
             this.dtpCastracion = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
             this.label26 = new System.Windows.Forms.Label();
-            this.lblNombVet = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.txtComentario = new System.Windows.Forms.TextBox();
@@ -91,14 +82,25 @@
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
             this.btnCancelarDatos = new System.Windows.Forms.Button();
             this.btnGuardarDatos = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFichaMedica = new System.Windows.Forms.DateTimePicker();
+            this.lklblVacunas = new System.Windows.Forms.LinkLabel();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
+            this.lblNombVet = new System.Windows.Forms.Label();
             this.tabSeguimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimiento)).BeginInit();
             this.tabFichaMed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).BeginInit();
             this.tabDatosAnimal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB1)).BeginInit();
             this.tbcDatosMasc.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSeguimiento
@@ -213,112 +215,19 @@
             // tabFichaMed
             // 
             this.tabFichaMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
-            this.tabFichaMed.Controls.Add(this.dtpFichaMedica);
-            this.tabFichaMed.Controls.Add(this.lklblVacunas);
-            this.tabFichaMed.Controls.Add(this.btnExportar);
-            this.tabFichaMed.Controls.Add(this.btnEliminar);
-            this.tabFichaMed.Controls.Add(this.btnNuevo);
-            this.tabFichaMed.Controls.Add(this.btnModificar);
-            this.tabFichaMed.Controls.Add(this.txtBuscar);
+            this.tabFichaMed.Controls.Add(this.groupBox1);
             this.tabFichaMed.Controls.Add(this.chkCasNo);
             this.tabFichaMed.Controls.Add(this.chkCasSi);
             this.tabFichaMed.Controls.Add(this.dtpCastracion);
             this.tabFichaMed.Controls.Add(this.label4);
             this.tabFichaMed.Controls.Add(this.label3);
-            this.tabFichaMed.Controls.Add(this.dgvFichaMedica);
             this.tabFichaMed.Controls.Add(this.label26);
-            this.tabFichaMed.Controls.Add(this.lblNombVet);
             this.tabFichaMed.Location = new System.Drawing.Point(4, 22);
             this.tabFichaMed.Name = "tabFichaMed";
             this.tabFichaMed.Padding = new System.Windows.Forms.Padding(3);
             this.tabFichaMed.Size = new System.Drawing.Size(849, 545);
             this.tabFichaMed.TabIndex = 2;
             this.tabFichaMed.Text = "Ficha Médica";
-            // 
-            // dtpFichaMedica
-            // 
-            this.dtpFichaMedica.Location = new System.Drawing.Point(240, 153);
-            this.dtpFichaMedica.Name = "dtpFichaMedica";
-            this.dtpFichaMedica.Size = new System.Drawing.Size(195, 20);
-            this.dtpFichaMedica.TabIndex = 50;
-            this.dtpFichaMedica.ValueChanged += new System.EventHandler(this.dtpFichaMedica_ValueChanged);
-            // 
-            // lklblVacunas
-            // 
-            this.lklblVacunas.AutoSize = true;
-            this.lklblVacunas.LinkColor = System.Drawing.Color.White;
-            this.lklblVacunas.Location = new System.Drawing.Point(7, 109);
-            this.lklblVacunas.Name = "lklblVacunas";
-            this.lklblVacunas.Size = new System.Drawing.Size(152, 13);
-            this.lklblVacunas.TabIndex = 49;
-            this.lklblVacunas.TabStop = true;
-            this.lklblVacunas.Text = "Ver Vacunas/Desparasitación:";
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
-            this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExportar.FlatAppearance.BorderSize = 0;
-            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(670, 143);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(28, 29);
-            this.btnExportar.TabIndex = 48;
-            this.btnExportar.UseVisualStyleBackColor = true;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(805, 143);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(28, 29);
-            this.btnEliminar.TabIndex = 45;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(715, 143);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(28, 29);
-            this.btnNuevo.TabIndex = 44;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(760, 143);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(28, 29);
-            this.btnModificar.TabIndex = 43;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(76, 152);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(158, 20);
-            this.txtBuscar.TabIndex = 42;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // chkCasNo
             // 
@@ -373,25 +282,6 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Castración:";
             // 
-            // dgvFichaMedica
-            // 
-            this.dgvFichaMedica.AllowUserToAddRows = false;
-            this.dgvFichaMedica.AllowUserToDeleteRows = false;
-            this.dgvFichaMedica.AllowUserToResizeColumns = false;
-            this.dgvFichaMedica.AllowUserToResizeRows = false;
-            this.dgvFichaMedica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFichaMedica.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgvFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFichaMedica.Location = new System.Drawing.Point(6, 178);
-            this.dgvFichaMedica.MultiSelect = false;
-            this.dgvFichaMedica.Name = "dgvFichaMedica";
-            this.dgvFichaMedica.ReadOnly = true;
-            this.dgvFichaMedica.RowHeadersWidth = 51;
-            this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFichaMedica.Size = new System.Drawing.Size(840, 361);
-            this.dgvFichaMedica.TabIndex = 28;
-            this.dgvFichaMedica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFichaMedica_CellContentClick);
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -403,17 +293,6 @@
             this.label26.Size = new System.Drawing.Size(137, 23);
             this.label26.TabIndex = 13;
             this.label26.Text = "Ficha Médica";
-            // 
-            // lblNombVet
-            // 
-            this.lblNombVet.AutoSize = true;
-            this.lblNombVet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombVet.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombVet.Location = new System.Drawing.Point(6, 153);
-            this.lblNombVet.Name = "lblNombVet";
-            this.lblNombVet.Size = new System.Drawing.Size(64, 19);
-            this.lblNombVet.TabIndex = 9;
-            this.lblNombVet.Text = "Buscar:";
             // 
             // tabDatosAnimal
             // 
@@ -501,11 +380,12 @@
             // 
             this.lklblPersona.AutoSize = true;
             this.lklblPersona.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lklblPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.lklblPersona.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.lklblPersona.LinkColor = System.Drawing.Color.White;
-            this.lklblPersona.Location = new System.Drawing.Point(414, 501);
+            this.lklblPersona.Location = new System.Drawing.Point(400, 499);
             this.lklblPersona.Name = "lklblPersona";
-            this.lklblPersona.Size = new System.Drawing.Size(109, 13);
+            this.lklblPersona.Size = new System.Drawing.Size(144, 17);
             this.lklblPersona.TabIndex = 106;
             this.lklblPersona.TabStop = true;
             this.lklblPersona.Text = "Acerca de la Persona";
@@ -841,6 +721,131 @@
             this.btnGuardarDatos.UseVisualStyleBackColor = false;
             this.btnGuardarDatos.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpFichaMedica);
+            this.groupBox1.Controls.Add(this.lklblVacunas);
+            this.groupBox1.Controls.Add(this.btnExportar);
+            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.btnNuevo);
+            this.groupBox1.Controls.Add(this.btnModificar);
+            this.groupBox1.Controls.Add(this.txtBuscar);
+            this.groupBox1.Controls.Add(this.dgvFichaMedica);
+            this.groupBox1.Controls.Add(this.lblNombVet);
+            this.groupBox1.Location = new System.Drawing.Point(6, 88);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(836, 442);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            // 
+            // dtpFichaMedica
+            // 
+            this.dtpFichaMedica.Location = new System.Drawing.Point(240, 47);
+            this.dtpFichaMedica.Name = "dtpFichaMedica";
+            this.dtpFichaMedica.Size = new System.Drawing.Size(195, 20);
+            this.dtpFichaMedica.TabIndex = 59;
+            // 
+            // lklblVacunas
+            // 
+            this.lklblVacunas.AutoSize = true;
+            this.lklblVacunas.LinkColor = System.Drawing.Color.White;
+            this.lklblVacunas.Location = new System.Drawing.Point(6, 16);
+            this.lklblVacunas.Name = "lklblVacunas";
+            this.lklblVacunas.Size = new System.Drawing.Size(152, 13);
+            this.lklblVacunas.TabIndex = 58;
+            this.lklblVacunas.TabStop = true;
+            this.lklblVacunas.Text = "Ver Vacunas/Desparasitación:";
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
+            this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Location = new System.Drawing.Point(662, 37);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(28, 29);
+            this.btnExportar.TabIndex = 57;
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Location = new System.Drawing.Point(797, 37);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(28, 29);
+            this.btnEliminar.TabIndex = 56;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Location = new System.Drawing.Point(707, 37);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(28, 29);
+            this.btnNuevo.TabIndex = 55;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Location = new System.Drawing.Point(752, 37);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(28, 29);
+            this.btnModificar.TabIndex = 54;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(76, 46);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(158, 20);
+            this.txtBuscar.TabIndex = 53;
+            // 
+            // dgvFichaMedica
+            // 
+            this.dgvFichaMedica.AllowUserToAddRows = false;
+            this.dgvFichaMedica.AllowUserToDeleteRows = false;
+            this.dgvFichaMedica.AllowUserToResizeColumns = false;
+            this.dgvFichaMedica.AllowUserToResizeRows = false;
+            this.dgvFichaMedica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFichaMedica.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFichaMedica.Location = new System.Drawing.Point(-2, 72);
+            this.dgvFichaMedica.MultiSelect = false;
+            this.dgvFichaMedica.Name = "dgvFichaMedica";
+            this.dgvFichaMedica.ReadOnly = true;
+            this.dgvFichaMedica.RowHeadersWidth = 51;
+            this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFichaMedica.Size = new System.Drawing.Size(840, 361);
+            this.dgvFichaMedica.TabIndex = 52;
+            // 
+            // lblNombVet
+            // 
+            this.lblNombVet.AutoSize = true;
+            this.lblNombVet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombVet.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombVet.Location = new System.Drawing.Point(6, 44);
+            this.lblNombVet.Name = "lblNombVet";
+            this.lblNombVet.Size = new System.Drawing.Size(64, 19);
+            this.lblNombVet.TabIndex = 51;
+            this.lblNombVet.Text = "Buscar:";
+            // 
             // Animales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -860,12 +865,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimiento)).EndInit();
             this.tabFichaMed.ResumeLayout(false);
             this.tabFichaMed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).EndInit();
             this.tabDatosAnimal.ResumeLayout(false);
             this.tabDatosAnimal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB1)).EndInit();
             this.tbcDatosMasc.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -903,24 +910,16 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabControl tbcDatosMasc;
         private System.Windows.Forms.DateTimePicker dtpAcontecimiento;
-        private System.Windows.Forms.DataGridView dgvFichaMedica;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.CheckBox chkCasNo;
         private System.Windows.Forms.CheckBox chkCasSi;
         private System.Windows.Forms.DateTimePicker dtpCastracion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblNombVet;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpFechaF;
         private System.Windows.Forms.LinkLabel lklblPersona;
-        private System.Windows.Forms.Button btnExportar;
-        private System.Windows.Forms.LinkLabel lklblVacunas;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.PictureBox picB2;
         private System.Windows.Forms.Label label1;
@@ -932,6 +931,15 @@
         private System.Windows.Forms.Button btnCancelarDatos;
         private System.Windows.Forms.Button btnGuardarDatos;
         private System.Windows.Forms.Button btnGuardarSeg;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpFichaMedica;
+        private System.Windows.Forms.LinkLabel lklblVacunas;
+        private System.Windows.Forms.Button btnExportar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridView dgvFichaMedica;
+        private System.Windows.Forms.Label lblNombVet;
     }
 }

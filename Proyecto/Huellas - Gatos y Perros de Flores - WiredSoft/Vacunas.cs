@@ -54,19 +54,21 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         txtRevacunacion.Text = (E_Vacuna.FrecuenciaRevacunacion / 365).ToString();
                         break;
                     case 1:
-                        txtRevacunacion.Text = E_Vacuna.FrecuenciaRevacunacion.ToString();
-                        break;
-                    case 2:
                         txtRevacunacion.Text = (E_Vacuna.FrecuenciaRevacunacion / 30).ToString();
                         break;
-                    case 3:
+                    case 2:
                         txtRevacunacion.Text = (E_Vacuna.FrecuenciaRevacunacion / 7).ToString();
+                        break;
+                    case 3:
+                        txtRevacunacion.Text = E_Vacuna.FrecuenciaRevacunacion.ToString();
                         break;
                 }   
             }
-
-            cmbEspecie.SelectedIndex = 0;
-            cmbRevacunacion.SelectedIndex = 0;
+            else
+            { 
+                cmbEspecie.SelectedIndex = 0;
+                cmbRevacunacion.SelectedIndex = 0;
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
