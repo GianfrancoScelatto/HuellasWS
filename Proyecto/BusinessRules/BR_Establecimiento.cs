@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Entities;
 using System.Data;
 using DataAccess;
+
+namespace BusinessRules
+{
     public class BR_Establecimiento
     {
         DA_Establecimiento daE = new DA_Establecimiento();
@@ -45,4 +48,4 @@ using DataAccess;
             return tabla;
         }
     }
-
+}

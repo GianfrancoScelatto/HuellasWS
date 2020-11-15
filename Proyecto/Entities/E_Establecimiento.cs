@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-   public class E_Establecimiento
+   public static class E_Establecimiento
     {
         public static int IdEstablecimiento { get; set; }
         public static int IdTipoEstablecimiento { get; set; }

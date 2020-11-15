@@ -39,7 +39,7 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnListaNegra = new System.Windows.Forms.Button();
-            this.btnVeterinaria = new System.Windows.Forms.Button();
+            this.btnEstablecimiento = new System.Windows.Forms.Button();
             this.btnPersonas = new System.Windows.Forms.Button();
             this.btnAnimal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@
             this.panelMenuLateral.Controls.Add(this.lblRol);
             this.panelMenuLateral.Controls.Add(this.pictureBox1);
             this.panelMenuLateral.Controls.Add(this.btnListaNegra);
-            this.panelMenuLateral.Controls.Add(this.btnVeterinaria);
+            this.panelMenuLateral.Controls.Add(this.btnEstablecimiento);
             this.panelMenuLateral.Controls.Add(this.btnPersonas);
             this.panelMenuLateral.Controls.Add(this.btnAnimal);
             this.panelMenuLateral.Controls.Add(this.panel2);
@@ -195,22 +195,22 @@
             this.btnListaNegra.UseVisualStyleBackColor = true;
             this.btnListaNegra.Click += new System.EventHandler(this.btnListaNegra_Click);
             // 
-            // btnVeterinaria
+            // btnEstablecimiento
             // 
-            this.btnVeterinaria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVeterinaria.FlatAppearance.BorderSize = 0;
-            this.btnVeterinaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVeterinaria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVeterinaria.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnVeterinaria.Location = new System.Drawing.Point(0, 194);
-            this.btnVeterinaria.Name = "btnVeterinaria";
-            this.btnVeterinaria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnVeterinaria.Size = new System.Drawing.Size(250, 45);
-            this.btnVeterinaria.TabIndex = 4;
-            this.btnVeterinaria.Text = "Veterinarias";
-            this.btnVeterinaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVeterinaria.UseVisualStyleBackColor = true;
-            this.btnVeterinaria.Click += new System.EventHandler(this.btnVeterinaria_Click);
+            this.btnEstablecimiento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEstablecimiento.FlatAppearance.BorderSize = 0;
+            this.btnEstablecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstablecimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstablecimiento.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEstablecimiento.Location = new System.Drawing.Point(0, 194);
+            this.btnEstablecimiento.Name = "btnEstablecimiento";
+            this.btnEstablecimiento.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEstablecimiento.Size = new System.Drawing.Size(250, 45);
+            this.btnEstablecimiento.TabIndex = 4;
+            this.btnEstablecimiento.Text = "Establecimiento";
+            this.btnEstablecimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstablecimiento.UseVisualStyleBackColor = true;
+            this.btnEstablecimiento.Click += new System.EventHandler(this.btnVeterinaria_Click);
             // 
             // btnPersonas
             // 
@@ -291,7 +291,7 @@
         private System.Windows.Forms.Panel panelMenuLateral;
         private System.Windows.Forms.Button btnAnimal;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnVeterinaria;
+        private System.Windows.Forms.Button btnEstablecimiento;
         private System.Windows.Forms.Button btnPersonas;
         private System.Windows.Forms.Panel panelFormHijo;
         private System.Windows.Forms.PictureBox pictureBox1;
