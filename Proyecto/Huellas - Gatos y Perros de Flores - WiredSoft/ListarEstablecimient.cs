@@ -107,12 +107,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Establecimiento.IdEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdEstablecimiento"].Value);
             E_Establecimiento.Nombre = dgvEstablecimiento.CurrentRow.Cells["Nombre"].Value.ToString();
             E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32 (dgvEstablecimiento.CurrentRow.Cells["IdTipoEstablecimiento"].Value);
-            E_Establecimiento.HorarioAtencion = dgvEstablecimiento.CurrentRow.Cells["Horario de atención"].Value.ToString();
+            E_Establecimiento.HorarioAtencion = dgvEstablecimiento.CurrentRow.Cells["HorarioAtencion"].Value.ToString();
             E_Establecimiento.Calle = dgvEstablecimiento.CurrentRow.Cells["Calle"].Value.ToString();
             E_Establecimiento.Altura = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["Altura"].Value);
-            E_Establecimiento.CodigoPostal = dgvEstablecimiento.CurrentRow.Cells["Codigo Postal"].Value.ToString();
+            E_Establecimiento.CodigoPostal = dgvEstablecimiento.CurrentRow.Cells["CodigoPostal"].Value.ToString();
             E_Establecimiento.Localidad = dgvEstablecimiento.CurrentRow.Cells["Localidad"].Value.ToString();
-            E_Establecimiento.Internacion = Convert.ToBoolean(dgvEstablecimiento.CurrentRow.Cells["Ïnternación"].Value);
+            E_Establecimiento.Internacion = Convert.ToBoolean(dgvEstablecimiento.CurrentRow.Cells["Internacion"].Value);
 
         }
     }

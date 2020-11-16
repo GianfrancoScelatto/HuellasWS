@@ -15,9 +15,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class Establecimiento : Form
 
     {
-        public bool Editar;
         BR_Establecimiento brE = new BR_Establecimiento();
         E_Mensaje msj = new E_Mensaje();
+        public bool Editar = false; 
+
         public Establecimiento()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void Establecimiento_Load(object sender, EventArgs e)
         {
             ListarCombos();
+
             if (E_Establecimiento.Editar == true)
             {
                 
@@ -52,5 +54,22 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             cmbEstablecimiento.SelectedIndex = 0;
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+           
+            
+              DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+              if (preg == DialogResult.Yes)
+              {
+                 Close();
+              }
+
+             
+        }
     }
 }
