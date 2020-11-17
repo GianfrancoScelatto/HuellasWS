@@ -56,6 +56,44 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //int Altura = 0;
+            
+            if (String.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                msj.MensajeAlerta("Hay campos vacios");
+            }
+
+            if (Editar == true)
+            {
+                try
+                {
+                    //brE.ModifcarEstablecimiento(E_Establecimiento.IdEstablecimiento, Convert.ToInt32(cmbEstablecimiento.SelectedValue), Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, chkInternacion.Checked, E_Usuario.IdUsuario);
+                    //brE.ModifcarEstablecimiento(E_Establecimiento.IdEstablecimiento, Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_Usuario.IdUsuario);
+                }
+
+                catch (Exception ex)
+                {
+                    msj.MensajeError("Ha ocurrido un error." + ex);
+                }
+
+            }
+
+            else
+            {
+                try
+                {
+                    ///brE.AltaEstablecimiento((Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_Usuario.IdUsuario));
+                }
+
+
+                catch (Exception ex)
+                {
+                    msj.MensajeError("Ha ocurrido un error" + ex);
+                }
+            }
+
+
+            Close();
 
         }
 
