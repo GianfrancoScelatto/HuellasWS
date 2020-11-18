@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contrato.Designer.cs">
+      <DependentUpon>Contrato.cs</DependentUpon>
+    </Compile>
     <Compile Include="DesparasitacionVacuna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="ListaNegra.Designer.cs">
       <DependentUpon>ListaNegra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarContrato.Designer.cs">
+      <DependentUpon>ListarContrato.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarFichaMedica.cs">
       <SubType>Form</SubType>
@@ -175,6 +187,9 @@
     <Compile Include="Establecimiento.Designer.cs">
       <DependentUpon>Establecimiento.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Contrato.resx">
+      <DependentUpon>Contrato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DesparasitacionVacuna.resx">
       <DependentUpon>DesparasitacionVacuna.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListaNegra.resx">
       <DependentUpon>ListaNegra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarContrato.resx">
+      <DependentUpon>ListarContrato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarFichaMedica.resx">
       <DependentUpon>ListarFichaMedica.cs</DependentUpon>
