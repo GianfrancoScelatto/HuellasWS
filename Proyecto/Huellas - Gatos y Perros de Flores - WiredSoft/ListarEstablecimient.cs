@@ -105,8 +105,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void dgvEstablecimiento_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             E_Establecimiento.IdEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdEstablecimiento"].Value);
+            E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdTipoEstablecimiento"].Value);
             E_Establecimiento.Nombre = dgvEstablecimiento.CurrentRow.Cells["Nombre"].Value.ToString();
-            E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32 (dgvEstablecimiento.CurrentRow.Cells["IdTipoEstablecimiento"].Value);
             E_Establecimiento.HorarioAtencion = dgvEstablecimiento.CurrentRow.Cells["HorarioAtencion"].Value.ToString();
             E_Establecimiento.Calle = dgvEstablecimiento.CurrentRow.Cells["Calle"].Value.ToString();
             E_Establecimiento.Altura = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["Altura"].Value);
