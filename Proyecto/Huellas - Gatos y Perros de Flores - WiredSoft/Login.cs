@@ -40,21 +40,21 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                try
+                //string Clave = MD5.EncriptrarClave(txtContraseña.Text);
+                //brU.AccesoUsuario(txtUsuario.Text, Clave);
+                bool ingreso = brU.AccesoUsuario(txtUsuario.Text, txtContraseña.Text);
+
+                if (ingreso == false)
                 {
-                    
-                    //string Clave = MD5.EncriptrarClave(txtContraseña.Text);
-                    //brU.AccesoUsuario(txtUsuario.Text, Clave);
-                    brU.AccesoUsuario(txtUsuario.Text, txtContraseña.Text);
+                    eM.MensajeError("Los datos ingresados son erróneos.");
+                }
+                else
+                {
                     pgbIngresar.Visible = true;
                     pgbIngresar.Value = pgbIngresar.Value + 5;
                     tmLogin.Start();
                 }
-                catch
-                {
-                    eM.MensajeError("Los datos ingresados son erróneos.");
-                }
-            }  
+            }
         }
 
         private void chkContraseña_CheckedChanged(object sender, EventArgs e)
