@@ -45,6 +45,7 @@
     <Compile Include="BR_Bitacora.cs" />
     <Compile Include="BR_Establecimiento.cs" />
     <Compile Include="BR_FichaMedica.cs" />
+    <Compile Include="BR_ListaNegra.cs" />
     <Compile Include="BR_Persona.cs" />
     <Compile Include="BR_Seguimiento.cs" />
     <Compile Include="BR_Usuario.cs" />
