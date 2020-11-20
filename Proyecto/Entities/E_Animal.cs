@@ -18,7 +18,7 @@ namespace Entities
         public static byte FotoAdopcion { get; set; }
         public static string Sexo { get; set; }
         public static int Edad { get; set; }
-        public static float Peso { get; set; }
+        public static string Peso { get; set; }
         public static string ColorPelo { get; set; }
         public static bool Castracion { get; set; }
         public static DateTime FechaCastracion { get; set; }

@@ -30,6 +30,6 @@ namespace DataAccess
             }
         }
 
-        public void AltaListaNegra (
+        //public void AltaListaNegra (
     }
 }

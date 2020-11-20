@@ -18,11 +18,11 @@ namespace BusinessRules
             tabla = ObjAnimal.ListarAnimal();
             return tabla;
         }
-        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, float Peso, string Comentario, int Estado, DateTime FechaCastracion, DateTime FechaIngreso, DateTime FechaNacimiento)
+        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaCastracion, DateTime FechaIngreso, DateTime FechaNacimiento)
         {
             ObjAnimal.AltaAnimal(idUsuario, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaCastracion,FechaIngreso, FechaNacimiento);
         }
-        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, float Peso, string Comentario, int Estado, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
             ObjAnimal.ModificarAnimal(IdAnimal, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
         }
