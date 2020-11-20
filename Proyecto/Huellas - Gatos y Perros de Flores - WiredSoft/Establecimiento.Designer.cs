@@ -285,7 +285,9 @@
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Establecimiento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Establecimiento";
+            this.Load += new System.EventHandler(this.Establecimiento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
