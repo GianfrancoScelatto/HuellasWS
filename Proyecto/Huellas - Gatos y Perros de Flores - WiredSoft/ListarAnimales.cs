@@ -123,6 +123,68 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Animal.Comentario = dgvMascotas.CurrentRow.Cells["Comentario"].Value.ToString();
             E_Animal.Persona = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdPersona"].Value);
         }
+
+        private void chxAdoptados_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxAdoptados.Checked == true)
+            {
+                chxFallecidos.Checked = false;
+                chxInternado.Checked = false;
+                chxTransito.Checked = false;
+            } 
+        }
+
+        private void chxInternados_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxInternado.Checked == true)
+            {
+                chxFallecidos.Checked = false;
+                chxAdoptados.Checked = false;
+                chxTransito.Checked = false;
+            }
+        }
+
+        private void chxTransito_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxTransito.Checked == true)
+            {
+                chxFallecidos.Checked = false;
+                chxInternado.Checked = false;
+                chxAdoptados.Checked = false;
+            }
+        }
+
+        private void chxFallecidos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxFallecidos.Checked == true)
+            {
+                chxAdoptados.Checked = false;
+                chxInternado.Checked = false;
+                chxTransito.Checked = false;
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            CheckBox chk = (CheckBox)sender;
+
+            switch (chk.Name)
+            {
+                case "chxAdoptados":
+                    brA.FiltrarAnimal(txtBuscar.Text, "Adoptado");
+                    break;
+                case "chxTransito":
+                    brA.FiltrarAnimal(txtBuscar.Text, "En Transito");
+                    break;
+                case "chxInternados":
+                    brA.FiltrarAnimal(txtBuscar.Text, "Internado");
+                    break;
+                case "chxFallecido":
+                    brA.FiltrarAnimal(txtBuscar.Text, "Fallecido");
+                    break;
+            }
+            
+        }
     }
     
 }

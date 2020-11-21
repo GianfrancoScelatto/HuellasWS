@@ -39,7 +39,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.chxFallecidos = new System.Windows.Forms.CheckBox();
             this.chxTransito = new System.Windows.Forms.CheckBox();
-            this.chxNoAdoptados = new System.Windows.Forms.CheckBox();
+            this.chxInternado = new System.Windows.Forms.CheckBox();
             this.chxAdoptados = new System.Windows.Forms.CheckBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.panelBotones.Controls.Add(this.btnModificar);
             this.panelBotones.Controls.Add(this.chxFallecidos);
             this.panelBotones.Controls.Add(this.chxTransito);
-            this.panelBotones.Controls.Add(this.chxNoAdoptados);
+            this.panelBotones.Controls.Add(this.chxInternado);
             this.panelBotones.Controls.Add(this.chxAdoptados);
             this.panelBotones.Controls.Add(this.txtBuscar);
             this.panelBotones.Controls.Add(this.lblBuscar);
@@ -129,6 +129,7 @@
             this.chxFallecidos.TabIndex = 43;
             this.chxFallecidos.Text = "Fallecidos";
             this.chxFallecidos.UseVisualStyleBackColor = true;
+            this.chxFallecidos.CheckedChanged += new System.EventHandler(this.chxFallecidos_CheckedChanged);
             // 
             // chxTransito
             // 
@@ -139,20 +140,22 @@
             this.chxTransito.Name = "chxTransito";
             this.chxTransito.Size = new System.Drawing.Size(94, 21);
             this.chxTransito.TabIndex = 42;
-            this.chxTransito.Text = "En transito";
+            this.chxTransito.Text = "En tránsito";
             this.chxTransito.UseVisualStyleBackColor = true;
+            this.chxTransito.CheckedChanged += new System.EventHandler(this.chxTransito_CheckedChanged);
             // 
-            // chxNoAdoptados
+            // chxInternado
             // 
-            this.chxNoAdoptados.AutoSize = true;
-            this.chxNoAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxNoAdoptados.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxNoAdoptados.Location = new System.Drawing.Point(235, 29);
-            this.chxNoAdoptados.Name = "chxNoAdoptados";
-            this.chxNoAdoptados.Size = new System.Drawing.Size(123, 21);
-            this.chxNoAdoptados.TabIndex = 41;
-            this.chxNoAdoptados.Text = "No adoptados";
-            this.chxNoAdoptados.UseVisualStyleBackColor = true;
+            this.chxInternado.AutoSize = true;
+            this.chxInternado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxInternado.ForeColor = System.Drawing.SystemColors.Control;
+            this.chxInternado.Location = new System.Drawing.Point(235, 29);
+            this.chxInternado.Name = "chxInternado";
+            this.chxInternado.Size = new System.Drawing.Size(95, 21);
+            this.chxInternado.TabIndex = 41;
+            this.chxInternado.Text = "Internados";
+            this.chxInternado.UseVisualStyleBackColor = true;
+            this.chxInternado.CheckedChanged += new System.EventHandler(this.chxInternados_CheckedChanged);
             // 
             // chxAdoptados
             // 
@@ -165,6 +168,7 @@
             this.chxAdoptados.TabIndex = 40;
             this.chxAdoptados.Text = "Adoptados";
             this.chxAdoptados.UseVisualStyleBackColor = true;
+            this.chxAdoptados.CheckedChanged += new System.EventHandler(this.chxAdoptados_CheckedChanged);
             // 
             // txtBuscar
             // 
@@ -172,6 +176,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(136, 20);
             this.txtBuscar.TabIndex = 39;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
@@ -263,7 +268,7 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.CheckBox chxFallecidos;
         private System.Windows.Forms.CheckBox chxTransito;
-        private System.Windows.Forms.CheckBox chxNoAdoptados;
+        private System.Windows.Forms.CheckBox chxInternado;
         private System.Windows.Forms.CheckBox chxAdoptados;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;

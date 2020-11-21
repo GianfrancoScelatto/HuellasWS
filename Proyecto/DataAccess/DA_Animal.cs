@@ -108,7 +108,7 @@ namespace DataAccess
             }
         }
 
-        public DataTable FiltrarAnimal(string busqueda)
+        public DataTable FiltrarAnimal(string busqueda, string tipoBusqueda)
         {
             using (var connection = GetConnection())
             {
@@ -118,7 +118,8 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Busqueda", busqueda);
-                    command.CommandText = "prc_BuscarAnimal";
+                    command.Parameters.AddWithValue("@TipoBusqueda", tipoBusqueda);
+                    command.CommandText = "prc_FiltrarAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);

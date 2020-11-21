@@ -49,21 +49,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             CargarCombos();
 
-             
             if (E_Animal.Editar == true)
             {
                 Editar = true;
                 groupBox1.Enabled = false;
                 CargarGrillas();
                 dgvFichaMedica.Columns["IdFichaMedica"].Visible = false;
-                //txtBuscar.Enabled = false;
-                //dgvFichaMedica.Enabled = false;
-                //dtpFichaMedica.Enabled = false;
-                //btnEliminar.Enabled = false;
-                //btnExportar.Enabled = false;
-                //btnNuevo.Enabled = false;
-                //btnModificar.Enabled = false;
-                //lklblVacunas.Enabled = false;
                 lblIdAnimal.Text = E_Animal.IdAnimal.ToString();
                 txtNombre.Text = E_Animal.NombreAnimal;
                 cmbEspecie.SelectedValue = E_Animal.IdEspecie;
@@ -85,7 +76,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 else
                     chkCasNo.Checked = true;
 
-                if (cmbEstado.SelectedText == "Fallecido")
+                if (cmbEstado.SelectedIndex == 2)
                 {
                     dtpFechaF.Enabled = true;
                     dtpFechaF.Value = E_Animal.FechaDefuncion.Date;
@@ -96,9 +87,17 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 cmbEspecie.SelectedIndex = 0;
                 cmbSexo.SelectedIndex = 0;
                 cmbEstado.SelectedIndex = 0;
+
+                txtBuscar.Enabled = false;
+                dgvFichaMedica.Enabled = false;
+                dtpFichaMedica.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnExportar.Enabled = false;
+                btnNuevo.Enabled = false;
+                btnModificar.Enabled = false;
+                lklblVacunas.Enabled = false;
             }
 
-            
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -129,9 +128,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     LimpiarForm();
                     Editar = false;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    eM.MensajeError("Ha ocurrido un error.");
+                    eM.MensajeError("Ha ocurrido un error: " + ex);
                 }
             }
             else
@@ -154,8 +153,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 }
                 catch(Exception ex)
                 {
-                    throw ex;
-                    //eM.MensajeError("Ha ocurrido un error.");
+                    eM.MensajeError("Ha ocurrido un error: " + ex);
                 }
             }
         }
@@ -235,20 +233,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             dtpFiltro.Value = DateTime.Now;
         }
 
-        private void btnImagen_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog faI = new OpenFileDialog();
-            OpenFileDialog faA = new OpenFileDialog();
-            DialogResult rsI = faI.ShowDialog();
-            DialogResult rsA = faA.ShowDialog();
-            if (rsA == DialogResult.OK && rsI == DialogResult.OK)
-            {
-                picB1.Image = Image.FromFile(faI.FileName);
-                picB1.Image = Image.FromFile(faA.FileName);
-            }
-
-        }
-
         private void tbcDatosMasc_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (tbcDatosMasc.SelectedIndex)
@@ -278,16 +262,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
         }
 
-        private void CmbEstado_TextUpdate(object sender, EventArgs e)
-        {
-            if (cmbEstado.Text == "Fallecido")
-            {
-                dtpFechaF.Enabled = true;
-            }
-            else
-                dtpFechaF.Enabled = false;
-        }
-
         private void DgvFichaMedica_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             E_FichaMedica.IdFichaMedica = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdFichaMedica"].Value);
@@ -297,6 +271,42 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_FichaMedica.IdVeterinaria = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdVeterinaria"].Value);
             E_FichaMedica.IdMascota = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdMascota"].Value);
             E_FichaMedica.Costo = Convert.ToDecimal(dgvFichaMedica.CurrentRow.Cells["Costo"].Value);
+        }
+
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEstado.SelectedIndex == 2)
+            {
+                dtpFechaF.Enabled = true;
+            }
+            else
+                dtpFechaF.Enabled = false;
+        }
+
+        private void btnImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog faI = new OpenFileDialog();
+            OpenFileDialog faA = new OpenFileDialog();
+            DialogResult rsI = faI.ShowDialog();
+            DialogResult rsA = faA.ShowDialog();
+            if (rsA == DialogResult.OK && rsI == DialogResult.OK)
+            {
+                picB1.Image = Image.FromFile(faI.FileName);
+                picB1.Image = Image.FromFile(faA.FileName);
+            }
+        }
+
+        private void btnImagen2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog faI = new OpenFileDialog();
+            OpenFileDialog faA = new OpenFileDialog();
+            DialogResult rsI = faI.ShowDialog();
+            DialogResult rsA = faA.ShowDialog();
+            if (rsA == DialogResult.OK && rsI == DialogResult.OK)
+            {
+                picB2.Image = Image.FromFile(faI.FileName);
+                picB2.Image = Image.FromFile(faA.FileName);
+            }
         }
 
         private void dtpFichaMedica_ValueChanged(object sender, EventArgs e)

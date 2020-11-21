@@ -30,10 +30,10 @@ namespace BusinessRules
         {
             ObjAnimal.BajaAnimal(IdAnimal, IdUsuario, IdMovimiento, EstadoAnimal, Descripcion, Deshabilitado);
         }
-        public DataTable FiltrarAnimal(string Busqueda)
+        public DataTable FiltrarAnimal(string Busqueda, string tipoBusqueda)
         {
             DataTable tabla = new DataTable();
-            tabla = ObjAnimal.FiltrarAnimal(Busqueda);
+            tabla = ObjAnimal.FiltrarAnimal(Busqueda, tipoBusqueda);
             return tabla;
         }
 

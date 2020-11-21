@@ -34,15 +34,13 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.chx4 = new System.Windows.Forms.CheckBox();
-            this.chx2 = new System.Windows.Forms.CheckBox();
-            this.chx3 = new System.Windows.Forms.CheckBox();
-            this.chx1 = new System.Windows.Forms.CheckBox();
+            this.chxNombre = new System.Windows.Forms.CheckBox();
+            this.chxUsuario = new System.Windows.Forms.CheckBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
-            this.dataUsuarios = new System.Windows.Forms.DataGridView();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -52,10 +50,8 @@
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
             this.panelBotones.Controls.Add(this.btnModificar);
-            this.panelBotones.Controls.Add(this.chx4);
-            this.panelBotones.Controls.Add(this.chx2);
-            this.panelBotones.Controls.Add(this.chx3);
-            this.panelBotones.Controls.Add(this.chx1);
+            this.panelBotones.Controls.Add(this.chxNombre);
+            this.panelBotones.Controls.Add(this.chxUsuario);
             this.panelBotones.Controls.Add(this.txtBuscar);
             this.panelBotones.Controls.Add(this.lblBuscar);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -113,53 +109,29 @@
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
-            // chx4
+            // chxNombre
             // 
-            this.chx4.AutoSize = true;
-            this.chx4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chx4.ForeColor = System.Drawing.SystemColors.Control;
-            this.chx4.Location = new System.Drawing.Point(371, 29);
-            this.chx4.Name = "chx4";
-            this.chx4.Size = new System.Drawing.Size(31, 21);
-            this.chx4.TabIndex = 43;
-            this.chx4.Text = "-";
-            this.chx4.UseVisualStyleBackColor = true;
+            this.chxNombre.AutoSize = true;
+            this.chxNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.chxNombre.Location = new System.Drawing.Point(235, 29);
+            this.chxNombre.Name = "chxNombre";
+            this.chxNombre.Size = new System.Drawing.Size(80, 21);
+            this.chxNombre.TabIndex = 41;
+            this.chxNombre.Text = "Nombre";
+            this.chxNombre.UseVisualStyleBackColor = true;
             // 
-            // chx2
+            // chxUsuario
             // 
-            this.chx2.AutoSize = true;
-            this.chx2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chx2.ForeColor = System.Drawing.SystemColors.Control;
-            this.chx2.Location = new System.Drawing.Point(371, 5);
-            this.chx2.Name = "chx2";
-            this.chx2.Size = new System.Drawing.Size(31, 21);
-            this.chx2.TabIndex = 42;
-            this.chx2.Text = "-";
-            this.chx2.UseVisualStyleBackColor = true;
-            // 
-            // chx3
-            // 
-            this.chx3.AutoSize = true;
-            this.chx3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chx3.ForeColor = System.Drawing.SystemColors.Control;
-            this.chx3.Location = new System.Drawing.Point(235, 29);
-            this.chx3.Name = "chx3";
-            this.chx3.Size = new System.Drawing.Size(38, 21);
-            this.chx3.TabIndex = 41;
-            this.chx3.Text = "-k";
-            this.chx3.UseVisualStyleBackColor = true;
-            // 
-            // chx1
-            // 
-            this.chx1.AutoSize = true;
-            this.chx1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chx1.ForeColor = System.Drawing.SystemColors.Control;
-            this.chx1.Location = new System.Drawing.Point(235, 5);
-            this.chx1.Name = "chx1";
-            this.chx1.Size = new System.Drawing.Size(31, 21);
-            this.chx1.TabIndex = 40;
-            this.chx1.Text = "-";
-            this.chx1.UseVisualStyleBackColor = true;
+            this.chxUsuario.AutoSize = true;
+            this.chxUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.chxUsuario.Location = new System.Drawing.Point(235, 5);
+            this.chxUsuario.Name = "chxUsuario";
+            this.chxUsuario.Size = new System.Drawing.Size(73, 21);
+            this.chxUsuario.TabIndex = 40;
+            this.chxUsuario.Text = "Usuario";
+            this.chxUsuario.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
@@ -179,28 +151,28 @@
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
-            // dataUsuarios
+            // dgvUsuarios
             // 
-            this.dataUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataUsuarios.Location = new System.Drawing.Point(0, 55);
-            this.dataUsuarios.Name = "dataUsuarios";
-            this.dataUsuarios.Size = new System.Drawing.Size(1570, 576);
-            this.dataUsuarios.TabIndex = 29;
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUsuarios.Location = new System.Drawing.Point(0, 55);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.Size = new System.Drawing.Size(1570, 576);
+            this.dgvUsuarios.TabIndex = 29;
             // 
             // ListarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1570, 631);
-            this.Controls.Add(this.dataUsuarios);
+            this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarUsuarios";
             this.Text = "ListarUsuarios";
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,12 +184,10 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.CheckBox chx4;
-        private System.Windows.Forms.CheckBox chx2;
-        private System.Windows.Forms.CheckBox chx3;
-        private System.Windows.Forms.CheckBox chx1;
+        private System.Windows.Forms.CheckBox chxNombre;
+        private System.Windows.Forms.CheckBox chxUsuario;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.DataGridView dataUsuarios;
+        private System.Windows.Forms.DataGridView dgvUsuarios;
     }
 }
