@@ -18,15 +18,15 @@ namespace BusinessRules
             tabla = ObjAnimal.ListarAnimal();
             return tabla;
         }
-        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaCastracion, DateTime FechaIngreso, DateTime FechaNacimiento)
+        public void AltaAnimal(int IdUsuario, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaCastracion, DateTime FechaIngreso, DateTime FechaNacimiento)
         {
-            ObjAnimal.AltaAnimal(idUsuario, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaCastracion,FechaIngreso, FechaNacimiento);
+            ObjAnimal.AltaAnimal(IdUsuario, IdPersona, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaCastracion,FechaIngreso, FechaNacimiento);
         }
-        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
-            ObjAnimal.ModificarAnimal(IdAnimal, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
+            ObjAnimal.ModificarAnimal(IdAnimal, IdPersona, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
         }
-        public void BorrarAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, int EstadoAnimal, string Descripcion, bool Deshabilitado)
+        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, int EstadoAnimal, string Descripcion, bool Deshabilitado)
         {
             ObjAnimal.BajaAnimal(IdAnimal, IdUsuario, IdMovimiento, EstadoAnimal, Descripcion, Deshabilitado);
         }

@@ -20,7 +20,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_PersonaHistorial";
+                    command.CommandText = "prc_ListarPersona";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);

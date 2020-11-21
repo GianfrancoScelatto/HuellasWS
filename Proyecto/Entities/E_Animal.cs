@@ -14,8 +14,8 @@ namespace Entities
         public static DateTime FechaIngreso { get; set; }
         public static DateTime FechaNac { get; set; }
         public static string LugarRescate { get; set; }
-        public static byte FotoIngreso { get; set; }
-        public static byte FotoAdopcion { get; set; }
+        public static string FotoIngreso { get; set; }
+        public static string FotoAdopcion { get; set; }
         public static string Sexo { get; set; }
         public static int Edad { get; set; }
         public static string Peso { get; set; }

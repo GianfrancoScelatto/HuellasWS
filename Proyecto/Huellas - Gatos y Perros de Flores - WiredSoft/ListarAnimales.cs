@@ -94,7 +94,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 if (preg == DialogResult.OK)
                 {
                     E_Animal.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdAnimal"].Value);
-                    brA.BorrarAnimal(E_Animal.IdAnimal, E_Usuario.IdUsuario, eB.IdMovimiento, E_Animal.Estado, eB.Descripcion, E_Animal.Deshabilitado);
+                    brA.BajaAnimal(E_Animal.IdAnimal, E_Usuario.IdUsuario, eB.IdMovimiento, E_Animal.Estado, eB.Descripcion, E_Animal.Deshabilitado);
                     MostrarRegistroAnimal();
                 }
             }
