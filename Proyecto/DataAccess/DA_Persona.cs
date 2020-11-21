@@ -153,10 +153,11 @@ namespace DataAccess
                     while (reader.HasRows && reader.Read())
                     {
                         E_Persona.NombrePersona = reader.GetString(0);
-                        E_Persona.Domicilio = reader.GetString(1);
-                        E_Persona.Localidad = reader.GetString(2);
-                        E_Persona.Celular = reader.GetInt32(3);
-                        E_Persona.Email = reader.GetString(4);
+                        E_Persona.ApellidoPersona = reader.GetString(1);
+                        E_Persona.Domicilio = reader.GetString(2);
+                        E_Persona.Localidad = reader.GetString(3);
+                        E_Persona.Celular = reader.GetInt32(4);
+                        E_Persona.Email = reader.GetString(5);
                     }
                     tabla.Load(reader);
                     connection.Close();
