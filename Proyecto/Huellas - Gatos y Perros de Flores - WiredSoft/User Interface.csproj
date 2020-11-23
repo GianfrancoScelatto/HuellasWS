@@ -72,6 +72,12 @@
     <Compile Include="FichaMedica.Designer.cs">
       <DependentUpon>FichaMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarHistorial.Designer.cs">
+      <DependentUpon>ListarHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaNegra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListarFichaMedica.resx">
       <DependentUpon>ListarFichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarHistorial.resx">
+      <DependentUpon>ListarHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarListaNegra.resx">
       <DependentUpon>ListarListaNegra.cs</DependentUpon>

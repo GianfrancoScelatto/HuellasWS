@@ -56,7 +56,7 @@
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1570, 55);
+            this.panelBotones.Size = new System.Drawing.Size(1083, 55);
             this.panelBotones.TabIndex = 28;
             // 
             // btnExportar
@@ -65,11 +65,12 @@
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(1367, 5);
+            this.btnExportar.Location = new System.Drawing.Point(880, 5);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnEliminar
             // 
@@ -77,11 +78,12 @@
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1513, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1026, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -89,11 +91,12 @@
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(1421, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(934, 5);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnModificar
             // 
@@ -101,11 +104,12 @@
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(1467, 5);
+            this.btnModificar.Location = new System.Drawing.Point(980, 5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // chxB
             // 
@@ -155,7 +159,7 @@
             this.dgvContrato.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvContrato.Location = new System.Drawing.Point(0, 55);
             this.dgvContrato.Name = "dgvContrato";
-            this.dgvContrato.Size = new System.Drawing.Size(1570, 576);
+            this.dgvContrato.Size = new System.Drawing.Size(1083, 615);
             this.dgvContrato.TabIndex = 29;
             // 
             // ListarContrato
@@ -163,12 +167,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1570, 631);
+            this.ClientSize = new System.Drawing.Size(1083, 670);
             this.Controls.Add(this.dgvContrato);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarContrato";
             this.Text = "ListarContrato";
+            this.Load += new System.EventHandler(this.ListarContrato_Load);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContrato)).EndInit();

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class E_Contrato
+    public static class E_Contrato
     {
-        public int IdContrato { get; set; }
-        public int IdAdoptante { get; set; }
-        public int IdMascota { get; set; }
-        public int Nuevonombre { get; set; }
-        public DateTime FechaAdopcion { get; set; }
+        public static int IdContrato { get; set; }
+        public static int IdAdoptante { get; set; }
+        public static int IdAnimal{ get; set; }
+        public static string NuevoNombre { get; set; }
+        //public static date FechaAdopcion { get; set; }
+        public static bool Deshabilitao { get; set; }
     }
 }

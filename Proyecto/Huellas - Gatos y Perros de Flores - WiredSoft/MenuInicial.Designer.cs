@@ -33,7 +33,6 @@
             this.panelMenuLateral = new System.Windows.Forms.Panel();
             this.lklblCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnHistorial = new System.Windows.Forms.Button();
             this.btnFichasMedicas = new System.Windows.Forms.Button();
             this.btnVacunas = new System.Windows.Forms.Button();
             this.lklblUsuario = new System.Windows.Forms.LinkLabel();
@@ -45,11 +44,14 @@
             this.btnAnimal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
-            this.cldrEventos = new System.Windows.Forms.MonthCalendar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.lblEvento = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cldrEventos = new System.Windows.Forms.MonthCalendar();
+            this.btnCosto = new System.Windows.Forms.Button();
+            this.bntContrato = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.bdscEventos = new System.Windows.Forms.BindingSource(this.components);
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,9 +63,11 @@
             // 
             this.panelMenuLateral.AutoScroll = true;
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelMenuLateral.Controls.Add(this.button3);
+            this.panelMenuLateral.Controls.Add(this.bntContrato);
+            this.panelMenuLateral.Controls.Add(this.btnCosto);
             this.panelMenuLateral.Controls.Add(this.lklblCerrarSesion);
             this.panelMenuLateral.Controls.Add(this.label1);
-            this.panelMenuLateral.Controls.Add(this.btnHistorial);
             this.panelMenuLateral.Controls.Add(this.btnFichasMedicas);
             this.panelMenuLateral.Controls.Add(this.btnVacunas);
             this.panelMenuLateral.Controls.Add(this.lklblUsuario);
@@ -103,22 +107,6 @@
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Bienvenido/a:";
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistorial.FlatAppearance.BorderSize = 0;
-            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHistorial.Location = new System.Drawing.Point(0, 374);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHistorial.Size = new System.Drawing.Size(250, 45);
-            this.btnHistorial.TabIndex = 12;
-            this.btnHistorial.Text = "Historial";
-            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.UseVisualStyleBackColor = true;
             // 
             // btnFichasMedicas
             // 
@@ -276,32 +264,14 @@
             this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
             this.panelFormHijo.TabIndex = 1;
             // 
-            // cldrEventos
+            // lblEvento
             // 
-            this.cldrEventos.CalendarDimensions = new System.Drawing.Size(4, 3);
-            this.cldrEventos.Location = new System.Drawing.Point(96, 9);
-            this.cldrEventos.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
-            this.cldrEventos.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.cldrEventos.Name = "cldrEventos";
-            this.cldrEventos.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 514);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Fecha:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 553);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Evento:";
+            this.lblEvento.AutoSize = true;
+            this.lblEvento.Location = new System.Drawing.Point(170, 553);
+            this.lblEvento.Name = "lblEvento";
+            this.lblEvento.Size = new System.Drawing.Size(10, 13);
+            this.lblEvento.TabIndex = 4;
+            this.lblEvento.Text = "-";
             // 
             // lblFecha
             // 
@@ -312,18 +282,81 @@
             this.lblFecha.TabIndex = 3;
             this.lblFecha.Text = "-";
             // 
-            // lblEvento
+            // label3
             // 
-            this.lblEvento.AutoSize = true;
-            this.lblEvento.Location = new System.Drawing.Point(170, 553);
-            this.lblEvento.Name = "lblEvento";
-            this.lblEvento.Size = new System.Drawing.Size(10, 13);
-            this.lblEvento.TabIndex = 4;
-            this.lblEvento.Text = "-";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(124, 553);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Evento:";
             // 
-            // bdscEventos
+            // label2
             // 
-            //this.bdscEventos.DataSource = typeof(Entities.E_Evento);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(124, 514);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fecha:";
+            // 
+            // cldrEventos
+            // 
+            this.cldrEventos.CalendarDimensions = new System.Drawing.Size(4, 3);
+            this.cldrEventos.Location = new System.Drawing.Point(96, 9);
+            this.cldrEventos.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
+            this.cldrEventos.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.cldrEventos.Name = "cldrEventos";
+            this.cldrEventos.TabIndex = 0;
+            // 
+            // btnCosto
+            // 
+            this.btnCosto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCosto.FlatAppearance.BorderSize = 0;
+            this.btnCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCosto.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCosto.Location = new System.Drawing.Point(0, 374);
+            this.btnCosto.Name = "btnCosto";
+            this.btnCosto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCosto.Size = new System.Drawing.Size(250, 45);
+            this.btnCosto.TabIndex = 15;
+            this.btnCosto.Text = "Costo";
+            this.btnCosto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCosto.UseVisualStyleBackColor = true;
+            // 
+            // bntContrato
+            // 
+            this.bntContrato.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bntContrato.FlatAppearance.BorderSize = 0;
+            this.bntContrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntContrato.ForeColor = System.Drawing.SystemColors.Window;
+            this.bntContrato.Location = new System.Drawing.Point(0, 419);
+            this.bntContrato.Name = "bntContrato";
+            this.bntContrato.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bntContrato.Size = new System.Drawing.Size(250, 45);
+            this.bntContrato.TabIndex = 16;
+            this.bntContrato.Text = "Contrato";
+            this.bntContrato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntContrato.UseVisualStyleBackColor = true;
+            this.bntContrato.Click += new System.EventHandler(this.bntContrato_Click);
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
+            this.button3.Location = new System.Drawing.Point(0, 464);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(250, 45);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Historial";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // MenuInicial
             // 
@@ -363,7 +396,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lklblUsuario;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnFichasMedicas;
         private System.Windows.Forms.Button btnVacunas;
         private System.Windows.Forms.Button btnListaNegra;
@@ -375,5 +407,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MonthCalendar cldrEventos;
         private System.Windows.Forms.BindingSource bdscEventos;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bntContrato;
+        private System.Windows.Forms.Button btnCosto;
     }
 }

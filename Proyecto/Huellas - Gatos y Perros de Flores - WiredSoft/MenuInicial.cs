@@ -53,30 +53,37 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             AbirFormHijo(new ListarPersonas());
         }
 
-        private void btnListaNegra_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVeterinaria_Click(object sender, EventArgs e)
         {
             AbirFormHijo(new ListarEstablecimient());
         }
 
-        private void btnAdoptantes_Click(object sender, EventArgs e)
+        private void btnListaNegra_Click(object sender, EventArgs e)
         {
-            AbirFormHijo(new ListarPersonas());
-        }
-
-        private void btnFichasMedicas_Click(object sender, EventArgs e)
-        {
-
+            AbirFormHijo(new ListarListaNegra());
         }
 
         private void btnVacunas_Click(object sender, EventArgs e)
         {
             AbirFormHijo(new ListarVacunaT());
         }
+
+
+        private void btnFichasMedicas_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bntContrato_Click(object sender, EventArgs e)
+        {
+            AbirFormHijo(new ListarContrato());
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            AbirFormHijo(new ListarHistorial());
+        }
+
 
         private void lklblCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -89,5 +96,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             Application.Exit();
         }
+
+
     }
 }
