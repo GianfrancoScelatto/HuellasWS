@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 using Entities;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
@@ -24,6 +25,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             lklblUsuario.Text = E_Usuario.Nombre;
             lblRol.Text = E_Usuario.Rol;
+            bdscEventos.DataSource = 
         }
 
         private void AbirFormHijo(Form FormHijo)
