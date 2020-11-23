@@ -25,9 +25,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void ListarCombos()
         {
-            cmbSexo.DataSource = brP.ComboPersona();
+            cmbTipoPersona.DataSource = brP.ComboTipoPersona();
+            cmbTipoPersona.DisplayMember = "TipoPersona";
+            cmbTipoPersona.ValueMember = "IdTipoPersona";
+
+            cmbSexo.DataSource = brP.ComboSexo();
             cmbSexo.DisplayMember = "Sexo";
+            cmbSexo.ValueMember = "IdSexo";
         }
+
 
 
         private void Persona_Load(object sender, EventArgs e)
@@ -48,14 +54,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 txtCalles.Text = E_Persona.Calles;
                 txtCelular.Text = E_Persona.Celular.ToString();
                 txtMail.Text = E_Persona.Email;
-                cmbSexo.SelectedValue = E_Persona.Sexo;
+                cmbSexo.SelectedValue = E_Persona.IdSexo.ToString();
                 txtTelefono.Text = E_Persona.Telefono.ToString();
                 txtUser.Text = E_Persona.UsuarioFaceIg;
+                chkListaNegra.Checked = E_Persona.ListaNegra;
+                txtMotivo.Text = E_Persona.Motivo;
 
             }
 
-            cmbSexo.SelectedIndex = 0;
-            cmbTipoPersona.SelectedIndex = 0;
+            //cmbSexo.SelectedIndex = 0;
+            //cmbTipoPersona.SelectedIndex = 0;
 
         }
 
@@ -63,20 +71,37 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (String.IsNullOrEmpty(txtNombre.Text))
             {
-                msj.MensajeAlerta("Hay campos vacíos");
+                msj.MensajeAlerta("Hay campos vacíos.");
             }
-
-            if (Editar == true)
-                try
+            else
+            {
+                if (Editar == true)
                 {
+                    try
+                    {
+                        brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkListaNegra.Checked, txtMotivo.Text, E_Usuario.IdUsuario);
+                        Editar = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        msj.MensajeError("Ha ocurrido un error." + ex);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        brP.AltaPersona(Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32 (cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkListaNegra.Checked, txtMotivo.Text, E_Usuario.IdUsuario);
+                    }
+                    catch (Exception ex)
+                    {
+                        msj.MensajeError("Ha ocurrido un error." + ex);
+                    }
 
-                    brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), cmbSexo.SelectedValue.ToString(), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkListaNegra.Checked, txtMotivo.Text, E_Usuario.IdUsuario);
                 }
 
-                catch (Exception ex)
-                {
-                    msj.MensajeError("Ha ocurrido un error" + ex);
-                }
+                Close();
+            }
         }
 
 

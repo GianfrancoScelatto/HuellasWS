@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaPersona( int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
+        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -47,7 +47,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Codigo_Postal", Codigo_Postal);
                     command.Parameters.AddWithValue("@Calles", Calles);
                     command.Parameters.AddWithValue("@Altura", Altura);
-                    command.Parameters.AddWithValue("@Sexo", Sexo);
+                    command.Parameters.AddWithValue("@IdSexo", IdSexo);
                     command.Parameters.AddWithValue(" @Telefono", Telefono);
                     command.Parameters.AddWithValue("@Celular", Celular);
                     command.Parameters.AddWithValue("@Email", Email);
@@ -62,7 +62,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
+        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -81,7 +81,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Codigo_Postal", Codigo_Postal);
                     command.Parameters.AddWithValue("@Calles", Calles);
                     command.Parameters.AddWithValue("@Altura", Altura);
-                    command.Parameters.AddWithValue("@Sexo", Sexo);
+                    command.Parameters.AddWithValue("@IdSexo", IdSexo);
                     command.Parameters.AddWithValue("@Telefono", Telefono);
                     command.Parameters.AddWithValue("@Celular", Celular);
                     command.Parameters.AddWithValue("@Email", Email);
@@ -181,7 +181,41 @@ namespace DataAccess
             }
         }
 
+        public DataTable ComboTipoPersona()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboTipoPersona", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
 
+        public DataTable SexoPersona()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboSexo", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
 
+        }
     }
 }

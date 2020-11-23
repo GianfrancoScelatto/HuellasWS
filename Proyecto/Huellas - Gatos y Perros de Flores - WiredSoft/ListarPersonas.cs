@@ -76,6 +76,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if (preg == DialogResult.OK)
                 {
+
                     brP.BajaPersona(E_Persona.IdPersona, eB.IdUsuario);//Se discute modificar estos parámetros. 
                     MostrarRegistroPersona();
                 }

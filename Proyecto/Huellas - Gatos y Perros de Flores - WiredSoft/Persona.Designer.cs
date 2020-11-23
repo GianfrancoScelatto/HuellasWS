@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMotivo = new System.Windows.Forms.RichTextBox();
+            this.lblMotivo = new System.Windows.Forms.Label();
+            this.chkListaNegra = new System.Windows.Forms.CheckBox();
+            this.lblListaNegra = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
             this.txtCP = new System.Windows.Forms.TextBox();
@@ -61,12 +65,8 @@
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.lblDomicilio = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
-            this.lblListaNegra = new System.Windows.Forms.Label();
-            this.chkListaNegra = new System.Windows.Forms.CheckBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.lblMotivo = new System.Windows.Forms.Label();
-            this.txtMotivo = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,50 @@
             this.groupBox1.Size = new System.Drawing.Size(324, 683);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // txtMotivo
+            // 
+            this.txtMotivo.Location = new System.Drawing.Point(140, 602);
+            this.txtMotivo.Name = "txtMotivo";
+            this.txtMotivo.Size = new System.Drawing.Size(166, 66);
+            this.txtMotivo.TabIndex = 154;
+            this.txtMotivo.Text = "";
+            // 
+            // lblMotivo
+            // 
+            this.lblMotivo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMotivo.AutoSize = true;
+            this.lblMotivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotivo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblMotivo.Location = new System.Drawing.Point(15, 602);
+            this.lblMotivo.Name = "lblMotivo";
+            this.lblMotivo.Size = new System.Drawing.Size(64, 19);
+            this.lblMotivo.TabIndex = 153;
+            this.lblMotivo.Text = "Motivo:";
+            // 
+            // chkListaNegra
+            // 
+            this.chkListaNegra.AutoSize = true;
+            this.chkListaNegra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkListaNegra.ForeColor = System.Drawing.Color.White;
+            this.chkListaNegra.Location = new System.Drawing.Point(140, 576);
+            this.chkListaNegra.Name = "chkListaNegra";
+            this.chkListaNegra.Size = new System.Drawing.Size(39, 20);
+            this.chkListaNegra.TabIndex = 152;
+            this.chkListaNegra.Text = "Si";
+            this.chkListaNegra.UseVisualStyleBackColor = true;
+            // 
+            // lblListaNegra
+            // 
+            this.lblListaNegra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblListaNegra.AutoSize = true;
+            this.lblListaNegra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaNegra.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblListaNegra.Location = new System.Drawing.Point(15, 574);
+            this.lblListaNegra.Name = "lblListaNegra";
+            this.lblListaNegra.Size = new System.Drawing.Size(98, 19);
+            this.lblListaNegra.TabIndex = 151;
+            this.lblListaNegra.Text = "Lista Negra:";
             // 
             // txtEdad
             // 
@@ -205,6 +249,9 @@
             this.cmbSexo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "M",
+            "F"});
             this.cmbSexo.Location = new System.Drawing.Point(140, 471);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(160, 21);
@@ -442,30 +489,6 @@
             this.lblDNI.TabIndex = 115;
             this.lblDNI.Text = "DNI:";
             // 
-            // lblListaNegra
-            // 
-            this.lblListaNegra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblListaNegra.AutoSize = true;
-            this.lblListaNegra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaNegra.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblListaNegra.Location = new System.Drawing.Point(15, 574);
-            this.lblListaNegra.Name = "lblListaNegra";
-            this.lblListaNegra.Size = new System.Drawing.Size(98, 19);
-            this.lblListaNegra.TabIndex = 151;
-            this.lblListaNegra.Text = "Lista Negra:";
-            // 
-            // chkListaNegra
-            // 
-            this.chkListaNegra.AutoSize = true;
-            this.chkListaNegra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkListaNegra.ForeColor = System.Drawing.Color.White;
-            this.chkListaNegra.Location = new System.Drawing.Point(140, 576);
-            this.chkListaNegra.Name = "chkListaNegra";
-            this.chkListaNegra.Size = new System.Drawing.Size(39, 20);
-            this.chkListaNegra.TabIndex = 152;
-            this.chkListaNegra.Text = "Si";
-            this.chkListaNegra.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -493,26 +516,7 @@
             this.btnGuardar.TabIndex = 151;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // lblMotivo
-            // 
-            this.lblMotivo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMotivo.AutoSize = true;
-            this.lblMotivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotivo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMotivo.Location = new System.Drawing.Point(16, 611);
-            this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Size = new System.Drawing.Size(64, 19);
-            this.lblMotivo.TabIndex = 153;
-            this.lblMotivo.Text = "Motivo:";
-            // 
-            // txtMotivo
-            // 
-            this.txtMotivo.Location = new System.Drawing.Point(140, 623);
-            this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(178, 54);
-            this.txtMotivo.TabIndex = 154;
-            this.txtMotivo.Text = "";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Persona
             // 

@@ -323,7 +323,7 @@
             // 
             // bdscEventos
             // 
-            this.bdscEventos.DataSource = typeof(Entities.E_Evento);
+            //this.bdscEventos.DataSource = typeof(Entities.E_Evento);
             // 
             // MenuInicial
             // 

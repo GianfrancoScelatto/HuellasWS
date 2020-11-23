@@ -19,7 +19,7 @@ namespace Entities
         public static string CodigoPostal { get; set; }
         public static string Calles { get; set; }
         public static int Altura { get; set; }
-        public static string Sexo { get; set; }
+        public static int IdSexo { get; set; }
         public static int Telefono { get; set; }
         public static int Celular { get; set; }
         public static string Email { get; set; }
