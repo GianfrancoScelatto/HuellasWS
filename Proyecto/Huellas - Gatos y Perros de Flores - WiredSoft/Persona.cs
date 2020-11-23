@@ -9,77 +9,81 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessRules;
 using Entities;
+
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     public partial class Persona : Form
     {
         BR_Persona brP = new BR_Persona();
-        E_Mensaje eM = new E_Mensaje();
+        E_Mensaje msj = new E_Mensaje();
         public bool Editar = false;
         public Persona()
         {
             InitializeComponent();
         }
 
-        private void LimpiarForm()
+
+        private void ListarCombos()
         {
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtAltura.Clear();
-            txtCelular.Clear();
-            txtLocalidad.Clear();
-            txtDNI.Clear();
-            txtMail.Clear();
+            cmbSexo.DataSource = brP.ComboPersona();
+            cmbSexo.DisplayMember = "Sexo";
+        }
+
+
+        private void Persona_Load(object sender, EventArgs e)
+        {
+            ListarCombos();
+            if (E_Persona.Editar == true)
+            {
+                Editar = true;
+                lblID.Text = E_Persona.IdPersona.ToString();
+                cmbTipoPersona.SelectedValue = E_Persona.IdTipoPersona.ToString();
+                txtNombre.Text = E_Persona.NombrePersona;
+                txtEdad.Text = E_Persona.Edad.ToString();
+                txtDNI.Text = E_Persona.DNI;
+                txtDomicilio.Text = E_Persona.Domicilio;
+                txtAltura.Text = E_Persona.Altura.ToString();
+                txtCP.Text = E_Persona.CodigoPostal;
+                txtLocalidad.Text = E_Persona.Localidad;
+                txtCalles.Text = E_Persona.Calles;
+                txtCelular.Text = E_Persona.Celular.ToString();
+                txtMail.Text = E_Persona.Email;
+                cmbSexo.SelectedValue = E_Persona.Sexo;
+                txtTelefono.Text = E_Persona.Telefono.ToString();
+                txtUser.Text = E_Persona.UsuarioFaceIg;
+
+            }
+
             cmbSexo.SelectedIndex = 0;
+            cmbTipoPersona.SelectedIndex = 0;
+
         }
-        private void BtnGuardar_Click(object sender, EventArgs e)
+
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //if (String.IsNullOrWhiteSpace(txtNombre.Text) || String.IsNullOrWhiteSpace(txtApellido.Text) || String.IsNullOrWhiteSpace(txtAltura.Text) || String.IsNullOrWhiteSpace(txtDNI.Text) || String.IsNullOrWhiteSpace(txtMail.Text) || String.IsNullOrWhiteSpace(txtUserFB.Text) || String.IsNullOrWhiteSpace(txtUserIG.Text) || String.IsNullOrWhiteSpace(txtTelefono.Text) || String.IsNullOrWhiteSpace(txtLocalidad.Text) || String.IsNullOrWhiteSpace(txtCalle.Text))
-            //{//falta agregar los .text
-            //    eM.MensajeError("Hay espacios vacíos.");
-            //}
-            //else if (Editar == true)
-            //{
-            //    try
-            //    {
-            //        if (chkCasSi.Checked == true)//Preguntar esto
-            //        {
-            //            brP.ModificarPersona();
-            //        }
-            //        else
-            //            brP.ModificarPersona();
+            if (String.IsNullOrEmpty(txtNombre.Text))
+            {
+                msj.MensajeAlerta("Hay campos vacíos");
+            }
 
-            //        LimpiarForm();
-            //        Editar = false;
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("No se pudo editar los datos por el siguiente motivo: " + ex);
-            //    }
-            //}
-            //else
-            //{
-            //    try
-            //    {
-            //        if (chkCasSi.Checked == true)
-            //        {
-            //            brP.AltaPersona(1, txtNombre.Text, txtApellido.Text, txtEdad.Text, txtDNI.Text, txt, txtDNI.Text, txtCalle, txtAltura,, Convert.ToInt32(comboBox1.SelectedValue), txtTelefono.Text, txtCelular.Text, txtMail.Text, txtUserIG.Text);
-            //        }
-            //        else
-            //            brP.AltaPersona(1, txtNombre.Text, txtApellido.Text,txtEdad.Text,txtDNI.Text,txt ,txtDNI.Text,txtCalle,txtAltura,, Convert.ToInt32(comboBox1.SelectedValue),txtTelefono.Text,txtCelular.Text,txtMail.Text,txtUserIG.Text);
-            //        LimpiarForm();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("no se pudo insertar los datos por: " + ex);
-            //    }
-            //}
+            if (Editar == true)
+                try
+                {
+                   
+                    brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, Convert.ToInt32(txtAltura.Text), txtCP.Text, txtLocalidad.Text, txtCalles.Text, Convert.ToInt32(txtCelular.Text), txtMail.Text, Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), txtUser.Text);
+                }
 
+                catch (Exception ex)
+                {
+                    msj.MensajeError("Ha ocurrido un error");
+                }
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+
     }
+
 }
+    
+
+
+

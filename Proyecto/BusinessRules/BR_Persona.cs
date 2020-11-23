@@ -17,17 +17,17 @@ namespace BusinessRules
             tabla = ObjPersona.ListarPersona();
             return tabla;
         }
-        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
+        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo)
         {
-            ObjPersona.AltaPersona(IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, Deshabilitado);
+            ObjPersona.AltaPersona(IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo);
         }
-        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
+        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo)
         {
-            ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, Deshabilitado);
+            ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo);
         }
-        public void BajaPersona(int idPersona, int IdUsuario, int IdMovimiento, string Descripcion, bool Deshabilitado)
+        public void BajaPersona(int idPersona, int IdUsuario)
         {
-            ObjPersona.BajaPersona(idPersona, IdUsuario, IdMovimiento, Descripcion, Deshabilitado);
+            ObjPersona.BajaPersona(idPersona, IdUsuario);
         }
         public void FiltrarPersona(string Busqueda, string tipoPersona)
         {
@@ -47,5 +47,13 @@ namespace BusinessRules
             tabla = ObjPersona.ComboPersona();
             return tabla;
         }
+
+        public DataTable ComboSexo()
+        {
+            DataTable tabla = new DataTable();
+            tabla = ObjPersona.ComboSexo();
+            return tabla;
+        }
+
     }
 }

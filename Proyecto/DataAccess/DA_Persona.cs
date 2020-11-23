@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaPersona( int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
+        public void AltaPersona( int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -54,7 +54,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@UsuarioFaceIg", UsuarioFaceIg);
                     command.Parameters.AddWithValue("@ListaNegra", ListaNegra);
                     command.Parameters.AddWithValue("@Motivo", Motivo);
-                    command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_AltaPersona";
                     //y la BR y dsp funcionalidad, a su vez tambien faltan los prc en Base Datos
                     command.CommandType = CommandType.StoredProcedure;
@@ -62,7 +62,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, byte Deshabilitado)
+        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -82,20 +82,20 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Calles", Calles);
                     command.Parameters.AddWithValue("@Altura", Altura);
                     command.Parameters.AddWithValue("@Sexo", Sexo);
-                    command.Parameters.AddWithValue(" @Telefono", Telefono);
+                    command.Parameters.AddWithValue("@Telefono", Telefono);
                     command.Parameters.AddWithValue("@Celular", Celular);
                     command.Parameters.AddWithValue("@Email", Email);
                     command.Parameters.AddWithValue("@UsuarioFaceIg", UsuarioFaceIg);
                     command.Parameters.AddWithValue("@ListaNegra", ListaNegra);
                     command.Parameters.AddWithValue("@Motivo", Motivo);
-                    command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_ModificarPersona";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }
             }
         }
-        public void BajaPersona(int IdPersona, int IdUsuario, int IdMovimiento, string Descripcion, bool Deshabilitado)
+        public void BajaPersona(int IdPersona, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -106,9 +106,6 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                    command.Parameters.AddWithValue("@IdMovimiento", IdMovimiento);
-                    command.Parameters.AddWithValue("@Deshabilitado", Deshabilitado);
-                    command.Parameters.AddWithValue("@Descripcion", Descripcion);
                     command.CommandText = "prc_BajaPersona";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
@@ -183,5 +180,8 @@ namespace DataAccess
                 }
             }
         }
+
+
+
     }
 }
