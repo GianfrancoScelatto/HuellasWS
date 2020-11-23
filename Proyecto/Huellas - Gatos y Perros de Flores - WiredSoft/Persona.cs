@@ -69,13 +69,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             if (Editar == true)
                 try
                 {
-                   
-                    brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, Convert.ToInt32(txtAltura.Text), txtCP.Text, txtLocalidad.Text, txtCalles.Text, Convert.ToInt32(txtCelular.Text), txtMail.Text, Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), txtUser.Text);
+
+                    brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), cmbSexo.SelectedValue.ToString(), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkListaNegra.Checked, txtMotivo.Text, E_Usuario.IdUsuario);
                 }
 
                 catch (Exception ex)
                 {
-                    msj.MensajeError("Ha ocurrido un error");
+                    msj.MensajeError("Ha ocurrido un error" + ex);
                 }
         }
 

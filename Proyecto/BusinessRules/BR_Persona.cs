@@ -17,13 +17,13 @@ namespace BusinessRules
             tabla = ObjPersona.ListarPersona();
             return tabla;
         }
-        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo)
+        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo,int IdUsuario)
         {
-            ObjPersona.AltaPersona(IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo);
+            ObjPersona.AltaPersona(IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo,IdUsuario);
         }
-        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, int DNI, string Domicilio, string Localidad, int Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo)
+        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, string Sexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
-            ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo);
+            ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, Sexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, IdUsuario);
         }
         public void BajaPersona(int idPersona, int IdUsuario)
         {
@@ -48,12 +48,6 @@ namespace BusinessRules
             return tabla;
         }
 
-        public DataTable ComboSexo()
-        {
-            DataTable tabla = new DataTable();
-            tabla = ObjPersona.ComboSexo();
-            return tabla;
-        }
 
     }
 }
