@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicial));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
             this.lklblCerrarSesion = new System.Windows.Forms.LinkLabel();
@@ -44,8 +45,16 @@
             this.btnAnimal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
+            this.cldrEventos = new System.Windows.Forms.MonthCalendar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblEvento = new System.Windows.Forms.Label();
+            this.bdscEventos = new System.Windows.Forms.BindingSource(this.components);
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelFormHijo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuLateral
@@ -100,7 +109,7 @@
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistorial.FlatAppearance.BorderSize = 0;
             this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.SystemColors.Window;
             this.btnHistorial.Location = new System.Drawing.Point(0, 374);
             this.btnHistorial.Name = "btnHistorial";
@@ -116,7 +125,7 @@
             this.btnFichasMedicas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFichasMedicas.FlatAppearance.BorderSize = 0;
             this.btnFichasMedicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFichasMedicas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFichasMedicas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFichasMedicas.ForeColor = System.Drawing.SystemColors.Window;
             this.btnFichasMedicas.Location = new System.Drawing.Point(0, 329);
             this.btnFichasMedicas.Name = "btnFichasMedicas";
@@ -133,7 +142,7 @@
             this.btnVacunas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVacunas.FlatAppearance.BorderSize = 0;
             this.btnVacunas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVacunas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVacunas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVacunas.ForeColor = System.Drawing.SystemColors.Window;
             this.btnVacunas.Location = new System.Drawing.Point(0, 284);
             this.btnVacunas.Name = "btnVacunas";
@@ -183,7 +192,7 @@
             this.btnListaNegra.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListaNegra.FlatAppearance.BorderSize = 0;
             this.btnListaNegra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaNegra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaNegra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListaNegra.ForeColor = System.Drawing.SystemColors.Window;
             this.btnListaNegra.Location = new System.Drawing.Point(0, 239);
             this.btnListaNegra.Name = "btnListaNegra";
@@ -200,7 +209,7 @@
             this.btnEstablecimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEstablecimiento.FlatAppearance.BorderSize = 0;
             this.btnEstablecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstablecimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstablecimiento.ForeColor = System.Drawing.SystemColors.Window;
             this.btnEstablecimiento.Location = new System.Drawing.Point(0, 194);
             this.btnEstablecimiento.Name = "btnEstablecimiento";
@@ -217,7 +226,7 @@
             this.btnPersonas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPersonas.FlatAppearance.BorderSize = 0;
             this.btnPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonas.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPersonas.Location = new System.Drawing.Point(0, 149);
             this.btnPersonas.Name = "btnPersonas";
@@ -234,7 +243,7 @@
             this.btnAnimal.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAnimal.FlatAppearance.BorderSize = 0;
             this.btnAnimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnimal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnimal.ForeColor = System.Drawing.SystemColors.Window;
             this.btnAnimal.Location = new System.Drawing.Point(0, 104);
             this.btnAnimal.Name = "btnAnimal";
@@ -256,11 +265,65 @@
             // 
             // panelFormHijo
             // 
+            this.panelFormHijo.Controls.Add(this.lblEvento);
+            this.panelFormHijo.Controls.Add(this.lblFecha);
+            this.panelFormHijo.Controls.Add(this.label3);
+            this.panelFormHijo.Controls.Add(this.label2);
+            this.panelFormHijo.Controls.Add(this.cldrEventos);
             this.panelFormHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormHijo.Location = new System.Drawing.Point(250, 0);
             this.panelFormHijo.Name = "panelFormHijo";
             this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
             this.panelFormHijo.TabIndex = 1;
+            // 
+            // cldrEventos
+            // 
+            this.cldrEventos.CalendarDimensions = new System.Drawing.Size(4, 3);
+            this.cldrEventos.Location = new System.Drawing.Point(96, 9);
+            this.cldrEventos.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
+            this.cldrEventos.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.cldrEventos.Name = "cldrEventos";
+            this.cldrEventos.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(124, 514);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fecha:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(124, 553);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Evento:";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(170, 514);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(10, 13);
+            this.lblFecha.TabIndex = 3;
+            this.lblFecha.Text = "-";
+            // 
+            // lblEvento
+            // 
+            this.lblEvento.AutoSize = true;
+            this.lblEvento.Location = new System.Drawing.Point(170, 553);
+            this.lblEvento.Name = "lblEvento";
+            this.lblEvento.Size = new System.Drawing.Size(10, 13);
+            this.lblEvento.TabIndex = 4;
+            this.lblEvento.Text = "-";
+            // 
+            // bdscEventos
+            // 
+            this.bdscEventos.DataSource = typeof(Entities.E_Evento);
             // 
             // MenuInicial
             // 
@@ -282,6 +345,9 @@
             this.panelMenuLateral.ResumeLayout(false);
             this.panelMenuLateral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelFormHijo.ResumeLayout(false);
+            this.panelFormHijo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,5 +369,11 @@
         private System.Windows.Forms.Button btnListaNegra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lklblCerrarSesion;
+        private System.Windows.Forms.Label lblEvento;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MonthCalendar cldrEventos;
+        private System.Windows.Forms.BindingSource bdscEventos;
     }
 }
