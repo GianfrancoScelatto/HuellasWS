@@ -94,7 +94,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 if (preg == DialogResult.OK)
                 {
                     E_Animal.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdAnimal"].Value);
-                    brA.BorrarAnimal(E_Animal.IdAnimal, E_Usuario.IdUsuario, eB.IdMovimiento, E_Animal.Estado, eB.Descripcion, E_Animal.Deshabilitado);
+                    brA.BajaAnimal(E_Animal.IdAnimal, E_Usuario.IdUsuario, eB.IdMovimiento, E_Animal.Estado, eB.Descripcion, E_Animal.Deshabilitado);
                     MostrarRegistroAnimal();
                 }
             }
@@ -116,12 +116,74 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Animal.LugarRescate = dgvMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
             E_Animal.Sexo = dgvMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
             E_Animal.Edad = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Edad"].Value);
-            E_Animal.Peso = (float) (dgvMascotas.CurrentRow.Cells["Peso"].Value);
+            E_Animal.Peso =dgvMascotas.CurrentRow.Cells["Peso"].Value.ToString();
             E_Animal.ColorPelo = dgvMascotas.CurrentRow.Cells["Color"].Value.ToString();
             E_Animal.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Estado"].Value);
             E_Animal.FechaNac = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha nacimiento"].Value).Date;
             E_Animal.Comentario = dgvMascotas.CurrentRow.Cells["Comentario"].Value.ToString();
             E_Animal.Persona = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdPersona"].Value);
+        }
+
+        private void chxAdoptados_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxAdoptados.Checked == true)
+            {
+                chxFallecidos.Checked = false;
+                chxInternado.Checked = false;
+                chxTransito.Checked = false;
+            } 
+        }
+
+        private void chxInternados_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxInternado.Checked == true)
+            {
+                chxFallecidos.Checked = false;
+                chxAdoptados.Checked = false;
+                chxTransito.Checked = false;
+            }
+        }
+
+        private void chxTransito_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxTransito.Checked == true)
+            {
+                chxFallecidos.Checked = false;
+                chxInternado.Checked = false;
+                chxAdoptados.Checked = false;
+            }
+        }
+
+        private void chxFallecidos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chxFallecidos.Checked == true)
+            {
+                chxAdoptados.Checked = false;
+                chxInternado.Checked = false;
+                chxTransito.Checked = false;
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            CheckBox chk = (CheckBox)sender;
+
+            switch (chk.Name)
+            {
+                case "chxAdoptados":
+                    brA.FiltrarAnimal(txtBuscar.Text, "Adoptado");
+                    break;
+                case "chxTransito":
+                    brA.FiltrarAnimal(txtBuscar.Text, "En Transito");
+                    break;
+                case "chxInternados":
+                    brA.FiltrarAnimal(txtBuscar.Text, "Internado");
+                    break;
+                case "chxFallecido":
+                    brA.FiltrarAnimal(txtBuscar.Text, "Fallecido");
+                    break;
+            }
+            
         }
     }
     

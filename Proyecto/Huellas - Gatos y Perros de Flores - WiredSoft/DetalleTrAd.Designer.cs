@@ -30,18 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.lblLocalidad = new System.Windows.Forms.Label();
+            this.lblDomicilio = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblDomicilio = new System.Windows.Forms.Label();
-            this.lblLocalidad = new System.Windows.Forms.Label();
-            this.lblCelular = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,60 @@
             this.groupBox1.Size = new System.Drawing.Size(442, 296);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(177, 247);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.TabIndex = 57;
+            this.lblEmail.Text = "label7";
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Location = new System.Drawing.Point(177, 205);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(35, 13);
+            this.lblCelular.TabIndex = 56;
+            this.lblCelular.Text = "label6";
+            // 
+            // lblLocalidad
+            // 
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Location = new System.Drawing.Point(177, 165);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(35, 13);
+            this.lblLocalidad.TabIndex = 55;
+            this.lblLocalidad.Text = "label5";
+            // 
+            // lblDomicilio
+            // 
+            this.lblDomicilio.AutoSize = true;
+            this.lblDomicilio.Location = new System.Drawing.Point(177, 124);
+            this.lblDomicilio.Name = "lblDomicilio";
+            this.lblDomicilio.Size = new System.Drawing.Size(35, 13);
+            this.lblDomicilio.TabIndex = 54;
+            this.lblDomicilio.Text = "label4";
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(177, 80);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(35, 13);
+            this.lblDni.TabIndex = 53;
+            this.lblDni.Text = "label3";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(177, 39);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(35, 13);
+            this.lblNombre.TabIndex = 52;
+            this.lblNombre.Text = "label2";
             // 
             // label7
             // 
@@ -142,60 +196,6 @@
             this.label2.Size = new System.Drawing.Size(77, 19);
             this.label2.TabIndex = 46;
             this.label2.Text = "Nombre:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(177, 39);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(35, 13);
-            this.lblNombre.TabIndex = 52;
-            this.lblNombre.Text = "label2";
-            // 
-            // lblDni
-            // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(177, 80);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(35, 13);
-            this.lblDni.TabIndex = 53;
-            this.lblDni.Text = "label3";
-            // 
-            // lblDomicilio
-            // 
-            this.lblDomicilio.AutoSize = true;
-            this.lblDomicilio.Location = new System.Drawing.Point(177, 124);
-            this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(35, 13);
-            this.lblDomicilio.TabIndex = 54;
-            this.lblDomicilio.Text = "label4";
-            // 
-            // lblLocalidad
-            // 
-            this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(177, 165);
-            this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(35, 13);
-            this.lblLocalidad.TabIndex = 55;
-            this.lblLocalidad.Text = "label5";
-            // 
-            // lblCelular
-            // 
-            this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(177, 205);
-            this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(35, 13);
-            this.lblCelular.TabIndex = 56;
-            this.lblCelular.Text = "label6";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(177, 247);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 57;
-            this.lblEmail.Text = "label7";
             // 
             // DetalleTrAd
             // 

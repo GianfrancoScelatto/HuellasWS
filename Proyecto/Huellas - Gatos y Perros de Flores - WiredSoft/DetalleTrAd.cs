@@ -24,6 +24,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void DetalleTrAd_Load(object sender, EventArgs e)
         {
             brP.DetallePersona(E_Animal.Persona);
+            lblNombre.Text = E_Persona.NombrePersona + ' ' + E_Persona.ApellidoPersona;
             lblDni.Text = E_Persona.DNI.ToString();
             lblDomicilio.Text = E_Persona.Domicilio;
             lblLocalidad.Text = E_Persona.Localidad;

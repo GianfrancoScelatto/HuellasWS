@@ -45,7 +45,7 @@ namespace DataAccess
 					command.Parameters.AddWithValue("@Nombre", Nombre);
 					command.Parameters.AddWithValue("@HorarioAtencion", HorarioAtencion);
 					command.Parameters.AddWithValue("@Localidad", Localidad);
-					command.Parameters.AddWithValue("@CodigoPostar", CodigoPostal);
+					command.Parameters.AddWithValue("@CodigoPostal", CodigoPostal);
 					command.Parameters.AddWithValue("@Calle", Calle);
 					command.Parameters.AddWithValue("@Altura", Altura);
 					command.Parameters.AddWithValue("@Internacion", Internacion);
@@ -72,7 +72,7 @@ namespace DataAccess
 					command.Parameters.AddWithValue("@Nombre", Nombre);
 					command.Parameters.AddWithValue("@HorarioAtencion", HorarioAtencion);
 					command.Parameters.AddWithValue("@Localidad", Localidad);
-					command.Parameters.AddWithValue("@CodigoPostar", CodigoPostal);
+					command.Parameters.AddWithValue("@CodigoPostal", CodigoPostal);
 					command.Parameters.AddWithValue("@Calle", Calle);
 					command.Parameters.AddWithValue("@Altura", Altura);
 					command.Parameters.AddWithValue("@Internacion", Internacion);

@@ -28,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaAnimal(int idUsuario, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, float Peso, string Comentario, int Estado, DateTime FechaCastracion,DateTime FechaIngreso, DateTime FechaNacimiento)
+        public void AltaAnimal(int IdUsuario, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaCastracion,DateTime FechaIngreso, DateTime FechaNacimiento)
         {
             using (var connection = GetConnection())
             {
@@ -36,7 +36,8 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@IdEspecie", TipoAnimal);
                     command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
                     command.Parameters.AddWithValue("@ImagenIngreso", FotoIngreso);
@@ -58,7 +59,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarAnimal(int IdAnimal, int TipoAnimal, string LugarRescate, byte FotoIngreso, byte FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, float Peso, string Comentario, int Estado, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
             {
@@ -67,6 +68,7 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@IdEspecie", TipoAnimal);
                     command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
                     command.Parameters.AddWithValue("@FotoIngreso", FotoIngreso);
@@ -87,7 +89,7 @@ namespace DataAccess
             }
 
         }
-        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento,int EstadoAnimal,string Descripcion, bool Deshabilitado)
+        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, int EstadoAnimal, string Descripcion, bool Deshabilitado)
         {
             using (var connection = GetConnection())
             {
@@ -108,7 +110,7 @@ namespace DataAccess
             }
         }
 
-        public DataTable FiltrarAnimal(string busqueda)
+        public DataTable FiltrarAnimal(string busqueda, string tipoBusqueda)
         {
             using (var connection = GetConnection())
             {
@@ -118,7 +120,8 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@Busqueda", busqueda);
-                    command.CommandText = "prc_BuscarAnimal";
+                    command.Parameters.AddWithValue("@TipoBusqueda", tipoBusqueda);
+                    command.CommandText = "prc_FiltrarAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
