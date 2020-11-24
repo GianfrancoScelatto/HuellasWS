@@ -50,10 +50,5 @@ namespace BusinessRules
             tabla = ObjAnimal.ListarEstado();
             return tabla;
         }
-
-        public void ModificarAnimal(int v1, int v2, string text1, byte v3, byte v4, string text2, int v5, string selectedText, bool @checked, string text3, object p, string comment, int v6, DateTime date)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

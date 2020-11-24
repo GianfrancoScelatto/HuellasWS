@@ -185,11 +185,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             
         }
-
-        private void btnExportar_Click_1(object sender, EventArgs e)
-        {
-            ExportarDatos(dgvMascotas);
-        }
     }
     
 }

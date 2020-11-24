@@ -25,7 +25,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             lklblUsuario.Text = E_Usuario.Nombre;
             lblRol.Text = E_Usuario.Rol;
-            //bdscEventos.DataSource = ;
         }
 
         private void AbirFormHijo(Form FormHijo)

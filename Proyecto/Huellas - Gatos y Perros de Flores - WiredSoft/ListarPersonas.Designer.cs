@@ -213,11 +213,19 @@
             // 
             // dgvPersona
             // 
+            this.dgvPersona.AllowUserToAddRows = false;
+            this.dgvPersona.AllowUserToDeleteRows = false;
+            this.dgvPersona.AllowUserToResizeColumns = false;
+            this.dgvPersona.AllowUserToResizeRows = false;
+            this.dgvPersona.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPersona.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.dgvPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPersona.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPersona.Location = new System.Drawing.Point(0, 0);
             this.dgvPersona.Name = "dgvPersona";
+            this.dgvPersona.ReadOnly = true;
             this.dgvPersona.RowHeadersWidth = 51;
+            this.dgvPersona.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersona.Size = new System.Drawing.Size(1083, 615);
             this.dgvPersona.TabIndex = 16;
             this.dgvPersona.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersona_CellContentClick);

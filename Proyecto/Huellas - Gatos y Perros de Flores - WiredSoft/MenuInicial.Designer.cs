@@ -47,15 +47,9 @@
             this.btnAnimal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
-            this.lblEvento = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cldrEventos = new System.Windows.Forms.MonthCalendar();
             this.bdscEventos = new System.Windows.Forms.BindingSource(this.components);
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelFormHijo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -304,61 +298,11 @@
             // 
             // panelFormHijo
             // 
-            this.panelFormHijo.Controls.Add(this.lblEvento);
-            this.panelFormHijo.Controls.Add(this.lblFecha);
-            this.panelFormHijo.Controls.Add(this.label3);
-            this.panelFormHijo.Controls.Add(this.label2);
-            this.panelFormHijo.Controls.Add(this.cldrEventos);
             this.panelFormHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormHijo.Location = new System.Drawing.Point(250, 0);
             this.panelFormHijo.Name = "panelFormHijo";
             this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
             this.panelFormHijo.TabIndex = 1;
-            // 
-            // lblEvento
-            // 
-            this.lblEvento.AutoSize = true;
-            this.lblEvento.Location = new System.Drawing.Point(170, 553);
-            this.lblEvento.Name = "lblEvento";
-            this.lblEvento.Size = new System.Drawing.Size(10, 13);
-            this.lblEvento.TabIndex = 4;
-            this.lblEvento.Text = "-";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(170, 514);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(10, 13);
-            this.lblFecha.TabIndex = 3;
-            this.lblFecha.Text = "-";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 553);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Evento:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 514);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Fecha:";
-            // 
-            // cldrEventos
-            // 
-            this.cldrEventos.CalendarDimensions = new System.Drawing.Size(4, 3);
-            this.cldrEventos.Location = new System.Drawing.Point(96, 9);
-            this.cldrEventos.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
-            this.cldrEventos.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.cldrEventos.Name = "cldrEventos";
-            this.cldrEventos.TabIndex = 0;
             // 
             // MenuInicial
             // 
@@ -380,8 +324,6 @@
             this.panelMenuLateral.ResumeLayout(false);
             this.panelMenuLateral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelFormHijo.ResumeLayout(false);
-            this.panelFormHijo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).EndInit();
             this.ResumeLayout(false);
 
@@ -403,11 +345,6 @@
         private System.Windows.Forms.Button btnListaNegra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lklblCerrarSesion;
-        private System.Windows.Forms.Label lblEvento;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MonthCalendar cldrEventos;
         private System.Windows.Forms.BindingSource bdscEventos;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button bntContrato;

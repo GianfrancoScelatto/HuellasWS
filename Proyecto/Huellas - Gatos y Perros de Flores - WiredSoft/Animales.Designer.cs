@@ -56,6 +56,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
+            this.cmbPersona = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnImagen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -94,8 +96,6 @@
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
             this.btnCancelarDatos = new System.Windows.Forms.Button();
             this.btnGuardarDatos = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbPersona = new System.Windows.Forms.ComboBox();
             this.tabSeguimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimiento)).BeginInit();
             this.tabFichaMed.SuspendLayout();
@@ -134,7 +134,7 @@
             this.btnGuardarSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarSeg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarSeg.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardarSeg.Location = new System.Drawing.Point(683, 149);
+            this.btnGuardarSeg.Location = new System.Drawing.Point(682, 133);
             this.btnGuardarSeg.Name = "btnGuardarSeg";
             this.btnGuardarSeg.Size = new System.Drawing.Size(152, 60);
             this.btnGuardarSeg.TabIndex = 114;
@@ -471,6 +471,25 @@
             this.tabDatosAnimal.Size = new System.Drawing.Size(849, 561);
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
+            // 
+            // cmbPersona
+            // 
+            this.cmbPersona.FormattingEnabled = true;
+            this.cmbPersona.Location = new System.Drawing.Point(397, 498);
+            this.cmbPersona.Name = "cmbPersona";
+            this.cmbPersona.Size = new System.Drawing.Size(146, 21);
+            this.cmbPersona.TabIndex = 114;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(255, 498);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 19);
+            this.label5.TabIndex = 113;
+            this.label5.Text = "Asignar persona:";
             // 
             // linkLabel1
             // 
@@ -878,25 +897,6 @@
             this.btnGuardarDatos.Text = "Guardar";
             this.btnGuardarDatos.UseVisualStyleBackColor = false;
             this.btnGuardarDatos.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(255, 498);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 19);
-            this.label5.TabIndex = 113;
-            this.label5.Text = "Asignar persona:";
-            // 
-            // cmbPersona
-            // 
-            this.cmbPersona.FormattingEnabled = true;
-            this.cmbPersona.Location = new System.Drawing.Point(397, 498);
-            this.cmbPersona.Name = "cmbPersona";
-            this.cmbPersona.Size = new System.Drawing.Size(146, 21);
-            this.cmbPersona.TabIndex = 114;
             // 
             // Animales
             // 
