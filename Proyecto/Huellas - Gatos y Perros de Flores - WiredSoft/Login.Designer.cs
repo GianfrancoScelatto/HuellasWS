@@ -119,6 +119,7 @@
             // lklblContraseña
             // 
             this.lklblContraseña.AutoSize = true;
+            this.lklblContraseña.LinkColor = System.Drawing.Color.White;
             this.lklblContraseña.Location = new System.Drawing.Point(396, 284);
             this.lklblContraseña.Name = "lklblContraseña";
             this.lklblContraseña.Size = new System.Drawing.Size(106, 13);
