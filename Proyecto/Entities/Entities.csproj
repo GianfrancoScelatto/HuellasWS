@@ -52,6 +52,7 @@
     <Compile Include="E_Seguimiento.cs" />
     <Compile Include="E_Usuario.cs" />
     <Compile Include="E_Vacuna.cs" />
+    <Compile Include="E_Validaciones.cs" />
     <Compile Include="E_Veterinaria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

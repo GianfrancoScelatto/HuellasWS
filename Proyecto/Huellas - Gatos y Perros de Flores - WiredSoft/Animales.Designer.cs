@@ -897,7 +897,6 @@
             this.cmbPersona.Name = "cmbPersona";
             this.cmbPersona.Size = new System.Drawing.Size(146, 21);
             this.cmbPersona.TabIndex = 114;
-            this.cmbPersona.SelectedValueChanged += new System.EventHandler(this.cmbPersona_SelectedValueChanged);
             // 
             // Animales
             // 

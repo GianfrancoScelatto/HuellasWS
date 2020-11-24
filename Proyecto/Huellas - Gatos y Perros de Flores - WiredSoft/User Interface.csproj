@@ -72,6 +72,12 @@
     <Compile Include="FichaMedica.Designer.cs">
       <DependentUpon>FichaMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarCostos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarCostos.Designer.cs">
+      <DependentUpon>ListarCostos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarHistorial.cs">
       <SubType>Form</SubType>
     </Compile>

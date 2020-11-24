@@ -148,13 +148,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                     if (chkCasSi.Checked == true)
                     {
-                        brA.AltaAnimal(E_Usuario.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, picB1.ImageLocation,
-                                                        picB2.ImageLocation, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, txtPeso.Text,
+                        brA.AltaAnimal(E_Usuario.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
+                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
                                                         comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date);
                     }
                     else
-                        brA.AltaAnimal(E_Usuario.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, picB1.ImageLocation,
-                                                        picB2.ImageLocation, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, txtPeso.Text, comment,
+                        brA.AltaAnimal(E_Usuario.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
+                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
                                                         Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date);
                     LimpiarForm();
                 }
@@ -307,10 +307,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
-        private void cmbPersona_SelectedValueChanged(object sender, EventArgs e)
-        {
-            E_Animal.Persona = Convert.ToInt32(cmbPersona.SelectedValue);
-        }
         private void dtpFiltro_ValueChanged(object sender, EventArgs e)
         {
             if (dtpFiltro.Enabled == true)

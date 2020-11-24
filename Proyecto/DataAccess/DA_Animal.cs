@@ -28,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaAnimal(int IdUsuario, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaCastracion,DateTime FechaIngreso, DateTime FechaNacimiento)
+        public void AltaAnimal(int IdUsuario, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime FechaCastracion,DateTime FechaIngreso, DateTime FechaNacimiento)
         {
             using (var connection = GetConnection())
             {
@@ -59,7 +59,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarAnimal(int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, string Peso, string Comentario, int Estado, DateTime FechaIngreso)
+        public void ModificarAnimal(int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime FechaIngreso)
         {
             using (var connection = GetConnection())
             {

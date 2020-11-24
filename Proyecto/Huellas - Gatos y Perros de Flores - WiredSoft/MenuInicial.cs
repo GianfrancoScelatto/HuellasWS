@@ -71,7 +71,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnFichasMedicas_Click(object sender, EventArgs e)
         {
-            
+            AbirFormHijo(new ListarFichaMedica());
         }
 
         private void bntContrato_Click(object sender, EventArgs e)
@@ -97,6 +97,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             Application.Exit();
         }
 
+        private void btnCosto_Click(object sender, EventArgs e)
+        {
+           AbirFormHijo(new ListarCostos());
+        }
 
+        private void btnHistorial_Click_1(object sender, EventArgs e)
+        {
+            AbirFormHijo(new ListarHistorial());
+        }
     }
 }

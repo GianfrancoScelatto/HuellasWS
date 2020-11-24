@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicial));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.bntContrato = new System.Windows.Forms.Button();
+            this.btnCosto = new System.Windows.Forms.Button();
             this.lklblCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFichasMedicas = new System.Windows.Forms.Button();
@@ -49,9 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cldrEventos = new System.Windows.Forms.MonthCalendar();
-            this.btnCosto = new System.Windows.Forms.Button();
-            this.bntContrato = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.bdscEventos = new System.Windows.Forms.BindingSource(this.components);
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +63,7 @@
             // 
             this.panelMenuLateral.AutoScroll = true;
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.panelMenuLateral.Controls.Add(this.button3);
+            this.panelMenuLateral.Controls.Add(this.btnHistorial);
             this.panelMenuLateral.Controls.Add(this.bntContrato);
             this.panelMenuLateral.Controls.Add(this.btnCosto);
             this.panelMenuLateral.Controls.Add(this.lklblCerrarSesion);
@@ -83,6 +83,57 @@
             this.panelMenuLateral.Name = "panelMenuLateral";
             this.panelMenuLateral.Size = new System.Drawing.Size(250, 670);
             this.panelMenuLateral.TabIndex = 0;
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnHistorial.Location = new System.Drawing.Point(0, 464);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHistorial.Size = new System.Drawing.Size(250, 45);
+            this.btnHistorial.TabIndex = 17;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click_1);
+            // 
+            // bntContrato
+            // 
+            this.bntContrato.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bntContrato.FlatAppearance.BorderSize = 0;
+            this.bntContrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntContrato.ForeColor = System.Drawing.SystemColors.Window;
+            this.bntContrato.Location = new System.Drawing.Point(0, 419);
+            this.bntContrato.Name = "bntContrato";
+            this.bntContrato.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bntContrato.Size = new System.Drawing.Size(250, 45);
+            this.bntContrato.TabIndex = 16;
+            this.bntContrato.Text = "Contrato";
+            this.bntContrato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntContrato.UseVisualStyleBackColor = true;
+            this.bntContrato.Click += new System.EventHandler(this.bntContrato_Click);
+            // 
+            // btnCosto
+            // 
+            this.btnCosto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCosto.FlatAppearance.BorderSize = 0;
+            this.btnCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCosto.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCosto.Location = new System.Drawing.Point(0, 374);
+            this.btnCosto.Name = "btnCosto";
+            this.btnCosto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCosto.Size = new System.Drawing.Size(250, 45);
+            this.btnCosto.TabIndex = 15;
+            this.btnCosto.Text = "Costo";
+            this.btnCosto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCosto.UseVisualStyleBackColor = true;
+            this.btnCosto.Click += new System.EventHandler(this.btnCosto_Click);
             // 
             // lklblCerrarSesion
             // 
@@ -309,55 +360,6 @@
             this.cldrEventos.Name = "cldrEventos";
             this.cldrEventos.TabIndex = 0;
             // 
-            // btnCosto
-            // 
-            this.btnCosto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCosto.FlatAppearance.BorderSize = 0;
-            this.btnCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCosto.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCosto.Location = new System.Drawing.Point(0, 374);
-            this.btnCosto.Name = "btnCosto";
-            this.btnCosto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCosto.Size = new System.Drawing.Size(250, 45);
-            this.btnCosto.TabIndex = 15;
-            this.btnCosto.Text = "Costo";
-            this.btnCosto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCosto.UseVisualStyleBackColor = true;
-            // 
-            // bntContrato
-            // 
-            this.bntContrato.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bntContrato.FlatAppearance.BorderSize = 0;
-            this.bntContrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntContrato.ForeColor = System.Drawing.SystemColors.Window;
-            this.bntContrato.Location = new System.Drawing.Point(0, 419);
-            this.bntContrato.Name = "bntContrato";
-            this.bntContrato.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bntContrato.Size = new System.Drawing.Size(250, 45);
-            this.bntContrato.TabIndex = 16;
-            this.bntContrato.Text = "Contrato";
-            this.bntContrato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntContrato.UseVisualStyleBackColor = true;
-            this.bntContrato.Click += new System.EventHandler(this.bntContrato_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(0, 464);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(250, 45);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Historial";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // MenuInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,7 +409,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MonthCalendar cldrEventos;
         private System.Windows.Forms.BindingSource bdscEventos;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button bntContrato;
         private System.Windows.Forms.Button btnCosto;
     }

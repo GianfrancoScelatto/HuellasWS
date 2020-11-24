@@ -116,7 +116,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Animal.LugarRescate = dgvMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
             E_Animal.Sexo = dgvMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
             E_Animal.Edad = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Edad"].Value);
-            E_Animal.Peso =dgvMascotas.CurrentRow.Cells["Peso"].Value.ToString();
+            E_Animal.Peso =Convert.ToDecimal(dgvMascotas.CurrentRow.Cells["Peso"].Value.ToString());
             E_Animal.ColorPelo = dgvMascotas.CurrentRow.Cells["Color"].Value.ToString();
             E_Animal.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Estado"].Value);
             E_Animal.FechaNac = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha nacimiento"].Value).Date;
@@ -184,6 +184,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     break;
             }
             
+        }
+
+        private void btnExportar_Click_1(object sender, EventArgs e)
+        {
+            ExportarDatos(dgvMascotas);
         }
     }
     
