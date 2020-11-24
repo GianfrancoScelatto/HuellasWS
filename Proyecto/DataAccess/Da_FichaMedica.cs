@@ -29,6 +29,24 @@ namespace DataAccess
                 }
             }
         }
+        public DataTable ListarFichaMedica2()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "prc_ListarFichaMedica2";
+                    command.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = command.ExecuteReader();
+                    tabla.Load(reader);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
 
         public DataTable FiltrarFichaMedica(string Nombre, DateTime Fecha)
         {

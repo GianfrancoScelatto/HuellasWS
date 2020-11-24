@@ -57,6 +57,7 @@
             this.panelBotones.Name = "panelBotones";
             this.panelBotones.Size = new System.Drawing.Size(1083, 55);
             this.panelBotones.TabIndex = 28;
+            
             // 
             // btnExportar
             // 

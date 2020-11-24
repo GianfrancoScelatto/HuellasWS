@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessRules;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
     public partial class ListarFichaMedica : Form
     {
+        BR_FichaMedica brFM = new BR_FichaMedica();
         public ListarFichaMedica()
         {
             InitializeComponent();
+        }
+        private void ListarFichaMedica_Load(object sender, EventArgs e)
+        {
+            dgvFichaMedica.DataSource = brFM.ListarFichaMedica2();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -55,5 +61,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             exportarexcel.Visible = true;
         }
+
+        
     }
 }

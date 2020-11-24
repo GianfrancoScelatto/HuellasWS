@@ -60,6 +60,12 @@
     <Compile Include="Contrato.Designer.cs">
       <DependentUpon>Contrato.cs</DependentUpon>
     </Compile>
+    <Compile Include="Costos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Costos.Designer.cs">
+      <DependentUpon>Costos.cs</DependentUpon>
+    </Compile>
     <Compile Include="DesparasitacionVacuna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     <EmbeddedResource Include="Contrato.resx">
       <DependentUpon>Contrato.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Costos.resx">
+      <DependentUpon>Costos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DesparasitacionVacuna.resx">
       <DependentUpon>DesparasitacionVacuna.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListarContrato.resx">
       <DependentUpon>ListarContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarCostos.resx">
+      <DependentUpon>ListarCostos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarFichaMedica.resx">
       <DependentUpon>ListarFichaMedica.cs</DependentUpon>

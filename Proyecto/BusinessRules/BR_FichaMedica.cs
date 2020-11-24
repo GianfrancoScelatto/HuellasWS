@@ -17,6 +17,12 @@ namespace BusinessRules
             tabla = daFM.ListarFichaMedica(IdAnimal);
             return tabla;
         }
+        public DataTable ListarFichaMedica2()
+        {
+            DataTable tabla = new DataTable();
+            tabla = daFM.ListarFichaMedica2();
+            return tabla;
+        }
 
         public DataTable FiltrarFichaMedica(string Nombre, DateTime Fecha)
         {

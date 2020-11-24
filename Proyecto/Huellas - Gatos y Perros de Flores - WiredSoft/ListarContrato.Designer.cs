@@ -33,9 +33,6 @@
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.chxB = new System.Windows.Forms.CheckBox();
-            this.chxA = new System.Windows.Forms.CheckBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvContrato = new System.Windows.Forms.DataGridView();
@@ -48,9 +45,6 @@
             this.panelBotones.Controls.Add(this.btnExportar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
-            this.panelBotones.Controls.Add(this.btnModificar);
-            this.panelBotones.Controls.Add(this.chxB);
-            this.panelBotones.Controls.Add(this.chxA);
             this.panelBotones.Controls.Add(this.txtBuscar);
             this.panelBotones.Controls.Add(this.lblBuscar);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -66,7 +60,7 @@
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 6);
+            this.btnExportar.Location = new System.Drawing.Point(935, 6);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -84,6 +78,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
+            this.btnEliminar.Text = "-";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -94,50 +89,12 @@
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(934, 6);
+            this.btnNuevo.Location = new System.Drawing.Point(980, 6);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 6);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(40, 40);
-            this.btnModificar.TabIndex = 44;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // chxB
-            // 
-            this.chxB.AutoSize = true;
-            this.chxB.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxB.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxB.Location = new System.Drawing.Point(235, 29);
-            this.chxB.Name = "chxB";
-            this.chxB.Size = new System.Drawing.Size(31, 21);
-            this.chxB.TabIndex = 41;
-            this.chxB.Text = "-";
-            this.chxB.UseVisualStyleBackColor = true;
-            // 
-            // chxA
-            // 
-            this.chxA.AutoSize = true;
-            this.chxA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxA.ForeColor = System.Drawing.SystemColors.Control;
-            this.chxA.Location = new System.Drawing.Point(235, 5);
-            this.chxA.Name = "chxA";
-            this.chxA.Size = new System.Drawing.Size(31, 21);
-            this.chxA.TabIndex = 40;
-            this.chxA.Text = "-";
-            this.chxA.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
@@ -199,9 +156,6 @@
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.CheckBox chxB;
-        private System.Windows.Forms.CheckBox chxA;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvContrato;

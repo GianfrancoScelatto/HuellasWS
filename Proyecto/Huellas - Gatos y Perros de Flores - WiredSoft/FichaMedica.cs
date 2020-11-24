@@ -39,7 +39,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void FichaMedica_Load(object sender, EventArgs e)
         {
             CargarCombos();
-
+            
             if (E_FichaMedica.Editar == true)
             {
                 Editar = true;
