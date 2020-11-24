@@ -47,10 +47,13 @@
             this.dgvVacunas.AllowUserToDeleteRows = false;
             this.dgvVacunas.AllowUserToResizeColumns = false;
             this.dgvVacunas.AllowUserToResizeRows = false;
+            this.dgvVacunas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVacunas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVacunas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVacunas.Location = new System.Drawing.Point(0, 66);
             this.dgvVacunas.Name = "dgvVacunas";
+            this.dgvVacunas.ReadOnly = true;
             this.dgvVacunas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVacunas.Size = new System.Drawing.Size(1067, 565);
             this.dgvVacunas.TabIndex = 0;
@@ -58,7 +61,7 @@
             // 
             // panelBotones
             // 
-            this.panelBotones.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panelBotones.Controls.Add(this.btnExportar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
@@ -76,6 +79,7 @@
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportar.Location = new System.Drawing.Point(865, 10);
             this.btnExportar.Name = "btnExportar";
@@ -89,6 +93,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(1011, 10);
             this.btnEliminar.Name = "btnEliminar";
@@ -102,6 +107,7 @@
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Location = new System.Drawing.Point(919, 10);
             this.btnNuevo.Name = "btnNuevo";
@@ -115,6 +121,7 @@
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Location = new System.Drawing.Point(965, 10);
             this.btnModificar.Name = "btnModificar";
@@ -149,6 +156,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 631);
             this.Controls.Add(this.dgvVacunas);
             this.Controls.Add(this.panelBotones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarVacunaT";
             this.Text = "ListarVacunaT";
             this.Load += new System.EventHandler(this.ListarVacunaT_Load);

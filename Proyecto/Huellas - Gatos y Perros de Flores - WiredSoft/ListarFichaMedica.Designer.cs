@@ -37,16 +37,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
-            this.dataFichaMedica = new System.Windows.Forms.DataGridView();
-            this.IDFicha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Informe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreVet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataFichaMedica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -69,8 +63,9 @@
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 5);
+            this.btnExportar.Location = new System.Drawing.Point(880, 7);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -82,8 +77,9 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1026, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1026, 7);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
@@ -94,8 +90,9 @@
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(934, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(934, 7);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -107,8 +104,9 @@
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 5);
+            this.btnModificar.Location = new System.Drawing.Point(980, 7);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
@@ -134,59 +132,30 @@
             // 
             // panelListar
             // 
-            this.panelListar.Controls.Add(this.dataFichaMedica);
+            this.panelListar.Controls.Add(this.dgvFichaMedica);
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelListar.Location = new System.Drawing.Point(0, 55);
             this.panelListar.Name = "panelListar";
             this.panelListar.Size = new System.Drawing.Size(1083, 615);
             this.panelListar.TabIndex = 29;
             // 
-            // dataFichaMedica
+            // dgvFichaMedica
             // 
-            this.dataFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataFichaMedica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDFicha,
-            this.FechaAten,
-            this.Informe,
-            this.Tratamiento,
-            this.NombreVet,
-            this.Costo});
-            this.dataFichaMedica.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataFichaMedica.Location = new System.Drawing.Point(0, 0);
-            this.dataFichaMedica.Name = "dataFichaMedica";
-            this.dataFichaMedica.Size = new System.Drawing.Size(1083, 615);
-            this.dataFichaMedica.TabIndex = 0;
-            this.dataFichaMedica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // IDFicha
-            // 
-            this.IDFicha.HeaderText = "ID FIcha Medica";
-            this.IDFicha.Name = "IDFicha";
-            // 
-            // FechaAten
-            // 
-            this.FechaAten.HeaderText = "Fecha de Atención";
-            this.FechaAten.Name = "FechaAten";
-            // 
-            // Informe
-            // 
-            this.Informe.HeaderText = "Informe";
-            this.Informe.Name = "Informe";
-            // 
-            // Tratamiento
-            // 
-            this.Tratamiento.HeaderText = "Tratamiento";
-            this.Tratamiento.Name = "Tratamiento";
-            // 
-            // NombreVet
-            // 
-            this.NombreVet.HeaderText = "Nombre Veterinaria";
-            this.NombreVet.Name = "NombreVet";
-            // 
-            // Costo
-            // 
-            this.Costo.HeaderText = "Costo";
-            this.Costo.Name = "Costo";
+            this.dgvFichaMedica.AllowUserToAddRows = false;
+            this.dgvFichaMedica.AllowUserToDeleteRows = false;
+            this.dgvFichaMedica.AllowUserToResizeColumns = false;
+            this.dgvFichaMedica.AllowUserToResizeRows = false;
+            this.dgvFichaMedica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFichaMedica.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgvFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFichaMedica.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFichaMedica.Location = new System.Drawing.Point(0, 0);
+            this.dgvFichaMedica.Name = "dgvFichaMedica";
+            this.dgvFichaMedica.ReadOnly = true;
+            this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFichaMedica.Size = new System.Drawing.Size(1083, 615);
+            this.dgvFichaMedica.TabIndex = 0;
+            this.dgvFichaMedica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ListarFichaMedica
             // 
@@ -202,7 +171,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelListar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataFichaMedica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,12 +186,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelListar;
-        private System.Windows.Forms.DataGridView dataFichaMedica;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDFicha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaAten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Informe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tratamiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreVet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
+        private System.Windows.Forms.DataGridView dgvFichaMedica;
     }
 }

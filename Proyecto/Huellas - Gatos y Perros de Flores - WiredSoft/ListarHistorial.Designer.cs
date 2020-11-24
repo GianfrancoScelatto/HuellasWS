@@ -55,8 +55,9 @@
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(1016, 10);
+            this.btnExportar.Location = new System.Drawing.Point(1016, 8);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -82,10 +83,18 @@
             // 
             // dgvHistorial
             // 
+            this.dgvHistorial.AllowUserToAddRows = false;
+            this.dgvHistorial.AllowUserToDeleteRows = false;
+            this.dgvHistorial.AllowUserToResizeColumns = false;
+            this.dgvHistorial.AllowUserToResizeRows = false;
+            this.dgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHistorial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHistorial.Location = new System.Drawing.Point(0, 55);
             this.dgvHistorial.Name = "dgvHistorial";
+            this.dgvHistorial.ReadOnly = true;
+            this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorial.Size = new System.Drawing.Size(1067, 576);
             this.dgvHistorial.TabIndex = 29;
             // 

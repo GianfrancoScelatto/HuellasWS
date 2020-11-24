@@ -73,8 +73,9 @@
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 5);
+            this.btnExportar.Location = new System.Drawing.Point(880, 7);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -86,8 +87,9 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1026, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1026, 7);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
@@ -99,8 +101,9 @@
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(934, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(934, 7);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -112,8 +115,9 @@
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 5);
+            this.btnModificar.Location = new System.Drawing.Point(980, 7);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
@@ -149,10 +153,18 @@
             // 
             // dgvEstablecimiento
             // 
+            this.dgvEstablecimiento.AllowUserToAddRows = false;
+            this.dgvEstablecimiento.AllowUserToDeleteRows = false;
+            this.dgvEstablecimiento.AllowUserToResizeColumns = false;
+            this.dgvEstablecimiento.AllowUserToResizeRows = false;
+            this.dgvEstablecimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEstablecimiento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.dgvEstablecimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstablecimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEstablecimiento.Location = new System.Drawing.Point(0, 0);
             this.dgvEstablecimiento.Name = "dgvEstablecimiento";
+            this.dgvEstablecimiento.ReadOnly = true;
+            this.dgvEstablecimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEstablecimiento.Size = new System.Drawing.Size(1083, 615);
             this.dgvEstablecimiento.TabIndex = 0;
             this.dgvEstablecimiento.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstablecimiento_CellFormatting);

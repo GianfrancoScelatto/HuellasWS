@@ -11,10 +11,10 @@ namespace BusinessRules
     public class BR_FichaMedica
     {
         DA_FichaMedica daFM = new DA_FichaMedica();
-        public DataTable ListarFichaMedica()
+        public DataTable ListarFichaMedica(int IdAnimal)
         {
             DataTable tabla = new DataTable();
-            tabla = daFM.ListarFichaMedica();
+            tabla = daFM.ListarFichaMedica(IdAnimal);
             return tabla;
         }
 

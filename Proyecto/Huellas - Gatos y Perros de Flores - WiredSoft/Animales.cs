@@ -46,7 +46,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void CargarGrillas()
         {
-            dgvFichaMedica.DataSource = brFM.ListarFichaMedica();
+            dgvFichaMedica.DataSource = brFM.ListarFichaMedica(E_Animal.IdAnimal);
             dgvSeguimiento.DataSource = brS.ListarSeguimiento();
         }
 
@@ -123,13 +123,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                     if (chkCasSi.Checked == true)
                     {
-                        brA.ModificarAnimal(Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
-                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, float.Parse(txtPeso.Text),
+                        brA.ModificarAnimal(Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
+                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
                                                         comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
                     }
                     else
-                        brA.ModificarAnimal(Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, Convert.ToByte(picB1.ImageLocation),
-                                                        Convert.ToByte(picB2.ImageLocation), txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, float.Parse(txtPeso.Text), comment,
+                        brA.ModificarAnimal(Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
+                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
                                                         Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
 
                     LimpiarForm();

@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class DA_FichaMedica : DA_Connection
     {
-        public DataTable ListarFichaMedica()
+        public DataTable ListarFichaMedica(int IdAnimal)
         {
             using (var connection = GetConnection())
             {
@@ -19,6 +19,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
                     command.CommandText = "prc_ListarFichaMedica1";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();

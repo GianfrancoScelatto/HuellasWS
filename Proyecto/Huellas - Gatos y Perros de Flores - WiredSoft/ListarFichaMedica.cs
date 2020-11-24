@@ -30,7 +30,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            ExportarDatos(dataFichaMedica);
+            ExportarDatos(dgvFichaMedica);
         }
         public void ExportarDatos(DataGridView DatoListado)
         {

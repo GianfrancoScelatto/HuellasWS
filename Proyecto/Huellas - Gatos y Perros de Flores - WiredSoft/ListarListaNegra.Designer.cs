@@ -38,7 +38,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelLista = new System.Windows.Forms.Panel();
-            this.dataListaNegra = new System.Windows.Forms.DataGridView();
+            this.dgvListaNegra = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
             this.panelLista.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataListaNegra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaNegra)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -83,8 +83,9 @@
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 5);
+            this.btnExportar.Location = new System.Drawing.Point(880, 7);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -96,8 +97,9 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1026, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1026, 7);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
@@ -108,8 +110,9 @@
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(934, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(934, 7);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -121,8 +124,9 @@
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 5);
+            this.btnModificar.Location = new System.Drawing.Point(980, 7);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
@@ -148,17 +152,23 @@
             // 
             // panelLista
             // 
-            this.panelLista.Controls.Add(this.dataListaNegra);
+            this.panelLista.Controls.Add(this.dgvListaNegra);
             this.panelLista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLista.Location = new System.Drawing.Point(0, 55);
             this.panelLista.Name = "panelLista";
             this.panelLista.Size = new System.Drawing.Size(1083, 615);
             this.panelLista.TabIndex = 38;
             // 
-            // dataListaNegra
+            // dgvListaNegra
             // 
-            this.dataListaNegra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListaNegra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaNegra.AllowUserToAddRows = false;
+            this.dgvListaNegra.AllowUserToDeleteRows = false;
+            this.dgvListaNegra.AllowUserToResizeColumns = false;
+            this.dgvListaNegra.AllowUserToResizeRows = false;
+            this.dgvListaNegra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaNegra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgvListaNegra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaNegra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Apellido,
             this.Column1,
@@ -169,11 +179,13 @@
             this.Column3,
             this.Column2,
             this.Column4});
-            this.dataListaNegra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataListaNegra.Location = new System.Drawing.Point(0, 0);
-            this.dataListaNegra.Name = "dataListaNegra";
-            this.dataListaNegra.Size = new System.Drawing.Size(1083, 615);
-            this.dataListaNegra.TabIndex = 37;
+            this.dgvListaNegra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListaNegra.Location = new System.Drawing.Point(0, 0);
+            this.dgvListaNegra.Name = "dgvListaNegra";
+            this.dgvListaNegra.ReadOnly = true;
+            this.dgvListaNegra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaNegra.Size = new System.Drawing.Size(1083, 615);
+            this.dgvListaNegra.TabIndex = 37;
             // 
             // Nombre
             // 
@@ -191,11 +203,13 @@
             // 
             this.Column1.HeaderText = "Telefono Fijo";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Celular
             // 
             this.Celular.HeaderText = "Celular";
             this.Celular.Name = "Celular";
+            this.Celular.ReadOnly = true;
             // 
             // d
             // 
@@ -207,11 +221,13 @@
             // 
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
             // 
             // Entre
             // 
             this.Entre.HeaderText = "Entre Calles";
             this.Entre.Name = "Entre";
+            this.Entre.ReadOnly = true;
             // 
             // Column3
             // 
@@ -229,6 +245,7 @@
             // 
             this.Column4.HeaderText = "Motivo";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // ListarListaNegra
             // 
@@ -246,7 +263,7 @@
             this.panelListar.ResumeLayout(false);
             this.panelListar.PerformLayout();
             this.panelLista.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataListaNegra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaNegra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,7 +272,7 @@
 
         private System.Windows.Forms.Panel panelBotones;
         private System.Windows.Forms.Panel panelLista;
-        private System.Windows.Forms.DataGridView dataListaNegra;
+        private System.Windows.Forms.DataGridView dgvListaNegra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
