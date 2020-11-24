@@ -36,8 +36,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvContrato = new System.Windows.Forms.DataGridView();
+            this.dgvListarContrato = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContrato)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarContrato)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -131,12 +133,22 @@
             this.dgvContrato.Size = new System.Drawing.Size(1083, 615);
             this.dgvContrato.TabIndex = 29;
             // 
+            // dgvListarContrato
+            // 
+            this.dgvListarContrato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarContrato.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListarContrato.Location = new System.Drawing.Point(0, 55);
+            this.dgvListarContrato.Name = "dgvListarContrato";
+            this.dgvListarContrato.Size = new System.Drawing.Size(1083, 615);
+            this.dgvListarContrato.TabIndex = 30;
+            // 
             // ListarContrato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1083, 670);
+            this.Controls.Add(this.dgvListarContrato);
             this.Controls.Add(this.dgvContrato);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -146,6 +158,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContrato)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarContrato)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,5 +172,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvContrato;
+        private System.Windows.Forms.DataGridView dgvListarContrato;
     }
 }

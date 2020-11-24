@@ -34,8 +34,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
+            this.dgvListarHistorial = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarHistorial)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -98,11 +100,21 @@
             this.dgvHistorial.Size = new System.Drawing.Size(1067, 576);
             this.dgvHistorial.TabIndex = 29;
             // 
+            // dgvListarHistorial
+            // 
+            this.dgvListarHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarHistorial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListarHistorial.Location = new System.Drawing.Point(0, 55);
+            this.dgvListarHistorial.Name = "dgvListarHistorial";
+            this.dgvListarHistorial.Size = new System.Drawing.Size(1067, 576);
+            this.dgvListarHistorial.TabIndex = 30;
+            // 
             // ListarHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 631);
+            this.Controls.Add(this.dgvListarHistorial);
             this.Controls.Add(this.dgvHistorial);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -111,6 +123,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarHistorial)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +135,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvHistorial;
+        private System.Windows.Forms.DataGridView dgvListarHistorial;
     }
 }

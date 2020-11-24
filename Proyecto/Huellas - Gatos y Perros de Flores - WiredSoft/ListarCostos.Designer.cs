@@ -37,8 +37,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvCosto = new System.Windows.Forms.DataGridView();
+            this.dgvListarCosto = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCosto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarCosto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -93,6 +95,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnModificar
             // 
@@ -142,19 +145,31 @@
             this.dgvCosto.Size = new System.Drawing.Size(996, 532);
             this.dgvCosto.TabIndex = 30;
             // 
+            // dgvListarCosto
+            // 
+            this.dgvListarCosto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarCosto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListarCosto.Location = new System.Drawing.Point(0, 55);
+            this.dgvListarCosto.Name = "dgvListarCosto";
+            this.dgvListarCosto.Size = new System.Drawing.Size(996, 532);
+            this.dgvListarCosto.TabIndex = 31;
+            // 
             // ListarCostos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(996, 587);
+            this.Controls.Add(this.dgvListarCosto);
             this.Controls.Add(this.dgvCosto);
             this.Controls.Add(this.panelBotones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarCostos";
             this.Text = "ListarCostos";
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCosto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarCosto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,5 +184,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvCosto;
+        private System.Windows.Forms.DataGridView dgvListarCosto;
     }
 }

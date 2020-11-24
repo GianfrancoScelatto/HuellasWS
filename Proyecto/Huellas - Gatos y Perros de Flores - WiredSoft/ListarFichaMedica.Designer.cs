@@ -37,9 +37,11 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,6 @@
             this.panelBotones.Name = "panelBotones";
             this.panelBotones.Size = new System.Drawing.Size(1083, 55);
             this.panelBotones.TabIndex = 28;
-            
             // 
             // btnExportar
             // 
@@ -133,12 +134,22 @@
             // 
             // panelListar
             // 
+            this.panelListar.Controls.Add(this.dataGridView1);
             this.panelListar.Controls.Add(this.dgvFichaMedica);
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelListar.Location = new System.Drawing.Point(0, 55);
             this.panelListar.Name = "panelListar";
             this.panelListar.Size = new System.Drawing.Size(1083, 615);
             this.panelListar.TabIndex = 29;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1083, 615);
+            this.dataGridView1.TabIndex = 1;
             // 
             // dgvFichaMedica
             // 
@@ -172,6 +183,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelListar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFichaMedica)).EndInit();
             this.ResumeLayout(false);
 
@@ -188,5 +200,6 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelListar;
         private System.Windows.Forms.DataGridView dgvFichaMedica;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

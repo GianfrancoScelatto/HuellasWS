@@ -48,9 +48,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
             this.bdscEventos = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuLateral
@@ -290,6 +293,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -304,6 +308,17 @@
             this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
             this.panelFormHijo.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(250, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // MenuInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +326,7 @@
             this.ClientSize = new System.Drawing.Size(1333, 670);
             this.Controls.Add(this.panelFormHijo);
             this.Controls.Add(this.panelMenuLateral);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 650);
@@ -324,7 +339,9 @@
             this.panelMenuLateral.ResumeLayout(false);
             this.panelMenuLateral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,5 +366,6 @@
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button bntContrato;
         private System.Windows.Forms.Button btnCosto;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

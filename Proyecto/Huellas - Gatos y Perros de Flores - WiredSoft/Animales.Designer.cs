@@ -44,7 +44,7 @@
             this.lklblVacunas = new System.Windows.Forms.LinkLabel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnNuevo1 = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
@@ -239,7 +239,7 @@
             this.groupBox1.Controls.Add(this.lklblVacunas);
             this.groupBox1.Controls.Add(this.btnExportar);
             this.groupBox1.Controls.Add(this.btnEliminar);
-            this.groupBox1.Controls.Add(this.btnNuevo);
+            this.groupBox1.Controls.Add(this.btnNuevo1);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.dgvFichaMedica);
@@ -297,18 +297,19 @@
             this.btnEliminar.TabIndex = 56;
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // btnNuevo
+            // btnNuevo1
             // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(707, 37);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(28, 29);
-            this.btnNuevo.TabIndex = 55;
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo1.BackgroundImage")));
+            this.btnNuevo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo1.FlatAppearance.BorderSize = 0;
+            this.btnNuevo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo1.Location = new System.Drawing.Point(707, 37);
+            this.btnNuevo1.Name = "btnNuevo1";
+            this.btnNuevo1.Size = new System.Drawing.Size(28, 29);
+            this.btnNuevo1.TabIndex = 55;
+            this.btnNuevo1.UseVisualStyleBackColor = true;
+            this.btnNuevo1.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // btnModificar
             // 
@@ -988,7 +989,7 @@
         private System.Windows.Forms.LinkLabel lklblVacunas;
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnNuevo1;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvFichaMedica;

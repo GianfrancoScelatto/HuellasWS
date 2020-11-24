@@ -98,7 +98,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 dtpFichaMedica.Enabled = false;
                 btnEliminar.Enabled = false;
                 btnExportar.Enabled = false;
-                btnNuevo.Enabled = false;
+                btnNuevo1.Enabled = false;
                 btnModificar.Enabled = false;
                 lklblVacunas.Enabled = false;
                 dgvSeguimiento.Enabled = false;
@@ -321,6 +321,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
             }
+        }
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            Form VacunasDespa = new DesparasitacionVacuna();
+            VacunasDespa.Show();
         }
 
         private void dtpFichaMedica_ValueChanged(object sender, EventArgs e)
