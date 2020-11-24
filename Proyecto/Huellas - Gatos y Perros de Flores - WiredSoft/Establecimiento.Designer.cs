@@ -133,6 +133,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 20);
             this.txtNombre.TabIndex = 44;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtHoraAtencion
             // 
@@ -140,6 +141,7 @@
             this.txtHoraAtencion.Name = "txtHoraAtencion";
             this.txtHoraAtencion.Size = new System.Drawing.Size(178, 20);
             this.txtHoraAtencion.TabIndex = 45;
+            this.txtHoraAtencion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoraAtencion_KeyPress);
             // 
             // txtLocalidad
             // 
@@ -147,6 +149,7 @@
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(178, 20);
             this.txtLocalidad.TabIndex = 46;
+            this.txtLocalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLocalidad_KeyPress);
             // 
             // txtCP
             // 
@@ -154,6 +157,7 @@
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(178, 20);
             this.txtCP.TabIndex = 47;
+            this.txtCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCP_KeyPress);
             // 
             // txtCalle
             // 
@@ -161,6 +165,7 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(178, 20);
             this.txtCalle.TabIndex = 48;
+            this.txtCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalle_KeyPress);
             // 
             // txtAltura
             // 
@@ -168,6 +173,7 @@
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(178, 20);
             this.txtAltura.TabIndex = 49;
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress);
             // 
             // btnCancelar
             // 

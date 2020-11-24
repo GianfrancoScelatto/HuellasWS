@@ -93,5 +93,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 Hide();
             }
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            E_Validaciones.SoloLetras(e);
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            E_Validaciones.LetrasNumeros(e);
+        }
     }
 }
