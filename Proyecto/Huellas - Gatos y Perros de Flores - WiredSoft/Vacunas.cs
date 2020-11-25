@@ -98,27 +98,31 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             else
             {
                 descripcion += txtDescripcion.Text + Environment.NewLine;
+
                 if (Editar == true)
                 {
                     try
                     {
-                        brV.ModificarVacuna(E_Vacuna.IdVacuna, txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
+                        brV.ModificarVacuna(E_Vacuna.IdVacuna, txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias,
+                        Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
+
                         Editar = false;
                     }
                     catch (Exception ex)
                     {
-                        msj.MensajeError("Ha ocurrido un error." + ex);
+                        msj.MensajeError("Ha ocurrido un error: " + ex);
                     }
                 }
                 else
                 {
                     try
                     {
-                        brV.AltaVacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
+                        brV.AltaVacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, 
+                        Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
                     }
                     catch (Exception ex)
                     {
-                        msj.MensajeError("Ha ocurrido un error." + ex);
+                        msj.MensajeError("Ha ocurrido un error: " + ex);
                     }
                     
                 }

@@ -14,12 +14,12 @@ using BusinessRules;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarEstablecimient : Form
+    public partial class ListarEstablecimiento : Form
     {
         BR_Establecimiento brE = new BR_Establecimiento();
         E_Mensaje msj = new E_Mensaje();
         
-        public ListarEstablecimient()
+        public ListarEstablecimiento()
         {
             InitializeComponent();
         }

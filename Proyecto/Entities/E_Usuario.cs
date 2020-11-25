@@ -19,5 +19,6 @@ namespace Entities
         public static string Contraseña { get; set; }
         public static int IdRol { get; set; }
         public static string Rol { get; set; }
+        public static bool Editar { get; set; }
     }
 }

@@ -17,19 +17,19 @@ namespace BusinessRules
             return daU.AccesoUsuario(Usuario, Contraseña);
         }
 
-        public void AltaUsuario(string Usuario, string Nombre, string Apellido, int Dni, int Telefono, int idPregunta, string Respuesta, string Contrasenia, int idRol)
+        public void AltaUsuario(string Usuario, string Nombre, string Apellido, string Dni, int Telefono, int IdPregunta, string Respuesta, string Contrasenia, int IdRol)
         {
-            daU.AltaUsuario(Usuario, Nombre, Apellido, Dni, Telefono, idPregunta, Respuesta, Contrasenia, idRol);
+            daU.AltaUsuario(Usuario, Nombre, Apellido, Dni, Telefono, IdPregunta, Respuesta, Contrasenia, IdRol);
         }
 
-        public void ModificarUsuario(int idUsuario, string Usuario, string Nombre, string Apellido, int Dni, int Telefono, int idRol)
+        public void ModificarUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono, string Contraseña, int IdRol)
         {
-            daU.ModificarUsuario(idUsuario, Usuario, Nombre, Apellido, Dni, Telefono, idRol);
+            daU.ModificarUsuario(IdUsuario, Usuario, Nombre, Apellido, Dni, Telefono, Contraseña, IdRol);
         }
 
-        public void BajaUsuario(int idUsuario)
+        public void BajaUsuario(int IdUsuario)
         {
-            daU.BajaUsuario(idUsuario);
+            daU.BajaUsuario(IdUsuario);
         }
 
         public DataTable TraerPregunta(string Usuario)
@@ -51,11 +51,25 @@ namespace BusinessRules
             return tabla;
         }
 
-        public DataTable FiltrarUsuario(string Usuario)
+        public DataTable FiltrarUsuario(string Usuario, string tipoBusqueda)
         {
             DataTable tabla = new DataTable();
-            tabla = daU.FiltrarUsuario(Usuario);
+            tabla = daU.FiltrarUsuario(Usuario, tipoBusqueda);
             return tabla;
-        }        
+        }
+
+        public DataTable ListarPreguntas()
+        {
+            DataTable tabla = new DataTable();
+            tabla = daU.ListarPreguntas();
+            return tabla;
+        }
+
+        public DataTable ListarRoles()
+        {
+            DataTable tabla = new DataTable();
+            tabla = daU.ListarRoles();
+            return tabla;
+        }
     }
 }

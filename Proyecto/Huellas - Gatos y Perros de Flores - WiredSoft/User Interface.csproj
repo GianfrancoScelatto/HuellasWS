@@ -126,11 +126,11 @@
     <Compile Include="ListarAnimales.Designer.cs">
       <DependentUpon>ListarAnimales.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarEstablecimient.cs">
+    <Compile Include="ListarEstablecimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarEstablecimient.Designer.cs">
-      <DependentUpon>ListarEstablecimient.cs</DependentUpon>
+    <Compile Include="ListarEstablecimiento.Designer.cs">
+      <DependentUpon>ListarEstablecimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarUsuarios.cs">
       <SubType>Form</SubType>
@@ -242,8 +242,8 @@
     <EmbeddedResource Include="ListarAnimales.resx">
       <DependentUpon>ListarAnimales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarEstablecimient.resx">
-      <DependentUpon>ListarEstablecimient.cs</DependentUpon>
+    <EmbeddedResource Include="ListarEstablecimiento.resx">
+      <DependentUpon>ListarEstablecimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarUsuarios.resx">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>

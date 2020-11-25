@@ -57,7 +57,7 @@
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1570, 55);
+            this.panelBotones.Size = new System.Drawing.Size(1386, 55);
             this.panelBotones.TabIndex = 28;
             // 
             // btnExportar
@@ -65,32 +65,37 @@
             this.btnExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportar.BackgroundImage")));
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(1367, 5);
+            this.btnExportar.Location = new System.Drawing.Point(1183, 7);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1513, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(1329, 7);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(1421, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(1237, 7);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -102,36 +107,40 @@
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(1467, 5);
+            this.btnModificar.Location = new System.Drawing.Point(1283, 7);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // chxNombre
             // 
             this.chxNombre.AutoSize = true;
-            this.chxNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxNombre.ForeColor = System.Drawing.SystemColors.Control;
             this.chxNombre.Location = new System.Drawing.Point(235, 29);
             this.chxNombre.Name = "chxNombre";
-            this.chxNombre.Size = new System.Drawing.Size(80, 21);
+            this.chxNombre.Size = new System.Drawing.Size(76, 20);
             this.chxNombre.TabIndex = 41;
             this.chxNombre.Text = "Nombre";
             this.chxNombre.UseVisualStyleBackColor = true;
+            this.chxNombre.CheckedChanged += new System.EventHandler(this.chxNombre_CheckedChanged);
             // 
             // chxUsuario
             // 
             this.chxUsuario.AutoSize = true;
-            this.chxUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxUsuario.ForeColor = System.Drawing.SystemColors.Control;
             this.chxUsuario.Location = new System.Drawing.Point(235, 5);
             this.chxUsuario.Name = "chxUsuario";
-            this.chxUsuario.Size = new System.Drawing.Size(73, 21);
+            this.chxUsuario.Size = new System.Drawing.Size(74, 20);
             this.chxUsuario.TabIndex = 40;
             this.chxUsuario.Text = "Usuario";
             this.chxUsuario.UseVisualStyleBackColor = true;
+            this.chxUsuario.CheckedChanged += new System.EventHandler(this.chxUsuario_CheckedChanged);
             // 
             // txtBuscar
             // 
@@ -139,15 +148,16 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(136, 20);
             this.txtBuscar.TabIndex = 39;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.lblBuscar.Location = new System.Drawing.Point(17, 12);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(53, 17);
+            this.lblBuscar.Size = new System.Drawing.Size(53, 16);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -165,19 +175,21 @@
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1570, 576);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1386, 576);
             this.dgvUsuarios.TabIndex = 29;
+            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
             // 
             // ListarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1570, 631);
+            this.ClientSize = new System.Drawing.Size(1386, 631);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarUsuarios";
             this.Text = "ListarUsuarios";
+            this.Load += new System.EventHandler(this.ListarUsuarios_Load);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();

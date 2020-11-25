@@ -17,6 +17,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         BR_Animal brA = new BR_Animal();
         E_Bitacora eB = new E_Bitacora();
         E_Mensaje msj = new E_Mensaje();
+        string filtro;
 
         public ListarAnimales()
         {
@@ -116,7 +117,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Animal.LugarRescate = dgvMascotas.CurrentRow.Cells["Lugar de Rescate"].Value.ToString();
             E_Animal.Sexo = dgvMascotas.CurrentRow.Cells["Sexo"].Value.ToString();
             E_Animal.Edad = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Edad"].Value);
-            E_Animal.Peso =Convert.ToDecimal(dgvMascotas.CurrentRow.Cells["Peso"].Value.ToString());
+            E_Animal.Peso = Convert.ToDecimal(dgvMascotas.CurrentRow.Cells["Peso"].Value.ToString());
             E_Animal.ColorPelo = dgvMascotas.CurrentRow.Cells["Color"].Value.ToString();
             E_Animal.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Estado"].Value);
             E_Animal.FechaNac = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha nacimiento"].Value).Date;
@@ -131,6 +132,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 chxFallecidos.Checked = false;
                 chxInternado.Checked = false;
                 chxTransito.Checked = false;
+                filtro = "Adoptado";
             } 
         }
 
@@ -141,6 +143,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 chxFallecidos.Checked = false;
                 chxAdoptados.Checked = false;
                 chxTransito.Checked = false;
+                filtro = "Internado";
             }
         }
 
@@ -151,6 +154,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 chxFallecidos.Checked = false;
                 chxInternado.Checked = false;
                 chxAdoptados.Checked = false;
+                filtro = "En Transito";
             }
         }
 
@@ -161,29 +165,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 chxAdoptados.Checked = false;
                 chxInternado.Checked = false;
                 chxTransito.Checked = false;
+                filtro = "Fallecido";
             }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            CheckBox chk = (CheckBox)sender;
-
-            switch (chk.Name)
-            {
-                case "chxAdoptados":
-                    brA.FiltrarAnimal(txtBuscar.Text, "Adoptado");
-                    break;
-                case "chxTransito":
-                    brA.FiltrarAnimal(txtBuscar.Text, "En Transito");
-                    break;
-                case "chxInternados":
-                    brA.FiltrarAnimal(txtBuscar.Text, "Internado");
-                    break;
-                case "chxFallecido":
-                    brA.FiltrarAnimal(txtBuscar.Text, "Fallecido");
-                    break;
-            }
-            
+            brA.FiltrarAnimal(txtBuscar.Text, filtro);
         }
     }
     

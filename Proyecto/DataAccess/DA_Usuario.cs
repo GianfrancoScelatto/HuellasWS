@@ -11,7 +11,6 @@ namespace DataAccess
 {
     public class DA_Usuario : DA_Connection
     {
-        
         public bool AccesoUsuario(string Usuario, string Contraseña)
         {
             using (var conexion = GetConnection())
@@ -51,7 +50,7 @@ namespace DataAccess
             }
         }
 
-        public void AltaUsuario(string Usuario, string Nombre, string Apellido, int Dni, int Telefono, int idPregunta, string Respuesta, string Contrasenia, int idRol)
+        public void AltaUsuario(string Usuario, string Nombre, string Apellido, string Dni, int Telefono, int IdPregunta, string Respuesta, string Contraseña, int IdRol)
         {
             using (var connection = GetConnection())
             {
@@ -66,17 +65,17 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Dni", Dni);
                     command.Parameters.AddWithValue("@Telefono", Telefono);
-                    command.Parameters.AddWithValue("@IdPregunta", idPregunta);
+                    command.Parameters.AddWithValue("@IdPregunta", IdPregunta);
                     command.Parameters.AddWithValue("@Respuesta", Respuesta);
-                    command.Parameters.AddWithValue("@Contrasenia", Contrasenia);
-                    command.Parameters.AddWithValue("@IdRol", idRol);
+                    command.Parameters.AddWithValue("@Contrasenia", Contraseña);
+                    command.Parameters.AddWithValue("@IdRol", IdRol);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
             }
         }
 
-        public void ModificarUsuario(int idUsuario, string Usuario, string Nombre, string Apellido, int Dni, int Telefono, int idRol)
+        public void ModificarUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono, string Contraseña, int IdRol)
         {
             using (var connection = GetConnection())
             {
@@ -86,20 +85,21 @@ namespace DataAccess
                     command.Connection = connection;
                     command.CommandText = "prc_ModificarUsuario";
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.Parameters.AddWithValue("@Usuario", Usuario);
                     command.Parameters.AddWithValue("@Nombre", Nombre);
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Dni", Dni);
                     command.Parameters.AddWithValue("@Telefono", Telefono);
-                    command.Parameters.AddWithValue("@IdRol", idRol);
+                    command.Parameters.AddWithValue("@Contrasenia", Contraseña);
+                    command.Parameters.AddWithValue("@IdRol", IdRol);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
             }
         }
 
-        public void BajaUsuario(int idUsuario)
+        public void BajaUsuario(int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -109,7 +109,7 @@ namespace DataAccess
                     command.Connection = connection;
                     command.CommandText = "prc_BajaUsuario";
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
@@ -135,7 +135,7 @@ namespace DataAccess
             }
         }
 
-        public void RecuperarUsuario(string Usuario, int idPregunta, string Respuesta, string Contraseña)
+        public void RecuperarUsuario(string Usuario, int IdPregunta, string Respuesta, string Contraseña)
         {
             using (var connection = GetConnection())
             {
@@ -146,7 +146,7 @@ namespace DataAccess
                     command.CommandText = "prc_RecuperarUsuario";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Usuario", Usuario);
-                    command.Parameters.AddWithValue("@IdPregunta", idPregunta);
+                    command.Parameters.AddWithValue("@IdPregunta", IdPregunta);
                     command.Parameters.AddWithValue("@Respuesta", Respuesta);
                     command.Parameters.AddWithValue("@Contraseña", Contraseña);
                     command.ExecuteNonQuery();
@@ -174,7 +174,7 @@ namespace DataAccess
             }
         }
 
-        public DataTable FiltrarUsuario(string Usuario)
+        public DataTable FiltrarUsuario(string Usuario, string tipoBusqueda)
         {
             DataTable tabla = new DataTable();
             using (var connection = GetConnection())
@@ -186,8 +186,45 @@ namespace DataAccess
                     command.CommandText = "prc_FiltrarUsuario";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Usuario", Usuario);
+                    command.Parameters.AddWithValue("@TipoBusqueda", tipoBusqueda);
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
+        public DataTable ListarPreguntas()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboPregunta", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
+        public DataTable ListarRoles()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboRol", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
                     connection.Close();
                     return tabla;
                 }

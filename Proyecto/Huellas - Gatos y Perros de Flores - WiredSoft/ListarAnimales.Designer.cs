@@ -65,7 +65,7 @@
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1586, 55);
+            this.panelBotones.Size = new System.Drawing.Size(1386, 55);
             this.panelBotones.TabIndex = 27;
             // 
             // btnExportar
@@ -75,7 +75,7 @@
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(1383, 7);
+            this.btnExportar.Location = new System.Drawing.Point(1183, 7);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -89,7 +89,7 @@
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1529, 7);
+            this.btnEliminar.Location = new System.Drawing.Point(1329, 7);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
@@ -102,7 +102,7 @@
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(1437, 7);
+            this.btnNuevo.Location = new System.Drawing.Point(1237, 7);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -116,7 +116,7 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(1483, 7);
+            this.btnModificar.Location = new System.Drawing.Point(1283, 7);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
@@ -126,11 +126,11 @@
             // chxFallecidos
             // 
             this.chxFallecidos.AutoSize = true;
-            this.chxFallecidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxFallecidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxFallecidos.ForeColor = System.Drawing.SystemColors.Control;
             this.chxFallecidos.Location = new System.Drawing.Point(371, 29);
             this.chxFallecidos.Name = "chxFallecidos";
-            this.chxFallecidos.Size = new System.Drawing.Size(90, 21);
+            this.chxFallecidos.Size = new System.Drawing.Size(90, 20);
             this.chxFallecidos.TabIndex = 43;
             this.chxFallecidos.Text = "Fallecidos";
             this.chxFallecidos.UseVisualStyleBackColor = true;
@@ -139,11 +139,11 @@
             // chxTransito
             // 
             this.chxTransito.AutoSize = true;
-            this.chxTransito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxTransito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxTransito.ForeColor = System.Drawing.SystemColors.Control;
             this.chxTransito.Location = new System.Drawing.Point(371, 5);
             this.chxTransito.Name = "chxTransito";
-            this.chxTransito.Size = new System.Drawing.Size(94, 21);
+            this.chxTransito.Size = new System.Drawing.Size(89, 20);
             this.chxTransito.TabIndex = 42;
             this.chxTransito.Text = "En tránsito";
             this.chxTransito.UseVisualStyleBackColor = true;
@@ -152,11 +152,11 @@
             // chxInternado
             // 
             this.chxInternado.AutoSize = true;
-            this.chxInternado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxInternado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxInternado.ForeColor = System.Drawing.SystemColors.Control;
             this.chxInternado.Location = new System.Drawing.Point(235, 29);
             this.chxInternado.Name = "chxInternado";
-            this.chxInternado.Size = new System.Drawing.Size(95, 21);
+            this.chxInternado.Size = new System.Drawing.Size(90, 20);
             this.chxInternado.TabIndex = 41;
             this.chxInternado.Text = "Internados";
             this.chxInternado.UseVisualStyleBackColor = true;
@@ -165,11 +165,11 @@
             // chxAdoptados
             // 
             this.chxAdoptados.AutoSize = true;
-            this.chxAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxAdoptados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxAdoptados.ForeColor = System.Drawing.SystemColors.Control;
             this.chxAdoptados.Location = new System.Drawing.Point(235, 5);
             this.chxAdoptados.Name = "chxAdoptados";
-            this.chxAdoptados.Size = new System.Drawing.Size(100, 21);
+            this.chxAdoptados.Size = new System.Drawing.Size(94, 20);
             this.chxAdoptados.TabIndex = 40;
             this.chxAdoptados.Text = "Adoptados";
             this.chxAdoptados.UseVisualStyleBackColor = true;
@@ -186,11 +186,11 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.lblBuscar.Location = new System.Drawing.Point(17, 12);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(53, 17);
+            this.lblBuscar.Size = new System.Drawing.Size(53, 16);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -200,7 +200,7 @@
             this.panelFormListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormListar.Location = new System.Drawing.Point(0, 55);
             this.panelFormListar.Name = "panelFormListar";
-            this.panelFormListar.Size = new System.Drawing.Size(1586, 615);
+            this.panelFormListar.Size = new System.Drawing.Size(1386, 615);
             this.panelFormListar.TabIndex = 28;
             // 
             // dgvMascotas
@@ -216,7 +216,7 @@
             this.dgvMascotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(111)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -240,13 +240,13 @@
             this.dgvMascotas.ReadOnly = true;
             this.dgvMascotas.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvMascotas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMascotas.Size = new System.Drawing.Size(1586, 609);
+            this.dgvMascotas.Size = new System.Drawing.Size(1386, 609);
             this.dgvMascotas.TabIndex = 27;
             this.dgvMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMascotas_CellContentClick);
             // 
@@ -255,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1586, 670);
+            this.ClientSize = new System.Drawing.Size(1386, 670);
             this.Controls.Add(this.panelFormListar);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

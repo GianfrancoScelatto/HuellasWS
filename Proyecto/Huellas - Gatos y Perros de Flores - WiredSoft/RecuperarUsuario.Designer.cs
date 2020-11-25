@@ -46,55 +46,55 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(11, 102);
+            this.label2.Location = new System.Drawing.Point(10, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 19);
+            this.label2.Size = new System.Drawing.Size(196, 20);
             this.label2.TabIndex = 62;
             this.label2.Text = "Pregunta de seguridad:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(133, 61);
+            this.label1.Location = new System.Drawing.Point(130, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 61;
-            this.label1.Text = "Usuario: ";
+            this.label1.Text = "Usuario:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 184);
+            this.label3.Location = new System.Drawing.Point(47, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 19);
+            this.label3.Size = new System.Drawing.Size(159, 20);
             this.label3.TabIndex = 64;
             this.label3.Text = "Nueva contraseña:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(112, 143);
+            this.label4.Location = new System.Drawing.Point(105, 143);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 19);
+            this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 63;
             this.label4.Text = "Respuesta:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(41, 225);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 19);
+            this.label5.Size = new System.Drawing.Size(165, 20);
             this.label5.TabIndex = 65;
             this.label5.Text = "Validar contraseña:";
             // 
@@ -145,7 +145,7 @@
             // BtnIngresar
             // 
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIngresar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnIngresar.Location = new System.Drawing.Point(137, 303);
             this.BtnIngresar.Name = "BtnIngresar";
@@ -158,22 +158,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(101, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(257, 19);
+            this.label6.Size = new System.Drawing.Size(267, 20);
             this.label6.TabIndex = 72;
             this.label6.Text = "Complete los siguientes campos";
             // 
             // chkContraseña
             // 
             this.chkContraseña.AutoSize = true;
-            this.chkContraseña.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
+            this.chkContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.chkContraseña.ForeColor = System.Drawing.Color.White;
             this.chkContraseña.Location = new System.Drawing.Point(287, 262);
             this.chkContraseña.Name = "chkContraseña";
-            this.chkContraseña.Size = new System.Drawing.Size(130, 19);
+            this.chkContraseña.Size = new System.Drawing.Size(135, 17);
             this.chkContraseña.TabIndex = 73;
             this.chkContraseña.Text = "Mostrar contraseña";
             this.chkContraseña.UseVisualStyleBackColor = true;

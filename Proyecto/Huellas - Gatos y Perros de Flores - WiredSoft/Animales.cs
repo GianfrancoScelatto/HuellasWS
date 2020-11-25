@@ -323,7 +323,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
-        private void btnNuevo_Click_1(object sender, EventArgs e)
+        private void lklblVacunas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form VacunasDespa = new DesparasitacionVacuna();
             VacunasDespa.Show();
