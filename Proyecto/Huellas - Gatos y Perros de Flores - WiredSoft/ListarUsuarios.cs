@@ -23,6 +23,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             InitializeComponent();
         }
 
+        private void MostrarRegistroUsuarios()
+        {
+            dgvUsuarios.DataSource = brU.ListarUsuario();
+        }
+
         private void ListarUsuarios_Load(object sender, EventArgs e)
         {
             MostrarRegistroUsuarios();
@@ -32,15 +37,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Form ListarUsuarios = new ListarUsuarios();
-            ListarUsuarios.Show();
+            Form Usuarios = new Usuarios();
+            Usuarios.Show();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             E_Usuario.Editar = true;
-            Form ListarUsuarios = new ListarUsuarios();
-            ListarUsuarios.Show();
+            Form Usuarios = new Usuarios();
+            Usuarios.Show();
             E_Usuario.Editar = false;
         }
 
@@ -59,7 +64,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                msj.MensajeAlerta("Seleccione el animal a borrar");
+                msj.MensajeAlerta("Seleccione el usuario a borrar");
             }
         }
 
@@ -102,11 +107,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 }
             }
             exportarexcel.Visible = true;
-        }
-
-        private void MostrarRegistroUsuarios()
-        {
-            dgvUsuarios.DataSource = brU.ListarUsuario();
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
