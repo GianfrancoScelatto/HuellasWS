@@ -60,8 +60,9 @@
             this.panelBotones.Controls.Add(this.panelListar);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
+            this.panelBotones.Margin = new System.Windows.Forms.Padding(4);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1083, 55);
+            this.panelBotones.Size = new System.Drawing.Size(1444, 68);
             this.panelBotones.TabIndex = 37;
             // 
             // panelListar
@@ -74,8 +75,9 @@
             this.panelListar.Controls.Add(this.lblBuscar);
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelListar.Location = new System.Drawing.Point(0, 0);
+            this.panelListar.Margin = new System.Windows.Forms.Padding(4);
             this.panelListar.Name = "panelListar";
-            this.panelListar.Size = new System.Drawing.Size(1083, 55);
+            this.panelListar.Size = new System.Drawing.Size(1444, 68);
             this.panelListar.TabIndex = 28;
             // 
             // btnExportar
@@ -85,9 +87,10 @@
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 7);
+            this.btnExportar.Location = new System.Drawing.Point(1173, 9);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(39, 40);
+            this.btnExportar.Size = new System.Drawing.Size(52, 49);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
@@ -99,11 +102,13 @@
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1026, 7);
+            this.btnEliminar.Location = new System.Drawing.Point(1368, 9);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(53, 49);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -112,9 +117,10 @@
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(934, 7);
+            this.btnNuevo.Location = new System.Drawing.Point(1245, 9);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(53, 49);
             this.btnNuevo.TabIndex = 45;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -126,27 +132,32 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 7);
+            this.btnModificar.Location = new System.Drawing.Point(1307, 9);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(40, 40);
+            this.btnModificar.Size = new System.Drawing.Size(53, 49);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(76, 11);
+            this.txtBuscar.Location = new System.Drawing.Point(101, 14);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(136, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(180, 22);
             this.txtBuscar.TabIndex = 39;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBuscar.Location = new System.Drawing.Point(17, 12);
+            this.lblBuscar.Location = new System.Drawing.Point(23, 15);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(53, 17);
+            this.lblBuscar.Size = new System.Drawing.Size(70, 21);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -154,9 +165,10 @@
             // 
             this.panelLista.Controls.Add(this.dgvListaNegra);
             this.panelLista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLista.Location = new System.Drawing.Point(0, 55);
+            this.panelLista.Location = new System.Drawing.Point(0, 68);
+            this.panelLista.Margin = new System.Windows.Forms.Padding(4);
             this.panelLista.Name = "panelLista";
-            this.panelLista.Size = new System.Drawing.Size(1083, 615);
+            this.panelLista.Size = new System.Drawing.Size(1444, 757);
             this.panelLista.TabIndex = 38;
             // 
             // dgvListaNegra
@@ -181,81 +193,94 @@
             this.Column4});
             this.dgvListaNegra.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaNegra.Location = new System.Drawing.Point(0, 0);
+            this.dgvListaNegra.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListaNegra.Name = "dgvListaNegra";
             this.dgvListaNegra.ReadOnly = true;
+            this.dgvListaNegra.RowHeadersWidth = 51;
             this.dgvListaNegra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaNegra.Size = new System.Drawing.Size(1083, 615);
+            this.dgvListaNegra.Size = new System.Drawing.Size(1444, 757);
             this.dgvListaNegra.TabIndex = 37;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             // 
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Telefono Fijo";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Celular
             // 
             this.Celular.HeaderText = "Celular";
+            this.Celular.MinimumWidth = 6;
             this.Celular.Name = "Celular";
             this.Celular.ReadOnly = true;
             // 
             // d
             // 
             this.d.HeaderText = "Correo Electronico";
+            this.d.MinimumWidth = 6;
             this.d.Name = "d";
             this.d.ReadOnly = true;
             // 
             // Direccion
             // 
             this.Direccion.HeaderText = "Direccion";
+            this.Direccion.MinimumWidth = 6;
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
             // 
             // Entre
             // 
             this.Entre.HeaderText = "Entre Calles";
+            this.Entre.MinimumWidth = 6;
             this.Entre.Name = "Entre";
             this.Entre.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Localidad";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Provincia";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Motivo";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // ListarListaNegra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1083, 670);
+            this.ClientSize = new System.Drawing.Size(1444, 825);
             this.Controls.Add(this.panelLista);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListarListaNegra";
             this.Text = "ListarListaNegra";
             this.Load += new System.EventHandler(this.ListarListaNegra_Load);

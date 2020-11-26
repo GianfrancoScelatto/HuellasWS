@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BusinessRules;
+using Entities;
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
+
     public partial class ListarListaNegra : Form
     {
+        BR_ListaNegra brLN = new BR_ListaNegra();
+        E_Mensaje msj = new E_Mensaje();
         public ListarListaNegra()
         {
             InitializeComponent();
@@ -30,7 +34,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            Form ListaNegra = new ListaNegra();
+            ListaNegra.Show();
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
@@ -59,6 +64,47 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 }
             }
             exportarexcel.Visible = true;
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvListaNegra.SelectedRows.Count > 0)
+            {
+                E_ListaNegra.Editar = true;
+                Form ListaNegra = new ListaNegra();
+                ListaNegra.Show();
+
+                E_ListaNegra.Editar = false;
+            }
+            else
+                msj.MensajeAlerta("Debe seleccionar una Persona.");
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvListaNegra.SelectedRows.Count > 0)
+            {
+                DialogResult preg = MessageBox.Show("Quiere eliminar a la persona de la lista negra?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (preg == DialogResult.OK)
+                {
+                    //E_ListaNegra. = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["IdListaNegra"].Value);
+                    //brLN.BajaListaNegra(IdListaNegra, E_Usuario.IdUsuario);
+                    MostrarRegistroListaNegra();
+                }
+            }
+            else
+            {
+                msj.MensajeAlerta("Seleccione el animal a borrar");
+            }
+        }
+        public void MostrarRegistroListaNegra()
+        {
+            dgvListaNegra.DataSource = brLN.ListarListaNegra();
+        }
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            brLN.FiltrarListaNegra(txtBuscar.Text); //filtro);
         }
     }
 }
