@@ -57,7 +57,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             if (E_Animal.Editar == true)
             {
                 Editar = true;
-                groupBox1.Enabled = false;
                 CargarGrillas();
                 dgvFichaMedica.Columns["IdFichaMedica"].Visible = false;
                 lblIdAnimal.Text = E_Animal.IdAnimal.ToString();
@@ -103,6 +102,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 lklblVacunas.Enabled = false;
                 dgvSeguimiento.Enabled = false;
                 dtpFiltro.Enabled = false;
+                lblTranAdopt.Visible = false;
+                lklblPersona.Visible = false;
             }
 
         }
@@ -182,7 +183,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-
+            ExportarDatos(dgvFichaMedica);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -241,6 +242,30 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             dtpFiltro.Value = DateTime.Now;
         }
 
+        public void ExportarDatos(DataGridView DatoListado)
+        {
+            Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
+            exportarexcel.Application.Workbooks.Add(true);
+            int IndiceColumna = 0;
+            foreach (DataGridViewColumn columna in DatoListado.Columns)
+            {
+                IndiceColumna++;
+                exportarexcel.Cells[1, IndiceColumna] = columna.Name;
+            }
+            int IndiceFila = 0;
+            foreach (DataGridViewRow fila in DatoListado.Rows)
+            {
+                IndiceFila++;
+                IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in DatoListado.Columns)
+                {
+                    IndiceColumna++;
+                    exportarexcel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                }
+            }
+            exportarexcel.Visible = true;
+        }
+
         private void tbcDatosMasc_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (tbcDatosMasc.SelectedIndex)
@@ -250,8 +275,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     btnCancelarDatos.Visible = true;
                     break;
                 case 1:
-                    btnGuardarDatos.Visible = true;
-                    btnCancelarDatos.Visible = true;
+                    btnGuardarDatos.Visible = false;
+                    btnCancelarDatos.Visible = false;
                     break;
                 case 2:
                     btnGuardarDatos.Visible = false;
@@ -327,6 +352,24 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             Form VacunasDespa = new DesparasitacionVacuna();
             VacunasDespa.Show();
+        }
+
+        private void chkCasSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkCasSi.Checked == true)
+            {
+                chkCasNo.Checked = false;
+                dtpCastracion.Enabled = true;
+            }
+        }
+
+        private void chkCasNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkCasNo.Checked == true)
+            {
+                chkCasSi.Checked = false;
+                dtpCastracion.Enabled = false;
+            }
         }
 
         private void dtpFichaMedica_ValueChanged(object sender, EventArgs e)

@@ -59,6 +59,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            string clave = MD5.EncriptrarClave(txtContraseña.Text);
+
             if (String.IsNullOrWhiteSpace(txtUser.Text) || String.IsNullOrWhiteSpace(txtNombre.Text) || String.IsNullOrWhiteSpace(txtApellido.Text)
                 || String.IsNullOrWhiteSpace(txtDNI.Text) || String.IsNullOrWhiteSpace(txtTelefono.Text) || String.IsNullOrWhiteSpace(txtRespuesta.Text))
             {
@@ -68,8 +70,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
+                    
                     brU.ModificarUsuario(Convert.ToInt32(lblID.Text), txtUser.Text, txtNombre.Text, txtApellido.Text, txtDNI.Text,
-                    Convert.ToInt32(txtTelefono.Text), txtContraseña.Text, Convert.ToInt32(cboRol.SelectedValue));
+                    Convert.ToInt32(txtTelefono.Text), clave, Convert.ToInt32(cboRol.SelectedValue));
 
                     Editar = false;
                 }
@@ -84,7 +87,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 try
                 {
                     brU.AltaUsuario(txtUser.Text, txtNombre.Text, txtApellido.Text, txtDNI.Text, Convert.ToInt32(txtTelefono.Text),
-                                        Convert.ToInt32(cboPregunta.SelectedValue), txtRespuesta.Text, txtContraseña.Text,
+                                        Convert.ToInt32(cboPregunta.SelectedValue), txtRespuesta.Text, clave,
                                         Convert.ToInt32(cboRol.SelectedValue));
                 }
                 catch (Exception ex)
