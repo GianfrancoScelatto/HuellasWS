@@ -48,6 +48,7 @@
     <Compile Include="E_Contrato.cs" />
     <Compile Include="E_Establecimiento.cs" />
     <Compile Include="E_FichaMedica.cs" />
+    <Compile Include="E_ListaNegra.cs" />
     <Compile Include="E_Mensaje.cs" />
     <Compile Include="E_Persona.cs" />
     <Compile Include="E_Seguimiento.cs" />
