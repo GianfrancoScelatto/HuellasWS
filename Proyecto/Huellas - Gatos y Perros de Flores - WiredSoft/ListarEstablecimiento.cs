@@ -88,7 +88,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if (preg == DialogResult.OK)
                 {
-                    brE.BajaEstablecimiento(E_Establecimiento.IdEstablecimiento, E_Usuario.IdUsuario);
+                    brE.BajaEstablecimiento(E_Establecimiento.IdEstablecimiento, E_UsuarioAcceso.IdUsuario);
                     MostrarRegistroEstablecimiento();
                 }
             }

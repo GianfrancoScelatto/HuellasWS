@@ -27,9 +27,9 @@ namespace BusinessRules
             daU.ModificarUsuario(IdUsuario, Usuario, Nombre, Apellido, Dni, Telefono, Contraseña, IdRol);
         }
 
-        public void BajaUsuario(int IdUsuario)
+        public void BajaUsuario(int IdUsuario, int IdUsuarioAcceso)
         {
-            daU.BajaUsuario(IdUsuario);
+            daU.BajaUsuario(IdUsuario, IdUsuarioAcceso);
         }
 
         public DataTable TraerPregunta(string Usuario)

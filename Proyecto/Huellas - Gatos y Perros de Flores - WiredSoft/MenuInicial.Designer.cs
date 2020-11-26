@@ -46,14 +46,14 @@
             this.btnPersonas = new System.Windows.Forms.Button();
             this.btnAnimal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFormHijo = new System.Windows.Forms.Panel();
             this.bdscEventos = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuLateral
@@ -202,6 +202,7 @@
             this.lklblUsuario.TabIndex = 9;
             this.lklblUsuario.TabStop = true;
             this.lklblUsuario.Text = "Usuario";
+            this.lklblUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblUsuario_LinkClicked);
             // 
             // lblRol
             // 
@@ -300,14 +301,6 @@
             this.panel2.Size = new System.Drawing.Size(250, 104);
             this.panel2.TabIndex = 0;
             // 
-            // panelFormHijo
-            // 
-            this.panelFormHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormHijo.Location = new System.Drawing.Point(250, 0);
-            this.panelFormHijo.Name = "panelFormHijo";
-            this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
-            this.panelFormHijo.TabIndex = 1;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -318,6 +311,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // panelFormHijo
+            // 
+            this.panelFormHijo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormHijo.Location = new System.Drawing.Point(250, 0);
+            this.panelFormHijo.Name = "panelFormHijo";
+            this.panelFormHijo.Size = new System.Drawing.Size(1083, 670);
+            this.panelFormHijo.TabIndex = 1;
             // 
             // MenuInicial
             // 
@@ -340,8 +341,8 @@
             this.panelMenuLateral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).EndInit();
             this.ResumeLayout(false);
 
         }

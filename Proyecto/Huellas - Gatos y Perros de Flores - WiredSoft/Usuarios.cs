@@ -37,7 +37,20 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             CargarCombos();
 
-            if (E_Usuario.Editar == true)
+            if (E_UsuarioAcceso.Editar == true)
+            {
+                Editar = true;
+                lblID.Text = E_UsuarioAcceso.IdUsuario.ToString();
+                txtUser.Text = E_UsuarioAcceso.NombreUsuario;
+                txtNombre.Text = E_UsuarioAcceso.Nombre;
+                txtApellido.Text = E_UsuarioAcceso.Apellido;
+                txtDNI.Text = E_UsuarioAcceso.Dni;
+                txtTelefono.Text = E_UsuarioAcceso.Telefono.ToString();
+                cboPregunta.SelectedValue = E_UsuarioAcceso.IdPregunta;
+                txtRespuesta.Text = E_UsuarioAcceso.RespuestaSeguridad;
+                cboRol.SelectedValue = E_UsuarioAcceso.IdRol;
+            }
+            else if (E_Usuario.Editar == true)
             {
                 Editar = true;
                 lblID.Text = E_Usuario.IdUsuario.ToString();

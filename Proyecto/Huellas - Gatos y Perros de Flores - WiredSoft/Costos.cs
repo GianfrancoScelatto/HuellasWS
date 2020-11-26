@@ -73,7 +73,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    brC.ModificarGasto(E_Costos.IdGasto, dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), txtDetalle.Text, E_Usuario.IdUsuario);
+                    brC.ModificarGasto(E_Costos.IdGasto, dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), txtDetalle.Text, E_UsuarioAcceso.IdUsuario);
                     Editar = false;
                 }
 
@@ -86,7 +86,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    brC.AltaGasto(dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), txtDetalle.Text, E_Usuario.IdUsuario);
+                    brC.AltaGasto(dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), txtDetalle.Text, E_UsuarioAcceso.IdUsuario);
                 }
 
                 catch (Exception ex)

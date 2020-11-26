@@ -23,7 +23,7 @@ namespace BusinessRules
 
         public void AltaVacuna(string Vacuna, int idEspecie, int FrecuenciaVacunacion, int IdTiempo, string Descripcion, int IdUsuario)
         {
-            if (msj.MensajeAcceso(E_Usuario.Rol))
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
                 daV.AltaVacuna(Vacuna, idEspecie, FrecuenciaVacunacion,IdTiempo ,Descripcion, IdUsuario);
             }
@@ -32,7 +32,7 @@ namespace BusinessRules
 
         public void ModificarVacuna (int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion, int IdTiempo, string Descripcion, int idUsuario)
         {
-            if (msj.MensajeAcceso(E_Usuario.Rol))
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
                 daV.ModificarVacuna(idVacuna, Vacuna, idEspecie, FrecuenciaVacunacion, IdTiempo, Descripcion, idUsuario);
             } 
@@ -40,7 +40,7 @@ namespace BusinessRules
 
         public void BajaVacuna(int IdVacuna, int IdUsuario)
         {
-            if (msj.MensajeAcceso(E_Usuario.Rol))
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
                 daV.BajaVacuna(IdVacuna, IdUsuario);
             }

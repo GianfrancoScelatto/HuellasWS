@@ -28,17 +28,17 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            E_Usuario.IdUsuario = reader.GetInt32(0);
-                            E_Usuario.NombreUsuario = reader.GetString(1);
-                            E_Usuario.Nombre = reader.GetString(2);
-                            E_Usuario.Apellido = reader.GetString(3);
-                            E_Usuario.Dni = reader.GetString(4);
-                            E_Usuario.Telefono = reader.GetInt32(5);
-                            E_Usuario.IdPregunta = reader.GetInt32(6);
-                            E_Usuario.RespuestaSeguridad = reader.GetString(7);
-                            E_Usuario.Contraseña = reader.GetString(8);
-                            E_Usuario.IdRol = reader.GetInt32(9);
-                            E_Usuario.Rol = reader.GetString(10);
+                            E_UsuarioAcceso.IdUsuario = reader.GetInt32(0);
+                            E_UsuarioAcceso.NombreUsuario = reader.GetString(1);
+                            E_UsuarioAcceso.Nombre = reader.GetString(2);
+                            E_UsuarioAcceso.Apellido = reader.GetString(3);
+                            E_UsuarioAcceso.Dni = reader.GetString(4);
+                            E_UsuarioAcceso.Telefono = reader.GetInt32(5);
+                            E_UsuarioAcceso.IdPregunta = reader.GetInt32(6);
+                            E_UsuarioAcceso.RespuestaSeguridad = reader.GetString(7);
+                            E_UsuarioAcceso.Contraseña = reader.GetString(8);
+                            E_UsuarioAcceso.IdRol = reader.GetInt32(9);
+                            E_UsuarioAcceso.Rol = reader.GetString(10);
                         }
                         return true;
                     }
@@ -99,7 +99,7 @@ namespace DataAccess
             }
         }
 
-        public void BajaUsuario(int IdUsuario)
+        public void BajaUsuario(int IdUsuario, int IdUsuarioAcceso)
         {
             using (var connection = GetConnection())
             {
@@ -110,6 +110,7 @@ namespace DataAccess
                     command.CommandText = "prc_BajaUsuario";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdUsuarioAcceso", IdUsuarioAcceso);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }

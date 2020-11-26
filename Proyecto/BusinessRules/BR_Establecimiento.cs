@@ -34,7 +34,7 @@ namespace BusinessRules
 
         public void BajaEstablecimiento(int IdEstablecimiento, int IdUsuario)
         {
-            if (msj.MensajeAcceso(E_Usuario.Rol))
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
              daE.BajaVacuna(IdEstablecimiento, IdUsuario);
             }

@@ -22,7 +22,7 @@ namespace BusinessRules
 
         public void AltaGasto(DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle, int IdUsuario)
         {
-            if (msj.MensajeAcceso(E_Usuario.Rol))
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
                 daC.AltaGasto(FechaGasto, IdTipoGasto, IdAnimal, IdEstablecimiento, Monto, Pagado, Detalle,  IdUsuario);
             }
@@ -30,7 +30,7 @@ namespace BusinessRules
 
         public void ModificarGasto(int IdGasto, DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle,  int IdUsuario)
         {
-            if (msj.MensajeAcceso(E_Usuario.Rol))
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
                 daC.ModificarGasto(IdGasto, FechaGasto, IdTipoGasto, IdAnimal, IdEstablecimiento, Monto, Pagado, Detalle, IdUsuario);
             }
@@ -38,7 +38,7 @@ namespace BusinessRules
 
         public void BajaGasto(int IdGasto, int IdUsuario)
         {
-            if (msj.MensajeAcceso(E_Usuario.Rol))
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
                 daC.BajaGasto(IdGasto, IdUsuario);
             }

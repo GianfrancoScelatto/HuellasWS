@@ -149,12 +149,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                     if (chkCasSi.Checked == true)
                     {
-                        brA.AltaAnimal(E_Usuario.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
+                        brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
                                                         comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date);
                     }
                     else
-                        brA.AltaAnimal(E_Usuario.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
+                        brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
                                                         Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date);
                     LimpiarForm();
@@ -204,7 +204,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             DialogResult preg = MessageBox.Show("¿Desea eliminar esta ficha médica?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (preg == DialogResult.OK)
             {
-                brFM.BajaFichaMedica(E_FichaMedica.IdFichaMedica, E_Usuario.IdRol);
+                brFM.BajaFichaMedica(E_FichaMedica.IdFichaMedica, E_UsuarioAcceso.IdRol);
             }
         }
 

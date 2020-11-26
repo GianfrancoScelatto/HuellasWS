@@ -26,9 +26,9 @@ namespace BusinessRules
         {
             ObjAnimal.ModificarAnimal(IdAnimal, IdPersona, TipoAnimal, LugarRescate, FotoIngreso, FotoAdopcion, NombreAnimal, Edad, Sexo, Castracion, ColorPelo, Peso, Comentario, Estado, FechaIngreso);
         }
-        public void BajaAnimal(int IdAnimal, int IdUsuario, int IdMovimiento, int EstadoAnimal, string Descripcion, bool Deshabilitado)
+        public void BajaAnimal(int IdAnimal, int IdUsuario)
         {
-            ObjAnimal.BajaAnimal(IdAnimal, IdUsuario, IdMovimiento, EstadoAnimal, Descripcion, Deshabilitado);
+            ObjAnimal.BajaAnimal(IdAnimal, IdUsuario);
         }
         public DataTable FiltrarAnimal(string Busqueda, string tipoBusqueda)
         {

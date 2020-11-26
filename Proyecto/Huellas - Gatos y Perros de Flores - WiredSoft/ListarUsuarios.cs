@@ -43,10 +43,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            E_Usuario.Editar = true;
+            E_UsuarioAcceso.Editar = true;
             Form Usuarios = new Usuarios();
             Usuarios.Show();
-            E_Usuario.Editar = false;
+            E_UsuarioAcceso.Editar = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -57,8 +57,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if (preg == DialogResult.OK)
                 {
-                    E_Usuario.IdUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
-                    brU.BajaUsuario(E_Usuario.IdUsuario);
+                    brU.BajaUsuario(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value), E_UsuarioAcceso.IdUsuario);
                     MostrarRegistroUsuarios();
                 }
             }

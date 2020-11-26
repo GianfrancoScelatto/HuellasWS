@@ -104,7 +104,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     try
                     {
                         brV.ModificarVacuna(E_Vacuna.IdVacuna, txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias,
-                        Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
+                        Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_UsuarioAcceso.IdUsuario);
 
                         Editar = false;
                     }
@@ -118,7 +118,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     try
                     {
                         brV.AltaVacuna(txtVacuna.Text, Convert.ToInt32(cmbEspecie.SelectedValue), dias, 
-                        Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_Usuario.IdUsuario);
+                        Convert.ToInt32(cmbRevacunacion.SelectedValue), descripcion, E_UsuarioAcceso.IdUsuario);
                     }
                     catch (Exception ex)
                     {

@@ -23,8 +23,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void MenuInicial_Load(object sender, EventArgs e)
         {
-            lklblUsuario.Text = E_Usuario.Nombre;
-            lblRol.Text = E_Usuario.Rol;
+            lklblUsuario.Text = E_UsuarioAcceso.Nombre;
+            lblRol.Text = E_UsuarioAcceso.Rol;
         }
 
         private void AbirFormHijo(Form FormHijo)
@@ -104,6 +104,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void btnHistorial_Click_1(object sender, EventArgs e)
         {
             AbirFormHijo(new ListarHistorial());
+        }
+
+        private void lklblUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            E_UsuarioAcceso.Editar = true;
+            Form Usuarios = new Usuarios();
+            Usuarios.Show();
+            E_UsuarioAcceso.Editar = false;
         }
     }
 }

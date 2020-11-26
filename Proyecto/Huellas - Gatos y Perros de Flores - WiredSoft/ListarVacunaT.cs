@@ -89,7 +89,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if (preg == DialogResult.OK)
                 {
-                    brV.BajaVacuna(E_Vacuna.IdVacuna, E_Usuario.IdUsuario);
+                    brV.BajaVacuna(E_Vacuna.IdVacuna, E_UsuarioAcceso.IdUsuario);
                     MostrarRegistroVacuna();
                 }
             }

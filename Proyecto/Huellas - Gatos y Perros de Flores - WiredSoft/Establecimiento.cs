@@ -69,7 +69,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 try
                 {
                     
-                    brE.ModifcarEstablecimiento(E_Establecimiento.IdEstablecimiento, Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text , Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_Usuario.IdUsuario);
+                    brE.ModifcarEstablecimiento(E_Establecimiento.IdEstablecimiento, Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text , Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_UsuarioAcceso.IdUsuario);
                 }
 
                 catch (Exception ex)
@@ -83,7 +83,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    brE.AltaEstablecimiento(Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_Usuario.IdUsuario);
+                    brE.AltaEstablecimiento(Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_UsuarioAcceso.IdUsuario);
                 }
 
 
