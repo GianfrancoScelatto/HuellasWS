@@ -127,7 +127,6 @@ C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarListaNegra.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarPersonas.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarAnimales.resources
-C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarEstablecimient.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarUsuarios.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarVacunaT.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Login.resources
@@ -163,3 +162,4 @@ C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Pr
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Costos.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarCostos.resources
 C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarHistorial.resources
+C:\Desarrollo\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Debug\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarEstablecimiento.resources

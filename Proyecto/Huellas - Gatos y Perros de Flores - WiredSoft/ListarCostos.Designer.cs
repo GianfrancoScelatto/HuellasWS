@@ -69,6 +69,7 @@
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnEliminar
             // 
@@ -82,6 +83,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -109,6 +111,7 @@
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtBuscar
             // 
@@ -153,6 +156,7 @@
             this.dgvListarCosto.Name = "dgvListarCosto";
             this.dgvListarCosto.Size = new System.Drawing.Size(996, 532);
             this.dgvListarCosto.TabIndex = 31;
+            this.dgvListarCosto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListarCosto_CellFormatting);
             // 
             // ListarCostos
             // 
@@ -166,6 +170,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarCostos";
             this.Text = "ListarCostos";
+            this.Load += new System.EventHandler(this.ListarCostos_Load);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCosto)).EndInit();

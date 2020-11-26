@@ -19,7 +19,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_ListarCosto";
+                    command.CommandText = "prc_ListarGasto";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);
@@ -29,7 +29,7 @@ namespace DataAccess
             }
         }
 
-        public void AltaGasto (DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, string Detalle, decimal Pagado, int IdUsuario)
+        public void AltaGasto (DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle,  int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -52,7 +52,7 @@ namespace DataAccess
             }
         }
 
-        public void ModificarGasto (int IdGasto, DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, string Detalle, decimal Pagado, int IdUsuario)
+        public void ModificarGasto (int IdGasto, DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -143,7 +143,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_ComboTipoEstablecimiento";
+                    command.CommandText = "prc_ComboTEstablecimiento";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);

@@ -20,19 +20,19 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void AltaGasto(DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, string Detalle, decimal Pagado, int IdUsuario)
+        public void AltaGasto(DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle, int IdUsuario)
         {
             if (msj.MensajeAcceso(E_Usuario.Rol))
             {
-                daC.AltaGasto(FechaGasto, IdTipoGasto, IdAnimal, IdEstablecimiento, Monto, Detalle, Pagado, IdUsuario);
+                daC.AltaGasto(FechaGasto, IdTipoGasto, IdAnimal, IdEstablecimiento, Monto, Pagado, Detalle,  IdUsuario);
             }
         }
 
-        public void ModificarGasto(int IdGasto, DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, string Detalle, decimal Pagado, int IdUsuario)
+        public void ModificarGasto(int IdGasto, DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle,  int IdUsuario)
         {
             if (msj.MensajeAcceso(E_Usuario.Rol))
             {
-                daC.ModificarGasto(IdGasto, FechaGasto, IdTipoGasto, IdAnimal, IdEstablecimiento, Monto, Detalle, Pagado, IdUsuario);
+                daC.ModificarGasto(IdGasto, FechaGasto, IdTipoGasto, IdAnimal, IdEstablecimiento, Monto, Pagado, Detalle, IdUsuario);
             }
         }
 

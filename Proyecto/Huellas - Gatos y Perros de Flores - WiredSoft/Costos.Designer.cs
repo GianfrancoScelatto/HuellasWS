@@ -28,40 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmbTipoGasto = new System.Windows.Forms.ComboBox();
+            this.dtpFechaGasto = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbEstablecimiento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtComentario = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cmbAnimal = new System.Windows.Forms.ComboBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.txtPagado = new System.Windows.Forms.TextBox();
+            this.btnCancelarDatos = new System.Windows.Forms.Button();
+            this.btnGuardarDatos = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(288, 510);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(140, 40);
-            this.btnGuardar.TabIndex = 92;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -96,20 +82,20 @@
             this.label3.TabIndex = 93;
             this.label3.Text = "Tipo de gasto";
             // 
-            // comboBox1
+            // cmbTipoGasto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(189, 149);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 94;
+            this.cmbTipoGasto.FormattingEnabled = true;
+            this.cmbTipoGasto.Location = new System.Drawing.Point(189, 149);
+            this.cmbTipoGasto.Name = "cmbTipoGasto";
+            this.cmbTipoGasto.Size = new System.Drawing.Size(200, 21);
+            this.cmbTipoGasto.TabIndex = 94;
             // 
-            // dateTimePicker1
+            // dtpFechaGasto
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(189, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 95;
+            this.dtpFechaGasto.Location = new System.Drawing.Point(189, 105);
+            this.dtpFechaGasto.Name = "dtpFechaGasto";
+            this.dtpFechaGasto.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaGasto.TabIndex = 95;
             // 
             // label4
             // 
@@ -122,13 +108,13 @@
             this.label4.TabIndex = 96;
             this.label4.Text = "Establecimiento";
             // 
-            // comboBox2
+            // cmbEstablecimiento
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(189, 206);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 21);
-            this.comboBox2.TabIndex = 97;
+            this.cmbEstablecimiento.FormattingEnabled = true;
+            this.cmbEstablecimiento.Location = new System.Drawing.Point(189, 206);
+            this.cmbEstablecimiento.Name = "cmbEstablecimiento";
+            this.cmbEstablecimiento.Size = new System.Drawing.Size(200, 21);
+            this.cmbEstablecimiento.TabIndex = 97;
             // 
             // label5
             // 
@@ -184,35 +170,76 @@
             this.label9.TabIndex = 102;
             this.label9.Text = "Pagado";
             // 
-            // comboBox3
+            // cmbAnimal
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(189, 254);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 21);
-            this.comboBox3.TabIndex = 103;
+            this.cmbAnimal.FormattingEnabled = true;
+            this.cmbAnimal.Location = new System.Drawing.Point(189, 254);
+            this.cmbAnimal.Name = "cmbAnimal";
+            this.cmbAnimal.Size = new System.Drawing.Size(200, 21);
+            this.cmbAnimal.TabIndex = 103;
             // 
-            // textBox1
+            // txtMonto
             // 
-            this.textBox1.Location = new System.Drawing.Point(189, 302);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 104;
+            this.txtMonto.Location = new System.Drawing.Point(189, 302);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(200, 20);
+            this.txtMonto.TabIndex = 104;
             // 
-            // txtComentario
+            // txtDetalle
             // 
-            this.txtComentario.Location = new System.Drawing.Point(189, 390);
-            this.txtComentario.Multiline = true;
-            this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(200, 62);
-            this.txtComentario.TabIndex = 110;
+            this.txtDetalle.Location = new System.Drawing.Point(189, 390);
+            this.txtDetalle.Multiline = true;
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.Size = new System.Drawing.Size(200, 62);
+            this.txtDetalle.TabIndex = 110;
             // 
-            // textBox2
+            // txtPagado
             // 
-            this.textBox2.Location = new System.Drawing.Point(189, 344);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 111;
+            this.txtPagado.Location = new System.Drawing.Point(189, 344);
+            this.txtPagado.Name = "txtPagado";
+            this.txtPagado.Size = new System.Drawing.Size(200, 20);
+            this.txtPagado.TabIndex = 111;
+            // 
+            // btnCancelarDatos
+            // 
+            this.btnCancelarDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelarDatos.BackColor = System.Drawing.Color.White;
+            this.btnCancelarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarDatos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancelarDatos.Location = new System.Drawing.Point(232, 506);
+            this.btnCancelarDatos.Name = "btnCancelarDatos";
+            this.btnCancelarDatos.Size = new System.Drawing.Size(125, 44);
+            this.btnCancelarDatos.TabIndex = 113;
+            this.btnCancelarDatos.Text = "Cancelar";
+            this.btnCancelarDatos.UseVisualStyleBackColor = false;
+            this.btnCancelarDatos.Click += new System.EventHandler(this.btnCancelarDatos_Click);
+            // 
+            // btnGuardarDatos
+            // 
+            this.btnGuardarDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardarDatos.BackColor = System.Drawing.Color.White;
+            this.btnGuardarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarDatos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGuardarDatos.Location = new System.Drawing.Point(87, 506);
+            this.btnGuardarDatos.Name = "btnGuardarDatos";
+            this.btnGuardarDatos.Size = new System.Drawing.Size(125, 44);
+            this.btnGuardarDatos.TabIndex = 112;
+            this.btnGuardarDatos.Text = "Guardar";
+            this.btnGuardarDatos.UseVisualStyleBackColor = false;
+            this.btnGuardarDatos.Click += new System.EventHandler(this.btnGuardarDatos_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(265, 55);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(15, 21);
+            this.lblID.TabIndex = 114;
+            this.lblID.Text = "-";
             // 
             // Costos
             // 
@@ -220,48 +247,54 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(440, 562);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtComentario);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.btnCancelarDatos);
+            this.Controls.Add(this.btnGuardarDatos);
+            this.Controls.Add(this.txtPagado);
+            this.Controls.Add(this.txtDetalle);
+            this.Controls.Add(this.txtMonto);
+            this.Controls.Add(this.cmbAnimal);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbEstablecimiento);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dtpFechaGasto);
+            this.Controls.Add(this.cmbTipoGasto);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Costos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Costos";
+            this.Load += new System.EventHandler(this.Costos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cmbTipoGasto;
+        private System.Windows.Forms.DateTimePicker dtpFechaGasto;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbEstablecimiento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtComentario;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cmbAnimal;
+        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.TextBox txtPagado;
+        private System.Windows.Forms.Button btnCancelarDatos;
+        private System.Windows.Forms.Button btnGuardarDatos;
+        private System.Windows.Forms.Label lblID;
     }
 }
