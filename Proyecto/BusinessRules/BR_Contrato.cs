@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entities;
 using System.Data;
 using DataAccess;
+
 namespace BusinessRules
 {
     public class BR_Contrato
@@ -19,6 +20,21 @@ namespace BusinessRules
             tabla = daC.ListarContrato();
             return tabla;
         }
+        public void AltaContrato(int IdAdoptante, int IdAnimal, string NuevoNombre, DateTime FechaAdopcion, int IdUsuario)
+        {
+            if (msj.MensajeAcceso(E_Usuario.Rol))
+            {
+                daC.AltaContrato(IdAdoptante, IdAnimal, NuevoNombre, FechaAdopcion, IdUsuario);
+            }
 
+        }
+
+        public void BajaContrato(int IdContrato, int IdUsuario)
+        {
+            if (msj.MensajeAcceso(E_Usuario.Rol))
+            {
+                daC.BajaContrato(IdContrato, IdUsuario);
+            }
+        }
     }
 }
