@@ -24,12 +24,18 @@ namespace BusinessRules
 
         public void AltaEstablecimiento(int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
         {
-            daE.AltaEstablecimiento(TipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
+            {
+                daE.AltaEstablecimiento(TipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
+            }
         }
 
         public void ModifcarEstablecimiento(int IdEstablecimiento, int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
         {
-            daE.ModificarEstablecimiento(IdEstablecimiento, TipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
+            {
+                daE.ModificarEstablecimiento(IdEstablecimiento, TipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
+            }
         }
 
         public void BajaEstablecimiento(int IdEstablecimiento, int IdUsuario)

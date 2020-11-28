@@ -48,6 +48,7 @@
             this.IdEstablecimiento = new System.Windows.Forms.Label();
             this.lblD = new System.Windows.Forms.Label();
             this.chkInternacion = new System.Windows.Forms.CheckBox();
+            this.chkNoInternacion = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblInternacion
@@ -263,12 +264,25 @@
             this.chkInternacion.Text = "Si";
             this.chkInternacion.UseVisualStyleBackColor = true;
             // 
+            // chkNoInternacion
+            // 
+            this.chkNoInternacion.AutoSize = true;
+            this.chkNoInternacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkNoInternacion.ForeColor = System.Drawing.Color.White;
+            this.chkNoInternacion.Location = new System.Drawing.Point(286, 346);
+            this.chkNoInternacion.Name = "chkNoInternacion";
+            this.chkNoInternacion.Size = new System.Drawing.Size(46, 21);
+            this.chkNoInternacion.TabIndex = 95;
+            this.chkNoInternacion.Text = "No";
+            this.chkNoInternacion.UseVisualStyleBackColor = true;
+            // 
             // Establecimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(462, 495);
+            this.Controls.Add(this.chkNoInternacion);
             this.Controls.Add(this.chkInternacion);
             this.Controls.Add(this.lblD);
             this.Controls.Add(this.cmbEstablecimiento);
@@ -321,5 +335,6 @@
         private System.Windows.Forms.Label IdEstablecimiento;
         private System.Windows.Forms.Label lblD;
         private System.Windows.Forms.CheckBox chkInternacion;
+        private System.Windows.Forms.CheckBox chkNoInternacion;
     }
 }
