@@ -12,7 +12,7 @@ namespace Entities
         public static int IdAdoptante { get; set; }
         public static int IdAnimal{ get; set; }
         public static string NuevoNombre { get; set; }
-        //public static date FechaAdopcion { get; set; }
+        public static DateTime FechaAdopcion { get; set; }
         public static bool Deshabilitao { get; set; }
     }
 }

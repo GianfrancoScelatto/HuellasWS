@@ -115,7 +115,6 @@ namespace DataAccess
             }
         
         }
-
         public DataTable ListarTiempo()
         {
             using (var connection = GetConnection())
@@ -133,7 +132,6 @@ namespace DataAccess
                 }
             }
         }
-
         public DataTable ListarEspecie()
         {
             using (var connection = GetConnection())
