@@ -26,10 +26,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarCostos_Load(object sender, EventArgs e)
         {
             MostrarCostos();
-            //dgvCosto.Columns["IdEstablecimiento"].Visible = false;
-            //dgvCosto.Columns["IdTipoGasto"].Visible = false;
+            dgvCosto.Columns["IdEstablecimiento"].Visible = false;
+            dgvCosto.Columns["IdTipoGasto"].Visible = false;
 
-            //VER ESTO PORQUE ACA SE ROMPE 
 
         }
 
@@ -105,7 +104,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Costos.Monto = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Monto"].Value.ToString());
             E_Costos.Detalle = dgvCosto.CurrentRow.Cells["Detalle"].Value.ToString();
             E_Costos.Pagado = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Pagado"].Value.ToString());
-
 
         }
     }

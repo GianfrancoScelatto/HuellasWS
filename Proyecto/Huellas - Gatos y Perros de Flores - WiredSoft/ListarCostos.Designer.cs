@@ -37,10 +37,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvCosto = new System.Windows.Forms.DataGridView();
-            this.dgvListarCosto = new System.Windows.Forms.DataGridView();
+            this.dgvListarGasto = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCosto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarCosto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarGasto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -148,15 +148,15 @@
             this.dgvCosto.Size = new System.Drawing.Size(996, 532);
             this.dgvCosto.TabIndex = 30;
             // 
-            // dgvListarCosto
+            // dgvListarGasto
             // 
-            this.dgvListarCosto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarCosto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListarCosto.Location = new System.Drawing.Point(0, 55);
-            this.dgvListarCosto.Name = "dgvListarCosto";
-            this.dgvListarCosto.Size = new System.Drawing.Size(996, 532);
-            this.dgvListarCosto.TabIndex = 31;
-            this.dgvListarCosto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListarCosto_CellFormatting);
+            this.dgvListarGasto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarGasto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListarGasto.Location = new System.Drawing.Point(0, 55);
+            this.dgvListarGasto.Name = "dgvListarGasto";
+            this.dgvListarGasto.Size = new System.Drawing.Size(996, 532);
+            this.dgvListarGasto.TabIndex = 31;
+            this.dgvListarGasto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListarCosto_CellFormatting);
             // 
             // ListarCostos
             // 
@@ -164,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(996, 587);
-            this.Controls.Add(this.dgvListarCosto);
+            this.Controls.Add(this.dgvListarGasto);
             this.Controls.Add(this.dgvCosto);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -174,7 +174,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCosto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarCosto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarGasto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,6 +189,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvCosto;
-        private System.Windows.Forms.DataGridView dgvListarCosto;
+        private System.Windows.Forms.DataGridView dgvListarGasto;
     }
 }

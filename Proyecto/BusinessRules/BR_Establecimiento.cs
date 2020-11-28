@@ -22,19 +22,19 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void AltaEstablecimiento(int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
+        public void AltaEstablecimiento(int IdTipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
-                daE.AltaEstablecimiento(TipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
+                daE.AltaEstablecimiento(IdTipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
             }
         }
 
-        public void ModifcarEstablecimiento(int IdEstablecimiento, int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
+        public void ModifcarEstablecimiento(int IdEstablecimiento, int IdTipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
-                daE.ModificarEstablecimiento(IdEstablecimiento, TipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
+                daE.ModificarEstablecimiento(IdEstablecimiento, IdTipoEstablecimiento, Nombre, HorarioAtencion, Localidad, CodigoPostal, Calle, Altura, Internacion, IdUsuario);
             }
         }
 

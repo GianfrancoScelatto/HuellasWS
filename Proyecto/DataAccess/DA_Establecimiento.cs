@@ -33,7 +33,7 @@ namespace DataAccess
 
 		//Alta de Establecimiento
 
-		public void AltaEstablecimiento(int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
+		public void AltaEstablecimiento(int IdTipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
 		{
 			using (var connection = GetConnection())
 			{
@@ -41,7 +41,7 @@ namespace DataAccess
 				using (var command = new SqlCommand())
 				{
 					command.Connection = connection;
-					command.Parameters.AddWithValue("@TipoEstablecimiento", TipoEstablecimiento);
+					command.Parameters.AddWithValue("@IdTipoEstablecimiento", IdTipoEstablecimiento);
 					command.Parameters.AddWithValue("@Nombre", Nombre);
 					command.Parameters.AddWithValue("@HorarioAtencion", HorarioAtencion);
 					command.Parameters.AddWithValue("@Localidad", Localidad);
@@ -59,7 +59,7 @@ namespace DataAccess
 
 
 		//Modificacion 
-		public void  ModificarEstablecimiento(int IdEstablecimiento, int TipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
+		public void  ModificarEstablecimiento(int IdEstablecimiento, int IdTipoEstablecimiento, string Nombre, string HorarioAtencion, string Localidad, string CodigoPostal, string Calle, int Altura, bool Internacion, int IdUsuario)
 		{
 			using (var connection = GetConnection())
 			{
@@ -68,7 +68,7 @@ namespace DataAccess
 				{
 					command.Connection = connection;
 					command.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
-					command.Parameters.AddWithValue("@TipoEstablecimiento", TipoEstablecimiento);
+					command.Parameters.AddWithValue("@IdTipoEstablecimiento", IdTipoEstablecimiento);
 					command.Parameters.AddWithValue("@Nombre", Nombre);
 					command.Parameters.AddWithValue("@HorarioAtencion", HorarioAtencion);
 					command.Parameters.AddWithValue("@Localidad", Localidad);
@@ -77,7 +77,7 @@ namespace DataAccess
 					command.Parameters.AddWithValue("@Altura", Altura);
 					command.Parameters.AddWithValue("@Internacion", Internacion);
 					command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-					command.CommandText = "prc_BajaEstablecimiento";
+					command.CommandText = "prc_ModificarEstablecimiento";
 					command.CommandType = CommandType.StoredProcedure;
 					command.ExecuteNonQuery();
 				}
