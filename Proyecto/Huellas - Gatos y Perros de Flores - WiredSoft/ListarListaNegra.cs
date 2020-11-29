@@ -26,11 +26,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form ListaNegra = new ListaNegra();
-            ListaNegra.Show();
-        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
