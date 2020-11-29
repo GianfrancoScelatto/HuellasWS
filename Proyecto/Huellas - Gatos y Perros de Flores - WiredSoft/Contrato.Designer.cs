@@ -34,9 +34,7 @@
             this.cmbPersona = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblNuevoNombre = new System.Windows.Forms.Label();
-            this.txtNNombre = new System.Windows.Forms.TextBox();
-            this.dtpFechaAdopcion = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtNuevoNombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -79,14 +77,12 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardar.BackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(152, 279);
+            this.btnGuardar.Location = new System.Drawing.Point(148, 245);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(170, 36);
             this.btnGuardar.TabIndex = 89;
@@ -105,40 +101,20 @@
             this.lblNuevoNombre.TabIndex = 90;
             this.lblNuevoNombre.Text = "Nuevo nombre";
             // 
-            // txtNNombre
+            // txtNuevoNombre
             // 
-            this.txtNNombre.Location = new System.Drawing.Point(261, 159);
-            this.txtNNombre.Name = "txtNNombre";
-            this.txtNNombre.Size = new System.Drawing.Size(190, 20);
-            this.txtNNombre.TabIndex = 91;
-            // 
-            // dtpFechaAdopcion
-            // 
-            this.dtpFechaAdopcion.Location = new System.Drawing.Point(261, 224);
-            this.dtpFechaAdopcion.Name = "dtpFechaAdopcion";
-            this.dtpFechaAdopcion.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaAdopcion.TabIndex = 92;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 21);
-            this.label3.TabIndex = 93;
-            this.label3.Text = "Fecha de Adopcion";
+            this.txtNuevoNombre.Location = new System.Drawing.Point(261, 159);
+            this.txtNuevoNombre.Name = "txtNuevoNombre";
+            this.txtNuevoNombre.Size = new System.Drawing.Size(190, 20);
+            this.txtNuevoNombre.TabIndex = 91;
             // 
             // Contrato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(545, 343);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtpFechaAdopcion);
-            this.Controls.Add(this.txtNNombre);
+            this.ClientSize = new System.Drawing.Size(481, 325);
+            this.Controls.Add(this.txtNuevoNombre);
             this.Controls.Add(this.lblNuevoNombre);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cmbPersona);
@@ -147,6 +123,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Contrato";
             this.Text = "A";
+            this.Load += new System.EventHandler(this.Contrato_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,8 +137,6 @@
         private System.Windows.Forms.ComboBox cmbPersona;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblNuevoNombre;
-        private System.Windows.Forms.TextBox txtNNombre;
-        private System.Windows.Forms.DateTimePicker dtpFechaAdopcion;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNuevoNombre;
     }
 }

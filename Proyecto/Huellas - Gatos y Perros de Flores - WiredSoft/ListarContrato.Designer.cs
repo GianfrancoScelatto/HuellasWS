@@ -141,6 +141,7 @@
             this.dgvListarContrato.Name = "dgvListarContrato";
             this.dgvListarContrato.Size = new System.Drawing.Size(1083, 615);
             this.dgvListarContrato.TabIndex = 30;
+            this.dgvListarContrato.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListarContrato_CellFormatting);
             // 
             // ListarContrato
             // 
