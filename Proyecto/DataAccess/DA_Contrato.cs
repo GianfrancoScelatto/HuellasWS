@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaContrato(int IdAdoptante, int IdAnimal, string NuevoNombre, int IdUsuario)
+        public void AltaContrato(int IdAdoptante, int IdAnimal, string NuevoNombre, DateTime FechaAdopcion, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -40,6 +40,7 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdAdoptante", IdAdoptante);
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
                     command.Parameters.AddWithValue("@NuevoNombre", NuevoNombre);
+                    command.Parameters.AddWithValue("@FechaAdopcion", FechaAdopcion);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_AltaContrato";
                     command.CommandType = CommandType.StoredProcedure;

@@ -78,14 +78,5 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             exportarexcel.Visible = true;
         }
-
-        private void dgvListarContrato_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            E_Contrato.IdAdoptante = Convert.ToInt32(dgvContrato.CurrentRow.Cells["Nombre"].Value);
-            E_Animal.NombreAnimal = dgvContrato.CurrentRow.Cells["NombreAnimal"].Value.ToString();
-            E_Contrato.IdAnimal = Convert.ToInt32(dgvContrato.CurrentRow.Cells["IdAnimal"].Value);
-            E_Contrato.NuevoNombre = dgvContrato.CurrentRow.Cells["NuevoNombre"].Value.ToString();
-            E_Contrato.FechaAdopcion = Convert.ToDateTime(dgvContrato.CurrentRow.Cells["FechaAdopcion"].Value).Date;
-        }
     }
 }
