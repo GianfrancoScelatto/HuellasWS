@@ -18,6 +18,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         BR_Animal brA = new BR_Animal();
         BR_Persona brP = new BR_Persona();
         BR_Contrato brC = new BR_Contrato();
+        E_Mensaje msj = new E_Mensaje();
+        
+
         public Contrato()
         {
             InitializeComponent();
@@ -25,7 +28,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void CargarCombos()
         {
-            cmbAnimal.DataSource = brA.ListarAnimal();
+            cmbAnimal.DataSource = brA.ComboAnimal();
             cmbAnimal.DisplayMember = "NombreAnimal";
             cmbAnimal.ValueMember = "IdAnimal";
 
@@ -38,11 +41,32 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void Contrato_Load(object sender, EventArgs e)
         {
             CargarCombos();
+            cmbAnimal.SelectedIndex = 0;
+            cmbPersona.SelectedIndex = 0;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(txtNuevoNombre.Text))
+            {
+                msj.MensajeAlerta("Hay espacios vacíos.");
+            }
+            else
+            {
+                try
+                {
+                 brC.AltaContrato(Convert.ToInt32(cmbPersona.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), txtNuevoNombre.Text, E_UsuarioAcceso.IdUsuario);
+                }
 
+                catch (Exception ex)
+                {
+                 msj.MensajeError("Ha ocurrido un error" + ex);
+                }
+
+            }
+
+            
+            
         }
     }
 }
