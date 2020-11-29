@@ -26,10 +26,10 @@ namespace DataAccess
                     connection.Close();
                     return tabla;
 
-                }    
+                }
             }
         }
-        public void AltaListaNegra(int IdListaNegra, string Nombre, string Apellido, int TelefonoFijo, int Celular, string CorreoElectronico, string Direccion, string Localidad, string Provincia, string Motivo)
+        public void AltaListaNegra(int IdListaNegra, string Motivo)
         {
             using (var connection = GetConnection())
             {
@@ -38,14 +38,6 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdListaNegra", IdListaNegra);
-                    command.Parameters.AddWithValue("@Nombre", Nombre);
-                    command.Parameters.AddWithValue("@Apellido", Apellido);
-                    command.Parameters.AddWithValue("@TelefonoFijo", TelefonoFijo);
-                    command.Parameters.AddWithValue("@Celular",Celular);
-                    command.Parameters.AddWithValue("@CorreoElectronico", CorreoElectronico);
-                    command.Parameters.AddWithValue("@Direccion", Direccion);
-                    command.Parameters.AddWithValue("@Localidad",Localidad);
-                    command.Parameters.AddWithValue("@Provincia", Provincia);
                     command.Parameters.AddWithValue("@Motivo", Motivo);
                     command.CommandText = "prc_AltaListaNegra";
                     command.CommandType = CommandType.StoredProcedure;
@@ -53,31 +45,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarListaNegra(int IdListaNegra, string Nombre, string Apellido, int TelefonoFijo, int Celular, string CorreoElectronico, string Direccion, string Localidad, string Provincia, string Motivo)
-        {
-            using (var connection = GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdListaNegra", IdListaNegra);
-                    command.Parameters.AddWithValue("@Nombre", Nombre);
-                    command.Parameters.AddWithValue("@Apellido", Apellido);
-                    command.Parameters.AddWithValue("@TelefonoFijo", TelefonoFijo);
-                    command.Parameters.AddWithValue("@Celular", Celular);
-                    command.Parameters.AddWithValue("@CorreoElectronico", CorreoElectronico);
-                    command.Parameters.AddWithValue("@Direccion", Direccion);
-                    command.Parameters.AddWithValue("@Localidad", Localidad);
-                    command.Parameters.AddWithValue("@Provincia", Provincia);
-                    command.Parameters.AddWithValue("@Motivo", Motivo);
-                    command.CommandText = "prc_ModificarListaNegra";
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
-        public void BajaListaNegra(int IdListaNegra, int IdUsuario)
+        public void BajaListaNegra(int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -86,7 +54,6 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdListaNegra", IdListaNegra);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_BajaListaNegra";
                     command.CommandType = CommandType.StoredProcedure;
@@ -114,6 +81,22 @@ namespace DataAccess
                 }
             }
         }
-
+        public DataTable ComboAnimal()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboPersona", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
     }
 }
