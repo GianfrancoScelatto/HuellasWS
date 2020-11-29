@@ -1,6 +1,6 @@
 ﻿namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    partial class ListarCostos
+    partial class ListarCosto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarCostos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarCosto));
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -37,14 +37,13 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvCosto = new System.Windows.Forms.DataGridView();
-            this.dgvListarGasto = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCosto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarGasto)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
             // 
+            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(42)))));
             this.panelBotones.Controls.Add(this.btnExportar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
@@ -54,8 +53,8 @@
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(996, 55);
-            this.panelBotones.TabIndex = 29;
+            this.panelBotones.Size = new System.Drawing.Size(980, 55);
+            this.panelBotones.TabIndex = 30;
             // 
             // btnExportar
             // 
@@ -64,7 +63,7 @@
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(793, 6);
+            this.btnExportar.Location = new System.Drawing.Point(777, 6);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -78,7 +77,7 @@
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(939, 6);
+            this.btnEliminar.Location = new System.Drawing.Point(923, 6);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
@@ -92,7 +91,7 @@
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(847, 6);
+            this.btnNuevo.Location = new System.Drawing.Point(831, 6);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(40, 40);
             this.btnNuevo.TabIndex = 45;
@@ -106,7 +105,7 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(893, 6);
+            this.btnModificar.Location = new System.Drawing.Point(877, 6);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 44;
@@ -133,48 +132,29 @@
             // 
             // dgvCosto
             // 
-            this.dgvCosto.AllowUserToAddRows = false;
-            this.dgvCosto.AllowUserToDeleteRows = false;
-            this.dgvCosto.AllowUserToResizeColumns = false;
-            this.dgvCosto.AllowUserToResizeRows = false;
-            this.dgvCosto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCosto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.dgvCosto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCosto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCosto.Location = new System.Drawing.Point(0, 55);
             this.dgvCosto.Name = "dgvCosto";
-            this.dgvCosto.ReadOnly = true;
-            this.dgvCosto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCosto.Size = new System.Drawing.Size(996, 532);
-            this.dgvCosto.TabIndex = 30;
+            this.dgvCosto.Size = new System.Drawing.Size(980, 493);
+            this.dgvCosto.TabIndex = 31;
+            this.dgvCosto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCosto_CellFormatting);
             // 
-            // dgvListarGasto
-            // 
-            this.dgvListarGasto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarGasto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListarGasto.Location = new System.Drawing.Point(0, 55);
-            this.dgvListarGasto.Name = "dgvListarGasto";
-            this.dgvListarGasto.Size = new System.Drawing.Size(996, 532);
-            this.dgvListarGasto.TabIndex = 31;
-            this.dgvListarGasto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListarCosto_CellFormatting);
-            // 
-            // ListarCostos
+            // ListarCosto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(996, 587);
-            this.Controls.Add(this.dgvListarGasto);
+            this.ClientSize = new System.Drawing.Size(980, 548);
             this.Controls.Add(this.dgvCosto);
             this.Controls.Add(this.panelBotones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ListarCostos";
-            this.Text = "ListarCostos";
+            this.Name = "ListarCosto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ListarCosto";
             this.Load += new System.EventHandler(this.ListarCostos_Load);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCosto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarGasto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,6 +169,5 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvCosto;
-        private System.Windows.Forms.DataGridView dgvListarGasto;
     }
 }

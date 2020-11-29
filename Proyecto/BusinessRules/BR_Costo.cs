@@ -13,12 +13,13 @@ namespace BusinessRules
         DA_Costo daC = new DA_Costo();
         E_Mensaje msj = new E_Mensaje();
 
-        public DataTable MostrarCosto()
+        public DataTable MostrarCostos()
         {
             DataTable tabla = new DataTable();
-            tabla = daC.ListarCosto();
+            tabla = daC.ListarCostos();
             return tabla;
         }
+
 
         public void AltaGasto(DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle, int IdUsuario)
         {
@@ -35,8 +36,8 @@ namespace BusinessRules
                 daC.ModificarGasto(IdGasto, FechaGasto, IdTipoGasto, IdAnimal, IdEstablecimiento, Monto, Pagado, Detalle, IdUsuario);
             }
         }
-
-        public void BajaGasto(int IdGasto, int IdUsuario)
+        
+        public void BajaGasto (int IdGasto, int IdUsuario)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {

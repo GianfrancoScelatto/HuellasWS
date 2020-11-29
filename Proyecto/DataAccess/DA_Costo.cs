@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class DA_Costo : DA_Connection
     {
-        public DataTable ListarCosto()
+        public DataTable ListarCostos()
         {
             using (var connection = GetConnection())
             {
@@ -28,6 +28,7 @@ namespace DataAccess
                 }
             }
         }
+
 
         public void AltaGasto (DateTime FechaGasto, int IdTipoGasto, int IdAnimal, int IdEstablecimiento, decimal Monto, decimal Pagado, string Detalle,  int IdUsuario)
         {

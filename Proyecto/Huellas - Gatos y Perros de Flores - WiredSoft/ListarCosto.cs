@@ -11,25 +11,24 @@ using Entities;
 using BusinessRules;
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarCostos : Form
+    public partial class ListarCosto : Form
     {
         BR_Costo brC = new BR_Costo();
         E_Mensaje msj = new E_Mensaje();
-        public ListarCostos()
+        public ListarCosto()
         {
             InitializeComponent();
         }
-        public void MostrarCostos()
+
+        public void MostrarGastos()
         {
-            dgvCosto.DataSource = brC.MostrarCosto();
+            dgvCosto.DataSource = brC.MostrarCostos();
         }
         private void ListarCostos_Load(object sender, EventArgs e)
         {
-            MostrarCostos();
+            MostrarGastos();
             dgvCosto.Columns["IdEstablecimiento"].Visible = false;
             dgvCosto.Columns["IdTipoGasto"].Visible = false;
-
-
         }
 
         public void ExportarDatos(DataGridView DatoListado)
@@ -57,6 +56,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         }
 
 
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            ExportarDatos(dgvCosto);
+        }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Form Gasto = new Costos();
@@ -75,12 +79,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (dgvCosto.SelectedRows.Count > 0)
             {
-                DialogResult preg = MessageBox.Show("¿Desea eliminar esta vacuna?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult preg = MessageBox.Show("¿Desea eliminar esta gasto?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (preg == DialogResult.OK)
                 {
                     brC.BajaGasto(E_Costos.IdGasto, E_UsuarioAcceso.IdUsuario);
-                    MostrarCostos();
+                    MostrarGastos();
                 }
             }
             else
@@ -89,22 +93,25 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
-        private void btnExportar_Click(object sender, EventArgs e)
-        {
-            ExportarDatos(dgvCosto);
-        }
-
-        private void dgvListarCosto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvCosto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             E_Costos.IdGasto = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdGasto"].Value);
             E_Costos.FechaGasto = Convert.ToDateTime(dgvCosto.CurrentRow.Cells["FechaGasto"].Value).Date;
-            E_Costos.IdTipoGasto = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdTipoGasto"].Value);
+            E_Costos.IdTipoGasto = Convert.ToInt32(dgvCosto.CurrentRow.Cells["TipoGasto"].Value);
             E_Costos.IdEstablecimiento = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdEstablecimiento"].Value);
             E_Costos.IdAnimal = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdAnimal"].Value);
             E_Costos.Monto = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Monto"].Value.ToString());
             E_Costos.Detalle = dgvCosto.CurrentRow.Cells["Detalle"].Value.ToString();
             E_Costos.Pagado = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Pagado"].Value.ToString());
 
+            //VER PORQUE SE ROMPE ACA
         }
+
+
+
+
+
+        //}
+
     }
 }

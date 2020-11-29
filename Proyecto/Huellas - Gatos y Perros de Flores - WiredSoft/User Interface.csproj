@@ -78,11 +78,11 @@
     <Compile Include="FichaMedica.Designer.cs">
       <DependentUpon>FichaMedica.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarCostos.cs">
+    <Compile Include="ListarCosto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarCostos.Designer.cs">
-      <DependentUpon>ListarCostos.cs</DependentUpon>
+    <Compile Include="ListarCosto.Designer.cs">
+      <DependentUpon>ListarCosto.cs</DependentUpon>
     </Compile>
     <Compile Include="ListarHistorial.cs">
       <SubType>Form</SubType>
@@ -224,8 +224,8 @@
     <EmbeddedResource Include="ListarContrato.resx">
       <DependentUpon>ListarContrato.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarCostos.resx">
-      <DependentUpon>ListarCostos.cs</DependentUpon>
+    <EmbeddedResource Include="ListarCosto.resx">
+      <DependentUpon>ListarCosto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarFichaMedica.resx">
       <DependentUpon>ListarFichaMedica.cs</DependentUpon>
