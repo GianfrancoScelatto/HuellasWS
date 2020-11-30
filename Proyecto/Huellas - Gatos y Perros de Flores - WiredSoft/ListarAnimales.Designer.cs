@@ -94,6 +94,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -236,6 +237,7 @@
             this.dgvMascotas.EnableHeadersVisualStyles = false;
             this.dgvMascotas.GridColor = System.Drawing.Color.Snow;
             this.dgvMascotas.Location = new System.Drawing.Point(0, 6);
+            this.dgvMascotas.MultiSelect = false;
             this.dgvMascotas.Name = "dgvMascotas";
             this.dgvMascotas.ReadOnly = true;
             this.dgvMascotas.RowHeadersWidth = 51;
@@ -248,7 +250,7 @@
             this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMascotas.Size = new System.Drawing.Size(1386, 609);
             this.dgvMascotas.TabIndex = 27;
-            this.dgvMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMascotas_CellContentClick);
+            this.dgvMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMascotas_CellContentClick);
             // 
             // ListarAnimales
             // 

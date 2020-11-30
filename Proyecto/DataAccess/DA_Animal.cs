@@ -98,7 +98,7 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
-                    command.Parameters.AddWithValue("@Id_Usuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_BajaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
