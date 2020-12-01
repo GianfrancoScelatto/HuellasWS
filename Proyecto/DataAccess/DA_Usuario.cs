@@ -50,7 +50,7 @@ namespace DataAccess
             }
         }
 
-        public void AltaUsuario(string Usuario, string Nombre, string Apellido, string Dni, int Telefono, int IdPregunta, string Respuesta, string Contraseña, int IdRol)
+        public void AltaUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono, int IdPregunta, string Respuesta, string Contraseña, int IdRol)
         {
             using (var connection = GetConnection())
             {
@@ -60,14 +60,15 @@ namespace DataAccess
                     command.Connection = connection;
                     command.CommandText = "prc_AltaUsuario";
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Usuario", Usuario);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@NombreUsuario", Usuario);
                     command.Parameters.AddWithValue("@Nombre", Nombre);
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Dni", Dni);
                     command.Parameters.AddWithValue("@Telefono", Telefono);
                     command.Parameters.AddWithValue("@IdPregunta", IdPregunta);
-                    command.Parameters.AddWithValue("@Respuesta", Respuesta);
-                    command.Parameters.AddWithValue("@Contrasenia", Contraseña);
+                    command.Parameters.AddWithValue("@RespuestaSeguridad", Respuesta);
+                    command.Parameters.AddWithValue("@Contraseña", Contraseña);
                     command.Parameters.AddWithValue("@IdRol", IdRol);
                     command.ExecuteNonQuery();
                     connection.Close();
@@ -75,7 +76,7 @@ namespace DataAccess
             }
         }
 
-        public void ModificarUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono, string Contraseña, int IdRol)
+        public void ModificarUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono,int IdPregunta,string Respuesta, string Contraseña, int IdRol)
         {
             using (var connection = GetConnection())
             {
@@ -86,12 +87,14 @@ namespace DataAccess
                     command.CommandText = "prc_ModificarUsuario";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                    command.Parameters.AddWithValue("@Usuario", Usuario);
+                    command.Parameters.AddWithValue("@NombreUsuario", Usuario);
                     command.Parameters.AddWithValue("@Nombre", Nombre);
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Dni", Dni);
                     command.Parameters.AddWithValue("@Telefono", Telefono);
-                    command.Parameters.AddWithValue("@Contrasenia", Contraseña);
+                    command.Parameters.AddWithValue("@IdPregunta", IdPregunta);
+                    command.Parameters.AddWithValue("@RespuestaSeguridad", Respuesta);
+                    command.Parameters.AddWithValue("@Contraseña", Contraseña);
                     command.Parameters.AddWithValue("@IdRol", IdRol);
                     command.ExecuteNonQuery();
                     connection.Close();
@@ -110,7 +113,7 @@ namespace DataAccess
                     command.CommandText = "prc_BajaUsuario";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                    command.Parameters.AddWithValue("@IdUsuarioAcceso", IdUsuarioAcceso);
+                    command.Parameters.AddWithValue("@IdUsuarioAdm", IdUsuarioAcceso);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }

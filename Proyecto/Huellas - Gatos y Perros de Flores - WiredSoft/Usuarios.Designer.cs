@@ -59,7 +59,7 @@
             this.cboPregunta.Location = new System.Drawing.Point(184, 238);
             this.cboPregunta.Name = "cboPregunta";
             this.cboPregunta.Size = new System.Drawing.Size(178, 21);
-            this.cboPregunta.TabIndex = 109;
+            this.cboPregunta.TabIndex = 5;
             // 
             // ID
             // 
@@ -88,49 +88,49 @@
             this.txtContraseña.Location = new System.Drawing.Point(184, 314);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(178, 20);
-            this.txtContraseña.TabIndex = 106;
+            this.txtContraseña.TabIndex = 7;
             // 
             // txtRespuesta
             // 
             this.txtRespuesta.Location = new System.Drawing.Point(184, 277);
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(178, 20);
-            this.txtRespuesta.TabIndex = 105;
+            this.txtRespuesta.TabIndex = 6;
             // 
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(184, 60);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(178, 20);
-            this.txtUser.TabIndex = 104;
+            this.txtUser.TabIndex = 0;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(184, 203);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(178, 20);
-            this.txtTelefono.TabIndex = 103;
+            this.txtTelefono.TabIndex = 4;
             // 
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(184, 166);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(178, 20);
-            this.txtDNI.TabIndex = 102;
+            this.txtDNI.TabIndex = 3;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(184, 129);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(178, 20);
-            this.txtApellido.TabIndex = 101;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(184, 92);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 20);
-            this.txtNombre.TabIndex = 100;
+            this.txtNombre.TabIndex = 1;
             // 
             // lblContraseña
             // 
@@ -216,7 +216,7 @@
             this.cboRol.Location = new System.Drawing.Point(184, 350);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(178, 21);
-            this.cboRol.TabIndex = 111;
+            this.cboRol.TabIndex = 8;
             // 
             // label2
             // 
@@ -239,7 +239,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(237, 401);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(131, 33);
-            this.btnCancelar.TabIndex = 127;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -254,7 +254,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(67, 401);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(131, 33);
-            this.btnGuardar.TabIndex = 126;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

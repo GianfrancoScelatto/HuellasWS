@@ -40,9 +40,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                //string Clave = MD5.EncriptrarClave(txtContraseña.Text);
-                //bool ingreso = brU.AccesoUsuario(txtUsuario.Text, Clave);
-                bool ingreso = brU.AccesoUsuario(txtUsuario.Text, txtContraseña.Text);
+                string Clave = MD5.EncriptrarClave(txtContraseña.Text);
+                bool ingreso = brU.AccesoUsuario(txtUsuario.Text, Clave);
 
                 if (ingreso == false)
                 {

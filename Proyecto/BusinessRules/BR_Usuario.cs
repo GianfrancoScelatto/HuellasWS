@@ -17,14 +17,14 @@ namespace BusinessRules
             return daU.AccesoUsuario(Usuario, Contraseña);
         }
 
-        public void AltaUsuario(string Usuario, string Nombre, string Apellido, string Dni, int Telefono, int IdPregunta, string Respuesta, string Contrasenia, int IdRol)
+        public void AltaUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono, int IdPregunta, string Respuesta, string Contrasenia, int IdRol)
         {
-            daU.AltaUsuario(Usuario, Nombre, Apellido, Dni, Telefono, IdPregunta, Respuesta, Contrasenia, IdRol);
+            daU.AltaUsuario(IdUsuario, Usuario, Nombre, Apellido, Dni, Telefono, IdPregunta, Respuesta, Contrasenia, IdRol);
         }
 
-        public void ModificarUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono, string Contraseña, int IdRol)
+        public void ModificarUsuario(int IdUsuario, string Usuario, string Nombre, string Apellido, string Dni, int Telefono, int IdPregunta, string Respuesta, string Contraseña, int IdRol)
         {
-            daU.ModificarUsuario(IdUsuario, Usuario, Nombre, Apellido, Dni, Telefono, Contraseña, IdRol);
+            daU.ModificarUsuario(IdUsuario, Usuario, Nombre, Apellido, Dni, Telefono,IdPregunta,Respuesta, Contraseña, IdRol);
         }
 
         public void BajaUsuario(int IdUsuario, int IdUsuarioAcceso)

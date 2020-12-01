@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicial));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.btnUsuario = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.bntContrato = new System.Windows.Forms.Button();
             this.btnCosto = new System.Windows.Forms.Button();
@@ -48,18 +48,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFormHijo = new System.Windows.Forms.Panel();
-            this.bdscEventos = new System.Windows.Forms.BindingSource(this.components);
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuLateral
             // 
             this.panelMenuLateral.AutoScroll = true;
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelMenuLateral.Controls.Add(this.btnUsuario);
             this.panelMenuLateral.Controls.Add(this.btnHistorial);
             this.panelMenuLateral.Controls.Add(this.bntContrato);
             this.panelMenuLateral.Controls.Add(this.btnCosto);
@@ -81,6 +80,23 @@
             this.panelMenuLateral.Size = new System.Drawing.Size(250, 670);
             this.panelMenuLateral.TabIndex = 0;
             // 
+            // btnUsuario
+            // 
+            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuario.FlatAppearance.BorderSize = 0;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUsuario.Location = new System.Drawing.Point(0, 509);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsuario.Size = new System.Drawing.Size(250, 45);
+            this.btnUsuario.TabIndex = 18;
+            this.btnUsuario.Text = "Usuario";
+            this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            // 
             // btnHistorial
             // 
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
@@ -96,7 +112,7 @@
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorial.UseVisualStyleBackColor = true;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click_1);
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // bntContrato
             // 
@@ -342,7 +358,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdscEventos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,10 +378,10 @@
         private System.Windows.Forms.Button btnListaNegra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lklblCerrarSesion;
-        private System.Windows.Forms.BindingSource bdscEventos;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button bntContrato;
         private System.Windows.Forms.Button btnCosto;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnUsuario;
     }
 }

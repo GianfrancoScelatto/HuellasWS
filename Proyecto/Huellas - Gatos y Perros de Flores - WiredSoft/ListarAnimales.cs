@@ -35,6 +35,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             dgvMascotas.Columns["IdAnimal"].Visible = false;
             dgvMascotas.Columns["IdEspecie"].Visible = false;
             dgvMascotas.Columns["IdPersona"].Visible = false;
+            dgvMascotas.Columns["IdEstado"].Visible = false;
             dgvMascotas.Columns["Castracion"].Visible = false;
             chxAdoptados.Checked = true;
         }
@@ -159,7 +160,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void dgvMascotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             E_Animal.IdAnimal = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdAnimal"].Value);
-            E_Animal.NombreAnimal = dgvMascotas.CurrentRow.Cells["Nombre"].Value.ToString();
+            E_Animal.NombreAnimal = dgvMascotas.CurrentRow.Cells["Nombre animal"].Value.ToString();
             E_Animal.IdEspecie = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdEspecie"].Value);
             E_Animal.FechaIngreso = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha ingreso"].Value).Date;
             E_Animal.Castracion = Convert.ToBoolean(dgvMascotas.CurrentRow.Cells["Castracion"].Value);
@@ -169,10 +170,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Animal.Edad = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Edad"].Value);
             E_Animal.Peso = Convert.ToDecimal(dgvMascotas.CurrentRow.Cells["Peso"].Value.ToString());
             E_Animal.ColorPelo = dgvMascotas.CurrentRow.Cells["Color"].Value.ToString();
-            E_Animal.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["Estado"].Value);
+            E_Animal.Estado = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdEstado"].Value);
             E_Animal.FechaNac = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha nacimiento"].Value).Date;
             E_Animal.Comentario = dgvMascotas.CurrentRow.Cells["Comentario"].Value.ToString();
             E_Animal.Persona = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdPersona"].Value);
+            E_Animal.FechaDefuncion = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha defuncion"].Value);
         }
     }
-    }
+}

@@ -101,11 +101,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
            AbirFormHijo(new ListarCosto());
         }
 
-        private void btnHistorial_Click_1(object sender, EventArgs e)
+        private void btnUsuario_Click(object sender, EventArgs e)
         {
-            AbirFormHijo(new ListarHistorial());
+            AbirFormHijo(new ListarUsuarios());
         }
-
         private void lklblUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             E_UsuarioAcceso.Editar = true;
@@ -113,5 +112,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             Usuarios.Show();
             E_UsuarioAcceso.Editar = false;
         }
+
+        
     }
 }

@@ -77,7 +77,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Usuario.IdUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
             E_Usuario.IdRol = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdRol"].Value);
             E_Usuario.Rol = dgvUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
-            E_Usuario.NombreUsuario = dgvUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
+            E_Usuario.NombreUsuario = dgvUsuarios.CurrentRow.Cells["Nombre usuario"].Value.ToString();
             E_Usuario.Nombre = dgvUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
             E_Usuario.Apellido = dgvUsuarios.CurrentRow.Cells["Apellido"].Value.ToString();
             E_Usuario.Dni = dgvUsuarios.CurrentRow.Cells["Dni"].Value.ToString();
