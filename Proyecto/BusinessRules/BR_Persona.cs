@@ -20,19 +20,19 @@ namespace BusinessRules
             tabla = ObjPersona.ListarPersona();
             return tabla;
         }
-        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo,int IdUsuario)
+        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string CodigoPostal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo,int IdUsuario)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
 
-                ObjPersona.AltaPersona(IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, IdSexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, IdUsuario);
+                ObjPersona.AltaPersona(IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, CodigoPostal, Calles, Altura, IdSexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, IdUsuario);
             }
         }
-        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
+        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string CodigoPostal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
-                ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, Codigo_Postal, Calles, Altura, IdSexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, IdUsuario);
+                ObjPersona.ModificarPersona(idPersona, IdTipoPersona, Nombre, Apellido, Edad, DNI, Domicilio, Localidad, CodigoPostal, Calles, Altura, IdSexo, Telefono, Celular, Email, UsuarioFaceIg, ListaNegra, Motivo, IdUsuario);
             }
         }
         public void BajaPersona(int idPersona, int IdUsuario)

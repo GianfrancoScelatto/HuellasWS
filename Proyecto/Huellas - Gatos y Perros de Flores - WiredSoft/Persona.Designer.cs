@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkNo = new System.Windows.Forms.CheckBox();
             this.txtMotivo = new System.Windows.Forms.RichTextBox();
             this.lblMotivo = new System.Windows.Forms.Label();
-            this.chkSI = new System.Windows.Forms.CheckBox();
+            this.chkSi = new System.Windows.Forms.CheckBox();
             this.lblListaNegra = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@
             this.lblDNI = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.chkNo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             this.groupBox1.Controls.Add(this.chkNo);
             this.groupBox1.Controls.Add(this.txtMotivo);
             this.groupBox1.Controls.Add(this.lblMotivo);
-            this.groupBox1.Controls.Add(this.chkSI);
+            this.groupBox1.Controls.Add(this.chkSi);
             this.groupBox1.Controls.Add(this.lblListaNegra);
             this.groupBox1.Controls.Add(this.txtEdad);
             this.groupBox1.Controls.Add(this.lblEdad);
@@ -116,6 +116,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // chkNo
+            // 
+            this.chkNo.AutoSize = true;
+            this.chkNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkNo.ForeColor = System.Drawing.Color.White;
+            this.chkNo.Location = new System.Drawing.Point(185, 576);
+            this.chkNo.Name = "chkNo";
+            this.chkNo.Size = new System.Drawing.Size(45, 20);
+            this.chkNo.TabIndex = 155;
+            this.chkNo.Text = "No";
+            this.chkNo.UseVisualStyleBackColor = true;
+            // 
             // txtMotivo
             // 
             this.txtMotivo.Location = new System.Drawing.Point(140, 602);
@@ -136,17 +148,17 @@
             this.lblMotivo.TabIndex = 153;
             this.lblMotivo.Text = "Motivo:";
             // 
-            // chkSI
+            // chkSi
             // 
-            this.chkSI.AutoSize = true;
-            this.chkSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSI.ForeColor = System.Drawing.Color.White;
-            this.chkSI.Location = new System.Drawing.Point(140, 576);
-            this.chkSI.Name = "chkSI";
-            this.chkSI.Size = new System.Drawing.Size(39, 20);
-            this.chkSI.TabIndex = 152;
-            this.chkSI.Text = "Si";
-            this.chkSI.UseVisualStyleBackColor = true;
+            this.chkSi.AutoSize = true;
+            this.chkSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSi.ForeColor = System.Drawing.Color.White;
+            this.chkSi.Location = new System.Drawing.Point(140, 576);
+            this.chkSi.Name = "chkSi";
+            this.chkSi.Size = new System.Drawing.Size(39, 20);
+            this.chkSi.TabIndex = 152;
+            this.chkSi.Text = "Si";
+            this.chkSi.UseVisualStyleBackColor = true;
             // 
             // lblListaNegra
             // 
@@ -504,6 +516,7 @@
             this.btnCancelar.TabIndex = 152;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -519,18 +532,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // chkNo
-            // 
-            this.chkNo.AutoSize = true;
-            this.chkNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkNo.ForeColor = System.Drawing.Color.White;
-            this.chkNo.Location = new System.Drawing.Point(185, 576);
-            this.chkNo.Name = "chkNo";
-            this.chkNo.Size = new System.Drawing.Size(45, 20);
-            this.chkNo.TabIndex = 155;
-            this.chkNo.Text = "No";
-            this.chkNo.UseVisualStyleBackColor = true;
             // 
             // Persona
             // 
@@ -589,7 +590,7 @@
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.RichTextBox txtMotivo;
         private System.Windows.Forms.Label lblMotivo;
-        private System.Windows.Forms.CheckBox chkSI;
+        private System.Windows.Forms.CheckBox chkSi;
         private System.Windows.Forms.Label lblListaNegra;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;

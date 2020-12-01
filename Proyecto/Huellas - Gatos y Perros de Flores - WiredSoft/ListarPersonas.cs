@@ -103,7 +103,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void dgvPersona_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             E_Persona.IdPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdPersona"].Value);
-            E_Persona.IdTipoPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdTipoEstablecimiento"].Value);
+            E_Persona.IdTipoPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdTipoPersona"].Value);
             E_Persona.NombrePersona = dgvPersona.CurrentRow.Cells["Nombre"].Value.ToString();
             E_Persona.ApellidoPersona = dgvPersona.CurrentRow.Cells["Apellido"].Value.ToString();
             E_Persona.Edad = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Edad"].Value);

@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
+        public void AltaPersona(int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string CodigoPostal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -37,18 +37,18 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@TipoPersona", IdTipoPersona);
+                    command.Parameters.AddWithValue("@IdTipoPersona", IdTipoPersona);
                     command.Parameters.AddWithValue("@Nombre", Nombre);
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Edad", Edad);
                     command.Parameters.AddWithValue("@DNI", DNI);
                     command.Parameters.AddWithValue("@Domicilio", Domicilio);
                     command.Parameters.AddWithValue("@Localidad", Localidad);
-                    command.Parameters.AddWithValue("@Codigo_Postal", Codigo_Postal);
+                    command.Parameters.AddWithValue("@CodigoPostal", CodigoPostal);
                     command.Parameters.AddWithValue("@Calles", Calles);
                     command.Parameters.AddWithValue("@Altura", Altura);
                     command.Parameters.AddWithValue("@IdSexo", IdSexo);
-                    command.Parameters.AddWithValue(" @Telefono", Telefono);
+                    command.Parameters.AddWithValue("@Telefono", Telefono);
                     command.Parameters.AddWithValue("@Celular", Celular);
                     command.Parameters.AddWithValue("@Email", Email);
                     command.Parameters.AddWithValue("@UsuarioFaceIg", UsuarioFaceIg);
@@ -62,7 +62,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarPersona(int idPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string Codigo_Postal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
+        public void ModificarPersona(int IdPersona, int IdTipoPersona, string Nombre, string Apellido, int Edad, string DNI, string Domicilio, string Localidad, string CodigoPostal, string Calles, int Altura, int IdSexo, int Telefono, int Celular, string Email, string UsuarioFaceIg, bool ListaNegra, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -70,15 +70,15 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@idPersona", idPersona);
-                    command.Parameters.AddWithValue("@TipoPersona", IdTipoPersona);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
+                    command.Parameters.AddWithValue("@IdTipoPersona", IdTipoPersona);
                     command.Parameters.AddWithValue("@Nombre", Nombre);
                     command.Parameters.AddWithValue("@Apellido", Apellido);
                     command.Parameters.AddWithValue("@Edad", Edad);
                     command.Parameters.AddWithValue("@DNI", DNI);
                     command.Parameters.AddWithValue("@Domicilio", Domicilio);
                     command.Parameters.AddWithValue("@Localidad", Localidad);
-                    command.Parameters.AddWithValue("@Codigo_Postal", Codigo_Postal);
+                    command.Parameters.AddWithValue("@CodigoPostal", CodigoPostal);
                     command.Parameters.AddWithValue("@Calles", Calles);
                     command.Parameters.AddWithValue("@Altura", Altura);
                     command.Parameters.AddWithValue("@IdSexo", IdSexo);

@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BusinessRules;
+﻿using BusinessRules;
 using Entities;
+using System;
+using System.Windows.Forms;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
@@ -45,6 +38,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 lblID.Text = E_Persona.IdPersona.ToString();
                 cmbTipoPersona.SelectedValue = E_Persona.IdTipoPersona.ToString();
                 txtNombre.Text = E_Persona.NombrePersona;
+                txtApellido.Text = E_Persona.ApellidoPersona;
                 txtEdad.Text = E_Persona.Edad.ToString();
                 txtDNI.Text = E_Persona.DNI;
                 txtDomicilio.Text = E_Persona.Domicilio;
@@ -61,7 +55,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if (E_Persona.ListaNegra == true)
                 {
-                    chkSI.Checked = true;
+                    chkSi.Checked = true;
                 }
                 else
                     chkNo.Checked = true;
@@ -84,16 +78,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        if (chkSI.Checked == true)
+                        if (chkSi.Checked == true)
                         {
-                            brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkSI.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                            brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkSi.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
                         }
 
                         else
                             brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkNo.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
                         Editar = false;
                     }
-                    
+
 
                     catch (Exception ex)
                     {
@@ -104,9 +98,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        if (chkSI.Checked == true)
+                        if (chkSi.Checked == true)
                         {
-                            brP.AltaPersona(Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkSI.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                            brP.AltaPersona(Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkSi.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
                         }
                         else
                             brP.AltaPersona(Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkNo.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
@@ -122,11 +116,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
-
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
 }
-    
+
 
 
 
