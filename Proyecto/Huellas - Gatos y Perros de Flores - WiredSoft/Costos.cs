@@ -49,9 +49,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 cmbTipoGasto.SelectedValue = E_Costos.IdTipoGasto;
                 cmbEstablecimiento.SelectedValue = E_Costos.IdEstablecimiento;
                 cmbAnimal.SelectedValue = E_Costos.IdAnimal;
-                txtMonto.Text = E_Costos.Monto.ToString();
-                txtPagado.Text = E_Costos.Monto.ToString();
+                txtMonto.Text = Math.Round(E_Costos.Monto, 2, MidpointRounding.ToEven).ToString();
+                txtPagado.Text = Math.Round(E_Costos.Pagado, 2, MidpointRounding.ToEven).ToString();
                 txtDetalle.Text = E_Costos.Detalle;
+                dtpFechaGasto.Value = E_Costos.FechaGasto;
             }
             else
             {

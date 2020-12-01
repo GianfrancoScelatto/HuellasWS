@@ -69,7 +69,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            E_Vacuna.Editar = true;
+            E_Costos.Editar = true;
             Form Costo = new Costos();
             Costo.Show();
             E_Costos.Editar = false;
@@ -89,7 +89,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                msj.MensajeError("No se ha seleccionado ninguna vacuna.");
+                msj.MensajeError("No se ha seleccionado ningún gasto.");
             }
         }
 
@@ -97,7 +97,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             E_Costos.IdGasto = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdGasto"].Value);
             E_Costos.FechaGasto = Convert.ToDateTime(dgvCosto.CurrentRow.Cells["FechaGasto"].Value).Date;
-            E_Costos.IdTipoGasto = Convert.ToInt32(dgvCosto.CurrentRow.Cells["TipoGasto"].Value);
+            E_Costos.IdTipoGasto = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdTipoGasto"].Value);
             E_Costos.IdEstablecimiento = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdEstablecimiento"].Value);
             E_Costos.IdAnimal = Convert.ToInt32(dgvCosto.CurrentRow.Cells["IdAnimal"].Value);
             E_Costos.Monto = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Monto"].Value.ToString());

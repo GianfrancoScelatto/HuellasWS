@@ -132,10 +132,18 @@
             // 
             // dgvCosto
             // 
+            this.dgvCosto.AllowUserToAddRows = false;
+            this.dgvCosto.AllowUserToDeleteRows = false;
+            this.dgvCosto.AllowUserToResizeColumns = false;
+            this.dgvCosto.AllowUserToResizeRows = false;
+            this.dgvCosto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCosto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCosto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCosto.Location = new System.Drawing.Point(0, 55);
+            this.dgvCosto.MultiSelect = false;
             this.dgvCosto.Name = "dgvCosto";
+            this.dgvCosto.ReadOnly = true;
+            this.dgvCosto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCosto.Size = new System.Drawing.Size(980, 493);
             this.dgvCosto.TabIndex = 31;
             this.dgvCosto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCosto_CellFormatting);
