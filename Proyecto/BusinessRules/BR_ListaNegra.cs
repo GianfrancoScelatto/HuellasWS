@@ -20,17 +20,17 @@ namespace BusinessRules
             tabla = ObjListaNegra.ListarListaNegra();
             return tabla;
         }
-        public void AltaListaNegra(int IdListaNegra, string Nombre, string Apellido, int TelefonoFijo, int Celular, string CorreoElectronico, string Direccion, string Localidad, string Provincia, string Motivo)
+        public void AltaListaNegra(int IdPersona, string Motivo)
         {
-            ObjListaNegra.AltaListaNegra(IdListaNegra, Nombre, Apellido, TelefonoFijo, Celular, CorreoElectronico, Direccion, Localidad, Provincia, Motivo);
+            ObjListaNegra.AltaListaNegra(IdPersona, Motivo);
         }
-        public void ModificarListaNegra(int IdListaNegra, string Nombre, string Apellido, int TelefonoFijo, int Celular, string CorreoElectronico, string Direccion, string Localidad, string Provincia, string Motivo)
+        public void ModificarListaNegra(int IdPersona, string Motivo)
         {
-            ObjListaNegra.ModificarListaNegra(IdListaNegra, Nombre, Apellido, TelefonoFijo, Celular, CorreoElectronico, Direccion, Localidad, Provincia, Motivo);
+            ObjListaNegra.ModificarListaNegra(IdPersona, Motivo);
         }
-        public void BajaListaNegra(int IdListaNegra, int IdUsuario)
+        public void BajaListaNegra(int IdPersona, int IdUsuario)
         {
-            ObjListaNegra.BajaListaNegra(IdListaNegra,IdUsuario);
+            ObjListaNegra.BajaListaNegra(IdPersona,IdUsuario);
         }
         public DataTable FiltrarListaNegra(string Busqueda)
         {
