@@ -47,7 +47,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void CargarGrillas()
         {
             dgvFichaMedica.DataSource = brFM.ListarFichaMedica(E_Animal.IdAnimal);
-            dgvSeguimiento.DataSource = brS.ListarSeguimiento();
+            dgvSeguimiento.DataSource = brS.ListarSeguimiento(E_Animal.IdAnimal);
         }
 
         private void Mascota_Load(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 cmbSexo.SelectedValue = E_Animal.Sexo;
                 cmbEstado.SelectedValue = E_Animal.Estado;
                 txtComentario.Text = E_Animal.Comentario;
-                dtpCastracion.Value = Convert.ToDateTime(E_Animal.FechaCastracion).Date;
+                dtpCastracion.Value = E_Animal.FechaCastracion ?? DateTime.MinValue;
 
                 if (E_Animal.Castracion == true)
                 {
@@ -83,7 +83,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 if (cmbEstado.SelectedIndex == 2)
                 {
                     dtpFechaF.Enabled = true;
-                    dtpFechaF.Value = E_Animal.FechaDefuncion.Date;
+                    dtpFechaF.Value = E_Animal.FechaDefuncion ?? DateTime.MinValue;
                 }
             }
             else
@@ -129,12 +129,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     {
                         brA.ModificarAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
-                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
+                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
                     }
                     else
                         brA.ModificarAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
-                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpIngreso.Value.Date);
+                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
 
                     LimpiarForm();
                     Editar = false;
@@ -154,12 +154,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     {
                         brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
-                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date);
+                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
                     }
                     else
                         brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
-                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date);
+                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
                     LimpiarForm();
                 }
                 catch(Exception ex)

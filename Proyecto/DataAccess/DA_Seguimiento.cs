@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class DA_Seguimiento : DA_Connection
     {
-        public DataTable ListarSeguimiento()
+        public DataTable ListarSeguimiento(int IdAnimal)
         {
             using (var connection = GetConnection())
             {
@@ -21,6 +21,7 @@ namespace DataAccess
                     command.Connection = connection;
                     command.CommandText = "prc_ListarSeguimiento";
                     command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
                     connection.Close();

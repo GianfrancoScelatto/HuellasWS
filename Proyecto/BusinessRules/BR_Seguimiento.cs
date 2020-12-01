@@ -12,10 +12,10 @@ namespace BusinessRules
     {
         DA_Seguimiento daS = new DA_Seguimiento();
 
-        public DataTable ListarSeguimiento()
+        public DataTable ListarSeguimiento(int IdAnimal)
         {
             DataTable tabla = new DataTable();
-            tabla = daS.ListarSeguimiento();
+            tabla = daS.ListarSeguimiento(IdAnimal);
             return tabla;
         }
 

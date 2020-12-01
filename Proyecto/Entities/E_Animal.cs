@@ -21,12 +21,12 @@ namespace Entities
         public static decimal Peso { get; set; }
         public static string ColorPelo { get; set; }
         public static bool Castracion { get; set; }
-        public static DateTime FechaCastracion { get; set; }
+        public static DateTime? FechaCastracion { get; set; }
         public static string Comentario { get; set; }
         public static string Salud { get; set; }
         public static int Estado { get; set; }
         public static int Persona { get; set; }
-        public static DateTime FechaDefuncion { get; set; }
+        public static DateTime? FechaDefuncion { get; set; }
         public static bool Deshabilitado { get; set; }
         public static bool Editar { get; set; }
     }

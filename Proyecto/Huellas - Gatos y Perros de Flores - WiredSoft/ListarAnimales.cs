@@ -43,7 +43,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Form Animales = new Animales();
-            Animales.Show();
+            Animales.ShowDialog();
         }
 
         private void BtnExportar_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 E_Animal.Editar = true;
                 Form Animales = new Animales();
-                Animales.Show();
+                Animales.ShowDialog();
 
                 E_Animal.Editar = false;
             }
@@ -175,6 +175,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Animal.Comentario = dgvMascotas.CurrentRow.Cells["Comentario"].Value.ToString();
             E_Animal.Persona = Convert.ToInt32(dgvMascotas.CurrentRow.Cells["IdPersona"].Value);
             E_Animal.FechaDefuncion = Convert.ToDateTime(dgvMascotas.CurrentRow.Cells["Fecha defuncion"].Value);
+        }
+
+        private void ListarAnimales_Activated(object sender, EventArgs e)
+        {
+            MostrarRegistroAnimal();
         }
     }
 }
