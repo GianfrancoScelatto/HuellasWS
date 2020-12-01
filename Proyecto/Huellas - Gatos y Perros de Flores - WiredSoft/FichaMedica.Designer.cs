@@ -95,7 +95,7 @@
             this.lblDFichaMed.AutoSize = true;
             this.lblDFichaMed.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDFichaMed.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDFichaMed.Location = new System.Drawing.Point(36, 45);
+            this.lblDFichaMed.Location = new System.Drawing.Point(103, 45);
             this.lblDFichaMed.Name = "lblDFichaMed";
             this.lblDFichaMed.Size = new System.Drawing.Size(139, 19);
             this.lblDFichaMed.TabIndex = 104;
@@ -106,7 +106,7 @@
             this.lblMascota.AutoSize = true;
             this.lblMascota.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMascota.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMascota.Location = new System.Drawing.Point(39, 106);
+            this.lblMascota.Location = new System.Drawing.Point(106, 106);
             this.lblMascota.Name = "lblMascota";
             this.lblMascota.Size = new System.Drawing.Size(136, 19);
             this.lblMascota.TabIndex = 103;
@@ -114,7 +114,7 @@
             // 
             // dtpFechaAtencion
             // 
-            this.dtpFechaAtencion.Location = new System.Drawing.Point(181, 106);
+            this.dtpFechaAtencion.Location = new System.Drawing.Point(248, 106);
             this.dtpFechaAtencion.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
             this.dtpFechaAtencion.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaAtencion.Name = "dtpFechaAtencion";
@@ -167,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(13, 75);
+            this.label1.Location = new System.Drawing.Point(80, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 19);
             this.label1.TabIndex = 118;
@@ -186,7 +186,7 @@
             // 
             this.cmbAnimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAnimal.FormattingEnabled = true;
-            this.cmbAnimal.Location = new System.Drawing.Point(181, 73);
+            this.cmbAnimal.Location = new System.Drawing.Point(248, 73);
             this.cmbAnimal.Name = "cmbAnimal";
             this.cmbAnimal.Size = new System.Drawing.Size(197, 21);
             this.cmbAnimal.TabIndex = 121;
@@ -196,7 +196,7 @@
             this.lblIdFM.AutoSize = true;
             this.lblIdFM.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblIdFM.ForeColor = System.Drawing.Color.White;
-            this.lblIdFM.Location = new System.Drawing.Point(269, 43);
+            this.lblIdFM.Location = new System.Drawing.Point(336, 43);
             this.lblIdFM.Name = "lblIdFM";
             this.lblIdFM.Size = new System.Drawing.Size(15, 21);
             this.lblIdFM.TabIndex = 122;
