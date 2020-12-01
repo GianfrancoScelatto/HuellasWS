@@ -228,7 +228,7 @@
             this.dgvPersona.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersona.Size = new System.Drawing.Size(1083, 615);
             this.dgvPersona.TabIndex = 16;
-            this.dgvPersona.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersona_CellContentClick);
+            this.dgvPersona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPersona_CellFormatting);
             // 
             // ListarPersonas
             // 

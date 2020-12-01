@@ -57,9 +57,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 cmbSexo.SelectedValue = E_Persona.IdSexo.ToString();
                 txtTelefono.Text = E_Persona.Telefono.ToString();
                 txtUser.Text = E_Persona.UsuarioFaceIg;
-                chkListaNegra.Checked = E_Persona.ListaNegra;
                 txtMotivo.Text = E_Persona.Motivo;
 
+                if (E_Persona.ListaNegra == true)
+                {
+                    chkSI.Checked = true;
+                }
+                else
+                    chkNo.Checked = true;
             }
 
             //cmbSexo.SelectedIndex = 0;
@@ -79,9 +84,17 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkListaNegra.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                        if (chkSI.Checked == true)
+                        {
+                            brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkSI.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                        }
+
+                        else
+                            brP.ModificarPersona(E_Persona.IdPersona, Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkNo.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
                         Editar = false;
                     }
+                    
+
                     catch (Exception ex)
                     {
                         msj.MensajeError("Ha ocurrido un error." + ex);
@@ -91,7 +104,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        brP.AltaPersona(Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32 (cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkListaNegra.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                        if (chkSI.Checked == true)
+                        {
+                            brP.AltaPersona(Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkSI.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                        }
+                        else
+                            brP.AltaPersona(Convert.ToInt32(cmbTipoPersona.SelectedValue), txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad.Text), txtDNI.Text, txtDomicilio.Text, txtLocalidad.Text, txtCP.Text, txtCalles.Text, Convert.ToInt32(txtAltura.Text), Convert.ToInt32(cmbSexo.SelectedValue), Convert.ToInt32(txtTelefono.Text), Convert.ToInt32(txtCelular.Text), txtMail.Text, txtUser.Text, chkNo.Checked, txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
                     }
                     catch (Exception ex)
                     {

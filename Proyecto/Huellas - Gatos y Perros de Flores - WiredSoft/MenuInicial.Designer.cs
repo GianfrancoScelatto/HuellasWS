@@ -344,8 +344,6 @@
             this.Controls.Add(this.panelFormHijo);
             this.Controls.Add(this.panelMenuLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 650);
             this.Name = "MenuInicial";
             this.ShowIcon = false;

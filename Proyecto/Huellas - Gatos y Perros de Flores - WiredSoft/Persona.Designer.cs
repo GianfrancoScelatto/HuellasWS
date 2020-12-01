@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMotivo = new System.Windows.Forms.RichTextBox();
             this.lblMotivo = new System.Windows.Forms.Label();
-            this.chkListaNegra = new System.Windows.Forms.CheckBox();
+            this.chkSI = new System.Windows.Forms.CheckBox();
             this.lblListaNegra = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
@@ -67,14 +67,16 @@
             this.lblDNI = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.chkNo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkNo);
             this.groupBox1.Controls.Add(this.txtMotivo);
             this.groupBox1.Controls.Add(this.lblMotivo);
-            this.groupBox1.Controls.Add(this.chkListaNegra);
+            this.groupBox1.Controls.Add(this.chkSI);
             this.groupBox1.Controls.Add(this.lblListaNegra);
             this.groupBox1.Controls.Add(this.txtEdad);
             this.groupBox1.Controls.Add(this.lblEdad);
@@ -134,17 +136,17 @@
             this.lblMotivo.TabIndex = 153;
             this.lblMotivo.Text = "Motivo:";
             // 
-            // chkListaNegra
+            // chkSI
             // 
-            this.chkListaNegra.AutoSize = true;
-            this.chkListaNegra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkListaNegra.ForeColor = System.Drawing.Color.White;
-            this.chkListaNegra.Location = new System.Drawing.Point(140, 576);
-            this.chkListaNegra.Name = "chkListaNegra";
-            this.chkListaNegra.Size = new System.Drawing.Size(39, 20);
-            this.chkListaNegra.TabIndex = 152;
-            this.chkListaNegra.Text = "Si";
-            this.chkListaNegra.UseVisualStyleBackColor = true;
+            this.chkSI.AutoSize = true;
+            this.chkSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSI.ForeColor = System.Drawing.Color.White;
+            this.chkSI.Location = new System.Drawing.Point(140, 576);
+            this.chkSI.Name = "chkSI";
+            this.chkSI.Size = new System.Drawing.Size(39, 20);
+            this.chkSI.TabIndex = 152;
+            this.chkSI.Text = "Si";
+            this.chkSI.UseVisualStyleBackColor = true;
             // 
             // lblListaNegra
             // 
@@ -518,6 +520,18 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // chkNo
+            // 
+            this.chkNo.AutoSize = true;
+            this.chkNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkNo.ForeColor = System.Drawing.Color.White;
+            this.chkNo.Location = new System.Drawing.Point(185, 576);
+            this.chkNo.Name = "chkNo";
+            this.chkNo.Size = new System.Drawing.Size(45, 20);
+            this.chkNo.TabIndex = 155;
+            this.chkNo.Text = "No";
+            this.chkNo.UseVisualStyleBackColor = true;
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -575,9 +589,10 @@
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.RichTextBox txtMotivo;
         private System.Windows.Forms.Label lblMotivo;
-        private System.Windows.Forms.CheckBox chkListaNegra;
+        private System.Windows.Forms.CheckBox chkSI;
         private System.Windows.Forms.Label lblListaNegra;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.CheckBox chkNo;
     }
 }

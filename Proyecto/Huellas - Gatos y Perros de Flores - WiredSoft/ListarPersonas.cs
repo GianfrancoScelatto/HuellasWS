@@ -83,15 +83,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                msj.MensajeError("No se ha seleccionado ninguna vacuna.");
+                msj.MensajeError("No se ha seleccionado ninguna .");
             }
 
         }
 
-        private void dgvPersona_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {//Agregar demás parámetros
-            E_Persona.IdPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdPersona"].Value);
-        }
+
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
@@ -101,6 +98,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
                 brP.FiltrarPersona(txtBuscar.Text, rbtnTransitante.Text);
+        }
+
+        private void dgvPersona_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            E_Persona.IdPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdPersona"].Value);
         }
     }
 }
