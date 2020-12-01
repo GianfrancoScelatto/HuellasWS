@@ -15,7 +15,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class RecuperarUsuario : Form
     {
         BR_Usuario brU = new BR_Usuario();
-        E_Mensaje eM = new E_Mensaje();
+        E_Mensaje msj = new E_Mensaje();
         public RecuperarUsuario()
         {
             InitializeComponent();
@@ -25,18 +25,26 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (String.IsNullOrWhiteSpace(txtUser.Text) || String.IsNullOrWhiteSpace(txtRespuesta.Text) || String.IsNullOrWhiteSpace(txtContraseña.Text) || String.IsNullOrWhiteSpace(txtValidarContraseña.Text))
             {
-                eM.MensajeError("Hay campos vacíos.");
+                msj.MensajeAlerta("Hay campos vacíos.");
             }
             else if (txtContraseña.Text != txtValidarContraseña.Text)
             {
-                eM.MensajeAlerta("Las contraseñas no coinciden.");
+                msj.MensajeAlerta("Las contraseñas no coinciden.");
             }
             else
-            {
-                //string Clave = MD5.EncriptrarClave(txtValidarContraseña.Text);
-                //brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, Clave);
-                brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, txtValidarContraseña.Text);
-                Close();
+            {   
+                try
+                {
+                    //string Clave = MD5.EncriptrarClave(txtValidarContraseña.Text);
+                    //brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, Clave);
+                    brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, txtValidarContraseña.Text);
+                    Close();
+                }
+                catch
+                {
+                    msj.MensajeError("Los datos ingresados son incorrectos.");
+                }
+                
             }
         }
 

@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaListaNegra(int IdListaNegra, string Motivo)
+        public void AltaListaNegra(int IdPersona, string Motivo)
         {
             using (var connection = GetConnection())
             {
@@ -37,7 +37,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdListaNegra", IdListaNegra);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@Motivo", Motivo);
                     command.CommandText = "prc_AltaListaNegra";
                     command.CommandType = CommandType.StoredProcedure;
@@ -45,7 +45,23 @@ namespace DataAccess
                 }
             }
         }
-        public void BajaListaNegra(int IdUsuario)
+        public void ModificarListaNegra(int IdPersona, string Motivo)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
+                    command.Parameters.AddWithValue("@Motivo", Motivo);
+                    command.CommandText = "prc_ModificarListaNegra";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+        public void BajaListaNegra(int IdPersona,int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -54,6 +70,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_BajaListaNegra";
                     command.CommandType = CommandType.StoredProcedure;
@@ -81,7 +98,7 @@ namespace DataAccess
                 }
             }
         }
-        public DataTable ComboAnimal()
+        public DataTable ComboPersona()
         {
             using (var connection = GetConnection())
             {

@@ -20,6 +20,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         E_Mensaje msj = new E_Mensaje();
         bool Editar = false;
         string informe, tratamiento;
+
         public FichaMedica()
         {
             InitializeComponent();
@@ -53,10 +54,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
             {
-                cmbVet.Items.Insert(-1, "Seleccione un valor");
-                cmbAnimal.Items.Insert(-1, "Seleccione un valor");
-                cmbAnimal.SelectedIndex = -1;
-                cmbVet.SelectedIndex = -1;
+                cmbAnimal.SelectedIndex = 0;
+                cmbVet.SelectedIndex = 0;
             }
         }
 
@@ -74,8 +73,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (cmbAnimal.SelectedIndex == -1 || String.IsNullOrWhiteSpace(txtTratamiento.Text) || String.IsNullOrWhiteSpace(txtInforme.Text)
-                || cmbVet.SelectedIndex == -1 || String.IsNullOrWhiteSpace(txtCosto.Text))
+            if (String.IsNullOrWhiteSpace(txtTratamiento.Text) || String.IsNullOrWhiteSpace(txtInforme.Text) || String.IsNullOrWhiteSpace(txtCosto.Text))
             {
                 msj.MensajeAlerta("Hay campos vacíos.");
             }
