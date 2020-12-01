@@ -45,6 +45,13 @@ namespace BusinessRules
             }
         }
 
+        public DataTable BuscarCosto( string Busqueda)
+        {
+            DataTable tabla = new DataTable();
+            tabla = daC.BuscarGasto(Busqueda);
+            return tabla;
+        }
+
         //Este es para traer el ID para asignar a que animal
         public DataTable MostrarAnimales()
         {

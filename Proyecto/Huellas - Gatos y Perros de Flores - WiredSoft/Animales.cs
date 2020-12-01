@@ -97,13 +97,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 dtpFichaMedica.Enabled = false;
                 btnEliminar.Enabled = false;
                 btnExportar.Enabled = false;
-                btnNuevo1.Enabled = false;
+                btnNuevo.Enabled = false;
                 btnModificar.Enabled = false;
                 lklblVacunas.Enabled = false;
                 dgvSeguimiento.Enabled = false;
                 dtpFiltro.Enabled = false;
                 lblTranAdopt.Visible = false;
                 lklblPersona.Visible = false;
+                txtDetalle.Enabled = false;
+                dtpAcontecimiento.Enabled = false;
+                btnGuardarSeg.Enabled = false;
             }
 
         }

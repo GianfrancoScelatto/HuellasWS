@@ -104,7 +104,7 @@ namespace DataAccess
 		}
 
 
-		private DataTable BuscarEstablecimiento(string Busqueda)
+		public DataTable BuscarEstablecimientos(string Busqueda)
 		{
 			using (var connection = GetConnection())
 			{
@@ -114,7 +114,7 @@ namespace DataAccess
 				{
 					command.Connection = connection;
 					command.Parameters.AddWithValue("@Busqueda", Busqueda);
-					command.CommandText = "prc_FiltarEstablecimiento";
+					command.CommandText = "prc_FiltrarEstablecimiento";
 					command.CommandType = CommandType.StoredProcedure;
 					SqlDataReader reader = command.ExecuteReader();
 					tabla.Load(reader);
@@ -122,10 +122,9 @@ namespace DataAccess
 					return tabla;
 				}
 			}
-
 		}
 
-        public DataTable ComboEstablecimiento()
+		public DataTable ComboEstablecimiento()
         {
             using (var connection = GetConnection())
             {

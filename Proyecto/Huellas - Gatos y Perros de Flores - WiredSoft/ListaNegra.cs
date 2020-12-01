@@ -41,7 +41,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        //brLN.();
+                        brLN.ModificarListaNegra(E_ListaNegra.IdPersona, E_ListaNegra.Motivo);
                         Editar = false;
                     }
 
@@ -54,7 +54,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     try
                     {
-                        //brLN.AltaListaNegra();
+                        brLN.AltaListaNegra(E_ListaNegra.IdPersona, E_ListaNegra.Motivo);
                     }
 
                     catch (Exception ex)

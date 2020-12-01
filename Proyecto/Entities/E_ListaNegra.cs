@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-   public  class E_ListaNegra
+   public static  class E_ListaNegra
     {
-        public string Motivo { get; set; }
+        public static int IdPersona { get; set; }
+        public static string Motivo { get; set; }
         public static bool Editar { get; set; }
     }
 }

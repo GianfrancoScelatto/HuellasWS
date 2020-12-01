@@ -130,6 +130,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(136, 20);
             this.txtBuscar.TabIndex = 39;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
@@ -169,7 +170,7 @@
             this.dgvEstablecimiento.TabIndex = 0;
             this.dgvEstablecimiento.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstablecimiento_CellFormatting);
             // 
-            // ListarEstablecimient
+            // ListarEstablecimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,7 +179,7 @@
             this.Controls.Add(this.panelListar);
             this.Controls.Add(this.panelBoton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ListarEstablecimient";
+            this.Name = "ListarEstablecimiento";
             this.Text = "ListarVeterinaria";
             this.Load += new System.EventHandler(this.ListarEstablecimient_Load);
             this.panelBoton.ResumeLayout(false);
