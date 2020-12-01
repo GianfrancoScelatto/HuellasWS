@@ -103,15 +103,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Costos.Monto = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Monto"].Value.ToString());
             E_Costos.Detalle = dgvCosto.CurrentRow.Cells["Detalle"].Value.ToString();
             E_Costos.Pagado = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Pagado"].Value.ToString());
-
-            //VER PORQUE SE ROMPE ACA
         }
 
-
-
-
-
-        //}
 
     }
 }

@@ -17,6 +17,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         BR_Costo brC = new BR_Costo();
         E_Mensaje msj = new E_Mensaje();
         public bool Editar = false;
+        string detalle;
 
         public Costos()
         {
@@ -65,7 +66,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnGuardarDatos_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtMonto.Text))
+            if (String.IsNullOrWhiteSpace(txtMonto.Text) || String.IsNullOrWhiteSpace(txtPagado.Text) || String.IsNullOrWhiteSpace(txtDetalle.Text))
             {
                 msj.MensajeAlerta("Hay campos vacíos.");
             }
@@ -74,25 +75,30 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    brC.ModificarGasto(E_Costos.IdGasto, dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), txtDetalle.Text, E_UsuarioAcceso.IdUsuario);
+                    detalle += txtDetalle.Text + Environment.NewLine;
+                    brC.ModificarGasto(E_Costos.IdGasto, dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), 
+                                        Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), detalle, E_UsuarioAcceso.IdUsuario);
                     Editar = false;
                 }
 
                 catch (Exception ex)
                 {
-                    msj.MensajeError("Ha ocurrido un error" + ex);
+                    msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
             }
             else
             {
                 try
                 {
-                    brC.AltaGasto(dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), txtDetalle.Text, E_UsuarioAcceso.IdUsuario);
+                    detalle += txtDetalle.Text + Environment.NewLine;
+                    brC.AltaGasto(dtpFechaGasto.Value.Date, Convert.ToInt32(cmbTipoGasto.SelectedValue), Convert.ToInt32(cmbEstablecimiento.SelectedValue), 
+                                    Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToDecimal(txtMonto.Text), Convert.ToDecimal(txtPagado.Text), 
+                                    detalle, E_UsuarioAcceso.IdUsuario);
                 }
 
                 catch (Exception ex)
                 {
-                    msj.MensajeError("Ha ocurrido un error" + ex);
+                    msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
 
             }
@@ -103,14 +109,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnCancelarDatos_Click(object sender, EventArgs e)
         {
-                DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (preg == DialogResult.Yes)
-                {
-                    Close();
-                }
-            
+            DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (preg == DialogResult.Yes)
+            {
+                Close();
+            }
         }
-
-
     }
 }
