@@ -56,7 +56,7 @@
             // 
             this.cboPregunta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPregunta.FormattingEnabled = true;
-            this.cboPregunta.Location = new System.Drawing.Point(176, 238);
+            this.cboPregunta.Location = new System.Drawing.Point(184, 238);
             this.cboPregunta.Name = "cboPregunta";
             this.cboPregunta.Size = new System.Drawing.Size(178, 21);
             this.cboPregunta.TabIndex = 109;
@@ -66,7 +66,7 @@
             this.ID.AutoSize = true;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID.ForeColor = System.Drawing.Color.White;
-            this.ID.Location = new System.Drawing.Point(132, 24);
+            this.ID.Location = new System.Drawing.Point(140, 24);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(33, 20);
             this.ID.TabIndex = 108;
@@ -77,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 59);
+            this.label1.Location = new System.Drawing.Point(30, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 107;
@@ -85,49 +85,49 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(176, 314);
+            this.txtContraseña.Location = new System.Drawing.Point(184, 314);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(178, 20);
             this.txtContraseña.TabIndex = 106;
             // 
             // txtRespuesta
             // 
-            this.txtRespuesta.Location = new System.Drawing.Point(176, 277);
+            this.txtRespuesta.Location = new System.Drawing.Point(184, 277);
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(178, 20);
             this.txtRespuesta.TabIndex = 105;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(176, 60);
+            this.txtUser.Location = new System.Drawing.Point(184, 60);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(178, 20);
             this.txtUser.TabIndex = 104;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(176, 203);
+            this.txtTelefono.Location = new System.Drawing.Point(184, 203);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(178, 20);
             this.txtTelefono.TabIndex = 103;
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(176, 166);
+            this.txtDNI.Location = new System.Drawing.Point(184, 166);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(178, 20);
             this.txtDNI.TabIndex = 102;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(176, 129);
+            this.txtApellido.Location = new System.Drawing.Point(184, 129);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(178, 20);
             this.txtApellido.TabIndex = 101;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(176, 92);
+            this.txtNombre.Location = new System.Drawing.Point(184, 92);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 20);
             this.txtNombre.TabIndex = 100;
@@ -137,7 +137,7 @@
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.White;
-            this.lblContraseña.Location = new System.Drawing.Point(58, 313);
+            this.lblContraseña.Location = new System.Drawing.Point(66, 313);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(107, 20);
             this.lblContraseña.TabIndex = 99;
@@ -148,7 +148,7 @@
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.Color.White;
-            this.lblCP.Location = new System.Drawing.Point(81, 199);
+            this.lblCP.Location = new System.Drawing.Point(89, 199);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(84, 20);
             this.lblCP.TabIndex = 98;
@@ -159,7 +159,7 @@
             this.lblRespuesta.AutoSize = true;
             this.lblRespuesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRespuesta.ForeColor = System.Drawing.Color.White;
-            this.lblRespuesta.Location = new System.Drawing.Point(64, 276);
+            this.lblRespuesta.Location = new System.Drawing.Point(72, 276);
             this.lblRespuesta.Name = "lblRespuesta";
             this.lblRespuesta.Size = new System.Drawing.Size(101, 20);
             this.lblRespuesta.TabIndex = 97;
@@ -170,7 +170,7 @@
             this.lblDNI.AutoSize = true;
             this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNI.ForeColor = System.Drawing.Color.White;
-            this.lblDNI.Location = new System.Drawing.Point(120, 164);
+            this.lblDNI.Location = new System.Drawing.Point(128, 164);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(45, 20);
             this.lblDNI.TabIndex = 96;
@@ -181,7 +181,7 @@
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalle.ForeColor = System.Drawing.Color.White;
-            this.lblCalle.Location = new System.Drawing.Point(78, 238);
+            this.lblCalle.Location = new System.Drawing.Point(86, 238);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(87, 20);
             this.lblCalle.TabIndex = 95;
@@ -192,7 +192,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(87, 128);
+            this.lblApellido.Location = new System.Drawing.Point(95, 128);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(78, 20);
             this.lblApellido.TabIndex = 94;
@@ -203,7 +203,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(89, 91);
+            this.lblNombre.Location = new System.Drawing.Point(97, 91);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(76, 20);
             this.lblNombre.TabIndex = 93;
@@ -213,7 +213,7 @@
             // 
             this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRol.FormattingEnabled = true;
-            this.cboRol.Location = new System.Drawing.Point(176, 350);
+            this.cboRol.Location = new System.Drawing.Point(184, 350);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(178, 21);
             this.cboRol.TabIndex = 111;
@@ -223,7 +223,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(124, 350);
+            this.label2.Location = new System.Drawing.Point(132, 350);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 20);
             this.label2.TabIndex = 110;
@@ -264,7 +264,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(251, 24);
+            this.lblID.Location = new System.Drawing.Point(259, 24);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(15, 20);
             this.lblID.TabIndex = 128;
@@ -298,7 +298,10 @@
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Usuarios";
+            this.ShowIcon = false;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
             this.ResumeLayout(false);

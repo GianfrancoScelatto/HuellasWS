@@ -18,7 +18,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login()); //(new MenuInicial());//
+            Application.Run(new Splash());
         }
     }
 }

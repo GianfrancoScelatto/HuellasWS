@@ -50,10 +50,19 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 }
                 else
                 {
-                    pgbIngresar.Visible = true;
-                    pgbIngresar.Value = pgbIngresar.Value + 5;
-                    tmLogin.Start();
+                    MenuInicial menu = new MenuInicial();
+                    menu.Show();
+                    Hide();
                 }
+            }
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult preg = MessageBox.Show("¿Desea salir del programa?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (preg == DialogResult.OK)
+            {
+                Application.Exit();
             }
         }
 
@@ -78,19 +87,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             if (e.KeyCode == Keys.Enter)
             {
                 BtnIngresar.PerformClick();
-            }
-        }
-
-        private void tmLogin_Tick(object sender, EventArgs e)
-        {
-            pgbIngresar.Value = pgbIngresar.Value + 10;
-            
-            if (pgbIngresar.Value > 90)
-            {
-                tmLogin.Stop();
-                MenuInicial menu = new MenuInicial();
-                menu.Show();
-                Hide();
+                e.SuppressKeyPress = true;
             }
         }
 

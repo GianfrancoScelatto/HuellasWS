@@ -17,17 +17,18 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timerProgreso_Tick(object sender, EventArgs e)
         {
-            panelProgreso.Width += 3;
-            if (panelProgreso.Width >700)
-            {
-                timerProgreso.Stop();
-                MenuInicial menu = new MenuInicial();
-                menu.Show();
-                this.Hide();
+            Hide();
+            Form Login = new Login();
+            Login.Show();
+            timerProgreso.Stop();
+        }
 
-            }
+        private void Splash_Load(object sender, EventArgs e)
+        {
+            timerProgreso.Interval = 3000;
+            timerProgreso.Start();
         }
     }
 }

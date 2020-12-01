@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,10 +38,9 @@
             this.lklblContraseña = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkContraseña = new System.Windows.Forms.CheckBox();
-            this.pgbIngresar = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbHuellas = new System.Windows.Forms.PictureBox();
-            this.tmLogin = new System.Windows.Forms.Timer(this.components);
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHuellas)).BeginInit();
@@ -53,7 +51,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(251, 3);
+            this.label1.Location = new System.Drawing.Point(267, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 23);
             this.label1.TabIndex = 0;
@@ -110,7 +108,7 @@
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnIngresar.Location = new System.Drawing.Point(399, 213);
+            this.BtnIngresar.Location = new System.Drawing.Point(327, 211);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(103, 46);
             this.BtnIngresar.TabIndex = 5;
@@ -152,14 +150,6 @@
             this.chkContraseña.UseVisualStyleBackColor = true;
             this.chkContraseña.CheckedChanged += new System.EventHandler(this.chkContraseña_CheckedChanged);
             // 
-            // pgbIngresar
-            // 
-            this.pgbIngresar.Location = new System.Drawing.Point(20, 325);
-            this.pgbIngresar.Name = "pgbIngresar";
-            this.pgbIngresar.Size = new System.Drawing.Size(568, 23);
-            this.pgbIngresar.TabIndex = 75;
-            this.pgbIngresar.Visible = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pbHuellas);
@@ -178,18 +168,27 @@
             this.pbHuellas.TabIndex = 76;
             this.pbHuellas.TabStop = false;
             // 
-            // tmLogin
+            // btnSalir
             // 
-            this.tmLogin.Tick += new System.EventHandler(this.tmLogin_Tick);
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalir.Location = new System.Drawing.Point(467, 211);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(103, 46);
+            this.btnSalir.TabIndex = 76;
+            this.btnSalir.Text = "Cerrar";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(604, 358);
+            this.ClientSize = new System.Drawing.Size(604, 322);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pgbIngresar);
             this.Controls.Add(this.chkContraseña);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lklblContraseña);
@@ -225,9 +224,8 @@
         private System.Windows.Forms.LinkLabel lklblContraseña;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chkContraseña;
-        private System.Windows.Forms.ProgressBar pgbIngresar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pbHuellas;
-        private System.Windows.Forms.Timer tmLogin;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
