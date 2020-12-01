@@ -47,6 +47,12 @@ namespace BusinessRules
             
         }
 
+        public DataTable BuscarEstablecimiento (string Busqueda)
+        {
+            DataTable tabla = new DataTable();
+            tabla = daE.BuscarEstablecimientos(Busqueda);
+            return tabla;
+        }
         public DataTable ComboEstablecimiento()
         {
             DataTable tabla = new DataTable();

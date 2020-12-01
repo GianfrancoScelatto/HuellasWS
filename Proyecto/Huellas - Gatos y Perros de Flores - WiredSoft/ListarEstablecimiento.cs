@@ -115,5 +115,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Establecimiento.Internacion = Convert.ToBoolean(dgvEstablecimiento.CurrentRow.Cells["Internacion"].Value);
 
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            brE.BuscarEstablecimiento(txtBuscar.Text);
+        }
     }
 }

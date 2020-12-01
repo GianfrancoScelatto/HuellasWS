@@ -105,6 +105,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Costos.Pagado = Convert.ToDecimal(dgvCosto.CurrentRow.Cells["Pagado"].Value.ToString());
         }
 
-
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            //brC.BuscarCosto(txtBuscar.Text);
+        }
     }
 }

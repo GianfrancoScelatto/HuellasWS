@@ -97,6 +97,26 @@ namespace DataAccess
 
         }
 
+        public DataTable BuscarGasto(string Busqueda)
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.Parameters.AddWithValue("@Busqueda", Busqueda);
+                    command.CommandText = "prc_FiltrarGasto";
+                    command.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = command.ExecuteReader();
+                    tabla.Load(reader);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
         public DataTable ListarTipoGasto()
         {
             using (var connection = GetConnection())
