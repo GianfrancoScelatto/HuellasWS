@@ -275,6 +275,7 @@
             this.chkNoInternacion.TabIndex = 95;
             this.chkNoInternacion.Text = "No";
             this.chkNoInternacion.UseVisualStyleBackColor = true;
+            this.chkNoInternacion.Visible = false;
             // 
             // Establecimiento
             // 
