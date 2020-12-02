@@ -127,6 +127,7 @@
             this.chkNo.TabIndex = 155;
             this.chkNo.Text = "No";
             this.chkNo.UseVisualStyleBackColor = true;
+            this.chkNo.Visible = false;
             // 
             // txtMotivo
             // 

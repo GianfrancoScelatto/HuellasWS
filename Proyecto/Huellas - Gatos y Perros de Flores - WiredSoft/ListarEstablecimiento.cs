@@ -18,7 +18,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     {
         BR_Establecimiento brE = new BR_Establecimiento();
         E_Mensaje msj = new E_Mensaje();
-        
+
         public ListarEstablecimiento()
         {
             InitializeComponent();
@@ -119,6 +119,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             brE.BuscarEstablecimiento(txtBuscar.Text);
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            //brE.BuscarEstablecimiento(Busqueda);
         }
     }
 }

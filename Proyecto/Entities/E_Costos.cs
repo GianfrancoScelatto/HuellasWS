@@ -11,7 +11,7 @@ namespace Entities
         public static int IdGasto { get; set; }
         public static DateTime FechaGasto { get; set; }
         public static int IdTipoGasto { get; set; }
-       // public static string TipoGasto { get; set; }
+
         public static int IdEstablecimiento { get; set; }
         public static int IdAnimal { get; set; }
         public static decimal Monto { get; set; }
