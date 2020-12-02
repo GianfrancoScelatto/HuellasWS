@@ -20,9 +20,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         public ListarPersonas()
         {
             InitializeComponent();
-            MostrarRegistroPersona();
+            
         }
 
+        private void ListarPersonas_Load(object sender, EventArgs e)
+        {
+            MostrarRegistroPersona();
+            dgvPersona.Columns["IdPersona"].Visible = false;
+        }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Form Persona = new Persona();
@@ -123,5 +128,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         }
 
+        
     }
 }

@@ -50,7 +50,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             dgvSeguimiento.DataSource = brS.ListarSeguimiento(E_Animal.IdAnimal);
         }
 
-        private void Mascota_Load(object sender, EventArgs e)
+        private void Animales_Load(object sender, EventArgs e)
         {
             CargarCombos();
 
@@ -129,12 +129,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     {
                         brA.ModificarAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
-                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
+                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpFechaNac.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
                     }
                     else
                         brA.ModificarAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
                                                         String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
-                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
+                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpFechaNac.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
 
                     LimpiarForm();
                     Editar = false;

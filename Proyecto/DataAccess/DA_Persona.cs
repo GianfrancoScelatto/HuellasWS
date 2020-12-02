@@ -56,7 +56,6 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Motivo", Motivo);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_AltaPersona";
-                    //y la BR y dsp funcionalidad, a su vez tambien faltan los prc en Base Datos
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }

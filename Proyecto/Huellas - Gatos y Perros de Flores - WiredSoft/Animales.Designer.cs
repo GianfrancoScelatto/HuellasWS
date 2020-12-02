@@ -929,7 +929,7 @@
             this.Name = "Animales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Animal";
-            this.Load += new System.EventHandler(this.Mascota_Load);
+            this.Load += new System.EventHandler(this.Animales_Load);
             this.tabSeguimiento.ResumeLayout(false);
             this.tabSeguimiento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimiento)).EndInit();

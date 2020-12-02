@@ -243,6 +243,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarPersonas";
             this.Text = "ListarAdoptantes";
+            this.Load += new System.EventHandler(this.ListarPersonas_Load);
             this.panel1.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();

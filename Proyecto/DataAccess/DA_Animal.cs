@@ -36,31 +36,31 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
-                    command.Parameters.AddWithValue("@IdEspecie", TipoAnimal);
-                    command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
-                    command.Parameters.AddWithValue("@FotoIngreso", FotoIngreso);
-                    command.Parameters.AddWithValue("@FotoAdopcion", FotoAdopcion);
                     command.Parameters.AddWithValue("@NombreAnimal", NombreAnimal);
-                    command.Parameters.AddWithValue("@Edad", Edad);
-                    command.Parameters.AddWithValue("@Sexo", Sexo);
-                    command.Parameters.AddWithValue("@Castracion", Castracion);
-                    command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
-                    command.Parameters.AddWithValue("@Peso", Peso);
-                    command.Parameters.AddWithValue("@Comentario", Comentario);
-                    command.Parameters.AddWithValue("@EstadoAnimal", Estado);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdEspecie", TipoAnimal);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
                     command.Parameters.AddWithValue("@FechaNac", FechaNacimiento);
+                    command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
+                    command.Parameters.AddWithValue("@ImagenIngreso", FotoIngreso);
+                    command.Parameters.AddWithValue("@ImagenAdopcion", FotoAdopcion);
+                    command.Parameters.AddWithValue("@Sexo", Sexo);
+                    command.Parameters.AddWithValue("@Edad", Edad);
+                    command.Parameters.AddWithValue("@Peso", Peso);
+                    command.Parameters.AddWithValue("@ColorPelo", ColorPelo);
+                    command.Parameters.AddWithValue("@Castracion", Castracion);
                     if (FechaCastracion.HasValue) command.Parameters.AddWithValue("@FechaCastracion", FechaCastracion); else command.Parameters.AddWithValue("@FechaCastracion", null);
                     if (FechaDefuncion.HasValue) command.Parameters.AddWithValue("@FechaDefuncion", FechaDefuncion); else command.Parameters.AddWithValue("@FechaDefuncion", null);
+                    command.Parameters.AddWithValue("@Comentario", Comentario);
+                    command.Parameters.AddWithValue("@EstadoAnimal", Estado);
                     command.CommandText = "prc_AltaAnimal";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }
             }
         }
-        public void ModificarAnimal(int IdUsuario, int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime? FechaCastracion, DateTime FechaIngreso, DateTime FechaNacimiento, DateTime? FechaDefuncion)
+        public void ModificarAnimal(int IdUsuario, int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime? FechaCastracion, DateTime? FechaIngreso, DateTime? FechaNacimiento, DateTime? FechaDefuncion)
         {
             using (var connection = GetConnection())
             {
