@@ -107,7 +107,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            //brC.BuscarCosto(txtBuscar.Text);
+            if (txtBuscar.Text == String.Empty)
+            {
+                MostrarGastos();
+                dgvCosto.Columns["IdTipoGasto"].Visible = false;
+                //
+
+            }
+            else
+                dgvCosto.DataSource = brC.BuscarCosto(txtBuscar.Text);
         }
     }
 }

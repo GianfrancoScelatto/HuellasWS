@@ -32,7 +32,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarEstablecimient_Load(object sender, EventArgs e)
         {
             MostrarRegistroEstablecimiento();
-            dgvEstablecimiento.Columns["IdEstablecimiento"].Visible = false;
+            dgvEstablecimiento.Columns["IdTipoEstablecimiento"].Visible = false;
         }
 
 
@@ -118,7 +118,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            brE.BuscarEstablecimiento(txtBuscar.Text);
+            if (txtBuscar.Text == String.Empty)
+            {
+                MostrarRegistroEstablecimiento();
+                dgvEstablecimiento.Columns["IdTipoEstablecimiento"].Visible = false;
+                //VER PORQUE SE ROMPE EN dgv_establecimiento_CellFormatting ["IdTipoEstablecimiento"]
+
+            }
+            else
+                dgvEstablecimiento.DataSource = brE.BuscarEstablecimiento(txtBuscar.Text);
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
