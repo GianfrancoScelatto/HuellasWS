@@ -64,7 +64,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnVacunas_Click(object sender, EventArgs e)
         {
-            AbirFormHijo(new ListarVacunaT());
+            AbirFormHijo(new ListarVacunas());
         }
 
 

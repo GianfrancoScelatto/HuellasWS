@@ -48,7 +48,8 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(12, 179);
+            this.label5.Location = new System.Drawing.Point(47, 223);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 20);
             this.label5.TabIndex = 115;
@@ -59,7 +60,8 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(111, 102);
+            this.label3.Location = new System.Drawing.Point(164, 129);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 114;
@@ -70,7 +72,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(157, 32);
+            this.label1.Location = new System.Drawing.Point(209, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 20);
             this.label1.TabIndex = 113;
@@ -81,7 +84,8 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(113, 68);
+            this.label2.Location = new System.Drawing.Point(166, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 112;
@@ -89,18 +93,20 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(122, 181);
+            this.txtDescripcion.Location = new System.Drawing.Point(163, 223);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(306, 180);
+            this.txtDescripcion.Size = new System.Drawing.Size(407, 221);
             this.txtDescripcion.TabIndex = 116;
             this.txtDescripcion.Text = "";
             // 
             // txtVacuna
             // 
-            this.txtVacuna.Location = new System.Drawing.Point(189, 70);
+            this.txtVacuna.Location = new System.Drawing.Point(252, 86);
+            this.txtVacuna.Margin = new System.Windows.Forms.Padding(4);
             this.txtVacuna.MaxLength = 20;
             this.txtVacuna.Name = "txtVacuna";
-            this.txtVacuna.Size = new System.Drawing.Size(142, 20);
+            this.txtVacuna.Size = new System.Drawing.Size(188, 22);
             this.txtVacuna.TabIndex = 119;
             // 
             // label4
@@ -108,7 +114,8 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(13, 144);
+            this.label4.Location = new System.Drawing.Point(13, 176);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(214, 20);
             this.label4.TabIndex = 123;
@@ -121,9 +128,10 @@
             this.cmbEspecie.Items.AddRange(new object[] {
             "Perro",
             "Gato"});
-            this.cmbEspecie.Location = new System.Drawing.Point(190, 105);
+            this.cmbEspecie.Location = new System.Drawing.Point(253, 129);
+            this.cmbEspecie.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEspecie.Name = "cmbEspecie";
-            this.cmbEspecie.Size = new System.Drawing.Size(141, 21);
+            this.cmbEspecie.Size = new System.Drawing.Size(187, 24);
             this.cmbEspecie.TabIndex = 127;
             // 
             // lblID
@@ -131,7 +139,8 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(250, 32);
+            this.lblID.Location = new System.Drawing.Point(332, 46);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(13, 17);
             this.lblID.TabIndex = 128;
@@ -139,10 +148,11 @@
             // 
             // txtRevacunacion
             // 
-            this.txtRevacunacion.Location = new System.Drawing.Point(232, 145);
+            this.txtRevacunacion.Location = new System.Drawing.Point(235, 176);
+            this.txtRevacunacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtRevacunacion.MaxLength = 3;
             this.txtRevacunacion.Name = "txtRevacunacion";
-            this.txtRevacunacion.Size = new System.Drawing.Size(65, 20);
+            this.txtRevacunacion.Size = new System.Drawing.Size(85, 22);
             this.txtRevacunacion.TabIndex = 126;
             this.txtRevacunacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -155,9 +165,10 @@
             "Mes",
             "Semana",
             "Dia"});
-            this.cmbRevacunacion.Location = new System.Drawing.Point(303, 145);
+            this.cmbRevacunacion.Location = new System.Drawing.Point(335, 175);
+            this.cmbRevacunacion.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRevacunacion.Name = "cmbRevacunacion";
-            this.cmbRevacunacion.Size = new System.Drawing.Size(125, 21);
+            this.cmbRevacunacion.Size = new System.Drawing.Size(165, 24);
             this.cmbRevacunacion.TabIndex = 129;
             // 
             // btnCancelar
@@ -169,9 +180,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancelar.Location = new System.Drawing.Point(245, 375);
+            this.btnCancelar.Location = new System.Drawing.Point(327, 462);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(142, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(189, 41);
             this.btnCancelar.TabIndex = 133;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -186,9 +198,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(97, 375);
+            this.btnGuardar.Location = new System.Drawing.Point(129, 462);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(142, 33);
+            this.btnGuardar.Size = new System.Drawing.Size(189, 41);
             this.btnGuardar.TabIndex = 132;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -196,10 +209,10 @@
             // 
             // Vacunas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(456, 420);
+            this.ClientSize = new System.Drawing.Size(608, 517);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cmbRevacunacion);
@@ -213,7 +226,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Vacunas";
             this.Text = "Vacunas";
             this.Load += new System.EventHandler(this.Vacunas_Load);

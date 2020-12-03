@@ -33,8 +33,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             cmbAnimal.ValueMember = "IdAnimal";
 
             cmbVet.DataSource = brE.ComboEstablecimiento();
-            cmbAnimal.DisplayMember = "Establecimiento";
-            cmbAnimal.ValueMember = "IdEstablecimiento";
+            cmbVet.DisplayMember = "Nombre";
+            cmbVet.ValueMember = "IdEstablecimiento";
         }
 
         private void FichaMedica_Load(object sender, EventArgs e)
@@ -52,10 +52,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 cmbVet.SelectedValue = E_FichaMedica.IdVeterinaria;
                 txtCosto.Text = E_FichaMedica.Costo.ToString();
             }
+            else if (E_Animal.Editar == true)
+            {
+                cmbAnimal.SelectedValue = E_Animal.IdAnimal;
+                cmbAnimal.Enabled = false;
+            }
             else
             {
                 cmbAnimal.SelectedIndex = 0;
-                cmbVet.SelectedIndex = 0;
+                cmbVet.SelectedIndex = 0;  
             }
         }
 
@@ -69,6 +74,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     Close();
                 }
             }
+            else
+                Close();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)

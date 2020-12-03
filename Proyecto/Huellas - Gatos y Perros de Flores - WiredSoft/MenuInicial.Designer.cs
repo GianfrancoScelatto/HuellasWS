@@ -150,6 +150,7 @@
             // 
             // lklblCerrarSesion
             // 
+            this.lklblCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lklblCerrarSesion.AutoSize = true;
             this.lklblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lklblCerrarSesion.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
@@ -164,6 +165,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 574);
@@ -208,6 +210,7 @@
             // 
             // lklblUsuario
             // 
+            this.lklblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lklblUsuario.AutoSize = true;
             this.lklblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lklblUsuario.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
@@ -222,6 +225,7 @@
             // 
             // lblRol
             // 
+            this.lblRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRol.AutoSize = true;
             this.lblRol.ForeColor = System.Drawing.Color.White;
             this.lblRol.Location = new System.Drawing.Point(69, 618);
@@ -232,6 +236,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 590);
             this.pictureBox1.Name = "pictureBox1";
@@ -349,6 +354,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuInicial_FormClosing);
             this.Load += new System.EventHandler(this.MenuInicial_Load);
             this.panelMenuLateral.ResumeLayout(false);

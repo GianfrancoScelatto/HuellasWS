@@ -80,54 +80,60 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(177, 247);
+            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.Location = new System.Drawing.Point(168, 243);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.Size = new System.Drawing.Size(58, 19);
             this.lblEmail.TabIndex = 57;
             this.lblEmail.Text = "label7";
             // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(177, 205);
+            this.lblCelular.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCelular.Location = new System.Drawing.Point(168, 201);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(35, 13);
+            this.lblCelular.Size = new System.Drawing.Size(58, 19);
             this.lblCelular.TabIndex = 56;
             this.lblCelular.Text = "label6";
             // 
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(177, 165);
+            this.lblLocalidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLocalidad.Location = new System.Drawing.Point(168, 161);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(35, 13);
+            this.lblLocalidad.Size = new System.Drawing.Size(58, 19);
             this.lblLocalidad.TabIndex = 55;
             this.lblLocalidad.Text = "label5";
             // 
             // lblDomicilio
             // 
             this.lblDomicilio.AutoSize = true;
-            this.lblDomicilio.Location = new System.Drawing.Point(177, 124);
+            this.lblDomicilio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDomicilio.Location = new System.Drawing.Point(168, 120);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(35, 13);
+            this.lblDomicilio.Size = new System.Drawing.Size(58, 19);
             this.lblDomicilio.TabIndex = 54;
             this.lblDomicilio.Text = "label4";
             // 
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(177, 80);
+            this.lblDni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDni.Location = new System.Drawing.Point(168, 77);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(35, 13);
+            this.lblDni.Size = new System.Drawing.Size(58, 19);
             this.lblDni.TabIndex = 53;
             this.lblDni.Text = "label3";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(177, 39);
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Location = new System.Drawing.Point(168, 35);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(35, 13);
+            this.lblNombre.Size = new System.Drawing.Size(58, 19);
             this.lblNombre.TabIndex = 52;
             this.lblNombre.Text = "label2";
             // 

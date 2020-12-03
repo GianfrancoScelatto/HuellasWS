@@ -133,7 +133,7 @@ namespace DataAccess
             }
         }
 
-        public DataTable DetallePersona(int idPersona)
+        public DataTable DetallePersona(int IdPersona)
         {
             using (var connection = GetConnection())
             {
@@ -142,7 +142,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdPersona", idPersona);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.CommandText = "prc_DetallePersona";
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
@@ -150,10 +150,11 @@ namespace DataAccess
                     {
                         E_Persona.NombrePersona = reader.GetString(0);
                         E_Persona.ApellidoPersona = reader.GetString(1);
-                        E_Persona.Domicilio = reader.GetString(2);
-                        E_Persona.Localidad = reader.GetString(3);
-                        E_Persona.Celular = reader.GetInt32(4);
-                        E_Persona.Email = reader.GetString(5);
+                        E_Persona.DNI = reader.GetString(2);
+                        E_Persona.Domicilio = reader.GetString(3);
+                        E_Persona.Localidad = reader.GetString(4);
+                        E_Persona.Celular = reader.GetInt32(5);
+                        E_Persona.Email = reader.GetString(6);
                     }
                     tabla.Load(reader);
                     connection.Close();

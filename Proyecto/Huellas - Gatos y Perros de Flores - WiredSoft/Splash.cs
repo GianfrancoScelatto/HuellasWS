@@ -27,7 +27,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void Splash_Load(object sender, EventArgs e)
         {
-            timerProgreso.Interval = 3000;
+            timerProgreso.Interval = 2000;
             timerProgreso.Start();
         }
     }

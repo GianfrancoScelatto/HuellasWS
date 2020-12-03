@@ -26,9 +26,14 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void GuardarSeguimiento(string Detalle, DateTime Fecha)
+        public void GuardarSeguimiento(int IdAnimal, string Detalle, DateTime Fecha, int IdUsuario)
         {
-            daS.GuardarSeguimiento(Detalle, Fecha);
+            daS.GuardarSeguimiento(IdAnimal, Detalle, Fecha, IdUsuario);
+        }
+
+        public void BajaSeguimiento(int IdSeguimiento, int IdUsuario)
+        {
+            daS.BajaSeguimiento(IdSeguimiento, IdUsuario);
         }
     }
 }

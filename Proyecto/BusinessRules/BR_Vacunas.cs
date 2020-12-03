@@ -30,6 +30,11 @@ namespace BusinessRules
             
         }
 
+        public void AltaVacunaAnimal(int IdVacuna, int IdAnimal, DateTime FechaAplicacion, DateTime FechaReaplicacion, int IdUsuario)
+        {
+            daV.AltaVacunaAnimal(IdVacuna, IdAnimal, FechaAplicacion, FechaReaplicacion, IdUsuario);
+        }
+
         public void ModificarVacuna (int idVacuna, string Vacuna, int idEspecie, int FrecuenciaVacunacion, int IdTiempo, string Descripcion, int idUsuario)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
@@ -44,6 +49,11 @@ namespace BusinessRules
             {
                 daV.BajaVacuna(IdVacuna, IdUsuario);
             }
+        }
+
+        public void BajaVacunaAnimal(int IdVacunaAnimal, int IdUsuario)
+        {
+            daV.BajaVacunaAnimal(IdVacunaAnimal, IdUsuario);
         }
 
         public DataTable BuscarVacuna(string Busqueda)
@@ -64,6 +74,32 @@ namespace BusinessRules
         {
             DataTable tabla = new DataTable();
             tabla = daV.ListarTiempo();
+            return tabla;
+        }
+
+        public DataTable ListarComboVacunas(int IdEspecie)
+        {
+            DataTable tabla = new DataTable();
+            tabla = daV.ListarComboVacunas(IdEspecie);
+            return tabla;
+        }
+
+        public int TraerRevacunacion(int IdVacuna)
+        {
+            return daV.TraerRevacunacion(IdVacuna);
+        }
+
+        public DataTable ListarVacunas(int IdAnimal)
+        {
+            DataTable tabla = new DataTable();
+            tabla = daV.ListarVacunas(IdAnimal);
+            return tabla;
+        }
+
+        public DataTable FiltrarVacunas(string Vacuna)
+        {
+            DataTable tabla = new DataTable();
+            tabla = daV.FiltrarVacunas(Vacuna);
             return tabla;
         }
     }

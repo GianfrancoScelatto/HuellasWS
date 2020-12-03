@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Animales));
             this.tabSeguimiento = new System.Windows.Forms.TabPage();
+            this.btnExportarSeg = new System.Windows.Forms.Button();
+            this.btnEliminarSeg = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnGuardarSeg = new System.Windows.Forms.Button();
             this.dtpFiltro = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +56,6 @@
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
             this.dtpCastracion = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkCasNo = new System.Windows.Forms.CheckBox();
             this.chkCasSi = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbPersona = new System.Windows.Forms.ComboBox();
@@ -95,7 +96,7 @@
             this.lblMascota = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbcDatosMasc = new System.Windows.Forms.TabControl();
-            this.btnCancelarDatos = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardarDatos = new System.Windows.Forms.Button();
             this.tabSeguimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeguimiento)).BeginInit();
@@ -111,6 +112,8 @@
             // tabSeguimiento
             // 
             this.tabSeguimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
+            this.tabSeguimiento.Controls.Add(this.btnExportarSeg);
+            this.tabSeguimiento.Controls.Add(this.btnEliminarSeg);
             this.tabSeguimiento.Controls.Add(this.label8);
             this.tabSeguimiento.Controls.Add(this.btnGuardarSeg);
             this.tabSeguimiento.Controls.Add(this.dtpFiltro);
@@ -120,12 +123,42 @@
             this.tabSeguimiento.Controls.Add(this.dtpAcontecimiento);
             this.tabSeguimiento.Controls.Add(this.label63);
             this.tabSeguimiento.Controls.Add(this.label61);
-            this.tabSeguimiento.Location = new System.Drawing.Point(4, 22);
+            this.tabSeguimiento.Location = new System.Drawing.Point(4, 25);
             this.tabSeguimiento.Name = "tabSeguimiento";
             this.tabSeguimiento.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSeguimiento.Size = new System.Drawing.Size(849, 630);
+            this.tabSeguimiento.Size = new System.Drawing.Size(924, 627);
             this.tabSeguimiento.TabIndex = 3;
             this.tabSeguimiento.Text = "Seguimiento";
+            // 
+            // btnExportarSeg
+            // 
+            this.btnExportarSeg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportarSeg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportarSeg.BackgroundImage")));
+            this.btnExportarSeg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportarSeg.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExportarSeg.FlatAppearance.BorderSize = 0;
+            this.btnExportarSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarSeg.Location = new System.Drawing.Point(842, 257);
+            this.btnExportarSeg.Name = "btnExportarSeg";
+            this.btnExportarSeg.Size = new System.Drawing.Size(33, 33);
+            this.btnExportarSeg.TabIndex = 117;
+            this.btnExportarSeg.UseVisualStyleBackColor = true;
+            this.btnExportarSeg.Click += new System.EventHandler(this.btnExportarSeg_Click);
+            // 
+            // btnEliminarSeg
+            // 
+            this.btnEliminarSeg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarSeg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarSeg.BackgroundImage")));
+            this.btnEliminarSeg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminarSeg.FlatAppearance.BorderSize = 0;
+            this.btnEliminarSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarSeg.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarSeg.Location = new System.Drawing.Point(881, 256);
+            this.btnEliminarSeg.Name = "btnEliminarSeg";
+            this.btnEliminarSeg.Size = new System.Drawing.Size(33, 33);
+            this.btnEliminarSeg.TabIndex = 116;
+            this.btnEliminarSeg.UseVisualStyleBackColor = true;
+            this.btnEliminarSeg.Click += new System.EventHandler(this.btnEliminarSeg_Click);
             // 
             // label8
             // 
@@ -133,7 +166,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(368, 16);
+            this.label8.Location = new System.Drawing.Point(404, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(127, 24);
             this.label8.TabIndex = 115;
@@ -148,9 +181,9 @@
             this.btnGuardarSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarSeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarSeg.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardarSeg.Location = new System.Drawing.Point(682, 183);
+            this.btnGuardarSeg.Location = new System.Drawing.Point(682, 185);
             this.btnGuardarSeg.Name = "btnGuardarSeg";
-            this.btnGuardarSeg.Size = new System.Drawing.Size(152, 60);
+            this.btnGuardarSeg.Size = new System.Drawing.Size(227, 57);
             this.btnGuardarSeg.TabIndex = 114;
             this.btnGuardarSeg.Text = "Guardar";
             this.btnGuardarSeg.UseVisualStyleBackColor = false;
@@ -158,9 +191,9 @@
             // 
             // dtpFiltro
             // 
-            this.dtpFiltro.Location = new System.Drawing.Point(155, 269);
+            this.dtpFiltro.Location = new System.Drawing.Point(157, 269);
             this.dtpFiltro.Name = "dtpFiltro";
-            this.dtpFiltro.Size = new System.Drawing.Size(200, 20);
+            this.dtpFiltro.Size = new System.Drawing.Size(263, 22);
             this.dtpFiltro.TabIndex = 113;
             this.dtpFiltro.ValueChanged += new System.EventHandler(this.dtpFiltro_ValueChanged);
             // 
@@ -190,7 +223,7 @@
             this.dgvSeguimiento.ReadOnly = true;
             this.dgvSeguimiento.RowHeadersWidth = 51;
             this.dgvSeguimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSeguimiento.Size = new System.Drawing.Size(837, 329);
+            this.dgvSeguimiento.Size = new System.Drawing.Size(915, 329);
             this.dgvSeguimiento.TabIndex = 111;
             // 
             // txtDetalle
@@ -205,7 +238,7 @@
             // 
             this.dtpAcontecimiento.Location = new System.Drawing.Point(235, 67);
             this.dtpAcontecimiento.Name = "dtpAcontecimiento";
-            this.dtpAcontecimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpAcontecimiento.Size = new System.Drawing.Size(263, 22);
             this.dtpAcontecimiento.TabIndex = 9;
             // 
             // label63
@@ -235,10 +268,10 @@
             this.tabFichaMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
             this.tabFichaMed.Controls.Add(this.groupBox1);
             this.tabFichaMed.Controls.Add(this.label26);
-            this.tabFichaMed.Location = new System.Drawing.Point(4, 22);
+            this.tabFichaMed.Location = new System.Drawing.Point(4, 25);
             this.tabFichaMed.Name = "tabFichaMed";
             this.tabFichaMed.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFichaMed.Size = new System.Drawing.Size(849, 630);
+            this.tabFichaMed.Size = new System.Drawing.Size(924, 627);
             this.tabFichaMed.TabIndex = 2;
             this.tabFichaMed.Text = "Ficha Médica";
             // 
@@ -255,7 +288,7 @@
             this.groupBox1.Controls.Add(this.lblNombVet);
             this.groupBox1.Location = new System.Drawing.Point(6, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(836, 566);
+            this.groupBox1.Size = new System.Drawing.Size(912, 566);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             // 
@@ -263,7 +296,7 @@
             // 
             this.dtpFichaMedica.Location = new System.Drawing.Point(240, 47);
             this.dtpFichaMedica.Name = "dtpFichaMedica";
-            this.dtpFichaMedica.Size = new System.Drawing.Size(195, 20);
+            this.dtpFichaMedica.Size = new System.Drawing.Size(195, 22);
             this.dtpFichaMedica.TabIndex = 59;
             this.dtpFichaMedica.ValueChanged += new System.EventHandler(this.dtpFichaMedica_ValueChanged);
             // 
@@ -273,7 +306,7 @@
             this.lklblVacunas.LinkColor = System.Drawing.Color.White;
             this.lklblVacunas.Location = new System.Drawing.Point(6, 16);
             this.lklblVacunas.Name = "lklblVacunas";
-            this.lklblVacunas.Size = new System.Drawing.Size(152, 13);
+            this.lklblVacunas.Size = new System.Drawing.Size(191, 16);
             this.lklblVacunas.TabIndex = 58;
             this.lklblVacunas.TabStop = true;
             this.lklblVacunas.Text = "Ver Vacunas/Desparasitación:";
@@ -287,7 +320,7 @@
             this.btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(657, 33);
+            this.btnExportar.Location = new System.Drawing.Point(733, 33);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(33, 33);
             this.btnExportar.TabIndex = 57;
@@ -302,7 +335,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(792, 33);
+            this.btnEliminar.Location = new System.Drawing.Point(868, 33);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(33, 33);
             this.btnEliminar.TabIndex = 56;
@@ -316,7 +349,7 @@
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(702, 33);
+            this.btnNuevo.Location = new System.Drawing.Point(778, 33);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(33, 33);
             this.btnNuevo.TabIndex = 55;
@@ -330,7 +363,7 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(747, 33);
+            this.btnModificar.Location = new System.Drawing.Point(823, 33);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(33, 33);
             this.btnModificar.TabIndex = 54;
@@ -341,7 +374,7 @@
             // 
             this.txtBuscar.Location = new System.Drawing.Point(76, 46);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(158, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(158, 22);
             this.txtBuscar.TabIndex = 53;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -360,7 +393,7 @@
             this.dgvFichaMedica.ReadOnly = true;
             this.dgvFichaMedica.RowHeadersWidth = 51;
             this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFichaMedica.Size = new System.Drawing.Size(827, 494);
+            this.dgvFichaMedica.Size = new System.Drawing.Size(903, 494);
             this.dgvFichaMedica.TabIndex = 52;
             // 
             // lblNombVet
@@ -380,7 +413,7 @@
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.Control;
-            this.label26.Location = new System.Drawing.Point(362, 12);
+            this.label26.Location = new System.Drawing.Point(396, 16);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(136, 24);
             this.label26.TabIndex = 13;
@@ -391,7 +424,6 @@
             this.tabDatosAnimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.tabDatosAnimal.Controls.Add(this.dtpCastracion);
             this.tabDatosAnimal.Controls.Add(this.label4);
-            this.tabDatosAnimal.Controls.Add(this.chkCasNo);
             this.tabDatosAnimal.Controls.Add(this.chkCasSi);
             this.tabDatosAnimal.Controls.Add(this.label3);
             this.tabDatosAnimal.Controls.Add(this.cmbPersona);
@@ -431,10 +463,10 @@
             this.tabDatosAnimal.Controls.Add(this.lblD);
             this.tabDatosAnimal.Controls.Add(this.lblMascota);
             this.tabDatosAnimal.Controls.Add(this.label21);
-            this.tabDatosAnimal.Location = new System.Drawing.Point(4, 22);
+            this.tabDatosAnimal.Location = new System.Drawing.Point(4, 25);
             this.tabDatosAnimal.Name = "tabDatosAnimal";
             this.tabDatosAnimal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatosAnimal.Size = new System.Drawing.Size(849, 630);
+            this.tabDatosAnimal.Size = new System.Drawing.Size(924, 627);
             this.tabDatosAnimal.TabIndex = 0;
             this.tabDatosAnimal.Text = "Datos";
             // 
@@ -443,7 +475,7 @@
             this.dtpCastracion.Enabled = false;
             this.dtpCastracion.Location = new System.Drawing.Point(399, 528);
             this.dtpCastracion.Name = "dtpCastracion";
-            this.dtpCastracion.Size = new System.Drawing.Size(145, 20);
+            this.dtpCastracion.Size = new System.Drawing.Size(239, 22);
             this.dtpCastracion.TabIndex = 119;
             // 
             // label4
@@ -457,29 +489,16 @@
             this.label4.TabIndex = 118;
             this.label4.Text = "Fecha de castración:";
             // 
-            // chkCasNo
-            // 
-            this.chkCasNo.AutoSize = true;
-            this.chkCasNo.BackColor = System.Drawing.Color.Transparent;
-            this.chkCasNo.ForeColor = System.Drawing.Color.White;
-            this.chkCasNo.Location = new System.Drawing.Point(483, 498);
-            this.chkCasNo.Name = "chkCasNo";
-            this.chkCasNo.Size = new System.Drawing.Size(42, 17);
-            this.chkCasNo.TabIndex = 117;
-            this.chkCasNo.Text = "NO";
-            this.chkCasNo.UseVisualStyleBackColor = false;
-            this.chkCasNo.CheckedChanged += new System.EventHandler(this.chkCasNo_CheckedChanged);
-            // 
             // chkCasSi
             // 
             this.chkCasSi.AutoSize = true;
             this.chkCasSi.BackColor = System.Drawing.Color.Transparent;
             this.chkCasSi.ForeColor = System.Drawing.Color.White;
-            this.chkCasSi.Location = new System.Drawing.Point(428, 498);
+            this.chkCasSi.Location = new System.Drawing.Point(402, 494);
             this.chkCasSi.Name = "chkCasSi";
-            this.chkCasSi.Size = new System.Drawing.Size(36, 17);
+            this.chkCasSi.Size = new System.Drawing.Size(39, 20);
             this.chkCasSi.TabIndex = 116;
-            this.chkCasSi.Text = "SI";
+            this.chkCasSi.Text = "Si";
             this.chkCasSi.UseVisualStyleBackColor = false;
             this.chkCasSi.CheckedChanged += new System.EventHandler(this.chkCasSi_CheckedChanged);
             // 
@@ -496,11 +515,13 @@
             // 
             // cmbPersona
             // 
+            this.cmbPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersona.FormattingEnabled = true;
             this.cmbPersona.Location = new System.Drawing.Point(398, 563);
             this.cmbPersona.Name = "cmbPersona";
-            this.cmbPersona.Size = new System.Drawing.Size(146, 21);
+            this.cmbPersona.Size = new System.Drawing.Size(240, 24);
             this.cmbPersona.TabIndex = 114;
+            this.cmbPersona.SelectedValueChanged += new System.EventHandler(this.cmbPersona_SelectedValueChanged);
             // 
             // label5
             // 
@@ -517,9 +538,9 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(79, 63);
+            this.linkLabel1.Location = new System.Drawing.Point(75, 62);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(66, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(83, 16);
             this.linkLabel1.TabIndex = 112;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Foto Ingreso";
@@ -528,7 +549,7 @@
             // 
             this.btnImagen.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImagen.Location = new System.Drawing.Point(48, 79);
+            this.btnImagen.Location = new System.Drawing.Point(45, 79);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(135, 23);
             this.btnImagen.TabIndex = 111;
@@ -541,7 +562,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(645, 208);
+            this.label1.Location = new System.Drawing.Point(724, 207);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 110;
@@ -549,7 +570,7 @@
             // 
             // txtComentario
             // 
-            this.txtComentario.Location = new System.Drawing.Point(584, 237);
+            this.txtComentario.Location = new System.Drawing.Point(663, 236);
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(237, 173);
@@ -568,9 +589,9 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(79, 278);
+            this.linkLabel2.Location = new System.Drawing.Point(76, 277);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(64, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(82, 16);
             this.linkLabel2.TabIndex = 107;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Foto Egreso";
@@ -582,7 +603,7 @@
             this.lklblPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.lklblPersona.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.lklblPersona.LinkColor = System.Drawing.Color.White;
-            this.lklblPersona.Location = new System.Drawing.Point(399, 598);
+            this.lklblPersona.Location = new System.Drawing.Point(445, 599);
             this.lklblPersona.Name = "lklblPersona";
             this.lklblPersona.Size = new System.Drawing.Size(144, 17);
             this.lklblPersona.TabIndex = 106;
@@ -597,7 +618,7 @@
             this.dtpFechaF.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
             this.dtpFechaF.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaF.Name = "dtpFechaF";
-            this.dtpFechaF.Size = new System.Drawing.Size(146, 20);
+            this.dtpFechaF.Size = new System.Drawing.Size(240, 22);
             this.dtpFechaF.TabIndex = 105;
             // 
             // label7
@@ -613,11 +634,11 @@
             // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(398, 282);
+            this.dtpFechaNac.Location = new System.Drawing.Point(398, 281);
             this.dtpFechaNac.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
             this.dtpFechaNac.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(146, 20);
+            this.dtpFechaNac.Size = new System.Drawing.Size(240, 22);
             this.dtpFechaNac.TabIndex = 103;
             // 
             // label6
@@ -649,7 +670,7 @@
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Location = new System.Drawing.Point(399, 425);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(145, 21);
+            this.cmbEstado.Size = new System.Drawing.Size(239, 24);
             this.cmbEstado.TabIndex = 98;
             this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
             // 
@@ -657,47 +678,44 @@
             // 
             this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.Items.AddRange(new object[] {
-            "M",
-            "H"});
             this.cmbSexo.Location = new System.Drawing.Point(399, 389);
             this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(145, 21);
+            this.cmbSexo.Size = new System.Drawing.Size(239, 24);
             this.cmbSexo.TabIndex = 94;
             // 
             // txtColor
             // 
             this.txtColor.Location = new System.Drawing.Point(398, 354);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(146, 20);
+            this.txtColor.Size = new System.Drawing.Size(240, 22);
             this.txtColor.TabIndex = 93;
             // 
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(398, 318);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(146, 20);
+            this.txtPeso.Size = new System.Drawing.Size(240, 22);
             this.txtPeso.TabIndex = 92;
             // 
             // txtEdad
             // 
             this.txtEdad.Location = new System.Drawing.Point(398, 246);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(146, 20);
+            this.txtEdad.Size = new System.Drawing.Size(240, 22);
             this.txtEdad.TabIndex = 91;
             // 
             // txtUbicacion
             // 
             this.txtUbicacion.Location = new System.Drawing.Point(398, 210);
             this.txtUbicacion.Name = "txtUbicacion";
-            this.txtUbicacion.Size = new System.Drawing.Size(146, 20);
+            this.txtUbicacion.Size = new System.Drawing.Size(240, 22);
             this.txtUbicacion.TabIndex = 90;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(398, 102);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(146, 20);
+            this.txtNombre.Size = new System.Drawing.Size(240, 22);
             this.txtNombre.TabIndex = 84;
             // 
             // dtpIngreso
@@ -706,7 +724,7 @@
             this.dtpIngreso.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
             this.dtpIngreso.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpIngreso.Name = "dtpIngreso";
-            this.dtpIngreso.Size = new System.Drawing.Size(146, 20);
+            this.dtpIngreso.Size = new System.Drawing.Size(240, 22);
             this.dtpIngreso.TabIndex = 86;
             // 
             // cmbEspecie
@@ -715,14 +733,14 @@
             this.cmbEspecie.FormattingEnabled = true;
             this.cmbEspecie.Location = new System.Drawing.Point(399, 137);
             this.cmbEspecie.Name = "cmbEspecie";
-            this.cmbEspecie.Size = new System.Drawing.Size(145, 21);
+            this.cmbEspecie.Size = new System.Drawing.Size(239, 24);
             this.cmbEspecie.TabIndex = 85;
             // 
             // btnImagen2
             // 
             this.btnImagen2.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnImagen2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImagen2.Location = new System.Drawing.Point(48, 294);
+            this.btnImagen2.Location = new System.Drawing.Point(45, 294);
             this.btnImagen2.Name = "btnImagen2";
             this.btnImagen2.Size = new System.Drawing.Size(135, 23);
             this.btnImagen2.TabIndex = 82;
@@ -866,7 +884,7 @@
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(416, 17);
+            this.label21.Location = new System.Drawing.Point(455, 15);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 24);
             this.label21.TabIndex = 44;
@@ -880,26 +898,28 @@
             this.tbcDatosMasc.Controls.Add(this.tabDatosAnimal);
             this.tbcDatosMasc.Controls.Add(this.tabFichaMed);
             this.tbcDatosMasc.Controls.Add(this.tabSeguimiento);
+            this.tbcDatosMasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.tbcDatosMasc.Location = new System.Drawing.Point(12, 12);
             this.tbcDatosMasc.Name = "tbcDatosMasc";
             this.tbcDatosMasc.SelectedIndex = 0;
-            this.tbcDatosMasc.Size = new System.Drawing.Size(857, 656);
+            this.tbcDatosMasc.Size = new System.Drawing.Size(932, 656);
             this.tbcDatosMasc.TabIndex = 0;
             this.tbcDatosMasc.SelectedIndexChanged += new System.EventHandler(this.tbcDatosMasc_SelectedIndexChanged);
             // 
-            // btnCancelarDatos
+            // btnCancelar
             // 
-            this.btnCancelarDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelarDatos.BackColor = System.Drawing.Color.White;
-            this.btnCancelarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarDatos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancelarDatos.Location = new System.Drawing.Point(460, 677);
-            this.btnCancelarDatos.Name = "btnCancelarDatos";
-            this.btnCancelarDatos.Size = new System.Drawing.Size(125, 44);
-            this.btnCancelarDatos.TabIndex = 62;
-            this.btnCancelarDatos.Text = "Cancelar";
-            this.btnCancelarDatos.UseVisualStyleBackColor = false;
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancelar.Location = new System.Drawing.Point(521, 676);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(125, 44);
+            this.btnCancelar.TabIndex = 62;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardarDatos
             // 
@@ -908,7 +928,7 @@
             this.btnGuardarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarDatos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardarDatos.Location = new System.Drawing.Point(315, 677);
+            this.btnGuardarDatos.Location = new System.Drawing.Point(376, 676);
             this.btnGuardarDatos.Name = "btnGuardarDatos";
             this.btnGuardarDatos.Size = new System.Drawing.Size(125, 44);
             this.btnGuardarDatos.TabIndex = 61;
@@ -921,8 +941,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(881, 730);
-            this.Controls.Add(this.btnCancelarDatos);
+            this.ClientSize = new System.Drawing.Size(956, 730);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardarDatos);
             this.Controls.Add(this.tbcDatosMasc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -993,7 +1013,7 @@
         private System.Windows.Forms.DateTimePicker dtpFiltro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvSeguimiento;
-        private System.Windows.Forms.Button btnCancelarDatos;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardarDatos;
         private System.Windows.Forms.Button btnGuardarSeg;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1010,11 +1030,12 @@
         private System.Windows.Forms.Button btnImagen;
         private System.Windows.Forms.ComboBox cmbPersona;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox chkCasNo;
         private System.Windows.Forms.CheckBox chkCasSi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpCastracion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnExportarSeg;
+        private System.Windows.Forms.Button btnEliminarSeg;
     }
 }

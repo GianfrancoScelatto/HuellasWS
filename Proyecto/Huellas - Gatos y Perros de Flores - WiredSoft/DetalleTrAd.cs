@@ -25,7 +25,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             brP.DetallePersona(E_Animal.Persona);
             lblNombre.Text = E_Persona.NombrePersona + ' ' + E_Persona.ApellidoPersona;
-            lblDni.Text = E_Persona.DNI.ToString();
+            lblDni.Text = E_Persona.DNI;
             lblDomicilio.Text = E_Persona.Domicilio;
             lblLocalidad.Text = E_Persona.Localidad;
             lblCelular.Text = E_Persona.Celular.ToString();

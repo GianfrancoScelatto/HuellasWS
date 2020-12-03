@@ -9,9 +9,11 @@ namespace Entities
     public static class E_Vacuna
     {
         public static int IdVacuna { get; set; }
+        public static int IdVacunaAnimal { get; set; }
         public static string Vacuna { get; set; }
         public static string Especie { get; set; }
         public static int IdEspecie { get; set; }
+        public static DateTime FechaVacunacion { get; set; }
         public static int FrecuenciaRevacunacion { get; set; }
         public static int IdTiempo { get; set; }
         public static string Descripcion { get; set; }

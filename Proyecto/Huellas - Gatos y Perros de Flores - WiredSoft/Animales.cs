@@ -20,7 +20,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         BR_Seguimiento brS = new BR_Seguimiento();
         BR_FichaMedica brFM = new BR_FichaMedica();
         BR_Persona brP = new BR_Persona();
-        E_Mensaje eM = new E_Mensaje();
+        E_Mensaje msj = new E_Mensaje();
         public bool Editar = false;
         string comment, detalle;
 
@@ -39,15 +39,23 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             cmbEstado.DisplayMember = "Estado";
             cmbEstado.ValueMember = "IdEstado";
 
+            cmbPersona.SelectedValueChanged -= cmbPersona_SelectedValueChanged;
             cmbPersona.DataSource = brP.ComboPersona();
             cmbPersona.DisplayMember = "Nombre";
             cmbPersona.ValueMember = "IdPersona";
+            cmbPersona.SelectedValueChanged += cmbPersona_SelectedValueChanged;
+
+            cmbSexo.DataSource = brA.ListarSexo();
+            cmbSexo.DisplayMember = "Sexo";
+            cmbSexo.ValueMember = "IdSexo";
         }
 
         private void CargarGrillas()
         {
             dgvFichaMedica.DataSource = brFM.ListarFichaMedica(E_Animal.IdAnimal);
+            dgvFichaMedica.Columns["IdFichaMedica"].Visible = false;
             dgvSeguimiento.DataSource = brS.ListarSeguimiento(E_Animal.IdAnimal);
+            dgvSeguimiento.Columns["IdSeguimiento"].Visible = false;
         }
 
         private void Animales_Load(object sender, EventArgs e)
@@ -58,7 +66,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 Editar = true;
                 CargarGrillas();
-                dgvFichaMedica.Columns["IdFichaMedica"].Visible = false;
                 lblIdAnimal.Text = E_Animal.IdAnimal.ToString();
                 txtNombre.Text = E_Animal.NombreAnimal;
                 cmbEspecie.SelectedValue = E_Animal.IdEspecie;
@@ -66,19 +73,19 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 txtUbicacion.Text = E_Animal.LugarRescate;
                 txtEdad.Text = E_Animal.Edad.ToString();
                 dtpFechaNac.Value = E_Animal.FechaNac.Date;
-                txtPeso.Text = E_Animal.Peso.ToString();
+                txtPeso.Text = Math.Round(E_Animal.Peso, 2).ToString();
                 txtColor.Text = E_Animal.ColorPelo;
                 cmbSexo.SelectedValue = E_Animal.Sexo;
                 cmbEstado.SelectedValue = E_Animal.Estado;
                 txtComentario.Text = E_Animal.Comentario;
                 dtpCastracion.Value = E_Animal.FechaCastracion ?? DateTime.MinValue;
+                picB1.ImageLocation = E_Animal.FotoIngreso;
+                picB2.ImageLocation = E_Animal.FotoAdopcion;
 
                 if (E_Animal.Castracion == true)
                 {
                     chkCasSi.Checked = true;
                 }
-                else
-                    chkCasNo.Checked = true;
 
                 if (cmbEstado.SelectedIndex == 2)
                 {
@@ -102,8 +109,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 lklblVacunas.Enabled = false;
                 dgvSeguimiento.Enabled = false;
                 dtpFiltro.Enabled = false;
-                lblTranAdopt.Visible = false;
-                lklblPersona.Visible = false;
                 txtDetalle.Enabled = false;
                 dtpAcontecimiento.Enabled = false;
                 btnGuardarSeg.Enabled = false;
@@ -117,7 +122,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 String.IsNullOrWhiteSpace(txtEdad.Text) || String.IsNullOrWhiteSpace(txtPeso.Text) || 
                 String.IsNullOrWhiteSpace(txtColor.Text))
             {
-                eM.MensajeAlerta("Hay espacios vacíos.");
+                msj.MensajeAlerta("Hay espacios vacíos.");
             }
             else if (Editar == true)
             {
@@ -125,23 +130,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     comment += txtComentario.Text + Environment.NewLine;
 
-                    if (chkCasSi.Checked == true)
-                    {
-                        brA.ModificarAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
-                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
-                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpFechaNac.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
-                    }
-                    else
-                        brA.ModificarAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, String.Empty,
-                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
-                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpFechaNac.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
+                    brA.ModificarAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(lblIdAnimal.Text), Convert.ToInt32(cmbPersona.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, picB1.ImageLocation,
+                                        E_Animal.FotoAdopcion, txtNombre.Text, Convert.ToInt32(txtEdad.Text), Convert.ToInt32(cmbSexo.SelectedValue), chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
+                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date, dtpFechaF.Value.Date);
 
                     LimpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    eM.MensajeError("Ha ocurrido un error: " + ex);
+                    msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
             }
             else
@@ -150,21 +148,28 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     comment += txtComentario.Text + Environment.NewLine;
 
-                    if (chkCasSi.Checked == true)
-                    {
-                        brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
-                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
-                                                        comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
-                    }
-                    else
-                        brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbEspecie.SelectedValue), Convert.ToInt32(cmbPersona.SelectedValue), txtUbicacion.Text, String.Empty,
-                                                        String.Empty, txtNombre.Text, Convert.ToInt32(txtEdad.Text), cmbSexo.SelectedText, chkCasNo.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text), comment,
-                                                        Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpIngreso.Value.Date, dtpFechaF.Value.Date);
+                    brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbPersona.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, E_Animal.FotoIngreso,
+                                    txtNombre.Text, Convert.ToInt32(txtEdad.Text), Convert.ToInt32(cmbSexo.SelectedValue), chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
+                                    comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date, dtpFechaF.Value.Date);
                     LimpiarForm();
                 }
                 catch(Exception ex)
                 {
-                    eM.MensajeError("Ha ocurrido un error: " + ex);
+                    msj.MensajeError("Ha ocurrido un error: " + ex);
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtNombre.Text) || String.IsNullOrWhiteSpace(txtUbicacion.Text) ||
+                String.IsNullOrWhiteSpace(txtEdad.Text) || String.IsNullOrWhiteSpace(txtPeso.Text) ||
+                String.IsNullOrWhiteSpace(txtColor.Text))
+            {
+                DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (preg == DialogResult.OK)
+                {
+                    Close();
                 }
             }
         }
@@ -173,20 +178,44 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (String.IsNullOrWhiteSpace(txtDetalle.Text))
             {
-                eM.MensajeError("El campo de detalle se encuentra vacío.");
+                msj.MensajeAlerta("El campo de detalle se encuentra vacío.");
             }
             else
             {
-                detalle += txtDetalle.Text + Environment.NewLine;
-                brS.GuardarSeguimiento(detalle, dtpAcontecimiento.Value.Date);
-                LimpiarForm();
+                try
+                {
+                    detalle += txtDetalle.Text + Environment.NewLine;
+                    brS.GuardarSeguimiento(E_Animal.IdAnimal, detalle, dtpAcontecimiento.Value.Date, E_UsuarioAcceso.IdUsuario);
+                    CargarGrillas();
+                    txtDetalle.Text = String.Empty;
+                    detalle = String.Empty;
+                    dtpAcontecimiento.Value = DateTime.Now;
+                }
+                catch (Exception ex)
+                {
+                    msj.MensajeError("Ha ocurrido un error: " + ex);
+                }
+                
             }
                 
         }
 
-        private void btnExportar_Click(object sender, EventArgs e)
+        private void btnExportarSeg_Click(object sender, EventArgs e)
         {
-            ExportarDatos(dgvFichaMedica);
+            ExportarDatos(dgvSeguimiento);
+        }
+
+        private void btnEliminarSeg_Click(object sender, EventArgs e)
+        {
+            if (dgvSeguimiento.Rows.Count > 0)
+            {
+                DialogResult preg = MessageBox.Show("¿Desea eliminar este seguimiento?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (preg == DialogResult.OK)
+                {
+                    brS.BajaSeguimiento(Convert.ToInt32(dgvSeguimiento.CurrentRow.Cells["IdSeguimiento"].Value), E_Usuario.IdUsuario);
+                    CargarGrillas();
+                }
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -207,8 +236,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             DialogResult preg = MessageBox.Show("¿Desea eliminar esta ficha médica?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (preg == DialogResult.OK)
             {
-                brFM.BajaFichaMedica(E_FichaMedica.IdFichaMedica, E_UsuarioAcceso.IdRol);
+                brFM.BajaFichaMedica(E_FichaMedica.IdFichaMedica, E_UsuarioAcceso.IdUsuario);
+                CargarGrillas();
             }
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            ExportarDatos(dgvFichaMedica);
         }
 
         private void lklblPersona_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -234,8 +269,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             cmbSexo.SelectedIndex = 0;
             cmbPersona.SelectedIndex = 0;
 
+            picB1.Image = null;
+            picB2.Image = null;
+
             chkCasSi.Checked = false;
-            chkCasNo.Checked = false;
 
             dtpFechaNac.Value = DateTime.Now;
             dtpFechaF.Value = DateTime.Now;
@@ -275,15 +312,15 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 case 0:
                     btnGuardarDatos.Visible = true;
-                    btnCancelarDatos.Visible = true;
+                    btnCancelar.Visible = true;
                     break;
                 case 1:
                     btnGuardarDatos.Visible = false;
-                    btnCancelarDatos.Visible = false;
+                    btnCancelar.Visible = false;
                     break;
                 case 2:
                     btnGuardarDatos.Visible = false;
-                    btnCancelarDatos.Visible = false;
+                    btnCancelar.Visible = false;
                     break;
             }
         }
@@ -311,27 +348,23 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnImagen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog faI = new OpenFileDialog();
-            OpenFileDialog faA = new OpenFileDialog();
-            DialogResult rsI = faI.ShowDialog();
-            DialogResult rsA = faA.ShowDialog();
-            if (rsA == DialogResult.OK && rsI == DialogResult.OK)
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK)
             {
-                picB1.Image = Image.FromFile(faI.FileName);
-                picB1.Image = Image.FromFile(faA.FileName);
+                picB1.Image = Image.FromFile(ofd.FileName);
+                E_Animal.FotoIngreso = ofd.FileName;
             }
         }
 
         private void btnImagen2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog faI = new OpenFileDialog();
-            OpenFileDialog faA = new OpenFileDialog();
-            DialogResult rsI = faI.ShowDialog();
-            DialogResult rsA = faA.ShowDialog();
-            if (rsA == DialogResult.OK && rsI == DialogResult.OK)
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK)
             {
-                picB2.Image = Image.FromFile(faI.FileName);
-                picB2.Image = Image.FromFile(faA.FileName);
+                picB2.Image = Image.FromFile(ofd.FileName);
+                E_Animal.FotoAdopcion = ofd.FileName;
             }
         }
 
@@ -339,7 +372,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (dtpFiltro.Enabled == true)
             {
-                brS.FiltrarSeguimiento(dtpFiltro.Value.Date);
+                dgvSeguimiento.DataSource = brS.FiltrarSeguimiento(dtpFiltro.Value.Date);
             }
         }
 
@@ -347,7 +380,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (txtBuscar.Enabled == true && dtpFichaMedica.Enabled == true)
             {
-                brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
+                dgvFichaMedica.DataSource = brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
             }
         }
 
@@ -361,25 +394,22 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (chkCasSi.Checked == true)
             {
-                chkCasNo.Checked = false;
                 dtpCastracion.Enabled = true;
             }
+            else
+                dtpCastracion.Enabled = false;
         }
 
-        private void chkCasNo_CheckedChanged(object sender, EventArgs e)
+        private void cmbPersona_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (chkCasNo.Checked == true)
-            {
-                chkCasSi.Checked = false;
-                dtpCastracion.Enabled = false;
-            }
+            E_Animal.Persona = Convert.ToInt32(cmbPersona.SelectedValue);
         }
 
         private void dtpFichaMedica_ValueChanged(object sender, EventArgs e)
         {
             if (txtBuscar.Enabled == true && dtpFichaMedica.Enabled == true)
             {
-                brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
+                dgvFichaMedica.DataSource = brFM.FiltrarFichaMedica(txtBuscar.Text, dtpFichaMedica.Value.Date);
             }
         }
     }

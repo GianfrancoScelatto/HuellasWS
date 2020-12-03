@@ -44,10 +44,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelFormListar = new System.Windows.Forms.Panel();
-            this.dgvMascotas = new System.Windows.Forms.DataGridView();
+            this.dgvAnimales = new System.Windows.Forms.DataGridView();
             this.panelBotones.SuspendLayout();
             this.panelFormListar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimales)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -197,60 +197,59 @@
             // 
             // panelFormListar
             // 
-            this.panelFormListar.Controls.Add(this.dgvMascotas);
+            this.panelFormListar.Controls.Add(this.dgvAnimales);
             this.panelFormListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormListar.Location = new System.Drawing.Point(0, 55);
             this.panelFormListar.Name = "panelFormListar";
             this.panelFormListar.Size = new System.Drawing.Size(1386, 615);
             this.panelFormListar.TabIndex = 28;
             // 
-            // dgvMascotas
+            // dgvAnimales
             // 
-            this.dgvMascotas.AllowUserToAddRows = false;
-            this.dgvMascotas.AllowUserToDeleteRows = false;
-            this.dgvMascotas.AllowUserToResizeColumns = false;
-            this.dgvMascotas.AllowUserToResizeRows = false;
-            this.dgvMascotas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvAnimales.AllowUserToAddRows = false;
+            this.dgvAnimales.AllowUserToDeleteRows = false;
+            this.dgvAnimales.AllowUserToResizeColumns = false;
+            this.dgvAnimales.AllowUserToResizeRows = false;
+            this.dgvAnimales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMascotas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMascotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.dgvAnimales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAnimales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(111)))), ((int)(((byte)(140)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMascotas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnimales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAnimales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Format = "N2";
             dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMascotas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMascotas.EnableHeadersVisualStyles = false;
-            this.dgvMascotas.GridColor = System.Drawing.Color.Snow;
-            this.dgvMascotas.Location = new System.Drawing.Point(0, 6);
-            this.dgvMascotas.MultiSelect = false;
-            this.dgvMascotas.Name = "dgvMascotas";
-            this.dgvMascotas.ReadOnly = true;
-            this.dgvMascotas.RowHeadersWidth = 51;
+            this.dgvAnimales.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAnimales.EnableHeadersVisualStyles = false;
+            this.dgvAnimales.GridColor = System.Drawing.Color.Snow;
+            this.dgvAnimales.Location = new System.Drawing.Point(0, 6);
+            this.dgvAnimales.MultiSelect = false;
+            this.dgvAnimales.Name = "dgvAnimales";
+            this.dgvAnimales.ReadOnly = true;
+            this.dgvAnimales.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvMascotas.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMascotas.Size = new System.Drawing.Size(1386, 609);
-            this.dgvMascotas.TabIndex = 27;
-            this.dgvMascotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMascotas_CellContentClick);
+            this.dgvAnimales.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAnimales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAnimales.Size = new System.Drawing.Size(1386, 609);
+            this.dgvAnimales.TabIndex = 27;
+            this.dgvAnimales.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMascotas_CellMouseClick);
             // 
             // ListarAnimales
             // 
@@ -268,7 +267,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelFormListar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,6 +286,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelFormListar;
-        private System.Windows.Forms.DataGridView dgvMascotas;
+        private System.Windows.Forms.DataGridView dgvAnimales;
     }
 }

@@ -138,11 +138,11 @@
     <Compile Include="ListarUsuarios.Designer.cs">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarVacunaT.cs">
+    <Compile Include="ListarVacunas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarVacunaT.Designer.cs">
-      <DependentUpon>ListarVacunaT.cs</DependentUpon>
+    <Compile Include="ListarVacunas.Designer.cs">
+      <DependentUpon>ListarVacunas.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -187,6 +187,12 @@
     </Compile>
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacunaAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacunaAnimal.Designer.cs">
+      <DependentUpon>VacunaAnimal.cs</DependentUpon>
     </Compile>
     <Compile Include="Vacunas.cs">
       <SubType>Form</SubType>
@@ -248,8 +254,8 @@
     <EmbeddedResource Include="ListarUsuarios.resx">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarVacunaT.resx">
-      <DependentUpon>ListarVacunaT.cs</DependentUpon>
+    <EmbeddedResource Include="ListarVacunas.resx">
+      <DependentUpon>ListarVacunas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacunaAnimal.resx">
+      <DependentUpon>VacunaAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vacunas.resx">
       <DependentUpon>Vacunas.cs</DependentUpon>

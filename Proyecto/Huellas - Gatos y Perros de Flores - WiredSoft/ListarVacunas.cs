@@ -12,12 +12,12 @@ using BusinessRules;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    public partial class ListarVacunaT : Form
+    public partial class ListarVacunas : Form
     {
         BR_Vacunas brV = new BR_Vacunas();
         E_Mensaje msj = new E_Mensaje();
         
-        public ListarVacunaT()
+        public ListarVacunas()
         {
             InitializeComponent();
         }

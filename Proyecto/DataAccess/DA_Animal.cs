@@ -28,7 +28,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaAnimal(int IdUsuario, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime? FechaCastracion, DateTime FechaIngreso, DateTime FechaNacimiento, DateTime? FechaDefuncion)
+        public void AltaAnimal(int IdUsuario, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string NombreAnimal, int Edad, int Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime? FechaCastracion, DateTime FechaIngreso, DateTime FechaNacimiento, DateTime? FechaDefuncion)
         {
             using (var connection = GetConnection())
             {
@@ -44,7 +44,6 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@FechaNac", FechaNacimiento);
                     command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
                     command.Parameters.AddWithValue("@ImagenIngreso", FotoIngreso);
-                    command.Parameters.AddWithValue("@ImagenAdopcion", FotoAdopcion);
                     command.Parameters.AddWithValue("@Sexo", Sexo);
                     command.Parameters.AddWithValue("@Edad", Edad);
                     command.Parameters.AddWithValue("@Peso", Peso);
@@ -60,7 +59,7 @@ namespace DataAccess
                 }
             }
         }
-        public void ModificarAnimal(int IdUsuario, int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, string Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime? FechaCastracion, DateTime? FechaIngreso, DateTime? FechaNacimiento, DateTime? FechaDefuncion)
+        public void ModificarAnimal(int IdUsuario, int IdAnimal, int IdPersona, int TipoAnimal, string LugarRescate, string FotoIngreso, string FotoAdopcion, string NombreAnimal, int Edad, int Sexo, bool Castracion, string ColorPelo, decimal Peso, string Comentario, int Estado, DateTime? FechaCastracion, DateTime? FechaIngreso, DateTime? FechaNacimiento, DateTime? FechaDefuncion)
         {
             using (var connection = GetConnection())
             {
@@ -73,8 +72,8 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@IdEspecie", TipoAnimal);
                     command.Parameters.AddWithValue("@LugarRescate", LugarRescate);
-                    command.Parameters.AddWithValue("@FotoIngreso", FotoIngreso);
-                    command.Parameters.AddWithValue("@FotoAdopcion", FotoAdopcion);
+                    command.Parameters.AddWithValue("@ImagenIngreso", FotoIngreso);
+                    command.Parameters.AddWithValue("@ImagenAdopcion", FotoAdopcion);
                     command.Parameters.AddWithValue("@NombreAnimal", NombreAnimal);
                     command.Parameters.AddWithValue("@Edad", Edad);
                     command.Parameters.AddWithValue("@Sexo", Sexo);
@@ -156,6 +155,24 @@ namespace DataAccess
             {
                 DataTable tabla = new DataTable();
                 SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboEstado", connection);
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    sdA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sdA.Fill(tabla);
+                    connection.Close();
+                    return tabla;
+                }
+            }
+        }
+
+        public DataTable ListarSexo()
+        {
+            using (var connection = GetConnection())
+            {
+                DataTable tabla = new DataTable();
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboSexoAnimal", connection);
                 connection.Open();
                 using (var command = new SqlCommand())
                 {

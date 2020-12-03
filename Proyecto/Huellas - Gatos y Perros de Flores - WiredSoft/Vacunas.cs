@@ -81,13 +81,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 365;
                         break;
                     case 1:
-                        dias = Convert.ToInt32(txtRevacunacion.Text);
-                        break;
-                    case 2:
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 30;
                         break;
-                    case 3:
+                    case 2:
                         dias = Convert.ToInt32(txtRevacunacion.Text) * 7;
+                        break;
+                    case 3:
+                        dias = Convert.ToInt32(txtRevacunacion.Text);
                         break;
             }
             

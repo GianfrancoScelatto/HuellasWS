@@ -16,7 +16,7 @@ namespace Entities
         public static string LugarRescate { get; set; }
         public static string FotoIngreso { get; set; }
         public static string FotoAdopcion { get; set; }
-        public static string Sexo { get; set; }
+        public static int Sexo { get; set; }
         public static int Edad { get; set; }
         public static decimal Peso { get; set; }
         public static string ColorPelo { get; set; }

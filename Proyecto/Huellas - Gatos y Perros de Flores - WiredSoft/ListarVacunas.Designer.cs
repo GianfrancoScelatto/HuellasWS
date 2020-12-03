@@ -1,6 +1,6 @@
 ﻿namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 {
-    partial class ListarVacunaT
+    partial class ListarVacunas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarVacunaT));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarVacunas));
             this.dgvVacunas = new System.Windows.Forms.DataGridView();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnExportar = new System.Windows.Forms.Button();

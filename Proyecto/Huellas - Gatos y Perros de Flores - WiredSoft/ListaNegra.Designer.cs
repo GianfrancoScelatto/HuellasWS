@@ -41,10 +41,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(47, 73);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(25, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 25);
+            this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 59;
             this.label1.Text = "Nombre:";
             // 
@@ -53,10 +52,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(47, 133);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(35, 108);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 25);
+            this.label10.Size = new System.Drawing.Size(66, 20);
             this.label10.TabIndex = 67;
             this.label10.Text = "Motivo:";
             // 
@@ -69,10 +67,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancelar.Location = new System.Drawing.Point(320, 308);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(240, 250);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(167, 43);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 35);
             this.btnCancelar.TabIndex = 92;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -86,10 +83,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(112, 308);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(84, 250);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(167, 43);
+            this.btnGuardar.Size = new System.Drawing.Size(125, 35);
             this.btnGuardar.TabIndex = 91;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -97,28 +93,27 @@
             // 
             // cmbPersona
             // 
+            this.cmbPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersona.FormattingEnabled = true;
-            this.cmbPersona.Location = new System.Drawing.Point(169, 71);
-            this.cmbPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPersona.Location = new System.Drawing.Point(117, 61);
             this.cmbPersona.Name = "cmbPersona";
-            this.cmbPersona.Size = new System.Drawing.Size(377, 24);
+            this.cmbPersona.Size = new System.Drawing.Size(264, 21);
             this.cmbPersona.TabIndex = 93;
             // 
             // txtMotivo
             // 
-            this.txtMotivo.Location = new System.Drawing.Point(169, 134);
-            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMotivo.Location = new System.Drawing.Point(107, 110);
             this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(377, 132);
+            this.txtMotivo.Size = new System.Drawing.Size(284, 108);
             this.txtMotivo.TabIndex = 94;
             this.txtMotivo.Text = "";
             // 
             // ListaNegra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(577, 366);
+            this.ClientSize = new System.Drawing.Size(433, 297);
             this.Controls.Add(this.txtMotivo);
             this.Controls.Add(this.cmbPersona);
             this.Controls.Add(this.btnCancelar);
@@ -126,9 +121,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ListaNegra";
-            this.Text = "ListaNegra";
+            this.Text = "Lista negra";
             this.Load += new System.EventHandler(this.ListaNegra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
