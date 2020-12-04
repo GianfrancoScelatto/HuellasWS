@@ -122,7 +122,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 MostrarRegistroEstablecimiento();
                 dgvEstablecimiento.Columns["IdTipoEstablecimiento"].Visible = false;
-                //VER PORQUE SE ROMPE EN dgv_establecimiento_CellFormatting ["IdTipoEstablecimiento"]
+                
 
             }
             else

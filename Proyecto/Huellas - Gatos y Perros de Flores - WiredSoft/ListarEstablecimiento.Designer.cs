@@ -39,7 +39,6 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
             this.dgvEstablecimiento = new System.Windows.Forms.DataGridView();
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.panelBoton.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panelListar.SuspendLayout();
@@ -57,7 +56,6 @@
             // 
             // panelBotones
             // 
-            this.panelBotones.Controls.Add(this.btnFiltrar);
             this.panelBotones.Controls.Add(this.btnExportar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnNuevo);
@@ -173,15 +171,6 @@
             this.dgvEstablecimiento.TabIndex = 0;
             this.dgvEstablecimiento.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstablecimiento_CellFormatting);
             // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Location = new System.Drawing.Point(219, 7);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(43, 23);
-            this.btnFiltrar.TabIndex = 48;
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
             // ListarEstablecimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +204,5 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView dgvEstablecimiento;
-        private System.Windows.Forms.Button btnFiltrar;
     }
 }

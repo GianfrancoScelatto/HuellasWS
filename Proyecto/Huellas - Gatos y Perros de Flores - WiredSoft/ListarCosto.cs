@@ -111,7 +111,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 MostrarGastos();
                 dgvCosto.Columns["IdTipoGasto"].Visible = false;
-                //
+                dgvCosto.Columns["IdEstablecimiento"].Visible = false;
 
             }
             else
