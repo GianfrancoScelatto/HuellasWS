@@ -93,12 +93,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void MenuInicial_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Login login = new Login();
+            login.Show();
         }
 
         private void btnCosto_Click(object sender, EventArgs e)
         {
-           AbirFormHijo(new ListarCosto());
+            AbirFormHijo(new ListarCosto());
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)

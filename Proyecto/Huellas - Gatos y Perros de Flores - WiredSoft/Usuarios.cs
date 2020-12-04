@@ -15,7 +15,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
     public partial class Usuarios : Form
     {
         BR_Usuario brU = new BR_Usuario();
-        E_Mensaje eM = new E_Mensaje();
+        E_Mensaje msj = new E_Mensaje();
         bool Editar = false;
         public Usuarios()
         {
@@ -78,7 +78,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             if (String.IsNullOrWhiteSpace(txtUser.Text) || String.IsNullOrWhiteSpace(txtNombre.Text) || String.IsNullOrWhiteSpace(txtApellido.Text)
                 || String.IsNullOrWhiteSpace(txtDNI.Text) || String.IsNullOrWhiteSpace(txtTelefono.Text) || String.IsNullOrWhiteSpace(txtRespuesta.Text))
             {
-                eM.MensajeAlerta("Hay campos vacíos.");
+                msj.MensajeAlerta("Hay campos vacíos.");
             }
             else if (Editar == true)
             {
@@ -91,7 +91,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 }
                 catch (Exception ex)
                 {
-                    eM.MensajeError("Ha ocurrido un error: " + ex);
+                    msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
                 
             }
@@ -105,7 +105,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 }
                 catch (Exception ex)
                 {
-                    eM.MensajeError("Ha ocurrido un error: " + ex);
+                    msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
             }
                 
@@ -116,12 +116,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             if (String.IsNullOrWhiteSpace(txtUser.Text) || String.IsNullOrWhiteSpace(txtNombre.Text) || String.IsNullOrWhiteSpace(txtApellido.Text)
                 || String.IsNullOrWhiteSpace(txtDNI.Text) || String.IsNullOrWhiteSpace(txtTelefono.Text) || String.IsNullOrWhiteSpace(txtRespuesta.Text))
             {
-                DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (preg == DialogResult.Yes)
                 {
                     Close();
                 }
             }
+
+            Close();
         }
     }
 }

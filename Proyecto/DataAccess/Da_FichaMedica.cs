@@ -69,7 +69,7 @@ namespace DataAccess
             }
         }
 
-        public void AltaFichaMedica(int IdAnimal, int IdVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
+        public void AltaFichaMedica(int IdAnimal, int IdEstablecimiento, DateTime Fecha, string Informe, string Tratamiento, decimal Costo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -80,18 +80,19 @@ namespace DataAccess
                     command.CommandText = "prc_AltaFichaMedica";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
-                    command.Parameters.AddWithValue("@IdVeterinaria", IdVeterinaria);
-                    command.Parameters.AddWithValue("@Fecha", Fecha);
+                    command.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+                    command.Parameters.AddWithValue("@FechaAtencion", Fecha);
                     command.Parameters.AddWithValue("@Informe", Informe);
                     command.Parameters.AddWithValue("@Tratamiento", Tratamiento);
                     command.Parameters.AddWithValue("@Costo", Costo);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
             }
         }
 
-        public void ModificarFichaMedica(int IdFichaMedica, int IdAnimal, int IdVeterinaria, DateTime Fecha, string Informe, string Tratamiento, decimal Costo)
+        public void ModificarFichaMedica(int IdFichaMedica, int IdAnimal, int IdEstablecimiento, DateTime Fecha, string Informe, string Tratamiento, decimal Costo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -103,18 +104,19 @@ namespace DataAccess
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@IdFichaMedica", IdFichaMedica);
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
-                    command.Parameters.AddWithValue("@IdVeterinaria", IdVeterinaria);
-                    command.Parameters.AddWithValue("@Fecha", Fecha);
+                    command.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+                    command.Parameters.AddWithValue("@FechaAtencion", Fecha);
                     command.Parameters.AddWithValue("@Informe", Informe);
                     command.Parameters.AddWithValue("@Tratamiento", Tratamiento);
                     command.Parameters.AddWithValue("@Costo", Costo);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
             }
         }
 
-        public void BajaFichaMedica(int IdFichaMedica, int IdRol)
+        public void BajaFichaMedica(int IdFichaMedica, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -125,7 +127,7 @@ namespace DataAccess
                     command.CommandText = "prc_BajaFichaMedica";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@IdFichaMedica", IdFichaMedica);
-                    command.Parameters.AddWithValue("@IdRol", IdRol);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }

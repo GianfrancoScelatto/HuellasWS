@@ -68,7 +68,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             if (txtTratamiento.TextLength > 0 || txtInforme.TextLength > 0 || txtCosto.TextLength > 0)
             {
-                DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (preg == DialogResult.OK)
                 {
                     Close();
@@ -94,13 +94,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         informe += txtInforme.Text + Environment.NewLine;
 
                         brFM.ModificarFichaMedica(E_FichaMedica.IdFichaMedica, Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToInt32(cmbVet.SelectedValue), 
-                                                dtpFechaAtencion.Value.Date, informe, tratamiento, Convert.ToDecimal(txtCosto.Text));
+                                                dtpFechaAtencion.Value.Date, informe, tratamiento, Convert.ToDecimal(txtCosto.Text), E_UsuarioAcceso.IdUsuario);
 
                         Editar = false;
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        msj.MensajeError("Ha ocurrido un error.");
+                        msj.MensajeError("Ha ocurrido un error: " + ex);
                     }
                 }
                 else
@@ -111,11 +111,11 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         informe += txtInforme.Text + Environment.NewLine;
 
                         brFM.AltaFichaMedica(Convert.ToInt32(cmbAnimal.SelectedValue), Convert.ToInt32(cmbVet.SelectedValue),
-                                            dtpFechaAtencion.Value.Date, informe, tratamiento, Convert.ToDecimal(txtCosto.Text));
+                                            dtpFechaAtencion.Value.Date, informe, tratamiento, Convert.ToDecimal(txtCosto.Text), E_UsuarioAcceso.IdUsuario);
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        msj.MensajeError("Ha ocurrido un error.");
+                        msj.MensajeError("Ha ocurrido un error: " + ex);
                     }
                 }
             }

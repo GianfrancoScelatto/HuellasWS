@@ -121,7 +121,7 @@
             // dtpFechaAtencion
             // 
             this.dtpFechaAtencion.Location = new System.Drawing.Point(331, 130);
-            this.dtpFechaAtencion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaAtencion.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaAtencion.MaxDate = new System.DateTime(2070, 12, 31, 0, 0, 0, 0);
             this.dtpFechaAtencion.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpFechaAtencion.Name = "dtpFechaAtencion";
@@ -131,7 +131,7 @@
             // txtCosto
             // 
             this.txtCosto.Location = new System.Drawing.Point(333, 682);
-            this.txtCosto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(4);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(261, 22);
             this.txtCosto.TabIndex = 113;
@@ -146,7 +146,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancelar.Location = new System.Drawing.Point(413, 769);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(173, 43);
             this.btnCancelar.TabIndex = 117;
@@ -164,7 +164,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnGuardar.Location = new System.Drawing.Point(205, 769);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(173, 43);
             this.btnGuardar.TabIndex = 116;
@@ -189,7 +189,7 @@
             this.cmbVet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVet.FormattingEnabled = true;
             this.cmbVet.Location = new System.Drawing.Point(333, 634);
-            this.cmbVet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbVet.Margin = new System.Windows.Forms.Padding(4);
             this.cmbVet.Name = "cmbVet";
             this.cmbVet.Size = new System.Drawing.Size(261, 24);
             this.cmbVet.TabIndex = 120;
@@ -210,7 +210,7 @@
             // txtInforme
             // 
             this.txtInforme.Location = new System.Drawing.Point(23, 202);
-            this.txtInforme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInforme.Margin = new System.Windows.Forms.Padding(4);
             this.txtInforme.Multiline = true;
             this.txtInforme.Name = "txtInforme";
             this.txtInforme.Size = new System.Drawing.Size(725, 171);
@@ -219,7 +219,7 @@
             // txtTratamiento
             // 
             this.txtTratamiento.Location = new System.Drawing.Point(24, 421);
-            this.txtTratamiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTratamiento.Margin = new System.Windows.Forms.Padding(4);
             this.txtTratamiento.Multiline = true;
             this.txtTratamiento.Name = "txtTratamiento";
             this.txtTratamiento.Size = new System.Drawing.Size(724, 174);
@@ -230,7 +230,7 @@
             this.cmbAnimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAnimal.FormattingEnabled = true;
             this.cmbAnimal.Location = new System.Drawing.Point(331, 90);
-            this.cmbAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbAnimal.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAnimal.Name = "cmbAnimal";
             this.cmbAnimal.Size = new System.Drawing.Size(261, 24);
             this.cmbAnimal.TabIndex = 121;
@@ -259,9 +259,10 @@
             this.Controls.Add(this.cmbAnimal);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FichaMedica";
-            this.Text = "FichaMedica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ficha médica";
             this.Load += new System.EventHandler(this.FichaMedica_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

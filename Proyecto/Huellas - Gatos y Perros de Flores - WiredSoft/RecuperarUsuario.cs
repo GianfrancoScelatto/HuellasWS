@@ -23,7 +23,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtUser.Text) || String.IsNullOrWhiteSpace(txtRespuesta.Text) || String.IsNullOrWhiteSpace(txtContraseña.Text) || String.IsNullOrWhiteSpace(txtValidarContraseña.Text))
+            if (String.IsNullOrWhiteSpace(txtUser.Text) || String.IsNullOrWhiteSpace(txtRespuesta.Text) || 
+                String.IsNullOrWhiteSpace(txtContraseña.Text) || String.IsNullOrWhiteSpace(txtValidarContraseña.Text))
             {
                 msj.MensajeAlerta("Hay campos vacíos.");
             }
@@ -35,9 +36,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {   
                 try
                 {
-                    //string Clave = MD5.EncriptrarClave(txtValidarContraseña.Text);
-                    //brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, Clave);
-                    brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, txtValidarContraseña.Text);
+                    string Clave = MD5.EncriptrarClave(txtValidarContraseña.Text);
+                    brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, Clave);
                     Close();
                 }
                 catch

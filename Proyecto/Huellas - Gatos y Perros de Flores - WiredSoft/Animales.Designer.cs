@@ -395,6 +395,8 @@
             this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFichaMedica.Size = new System.Drawing.Size(903, 494);
             this.dgvFichaMedica.TabIndex = 52;
+            this.dgvFichaMedica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFichaMedica_CellFormatting);
+            this.dgvFichaMedica.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFichaMedica_CellMouseClick);
             // 
             // lblNombVet
             // 

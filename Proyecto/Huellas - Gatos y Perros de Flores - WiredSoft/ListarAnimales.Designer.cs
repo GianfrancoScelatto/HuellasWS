@@ -208,7 +208,6 @@
             // 
             this.dgvAnimales.AllowUserToAddRows = false;
             this.dgvAnimales.AllowUserToDeleteRows = false;
-            this.dgvAnimales.AllowUserToResizeColumns = false;
             this.dgvAnimales.AllowUserToResizeRows = false;
             this.dgvAnimales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -249,6 +248,7 @@
             this.dgvAnimales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAnimales.Size = new System.Drawing.Size(1386, 609);
             this.dgvAnimales.TabIndex = 27;
+            this.dgvAnimales.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAnimales_CellFormatting);
             this.dgvAnimales.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMascotas_CellMouseClick);
             // 
             // ListarAnimales

@@ -327,13 +327,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void DgvFichaMedica_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            E_FichaMedica.IdFichaMedica = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdFichaMedica"].Value);
-            E_FichaMedica.Fecha = Convert.ToDateTime(dgvFichaMedica.CurrentRow.Cells["Fecha"].Value).Date;
-            E_FichaMedica.Tratamiento = dgvFichaMedica.CurrentRow.Cells["Tratamiento"].Value.ToString();
-            E_FichaMedica.Informe = dgvFichaMedica.CurrentRow.Cells["Informe"].Value.ToString();
-            E_FichaMedica.IdVeterinaria = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdVeterinaria"].Value);
-            E_FichaMedica.IdMascota = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdMascota"].Value);
-            E_FichaMedica.Costo = Convert.ToDecimal(dgvFichaMedica.CurrentRow.Cells["Costo"].Value);
+            
         }
 
         private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
@@ -403,6 +397,22 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void cmbPersona_SelectedValueChanged(object sender, EventArgs e)
         {
             E_Animal.Persona = Convert.ToInt32(cmbPersona.SelectedValue);
+        }
+
+        private void dgvFichaMedica_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            E_FichaMedica.IdFichaMedica = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdFichaMedica"].Value);
+            E_FichaMedica.Fecha = Convert.ToDateTime(dgvFichaMedica.CurrentRow.Cells["Fecha atención"].Value).Date;
+            E_FichaMedica.Tratamiento = dgvFichaMedica.CurrentRow.Cells["Tratamiento"].Value.ToString();
+            E_FichaMedica.Informe = dgvFichaMedica.CurrentRow.Cells["Informe"].Value.ToString();
+            E_FichaMedica.IdVeterinaria = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdVeterinaria"].Value);
+            E_FichaMedica.IdMascota = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdMascota"].Value);
+            E_FichaMedica.Costo = Convert.ToDecimal(dgvFichaMedica.CurrentRow.Cells["Costo"].Value);
+        }
+
+        private void dgvFichaMedica_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dgvFichaMedica.Columns["Costo"].DefaultCellStyle.Format = "N2";
         }
 
         private void dtpFichaMedica_ValueChanged(object sender, EventArgs e)

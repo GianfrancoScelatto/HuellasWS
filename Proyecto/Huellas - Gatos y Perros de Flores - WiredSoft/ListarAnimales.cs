@@ -192,5 +192,10 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Animal.FotoAdopcion = dgvAnimales.CurrentRow.Cells["FotoAdopcion"].Value.ToString();
             E_Animal.FotoIngreso = dgvAnimales.CurrentRow.Cells["FotoIngreso"].Value.ToString();
         }
+
+        private void dgvAnimales_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dgvAnimales.Columns["Peso"].DefaultCellStyle.Format = "N2";
+        }
     }
 }
