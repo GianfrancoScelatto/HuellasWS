@@ -233,6 +233,7 @@
             // txtMonto
             // 
             this.txtMonto.Location = new System.Drawing.Point(189, 301);
+            this.txtMonto.MaxLength = 10;
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(200, 20);
             this.txtMonto.TabIndex = 115;
@@ -241,6 +242,7 @@
             // txtPagado
             // 
             this.txtPagado.Location = new System.Drawing.Point(189, 344);
+            this.txtPagado.MaxLength = 10;
             this.txtPagado.Name = "txtPagado";
             this.txtPagado.Size = new System.Drawing.Size(200, 20);
             this.txtPagado.TabIndex = 116;

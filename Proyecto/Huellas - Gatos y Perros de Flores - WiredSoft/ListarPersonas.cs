@@ -17,6 +17,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         BR_Persona brP = new BR_Persona();
         E_Mensaje msj = new E_Mensaje();
         E_Bitacora eB = new E_Bitacora();
+        string filtro;
         public ListarPersonas()
         {
             InitializeComponent();
@@ -26,13 +27,41 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarPersonas_Load(object sender, EventArgs e)
         {
             MostrarRegistroPersona();
-            dgvPersona.Columns["IdPersona"].Visible = false;
+            dgvPersona.Columns["IdTipoPersona"].Visible = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Form Persona = new Persona();
             Persona.Show();
         }
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            E_Persona.Editar = true;
+            Form Persona = new Persona();
+            Persona.Show();
+            E_Vacuna.Editar = false;
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvPersona.SelectedRows.Count > 0)
+            {
+                DialogResult preg = MessageBox.Show("¿Desea eliminar esta persona?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (preg == DialogResult.OK)
+                {
+
+                    brP.BajaPersona(E_Persona.IdPersona, E_UsuarioAcceso.IdUsuario);
+                    MostrarRegistroPersona();
+                }
+            }
+            else
+            {
+                msj.MensajeError("No se ha seleccionado ninguna persona.");
+            }
+
+        }
+
         public void MostrarRegistroPersona()
         {
             dgvPersona.DataSource = brP.ListarPersona();
@@ -66,44 +95,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             exportarexcel.Visible = true;
         }
 
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            E_Persona.Editar = true;
-            Form Persona = new Persona();
-            Persona.Show();
-        }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvPersona.SelectedRows.Count > 0)
-            {
-                DialogResult preg = MessageBox.Show("¿Desea eliminar esta persona?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                if (preg == DialogResult.OK)
-                {
-
-                    brP.BajaPersona(E_Persona.IdPersona, E_UsuarioAcceso.IdUsuario);
-                    MostrarRegistroPersona();
-                }
-            }
-            else
-            {
-                msj.MensajeError("No se ha seleccionado ninguna persona.");
-            }
-
-        }
-
-
-
-        private void TxtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            if (rbtnAdoptante.Checked == true)
-            {
-                brP.FiltrarPersona(txtBuscar.Text, rbtnAdoptante.Text);
-            }
-            else
-                brP.FiltrarPersona(txtBuscar.Text, rbtnTransitante.Text);
-        }
+        
 
         private void dgvPersona_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -128,6 +121,35 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         }
 
-        
+        private void chkAdoptante_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAdoptante.Checked == true)
+            {
+                chkTransitante.Checked = false;
+                filtro = "Adoptante";
+            }             
+                
+        }
+
+        private void chkTransitante_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTransitante.Checked == true)
+            {
+                chkAdoptante.Checked = false;
+                filtro = "Transitante";
+            }
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == String.Empty)
+            {
+                MostrarRegistroPersona();
+                dgvPersona.Columns["IdTipoPersona"].Visible = false;
+            }
+            else
+                dgvPersona.DataSource = brP.FiltrarPersona(txtBuscar.Text, filtro);
+        }
     }
 }

@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.rbtnAdoptante = new System.Windows.Forms.RadioButton();
+            this.chkTransitante = new System.Windows.Forms.CheckBox();
+            this.chkAdoptante = new System.Windows.Forms.CheckBox();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.rbtnTransitante = new System.Windows.Forms.Button();
@@ -78,8 +78,8 @@
             // 
             // panelBotones
             // 
-            this.panelBotones.Controls.Add(this.radioButton2);
-            this.panelBotones.Controls.Add(this.rbtnAdoptante);
+            this.panelBotones.Controls.Add(this.chkTransitante);
+            this.panelBotones.Controls.Add(this.chkAdoptante);
             this.panelBotones.Controls.Add(this.btnExportar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.rbtnTransitante);
@@ -92,31 +92,31 @@
             this.panelBotones.Size = new System.Drawing.Size(1083, 55);
             this.panelBotones.TabIndex = 28;
             // 
-            // radioButton2
+            // chkTransitante
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(218, 28);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(95, 21);
-            this.radioButton2.TabIndex = 49;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Transitante";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.chkTransitante.AutoSize = true;
+            this.chkTransitante.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTransitante.ForeColor = System.Drawing.Color.White;
+            this.chkTransitante.Location = new System.Drawing.Point(226, 28);
+            this.chkTransitante.Name = "chkTransitante";
+            this.chkTransitante.Size = new System.Drawing.Size(96, 21);
+            this.chkTransitante.TabIndex = 49;
+            this.chkTransitante.Text = "Transitante";
+            this.chkTransitante.UseVisualStyleBackColor = true;
+            this.chkTransitante.CheckedChanged += new System.EventHandler(this.chkTransitante_CheckedChanged);
             // 
-            // rbtnAdoptante
+            // chkAdoptante
             // 
-            this.rbtnAdoptante.AutoSize = true;
-            this.rbtnAdoptante.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.rbtnAdoptante.ForeColor = System.Drawing.Color.White;
-            this.rbtnAdoptante.Location = new System.Drawing.Point(218, 5);
-            this.rbtnAdoptante.Name = "rbtnAdoptante";
-            this.rbtnAdoptante.Size = new System.Drawing.Size(97, 21);
-            this.rbtnAdoptante.TabIndex = 48;
-            this.rbtnAdoptante.TabStop = true;
-            this.rbtnAdoptante.Text = "Adoptante";
-            this.rbtnAdoptante.UseVisualStyleBackColor = true;
+            this.chkAdoptante.AutoSize = true;
+            this.chkAdoptante.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAdoptante.ForeColor = System.Drawing.Color.White;
+            this.chkAdoptante.Location = new System.Drawing.Point(226, 7);
+            this.chkAdoptante.Name = "chkAdoptante";
+            this.chkAdoptante.Size = new System.Drawing.Size(98, 21);
+            this.chkAdoptante.TabIndex = 48;
+            this.chkAdoptante.Text = "Adoptante";
+            this.chkAdoptante.UseVisualStyleBackColor = true;
+            this.chkAdoptante.CheckedChanged += new System.EventHandler(this.chkAdoptante_CheckedChanged);
             // 
             // btnExportar
             // 
@@ -180,7 +180,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(136, 20);
             this.txtBuscar.TabIndex = 39;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
@@ -269,7 +269,7 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvPersona;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton rbtnAdoptante;
+        private System.Windows.Forms.CheckBox chkTransitante;
+        private System.Windows.Forms.CheckBox chkAdoptante;
     }
 }

@@ -42,9 +42,12 @@ namespace BusinessRules
                 ObjPersona.BajaPersona(idPersona, IdUsuario);
             }
         }
-        public void FiltrarPersona(string Busqueda, string tipoPersona)
+        
+        public DataTable FiltrarPersona (string Busqueda, string TipoBusqueda)
         {
-            ObjPersona.FiltrarPersona(Busqueda, tipoPersona);
+            DataTable tabla = new DataTable();
+            tabla = ObjPersona.FiltrarPersona(Busqueda, TipoBusqueda);
+            return tabla;
         }
 
         public DataTable DetallePersona(int idPersona)
