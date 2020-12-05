@@ -38,17 +38,17 @@
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtValidarContraseña = new System.Windows.Forms.TextBox();
-            this.BtnIngresar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.chkContraseña = new System.Windows.Forms.CheckBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 102);
+            this.label2.Location = new System.Drawing.Point(10, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(196, 20);
             this.label2.TabIndex = 62;
@@ -57,9 +57,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(130, 61);
+            this.label1.Location = new System.Drawing.Point(130, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 61;
@@ -68,9 +68,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(47, 184);
+            this.label3.Location = new System.Drawing.Point(47, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 20);
             this.label3.TabIndex = 64;
@@ -79,9 +79,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(105, 143);
+            this.label4.Location = new System.Drawing.Point(105, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 63;
@@ -90,9 +90,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(41, 225);
+            this.label5.Location = new System.Drawing.Point(41, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(165, 20);
             this.label5.TabIndex = 65;
@@ -142,42 +142,48 @@
             this.txtValidarContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtValidarContraseña.UseSystemPasswordChar = true;
             // 
-            // BtnIngresar
-            // 
-            this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIngresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnIngresar.Location = new System.Drawing.Point(137, 303);
-            this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(190, 56);
-            this.BtnIngresar.TabIndex = 71;
-            this.BtnIngresar.Text = "Guardar cambios";
-            this.BtnIngresar.UseVisualStyleBackColor = true;
-            this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(101, 19);
+            this.label6.Location = new System.Drawing.Point(100, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(267, 20);
+            this.label6.Size = new System.Drawing.Size(262, 21);
             this.label6.TabIndex = 72;
             this.label6.Text = "Complete los siguientes campos";
             // 
             // chkContraseña
             // 
             this.chkContraseña.AutoSize = true;
-            this.chkContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.chkContraseña.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
             this.chkContraseña.ForeColor = System.Drawing.Color.White;
-            this.chkContraseña.Location = new System.Drawing.Point(287, 262);
+            this.chkContraseña.Location = new System.Drawing.Point(278, 264);
             this.chkContraseña.Name = "chkContraseña";
-            this.chkContraseña.Size = new System.Drawing.Size(135, 17);
+            this.chkContraseña.Size = new System.Drawing.Size(139, 20);
             this.chkContraseña.TabIndex = 73;
             this.chkContraseña.Text = "Mostrar contraseña";
             this.chkContraseña.UseVisualStyleBackColor = true;
             this.chkContraseña.CheckedChanged += new System.EventHandler(this.chkContraseña_CheckedChanged);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGuardar.Location = new System.Drawing.Point(145, 307);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(189, 41);
+            this.btnGuardar.TabIndex = 133;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // RecuperarUsuario
             // 
@@ -185,9 +191,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(439, 371);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.chkContraseña);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.txtValidarContraseña);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtRespuesta);
@@ -220,8 +226,8 @@
         private System.Windows.Forms.TextBox txtRespuesta;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtValidarContraseña;
-        private System.Windows.Forms.Button BtnIngresar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chkContraseña;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

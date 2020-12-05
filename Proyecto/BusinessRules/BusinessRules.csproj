@@ -47,6 +47,7 @@
     <Compile Include="BR_Costo.cs" />
     <Compile Include="BR_Establecimiento.cs" />
     <Compile Include="BR_FichaMedica.cs" />
+    <Compile Include="BR_Historial.cs" />
     <Compile Include="BR_ListaNegra.cs" />
     <Compile Include="BR_Persona.cs" />
     <Compile Include="BR_Seguimiento.cs" />

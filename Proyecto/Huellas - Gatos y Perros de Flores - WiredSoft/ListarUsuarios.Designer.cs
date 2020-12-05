@@ -119,11 +119,11 @@
             // chxNombre
             // 
             this.chxNombre.AutoSize = true;
-            this.chxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.chxNombre.ForeColor = System.Drawing.SystemColors.Control;
             this.chxNombre.Location = new System.Drawing.Point(235, 29);
             this.chxNombre.Name = "chxNombre";
-            this.chxNombre.Size = new System.Drawing.Size(76, 20);
+            this.chxNombre.Size = new System.Drawing.Size(80, 21);
             this.chxNombre.TabIndex = 41;
             this.chxNombre.Text = "Nombre";
             this.chxNombre.UseVisualStyleBackColor = true;
@@ -132,11 +132,11 @@
             // chxUsuario
             // 
             this.chxUsuario.AutoSize = true;
-            this.chxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.chxUsuario.ForeColor = System.Drawing.SystemColors.Control;
             this.chxUsuario.Location = new System.Drawing.Point(235, 5);
             this.chxUsuario.Name = "chxUsuario";
-            this.chxUsuario.Size = new System.Drawing.Size(74, 20);
+            this.chxUsuario.Size = new System.Drawing.Size(73, 21);
             this.chxUsuario.TabIndex = 40;
             this.chxUsuario.Text = "Usuario";
             this.chxUsuario.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(76, 11);
+            this.txtBuscar.Location = new System.Drawing.Point(85, 16);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(136, 20);
             this.txtBuscar.TabIndex = 39;
@@ -153,11 +153,11 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBuscar.Location = new System.Drawing.Point(17, 12);
+            this.lblBuscar.Location = new System.Drawing.Point(17, 15);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(53, 16);
+            this.lblBuscar.Size = new System.Drawing.Size(65, 21);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 

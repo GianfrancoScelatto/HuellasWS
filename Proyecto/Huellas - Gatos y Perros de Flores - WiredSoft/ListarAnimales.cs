@@ -32,6 +32,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarMascotas_Load(object sender, EventArgs e)
         {
             MostrarRegistroAnimal();
+            dgvAnimales.ClearSelection();
             dgvAnimales.Columns["IdAnimal"].Visible = false;
             dgvAnimales.Columns["IdEspecie"].Visible = false;
             dgvAnimales.Columns["IdPersona"].Visible = false;
@@ -164,11 +165,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             else
                 dgvAnimales.DataSource = brA.FiltrarAnimal(txtBuscar.Text, filtro);
-        }
-
-        private void ListarAnimales_Activated(object sender, EventArgs e)
-        {
-            MostrarRegistroAnimal();
         }
 
         private void dgvMascotas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

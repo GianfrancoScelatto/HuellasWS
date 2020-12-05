@@ -39,23 +39,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(145, 20);
+            this.label2.Location = new System.Drawing.Point(145, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 20);
+            this.label2.Size = new System.Drawing.Size(192, 21);
             this.label2.TabIndex = 137;
             this.label2.Text = "Vacuna para el animal";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 74);
+            this.label1.Location = new System.Drawing.Point(55, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 147;
             this.label1.Text = "Vacunas:";
             // 
@@ -63,27 +63,27 @@
             // 
             this.cmbVacunas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVacunas.FormattingEnabled = true;
-            this.cmbVacunas.Location = new System.Drawing.Point(145, 73);
+            this.cmbVacunas.Location = new System.Drawing.Point(145, 78);
             this.cmbVacunas.Name = "cmbVacunas";
-            this.cmbVacunas.Size = new System.Drawing.Size(278, 24);
+            this.cmbVacunas.Size = new System.Drawing.Size(278, 25);
             this.cmbVacunas.TabIndex = 146;
             this.cmbVacunas.SelectedValueChanged += new System.EventHandler(this.cmbVacunas_SelectedValueChanged);
             // 
             // dtpAplicacion
             // 
-            this.dtpAplicacion.Location = new System.Drawing.Point(145, 109);
+            this.dtpAplicacion.Location = new System.Drawing.Point(145, 116);
             this.dtpAplicacion.Name = "dtpAplicacion";
-            this.dtpAplicacion.Size = new System.Drawing.Size(278, 22);
+            this.dtpAplicacion.Size = new System.Drawing.Size(278, 23);
             this.dtpAplicacion.TabIndex = 149;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 109);
+            this.label3.Location = new System.Drawing.Point(43, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
+            this.label3.Size = new System.Drawing.Size(99, 19);
             this.label3.TabIndex = 150;
             this.label3.Text = "Aplicación:";
             // 
@@ -94,12 +94,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.BackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(149, 163);
+            this.btnGuardar.Location = new System.Drawing.Point(151, 174);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(189, 41);
+            this.btnGuardar.Size = new System.Drawing.Size(189, 44);
             this.btnGuardar.TabIndex = 158;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -107,17 +107,17 @@
             // 
             // VacunaAnimal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(459, 217);
+            this.ClientSize = new System.Drawing.Size(459, 231);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpAplicacion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbVacunas);
             this.Controls.Add(this.label2);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "VacunaAnimal";

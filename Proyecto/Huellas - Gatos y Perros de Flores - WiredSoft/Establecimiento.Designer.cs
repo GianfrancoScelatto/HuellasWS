@@ -41,14 +41,13 @@
             this.txtCP = new System.Windows.Forms.TextBox();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.txtAltura = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.lblEstablecimiento = new System.Windows.Forms.Label();
             this.cmbEstablecimiento = new System.Windows.Forms.ComboBox();
             this.IdEstablecimiento = new System.Windows.Forms.Label();
             this.lblD = new System.Windows.Forms.Label();
             this.chkInternacion = new System.Windows.Forms.CheckBox();
-            this.chkNoInternacion = new System.Windows.Forms.CheckBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblInternacion
@@ -56,7 +55,7 @@
             this.lblInternacion.AutoSize = true;
             this.lblInternacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInternacion.ForeColor = System.Drawing.Color.White;
-            this.lblInternacion.Location = new System.Drawing.Point(58, 345);
+            this.lblInternacion.Location = new System.Drawing.Point(59, 320);
             this.lblInternacion.Name = "lblInternacion";
             this.lblInternacion.Size = new System.Drawing.Size(167, 19);
             this.lblInternacion.TabIndex = 43;
@@ -67,7 +66,7 @@
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.Color.White;
-            this.lblCP.Location = new System.Drawing.Point(106, 231);
+            this.lblCP.Location = new System.Drawing.Point(107, 206);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(119, 19);
             this.lblCP.TabIndex = 42;
@@ -78,7 +77,7 @@
             this.lblAltura.AutoSize = true;
             this.lblAltura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAltura.ForeColor = System.Drawing.Color.White;
-            this.lblAltura.Location = new System.Drawing.Point(166, 308);
+            this.lblAltura.Location = new System.Drawing.Point(167, 283);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(59, 19);
             this.lblAltura.TabIndex = 41;
@@ -89,7 +88,7 @@
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.ForeColor = System.Drawing.Color.White;
-            this.lblLocalidad.Location = new System.Drawing.Point(133, 196);
+            this.lblLocalidad.Location = new System.Drawing.Point(134, 171);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(92, 19);
             this.lblLocalidad.TabIndex = 40;
@@ -100,7 +99,7 @@
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalle.ForeColor = System.Drawing.Color.White;
-            this.lblCalle.Location = new System.Drawing.Point(171, 271);
+            this.lblCalle.Location = new System.Drawing.Point(172, 246);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(54, 19);
             this.lblCalle.TabIndex = 39;
@@ -111,7 +110,7 @@
             this.lblAtencion.AutoSize = true;
             this.lblAtencion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtencion.ForeColor = System.Drawing.Color.White;
-            this.lblAtencion.Location = new System.Drawing.Point(57, 160);
+            this.lblAtencion.Location = new System.Drawing.Point(58, 135);
             this.lblAtencion.Name = "lblAtencion";
             this.lblAtencion.Size = new System.Drawing.Size(168, 19);
             this.lblAtencion.TabIndex = 38;
@@ -122,7 +121,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(20, 123);
+            this.lblNombre.Location = new System.Drawing.Point(21, 98);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(205, 19);
             this.lblNombre.TabIndex = 37;
@@ -130,7 +129,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(238, 124);
+            this.txtNombre.Location = new System.Drawing.Point(232, 100);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 20);
@@ -139,7 +138,7 @@
             // 
             // txtHoraAtencion
             // 
-            this.txtHoraAtencion.Location = new System.Drawing.Point(238, 161);
+            this.txtHoraAtencion.Location = new System.Drawing.Point(232, 137);
             this.txtHoraAtencion.MaxLength = 40;
             this.txtHoraAtencion.Name = "txtHoraAtencion";
             this.txtHoraAtencion.Size = new System.Drawing.Size(178, 20);
@@ -148,7 +147,7 @@
             // 
             // txtLocalidad
             // 
-            this.txtLocalidad.Location = new System.Drawing.Point(238, 198);
+            this.txtLocalidad.Location = new System.Drawing.Point(232, 174);
             this.txtLocalidad.MaxLength = 70;
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(178, 20);
@@ -157,7 +156,7 @@
             // 
             // txtCP
             // 
-            this.txtCP.Location = new System.Drawing.Point(238, 235);
+            this.txtCP.Location = new System.Drawing.Point(232, 211);
             this.txtCP.MaxLength = 15;
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(178, 20);
@@ -166,7 +165,7 @@
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(238, 272);
+            this.txtCalle.Location = new System.Drawing.Point(232, 248);
             this.txtCalle.MaxLength = 100;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(178, 20);
@@ -175,52 +174,18 @@
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(238, 309);
+            this.txtAltura.Location = new System.Drawing.Point(232, 285);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(178, 20);
             this.txtAltura.TabIndex = 49;
             this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancelar.Location = new System.Drawing.Point(233, 409);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 36);
-            this.btnCancelar.TabIndex = 88;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGuardar.Location = new System.Drawing.Point(77, 409);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(125, 36);
-            this.btnGuardar.TabIndex = 87;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblEstablecimiento
             // 
             this.lblEstablecimiento.AutoSize = true;
             this.lblEstablecimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstablecimiento.ForeColor = System.Drawing.Color.White;
-            this.lblEstablecimiento.Location = new System.Drawing.Point(52, 91);
+            this.lblEstablecimiento.Location = new System.Drawing.Point(53, 66);
             this.lblEstablecimiento.Name = "lblEstablecimiento";
             this.lblEstablecimiento.Size = new System.Drawing.Size(173, 19);
             this.lblEstablecimiento.TabIndex = 89;
@@ -230,7 +195,7 @@
             // 
             this.cmbEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstablecimiento.FormattingEnabled = true;
-            this.cmbEstablecimiento.Location = new System.Drawing.Point(238, 91);
+            this.cmbEstablecimiento.Location = new System.Drawing.Point(232, 67);
             this.cmbEstablecimiento.Name = "cmbEstablecimiento";
             this.cmbEstablecimiento.Size = new System.Drawing.Size(178, 21);
             this.cmbEstablecimiento.TabIndex = 92;
@@ -240,7 +205,7 @@
             this.IdEstablecimiento.AutoSize = true;
             this.IdEstablecimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdEstablecimiento.ForeColor = System.Drawing.Color.White;
-            this.IdEstablecimiento.Location = new System.Drawing.Point(197, 57);
+            this.IdEstablecimiento.Location = new System.Drawing.Point(198, 32);
             this.IdEstablecimiento.Name = "IdEstablecimiento";
             this.IdEstablecimiento.Size = new System.Drawing.Size(28, 19);
             this.IdEstablecimiento.TabIndex = 91;
@@ -251,7 +216,7 @@
             this.lblD.AutoSize = true;
             this.lblD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblD.ForeColor = System.Drawing.Color.White;
-            this.lblD.Location = new System.Drawing.Point(306, 57);
+            this.lblD.Location = new System.Drawing.Point(300, 33);
             this.lblD.Name = "lblD";
             this.lblD.Size = new System.Drawing.Size(16, 19);
             this.lblD.TabIndex = 93;
@@ -262,40 +227,58 @@
             this.chkInternacion.AutoSize = true;
             this.chkInternacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkInternacion.ForeColor = System.Drawing.Color.White;
-            this.chkInternacion.Location = new System.Drawing.Point(238, 346);
+            this.chkInternacion.Location = new System.Drawing.Point(232, 322);
             this.chkInternacion.Name = "chkInternacion";
             this.chkInternacion.Size = new System.Drawing.Size(36, 21);
             this.chkInternacion.TabIndex = 94;
             this.chkInternacion.Text = "Si";
             this.chkInternacion.UseVisualStyleBackColor = true;
             // 
-            // chkNoInternacion
+            // btnCancelar
             // 
-            this.chkNoInternacion.AutoSize = true;
-            this.chkNoInternacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkNoInternacion.ForeColor = System.Drawing.Color.White;
-            this.chkNoInternacion.Location = new System.Drawing.Point(286, 346);
-            this.chkNoInternacion.Name = "chkNoInternacion";
-            this.chkNoInternacion.Size = new System.Drawing.Size(46, 21);
-            this.chkNoInternacion.TabIndex = 95;
-            this.chkNoInternacion.Text = "No";
-            this.chkNoInternacion.UseVisualStyleBackColor = true;
-            this.chkNoInternacion.Visible = false;
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancelar.Location = new System.Drawing.Point(260, 371);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(125, 36);
+            this.btnCancelar.TabIndex = 96;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGuardar.Location = new System.Drawing.Point(104, 371);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(125, 36);
+            this.btnGuardar.TabIndex = 95;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // Establecimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(462, 495);
-            this.Controls.Add(this.chkNoInternacion);
+            this.ClientSize = new System.Drawing.Size(463, 419);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.chkInternacion);
             this.Controls.Add(this.lblD);
             this.Controls.Add(this.cmbEstablecimiento);
             this.Controls.Add(this.IdEstablecimiento);
             this.Controls.Add(this.lblEstablecimiento);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtAltura);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.txtCP);
@@ -334,13 +317,12 @@
         private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.TextBox txtAltura;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblEstablecimiento;
         private System.Windows.Forms.ComboBox cmbEstablecimiento;
         private System.Windows.Forms.Label IdEstablecimiento;
         private System.Windows.Forms.Label lblD;
         private System.Windows.Forms.CheckBox chkInternacion;
-        private System.Windows.Forms.CheckBox chkNoInternacion;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

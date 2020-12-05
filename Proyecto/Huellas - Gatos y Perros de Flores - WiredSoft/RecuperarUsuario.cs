@@ -21,7 +21,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             InitializeComponent();
         }
 
-        private void BtnIngresar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtUser.Text) || String.IsNullOrWhiteSpace(txtRespuesta.Text) || 
                 String.IsNullOrWhiteSpace(txtContraseña.Text) || String.IsNullOrWhiteSpace(txtValidarContraseña.Text))

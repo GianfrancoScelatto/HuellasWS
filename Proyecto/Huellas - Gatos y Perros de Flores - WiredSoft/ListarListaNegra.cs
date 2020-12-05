@@ -21,9 +21,14 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             InitializeComponent();
         }
 
+        public void MostrarRegistroListaNegra()
+        {
+            dgvListaNegra.DataSource = brLN.ListarListaNegra();
+        }
+
         private void ListarListaNegra_Load(object sender, EventArgs e)
         {
-
+            MostrarRegistroListaNegra();
         }
 
 
@@ -72,7 +77,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 E_ListaNegra.Editar = false;
             }
             else
-                msj.MensajeAlerta("Debe seleccionar una Persona.");
+                msj.MensajeAlerta("Debe seleccionar una persona.");
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -83,23 +88,20 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if (preg == DialogResult.OK)
                 {
-                    //E_ListaNegra. = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["IdListaNegra"].Value);
-                    //brLN.BajaListaNegra(IdListaNegra, E_Usuario.IdUsuario);
+                    E_ListaNegra.IdListaNegra = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["IdListaNegra"].Value);
+                    brLN.BajaListaNegra(E_ListaNegra.IdListaNegra, E_UsuarioAcceso.IdUsuario);
                     MostrarRegistroListaNegra();
                 }
             }
             else
             {
-                msj.MensajeAlerta("Seleccione el animal a borrar");
+                msj.MensajeAlerta("Seleccione la persona a quitar de la lista negra.");
             }
         }
-        public void MostrarRegistroListaNegra()
-        {
-            dgvListaNegra.DataSource = brLN.ListarListaNegra();
-        }
+        
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
-            brLN.FiltrarListaNegra(txtBuscar.Text); //filtro);
+            dgvListaNegra.DataSource = brLN.FiltrarListaNegra(txtBuscar.Text);
         }
     }
 }

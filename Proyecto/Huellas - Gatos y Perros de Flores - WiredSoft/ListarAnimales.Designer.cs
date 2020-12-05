@@ -262,7 +262,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarAnimales";
             this.Text = "ListarMascotas";
-            this.Activated += new System.EventHandler(this.ListarAnimales_Activated);
             this.Load += new System.EventHandler(this.ListarMascotas_Load);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
@@ -286,6 +285,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Panel panelFormListar;
-        private System.Windows.Forms.DataGridView dgvAnimales;
+        public System.Windows.Forms.DataGridView dgvAnimales;
     }
 }

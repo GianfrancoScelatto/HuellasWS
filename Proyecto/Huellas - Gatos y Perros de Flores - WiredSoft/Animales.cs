@@ -73,7 +73,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 txtUbicacion.Text = E_Animal.LugarRescate;
                 txtEdad.Text = E_Animal.Edad.ToString();
                 dtpFechaNac.Value = E_Animal.FechaNac.Date;
-                txtPeso.Text = Math.Round(E_Animal.Peso, 2).ToString();
+                txtPeso.Text = Math.Round(E_Animal.Peso, 2, MidpointRounding.ToEven).ToString();
                 txtColor.Text = E_Animal.ColorPelo;
                 cmbSexo.SelectedValue = E_Animal.Sexo;
                 cmbEstado.SelectedValue = E_Animal.Estado;
@@ -195,9 +195,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
-                
             }
-                
         }
 
         private void btnExportarSeg_Click(object sender, EventArgs e)
@@ -212,7 +210,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 DialogResult preg = MessageBox.Show("¿Desea eliminar este seguimiento?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (preg == DialogResult.OK)
                 {
-                    brS.BajaSeguimiento(Convert.ToInt32(dgvSeguimiento.CurrentRow.Cells["IdSeguimiento"].Value), E_Usuario.IdUsuario);
+                    E_Seguimiento.IdSeguimiento = Convert.ToInt32(dgvSeguimiento.CurrentRow.Cells["IdSeguimiento"].Value);
+                    brS.BajaSeguimiento(E_Seguimiento.IdSeguimiento, E_UsuarioAcceso.IdUsuario);
                     CargarGrillas();
                 }
             }
@@ -323,11 +322,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     btnCancelar.Visible = false;
                     break;
             }
-        }
-
-        private void DgvFichaMedica_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)

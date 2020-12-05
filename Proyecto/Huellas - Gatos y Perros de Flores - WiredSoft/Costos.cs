@@ -109,8 +109,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnCancelarDatos_Click(object sender, EventArgs e)
         {
-            DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (preg == DialogResult.Yes)
+            DialogResult preg = MessageBox.Show("¿Desea cerrar este formulario?", "WiredSoft", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (preg == DialogResult.OK)
             {
                 Close();
             }

@@ -49,6 +49,7 @@
     <Compile Include="DA_Costo.cs" />
     <Compile Include="DA_Establecimiento.cs" />
     <Compile Include="DA_FichaMedica.cs" />
+    <Compile Include="DA_Historial.cs" />
     <Compile Include="DA_ListaNegra.cs" />
     <Compile Include="DA_Persona.cs" />
     <Compile Include="DA_Seguimiento.cs" />

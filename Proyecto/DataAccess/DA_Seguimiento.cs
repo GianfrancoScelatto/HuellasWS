@@ -39,9 +39,9 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
+                    command.Parameters.AddWithValue("@Fecha", Fecha);
                     command.CommandText = "prc_FiltrarSeguimiento";
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Fecha", Fecha);
                     SqlDataReader reader = command.ExecuteReader();
                     tabla.Load(reader);
                     connection.Close();

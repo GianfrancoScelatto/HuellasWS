@@ -28,21 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Animales));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabSeguimiento = new System.Windows.Forms.TabPage();
+            this.dgvSeguimiento = new System.Windows.Forms.DataGridView();
             this.btnExportarSeg = new System.Windows.Forms.Button();
             this.btnEliminarSeg = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnGuardarSeg = new System.Windows.Forms.Button();
             this.dtpFiltro = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvSeguimiento = new System.Windows.Forms.DataGridView();
             this.txtDetalle = new System.Windows.Forms.TextBox();
             this.dtpAcontecimiento = new System.Windows.Forms.DateTimePicker();
             this.label63 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.tabFichaMed = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
             this.dtpFichaMedica = new System.Windows.Forms.DateTimePicker();
             this.lklblVacunas = new System.Windows.Forms.LinkLabel();
             this.btnExportar = new System.Windows.Forms.Button();
@@ -50,7 +57,6 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dgvFichaMedica = new System.Windows.Forms.DataGridView();
             this.lblNombVet = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.tabDatosAnimal = new System.Windows.Forms.TabPage();
@@ -112,13 +118,13 @@
             // tabSeguimiento
             // 
             this.tabSeguimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(45)))));
+            this.tabSeguimiento.Controls.Add(this.dgvSeguimiento);
             this.tabSeguimiento.Controls.Add(this.btnExportarSeg);
             this.tabSeguimiento.Controls.Add(this.btnEliminarSeg);
             this.tabSeguimiento.Controls.Add(this.label8);
             this.tabSeguimiento.Controls.Add(this.btnGuardarSeg);
             this.tabSeguimiento.Controls.Add(this.dtpFiltro);
             this.tabSeguimiento.Controls.Add(this.label2);
-            this.tabSeguimiento.Controls.Add(this.dgvSeguimiento);
             this.tabSeguimiento.Controls.Add(this.txtDetalle);
             this.tabSeguimiento.Controls.Add(this.dtpAcontecimiento);
             this.tabSeguimiento.Controls.Add(this.label63);
@@ -130,6 +136,51 @@
             this.tabSeguimiento.TabIndex = 3;
             this.tabSeguimiento.Text = "Seguimiento";
             // 
+            // dgvSeguimiento
+            // 
+            this.dgvSeguimiento.AllowUserToAddRows = false;
+            this.dgvSeguimiento.AllowUserToDeleteRows = false;
+            this.dgvSeguimiento.AllowUserToResizeRows = false;
+            this.dgvSeguimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSeguimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSeguimiento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(111)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSeguimiento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSeguimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSeguimiento.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSeguimiento.EnableHeadersVisualStyles = false;
+            this.dgvSeguimiento.GridColor = System.Drawing.Color.Snow;
+            this.dgvSeguimiento.Location = new System.Drawing.Point(3, 307);
+            this.dgvSeguimiento.MultiSelect = false;
+            this.dgvSeguimiento.Name = "dgvSeguimiento";
+            this.dgvSeguimiento.ReadOnly = true;
+            this.dgvSeguimiento.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSeguimiento.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSeguimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSeguimiento.Size = new System.Drawing.Size(921, 317);
+            this.dgvSeguimiento.TabIndex = 118;
+            // 
             // btnExportarSeg
             // 
             this.btnExportarSeg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -138,7 +189,7 @@
             this.btnExportarSeg.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnExportarSeg.FlatAppearance.BorderSize = 0;
             this.btnExportarSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarSeg.Location = new System.Drawing.Point(842, 257);
+            this.btnExportarSeg.Location = new System.Drawing.Point(839, 264);
             this.btnExportarSeg.Name = "btnExportarSeg";
             this.btnExportarSeg.Size = new System.Drawing.Size(33, 33);
             this.btnExportarSeg.TabIndex = 117;
@@ -153,7 +204,7 @@
             this.btnEliminarSeg.FlatAppearance.BorderSize = 0;
             this.btnEliminarSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarSeg.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarSeg.Location = new System.Drawing.Point(881, 256);
+            this.btnEliminarSeg.Location = new System.Drawing.Point(878, 263);
             this.btnEliminarSeg.Name = "btnEliminarSeg";
             this.btnEliminarSeg.Size = new System.Drawing.Size(33, 33);
             this.btnEliminarSeg.TabIndex = 116;
@@ -208,24 +259,6 @@
             this.label2.TabIndex = 112;
             this.label2.Text = "Buscar por fecha:";
             // 
-            // dgvSeguimiento
-            // 
-            this.dgvSeguimiento.AllowUserToAddRows = false;
-            this.dgvSeguimiento.AllowUserToDeleteRows = false;
-            this.dgvSeguimiento.AllowUserToResizeColumns = false;
-            this.dgvSeguimiento.AllowUserToResizeRows = false;
-            this.dgvSeguimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSeguimiento.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgvSeguimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSeguimiento.Location = new System.Drawing.Point(6, 295);
-            this.dgvSeguimiento.MultiSelect = false;
-            this.dgvSeguimiento.Name = "dgvSeguimiento";
-            this.dgvSeguimiento.ReadOnly = true;
-            this.dgvSeguimiento.RowHeadersWidth = 51;
-            this.dgvSeguimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSeguimiento.Size = new System.Drawing.Size(915, 329);
-            this.dgvSeguimiento.TabIndex = 111;
-            // 
             // txtDetalle
             // 
             this.txtDetalle.Location = new System.Drawing.Point(235, 103);
@@ -277,6 +310,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dgvFichaMedica);
             this.groupBox1.Controls.Add(this.dtpFichaMedica);
             this.groupBox1.Controls.Add(this.lklblVacunas);
             this.groupBox1.Controls.Add(this.btnExportar);
@@ -284,13 +318,58 @@
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.txtBuscar);
-            this.groupBox1.Controls.Add(this.dgvFichaMedica);
             this.groupBox1.Controls.Add(this.lblNombVet);
             this.groupBox1.Location = new System.Drawing.Point(6, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(912, 566);
+            this.groupBox1.Size = new System.Drawing.Size(912, 574);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
+            // 
+            // dgvFichaMedica
+            // 
+            this.dgvFichaMedica.AllowUserToAddRows = false;
+            this.dgvFichaMedica.AllowUserToDeleteRows = false;
+            this.dgvFichaMedica.AllowUserToResizeRows = false;
+            this.dgvFichaMedica.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFichaMedica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFichaMedica.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(111)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFichaMedica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFichaMedica.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvFichaMedica.EnableHeadersVisualStyles = false;
+            this.dgvFichaMedica.GridColor = System.Drawing.Color.Snow;
+            this.dgvFichaMedica.Location = new System.Drawing.Point(0, 75);
+            this.dgvFichaMedica.MultiSelect = false;
+            this.dgvFichaMedica.Name = "dgvFichaMedica";
+            this.dgvFichaMedica.ReadOnly = true;
+            this.dgvFichaMedica.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFichaMedica.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFichaMedica.Size = new System.Drawing.Size(912, 499);
+            this.dgvFichaMedica.TabIndex = 60;
+            this.dgvFichaMedica.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFichaMedica_CellMouseClick);
             // 
             // dtpFichaMedica
             // 
@@ -377,26 +456,6 @@
             this.txtBuscar.Size = new System.Drawing.Size(158, 22);
             this.txtBuscar.TabIndex = 53;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // dgvFichaMedica
-            // 
-            this.dgvFichaMedica.AllowUserToAddRows = false;
-            this.dgvFichaMedica.AllowUserToDeleteRows = false;
-            this.dgvFichaMedica.AllowUserToResizeColumns = false;
-            this.dgvFichaMedica.AllowUserToResizeRows = false;
-            this.dgvFichaMedica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFichaMedica.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dgvFichaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFichaMedica.Location = new System.Drawing.Point(3, 72);
-            this.dgvFichaMedica.MultiSelect = false;
-            this.dgvFichaMedica.Name = "dgvFichaMedica";
-            this.dgvFichaMedica.ReadOnly = true;
-            this.dgvFichaMedica.RowHeadersWidth = 51;
-            this.dgvFichaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFichaMedica.Size = new System.Drawing.Size(903, 494);
-            this.dgvFichaMedica.TabIndex = 52;
-            this.dgvFichaMedica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFichaMedica_CellFormatting);
-            this.dgvFichaMedica.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFichaMedica_CellMouseClick);
             // 
             // lblNombVet
             // 
@@ -1014,7 +1073,6 @@
         private System.Windows.Forms.TextBox txtDetalle;
         private System.Windows.Forms.DateTimePicker dtpFiltro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvSeguimiento;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardarDatos;
         private System.Windows.Forms.Button btnGuardarSeg;
@@ -1026,7 +1084,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView dgvFichaMedica;
         private System.Windows.Forms.Label lblNombVet;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnImagen;
@@ -1039,5 +1096,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnExportarSeg;
         private System.Windows.Forms.Button btnEliminarSeg;
+        public System.Windows.Forms.DataGridView dgvSeguimiento;
+        public System.Windows.Forms.DataGridView dgvFichaMedica;
     }
 }

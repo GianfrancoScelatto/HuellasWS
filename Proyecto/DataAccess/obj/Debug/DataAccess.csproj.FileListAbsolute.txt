@@ -10,15 +10,6 @@ C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Pr
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\mati_\OneDrive\Escritorio\Documentos La PAZ\Proyecto Final\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.dll
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.pdb
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.dll
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.pdb
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
-D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.dll
 C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\matut\Source\Repos\GianfrancoScelatto\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.dll
@@ -37,3 +28,12 @@ C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CoreComp
 C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
 C:\Desarrollo\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.dll
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\DataAccess.pdb
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.dll
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\bin\Debug\Entities.pdb
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.dll
+D:\Proyecto\HuellasWS\Proyecto\DataAccess\obj\Debug\DataAccess.pdb

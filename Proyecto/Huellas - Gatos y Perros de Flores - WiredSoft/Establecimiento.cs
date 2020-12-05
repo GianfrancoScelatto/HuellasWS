@@ -52,10 +52,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 if (E_Establecimiento.Internacion == true)
                 {
                     chkInternacion.Checked = true;
-                }
-                else
-                    chkNoInternacion.Checked = true;
-                
+                } 
             }
 
             cmbEstablecimiento.SelectedIndex = 0;
@@ -74,13 +71,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    if (chkInternacion.Checked == true)
-                    {
-                        brE.ModifcarEstablecimiento(E_Establecimiento.IdEstablecimiento, Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_UsuarioAcceso.IdUsuario);
-                    }
-                    
-                    else
-                        brE.ModifcarEstablecimiento(E_Establecimiento.IdEstablecimiento, Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkNoInternacion.Checked, E_UsuarioAcceso.IdUsuario);
+                    brE.ModifcarEstablecimiento(E_Establecimiento.IdEstablecimiento, Convert.ToInt32(cmbEstablecimiento.SelectedValue), 
+                                                txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, 
+                                                Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_UsuarioAcceso.IdUsuario);
                     Editar = false;
                 }
                
@@ -95,12 +88,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                   if (chkInternacion.Checked == true)
-                    {
-                        brE.AltaEstablecimiento(Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkInternacion.Checked, E_UsuarioAcceso.IdUsuario);
-                    }
-                   else
-                        brE.AltaEstablecimiento(Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), chkNoInternacion.Checked, E_UsuarioAcceso.IdUsuario);
+                    brE.AltaEstablecimiento(Convert.ToInt32(cmbEstablecimiento.SelectedValue), txtNombre.Text, txtHoraAtencion.Text, 
+                                                            txtLocalidad.Text, txtCP.Text, txtCalle.Text, Convert.ToInt32(txtAltura.Text), 
+                                                            chkInternacion.Checked, E_UsuarioAcceso.IdUsuario);                  
                 }
 
 
