@@ -37,7 +37,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 try
                 {
                     string Clave = MD5.EncriptrarClave(txtValidarContraseña.Text);
-                    brU.RecuperarUsuario(txtUser.Text, Convert.ToInt32(cmbPregunta.SelectedValue), txtRespuesta.Text, Clave);
+                    brU.RecuperarUsuario(txtUser.Text, txtRespuesta.Text, Clave);
                     Close();
                 }
                 catch

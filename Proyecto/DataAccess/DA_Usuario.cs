@@ -139,7 +139,7 @@ namespace DataAccess
             }
         }
 
-        public void RecuperarUsuario(string Usuario, int IdPregunta, string Respuesta, string Contraseña)
+        public void RecuperarUsuario(string Usuario, string Respuesta, string Contraseña)
         {
             using (var connection = GetConnection())
             {
@@ -147,16 +147,15 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "prc_RecuperarUsuario";
-                    command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Usuario", Usuario);
-                    command.Parameters.AddWithValue("@IdPregunta", IdPregunta);
                     command.Parameters.AddWithValue("@Respuesta", Respuesta);
                     command.Parameters.AddWithValue("@Contraseña", Contraseña);
+                    command.CommandText = "prc_RecuperarUsuario";
+                    command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
-            }
+            }       
         }
 
         public DataTable ListarUsuario()

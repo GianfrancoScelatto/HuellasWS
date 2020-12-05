@@ -39,9 +39,9 @@ namespace BusinessRules
             return tabla;
         }
 
-        public void RecuperarUsuario(string Usuario, int idPregunta, string Respuesta, string Contraseña)
+        public void RecuperarUsuario(string Usuario, string Respuesta, string Contraseña)
         {
-            daU.RecuperarUsuario(Usuario, idPregunta, Respuesta, Contraseña);
+            daU.RecuperarUsuario(Usuario, Respuesta, Contraseña);
         }
 
         public DataTable ListarUsuario()
