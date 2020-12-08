@@ -103,5 +103,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             dgvListaNegra.DataSource = brLN.FiltrarListaNegra(txtBuscar.Text);
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            MostrarRegistroListaNegra();
+            dgvListaNegra.Refresh();
+            dgvListaNegra.Update();
+        }
     }
 }

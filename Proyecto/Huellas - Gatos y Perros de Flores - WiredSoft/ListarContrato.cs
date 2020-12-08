@@ -78,5 +78,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
             exportarexcel.Visible = true;
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            MostrarContrato();
+            dgvContrato.Refresh();
+            dgvContrato.Update();
+        }
     }
 }

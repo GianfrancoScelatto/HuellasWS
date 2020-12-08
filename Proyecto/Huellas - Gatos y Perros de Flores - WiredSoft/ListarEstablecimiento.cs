@@ -133,5 +133,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             //brE.BuscarEstablecimiento(Busqueda);
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            MostrarRegistroEstablecimiento();
+            dgvEstablecimiento.Refresh();
+            dgvEstablecimiento.Update();
+        }
     }
 }

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarPersonas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarPersonas));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,6 +47,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvPersona = new System.Windows.Forms.DataGridView();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,6 +82,7 @@
             // 
             // panelBotones
             // 
+            this.panelBotones.Controls.Add(this.btnRecargar);
             this.panelBotones.Controls.Add(this.chkTransitante);
             this.panelBotones.Controls.Add(this.chkAdoptante);
             this.panelBotones.Controls.Add(this.btnExportar);
@@ -128,7 +130,7 @@
             this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportar.FlatAppearance.BorderSize = 0;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Location = new System.Drawing.Point(880, 7);
+            this.btnExportar.Location = new System.Drawing.Point(882, 7);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(39, 40);
             this.btnExportar.TabIndex = 47;
@@ -142,9 +144,9 @@
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(1026, 7);
+            this.btnEliminar.Location = new System.Drawing.Point(1025, 7);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(39, 40);
             this.btnEliminar.TabIndex = 46;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -156,9 +158,9 @@
             this.rbtnTransitante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rbtnTransitante.FlatAppearance.BorderSize = 0;
             this.rbtnTransitante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbtnTransitante.Location = new System.Drawing.Point(934, 7);
+            this.rbtnTransitante.Location = new System.Drawing.Point(929, 7);
             this.rbtnTransitante.Name = "rbtnTransitante";
-            this.rbtnTransitante.Size = new System.Drawing.Size(40, 40);
+            this.rbtnTransitante.Size = new System.Drawing.Size(39, 40);
             this.rbtnTransitante.TabIndex = 45;
             this.rbtnTransitante.UseVisualStyleBackColor = true;
             this.rbtnTransitante.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -170,9 +172,9 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(980, 7);
+            this.btnModificar.Location = new System.Drawing.Point(977, 7);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(40, 40);
+            this.btnModificar.Size = new System.Drawing.Size(39, 40);
             this.btnModificar.TabIndex = 44;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
@@ -259,6 +261,20 @@
             this.dgvPersona.Size = new System.Drawing.Size(1080, 612);
             this.dgvPersona.TabIndex = 28;
             // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecargar.BackgroundImage")));
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRecargar.FlatAppearance.BorderSize = 0;
+            this.btnRecargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecargar.Location = new System.Drawing.Point(835, 9);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(39, 40);
+            this.btnRecargar.TabIndex = 50;
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
+            // 
             // ListarPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,5 +316,6 @@
         private System.Windows.Forms.CheckBox chkTransitante;
         private System.Windows.Forms.CheckBox chkAdoptante;
         public System.Windows.Forms.DataGridView dgvPersona;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

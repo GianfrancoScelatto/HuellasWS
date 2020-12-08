@@ -130,5 +130,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 filtro = "Nombre";
             }
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            MostrarRegistroUsuarios();
+            dgvUsuarios.Refresh();
+            dgvUsuarios.Update();
+        }
     }
 }

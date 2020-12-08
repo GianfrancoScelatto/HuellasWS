@@ -193,5 +193,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             dgvAnimales.Columns["Peso"].DefaultCellStyle.Format = "N2";
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            MostrarRegistroAnimal();
+            dgvAnimales.Refresh();
+            dgvAnimales.Update();
+        }
     }
 }
