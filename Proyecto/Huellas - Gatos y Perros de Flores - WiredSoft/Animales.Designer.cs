@@ -747,6 +747,7 @@
             // txtColor
             // 
             this.txtColor.Location = new System.Drawing.Point(398, 354);
+            this.txtColor.MaxLength = 15;
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(240, 22);
             this.txtColor.TabIndex = 93;
@@ -754,6 +755,7 @@
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(398, 318);
+            this.txtPeso.MaxLength = 7;
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(240, 22);
             this.txtPeso.TabIndex = 92;
@@ -761,6 +763,7 @@
             // txtEdad
             // 
             this.txtEdad.Location = new System.Drawing.Point(398, 246);
+            this.txtEdad.MaxLength = 2;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(240, 22);
             this.txtEdad.TabIndex = 91;
@@ -768,6 +771,7 @@
             // txtUbicacion
             // 
             this.txtUbicacion.Location = new System.Drawing.Point(398, 210);
+            this.txtUbicacion.MaxLength = 200;
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(240, 22);
             this.txtUbicacion.TabIndex = 90;
@@ -775,6 +779,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(398, 102);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(240, 22);
             this.txtNombre.TabIndex = 84;

@@ -101,7 +101,7 @@
             // txtMotivo
             // 
             this.txtMotivo.Location = new System.Drawing.Point(164, 610);
-            this.txtMotivo.MaxLength = 2000;
+            this.txtMotivo.MaxLength = 6300;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(166, 66);
             this.txtMotivo.TabIndex = 190;
@@ -147,7 +147,7 @@
             // 
             this.txtEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEdad.Location = new System.Drawing.Point(164, 162);
-            this.txtEdad.MaxLength = 3;
+            this.txtEdad.MaxLength = 2;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(160, 20);
             this.txtEdad.TabIndex = 186;
@@ -168,7 +168,7 @@
             // 
             this.txtCP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCP.Location = new System.Drawing.Point(164, 302);
-            this.txtCP.MaxLength = 15;
+            this.txtCP.MaxLength = 10;
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(160, 20);
             this.txtCP.TabIndex = 184;
@@ -257,7 +257,7 @@
             // 
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefono.Location = new System.Drawing.Point(164, 513);
-            this.txtTelefono.MaxLength = 20;
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(160, 20);
             this.txtTelefono.TabIndex = 176;
@@ -284,7 +284,7 @@
             // 
             this.txtCalles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCalles.Location = new System.Drawing.Point(164, 372);
-            this.txtCalles.MaxLength = 100;
+            this.txtCalles.MaxLength = 200;
             this.txtCalles.Name = "txtCalles";
             this.txtCalles.Size = new System.Drawing.Size(160, 20);
             this.txtCalles.TabIndex = 173;
@@ -302,7 +302,7 @@
             // 
             this.txtAltura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAltura.Location = new System.Drawing.Point(164, 267);
-            this.txtAltura.MaxLength = 5;
+            this.txtAltura.MaxLength = 7;
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(160, 20);
             this.txtAltura.TabIndex = 171;
@@ -311,7 +311,7 @@
             // 
             this.txtDomicilio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDomicilio.Location = new System.Drawing.Point(164, 232);
-            this.txtDomicilio.MaxLength = 70;
+            this.txtDomicilio.MaxLength = 200;
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(160, 20);
             this.txtDomicilio.TabIndex = 170;

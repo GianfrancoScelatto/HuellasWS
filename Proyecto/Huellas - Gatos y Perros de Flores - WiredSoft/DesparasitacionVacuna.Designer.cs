@@ -60,6 +60,7 @@
             // 
             this.txtBuscar.Location = new System.Drawing.Point(91, 94);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.MaxLength = 200;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(180, 22);
             this.txtBuscar.TabIndex = 66;

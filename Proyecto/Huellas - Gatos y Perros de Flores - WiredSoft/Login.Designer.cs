@@ -75,6 +75,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtUsuario.Location = new System.Drawing.Point(381, 83);
+            this.txtUsuario.MaxLength = 100;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(207, 27);
             this.txtUsuario.TabIndex = 2;
@@ -97,6 +98,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtContraseña.Location = new System.Drawing.Point(381, 120);
+            this.txtContraseña.MaxLength = 24;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(207, 27);
             this.txtContraseña.TabIndex = 4;

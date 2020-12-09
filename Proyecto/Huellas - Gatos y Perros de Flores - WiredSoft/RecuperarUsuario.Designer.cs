@@ -101,6 +101,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(208, 63);
+            this.txtUser.MaxLength = 100;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(209, 20);
             this.txtUser.TabIndex = 66;
@@ -119,6 +120,7 @@
             // txtRespuesta
             // 
             this.txtRespuesta.Location = new System.Drawing.Point(208, 145);
+            this.txtRespuesta.MaxLength = 100;
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(209, 20);
             this.txtRespuesta.TabIndex = 68;
@@ -127,6 +129,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(208, 186);
+            this.txtContraseña.MaxLength = 25;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(209, 20);
             this.txtContraseña.TabIndex = 69;
@@ -136,6 +139,7 @@
             // txtValidarContraseña
             // 
             this.txtValidarContraseña.Location = new System.Drawing.Point(208, 227);
+            this.txtValidarContraseña.MaxLength = 50;
             this.txtValidarContraseña.Name = "txtValidarContraseña";
             this.txtValidarContraseña.Size = new System.Drawing.Size(209, 20);
             this.txtValidarContraseña.TabIndex = 70;

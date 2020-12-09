@@ -86,7 +86,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(184, 314);
-            this.txtContraseña.MaxLength = 50;
+            this.txtContraseña.MaxLength = 25;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(178, 20);
             this.txtContraseña.TabIndex = 7;
@@ -94,7 +94,7 @@
             // txtRespuesta
             // 
             this.txtRespuesta.Location = new System.Drawing.Point(184, 277);
-            this.txtRespuesta.MaxLength = 50;
+            this.txtRespuesta.MaxLength = 100;
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(178, 20);
             this.txtRespuesta.TabIndex = 6;
@@ -102,7 +102,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(184, 60);
-            this.txtUser.MaxLength = 33;
+            this.txtUser.MaxLength = 100;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(178, 20);
             this.txtUser.TabIndex = 0;
@@ -126,7 +126,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(184, 129);
-            this.txtApellido.MaxLength = 50;
+            this.txtApellido.MaxLength = 70;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(178, 20);
             this.txtApellido.TabIndex = 2;
@@ -134,7 +134,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(184, 92);
-            this.txtNombre.MaxLength = 30;
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 20);
             this.txtNombre.TabIndex = 1;

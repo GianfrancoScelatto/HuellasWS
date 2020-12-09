@@ -95,6 +95,7 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(163, 223);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescripcion.MaxLength = 6373;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(407, 221);
             this.txtDescripcion.TabIndex = 116;
@@ -104,7 +105,7 @@
             // 
             this.txtVacuna.Location = new System.Drawing.Point(252, 86);
             this.txtVacuna.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacuna.MaxLength = 20;
+            this.txtVacuna.MaxLength = 100;
             this.txtVacuna.Name = "txtVacuna";
             this.txtVacuna.Size = new System.Drawing.Size(188, 22);
             this.txtVacuna.TabIndex = 119;
@@ -150,7 +151,7 @@
             // 
             this.txtRevacunacion.Location = new System.Drawing.Point(235, 176);
             this.txtRevacunacion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRevacunacion.MaxLength = 3;
+            this.txtRevacunacion.MaxLength = 4;
             this.txtRevacunacion.Name = "txtRevacunacion";
             this.txtRevacunacion.Size = new System.Drawing.Size(85, 22);
             this.txtRevacunacion.TabIndex = 126;

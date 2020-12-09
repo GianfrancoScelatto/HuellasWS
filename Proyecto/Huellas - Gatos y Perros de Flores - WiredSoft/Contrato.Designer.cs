@@ -98,6 +98,7 @@
             // 
             this.txtNuevoNombre.Location = new System.Drawing.Point(215, 193);
             this.txtNuevoNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNuevoNombre.MaxLength = 50;
             this.txtNuevoNombre.Name = "txtNuevoNombre";
             this.txtNuevoNombre.Size = new System.Drawing.Size(252, 22);
             this.txtNuevoNombre.TabIndex = 91;
