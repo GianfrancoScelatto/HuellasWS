@@ -198,6 +198,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListarFichaMedica";
             this.Text = "ListarFichaMedica";
+            this.Load += new System.EventHandler(this.ListarFichaMedica_Load);
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
             this.panelListar.ResumeLayout(false);

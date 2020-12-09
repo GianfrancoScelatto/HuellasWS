@@ -110,5 +110,26 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             dgvListaNegra.Refresh();
             dgvListaNegra.Update();
         }
+
+        private void dgvListaNegra_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            E_Persona.IdPersona = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["IdPersona"].Value);
+            //E_Persona.NombrePersona = dgvListaNegra.CurrentRow.Cells["Nombre"].Value.ToString();
+            //E_Persona.ApellidoPersona = dgvListaNegra.CurrentRow.Cells["Apellido"].Value.ToString();
+            //E_Persona.Edad = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["Edad"].Value);
+            //E_Persona.DNI = dgvListaNegra.CurrentRow.Cells["Dni"].Value.ToString();
+            //E_Persona.Domicilio = dgvListaNegra.CurrentRow.Cells["Domicilio"].Value.ToString();
+            //E_Persona.Localidad = dgvListaNegra.CurrentRow.Cells["Localidad"].Value.ToString();
+            //E_Persona.CodigoPostal = dgvListaNegra.CurrentRow.Cells["CodigoPostal"].Value.ToString();
+            //E_Persona.Calles = dgvListaNegra.CurrentRow.Cells["Calles"].Value.ToString();
+            //E_Persona.Altura = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["Altura"].Value);
+            //E_Persona.IdSexo = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["Sexo"].Value);
+            //E_Persona.Telefono = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["Telefono"].Value);
+            //E_Persona.Celular = Convert.ToInt32(dgvListaNegra.CurrentRow.Cells["Celular"].Value);
+            //E_Persona.Email = dgvListaNegra.CurrentRow.Cells["Email"].Value.ToString();
+            //E_Persona.UsuarioFaceIg = dgvListaNegra.CurrentRow.Cells["UsuarioFaceIg"].Value.ToString();
+            //E_Persona.ListaNegra = Convert.ToBoolean(dgvListaNegra.CurrentRow.Cells["ListaNegra"].Value);
+            E_Persona.Motivo = dgvListaNegra.CurrentRow.Cells["Motivo"].Value.ToString();
+        }
     }
 }

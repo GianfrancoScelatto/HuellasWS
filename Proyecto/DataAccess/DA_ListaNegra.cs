@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaListaNegra(int IdPersona, string Motivo)
+        public void AltaListaNegra(int IdPersona, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -39,13 +39,14 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@Motivo", Motivo);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_AltaListaNegra";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
                 }
             }
         }
-        public void ModificarListaNegra(int IdPersona, string Motivo)
+        public void ModificarListaNegra(int IdPersona, string Motivo, int IdUsuario)
         {
             using (var connection = GetConnection())
             {
@@ -55,6 +56,7 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@Motivo", Motivo);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_ModificarListaNegra";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();

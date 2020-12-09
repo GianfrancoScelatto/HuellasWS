@@ -38,14 +38,14 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("FechaGasto", FechaGasto);
-                    command.Parameters.AddWithValue("IdTipoGasto", IdTipoGasto);
-                    command.Parameters.AddWithValue("IdAnimal", IdAnimal);
-                    command.Parameters.AddWithValue("IdEstablecimiento", IdEstablecimiento);
-                    command.Parameters.AddWithValue("Monto", Monto);
-                    command.Parameters.AddWithValue("Detalle", Detalle);
-                    command.Parameters.AddWithValue("Pagado", Pagado);
-                    command.Parameters.AddWithValue("IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@FechaGasto", FechaGasto);
+                    command.Parameters.AddWithValue("@IdTipoGasto", IdTipoGasto);
+                    command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
+                    command.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+                    command.Parameters.AddWithValue("@Monto", Monto);
+                    command.Parameters.AddWithValue("@Detalle", Detalle);
+                    command.Parameters.AddWithValue("@Pagado", Pagado);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_AltaGasto";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();
@@ -61,15 +61,15 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("IdGasto", IdGasto);
-                    command.Parameters.AddWithValue("FechaGasto", FechaGasto);
-                    command.Parameters.AddWithValue("IdTipoGasto", IdTipoGasto);
-                    command.Parameters.AddWithValue("IdAnimal", IdAnimal);
-                    command.Parameters.AddWithValue("IdEstablecimiento", IdEstablecimiento);
-                    command.Parameters.AddWithValue("Monto", Monto);
-                    command.Parameters.AddWithValue("Detalle", Detalle);
-                    command.Parameters.AddWithValue("Pagado", Pagado);
-                    command.Parameters.AddWithValue("IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdGasto", IdGasto);
+                    command.Parameters.AddWithValue("@FechaGasto", FechaGasto);
+                    command.Parameters.AddWithValue("@IdTipoGasto", IdTipoGasto);
+                    command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
+                    command.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+                    command.Parameters.AddWithValue("@Monto", Monto);
+                    command.Parameters.AddWithValue("@Detalle", Detalle);
+                    command.Parameters.AddWithValue("@Pagado", Pagado);
+                    command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     command.CommandText = "prc_ModificarGasto";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();

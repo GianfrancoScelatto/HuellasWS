@@ -249,6 +249,7 @@
             this.btnCancelarDatos.TabIndex = 120;
             this.btnCancelarDatos.Text = "Cancelar";
             this.btnCancelarDatos.UseVisualStyleBackColor = false;
+            this.btnCancelarDatos.Click += new System.EventHandler(this.btnCancelarDatos_Click);
             // 
             // btnGuardarDatos
             // 
@@ -264,6 +265,7 @@
             this.btnGuardarDatos.TabIndex = 119;
             this.btnGuardarDatos.Text = "Guardar";
             this.btnGuardarDatos.UseVisualStyleBackColor = false;
+            this.btnGuardarDatos.Click += new System.EventHandler(this.btnGuardarDatos_Click);
             // 
             // Costos
             // 

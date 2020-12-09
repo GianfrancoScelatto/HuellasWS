@@ -194,6 +194,7 @@
             this.dgvCosto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCosto.Size = new System.Drawing.Size(980, 499);
             this.dgvCosto.TabIndex = 31;
+            this.dgvCosto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCosto_CellFormatting);
             // 
             // ListarCosto
             // 

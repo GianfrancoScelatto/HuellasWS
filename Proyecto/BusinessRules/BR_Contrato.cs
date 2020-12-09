@@ -20,20 +20,20 @@ namespace BusinessRules
             tabla = daC.ListarContrato();
             return tabla;
         }
-        public void AltaContrato(int IdAdoptante, int IdAnimal, string NuevoNombre, int IdUsuario)
+        public void AltaContrato(int IdAnimal, string NuevoNombre, int IdUsuario, int IdPersona)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
-                daC.AltaContrato(IdAdoptante, IdAnimal, NuevoNombre, IdUsuario);
+                daC.AltaContrato( IdAnimal, NuevoNombre, IdUsuario, IdPersona);
             }
 
         }
 
-        public void BajaContrato(int IdContrato, int IdUsuario)
+        public void BajaContrato(int IdContrato, int IdUsuario, int IdAnimal, int IdPersona, string NuevoNombre)
         {
             if (msj.MensajeAcceso(E_UsuarioAcceso.Rol))
             {
-                daC.BajaContrato(IdContrato, IdUsuario);
+                daC.BajaContrato(IdContrato, IdUsuario, IdAnimal, IdPersona, NuevoNombre );
             }
         }
     }

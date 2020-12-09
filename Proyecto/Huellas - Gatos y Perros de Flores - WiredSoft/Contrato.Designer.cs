@@ -118,6 +118,7 @@
             this.btnCancelar.TabIndex = 95;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -135,6 +136,7 @@
             this.btnGuardar.TabIndex = 94;
             this.btnGuardar.Text = "Generar contrato";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Contrato
             // 
@@ -157,6 +159,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contrato";
+            this.Load += new System.EventHandler(this.Contrato_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

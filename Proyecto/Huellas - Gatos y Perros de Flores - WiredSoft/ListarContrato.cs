@@ -42,7 +42,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
                 if (preg == DialogResult.OK)
                 {
-                    brC.BajaContrato(E_Contrato.IdContrato, E_Usuario.IdUsuario);
+                    brC.BajaContrato(E_Contrato.IdContrato, E_Usuario.IdUsuario, E_Animal.IdAnimal,E_Persona.IdPersona, E_Contrato.NuevoNombre);
                     MostrarContrato();
                 }
             }

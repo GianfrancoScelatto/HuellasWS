@@ -74,10 +74,16 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dgvVacunas.SelectedRows.Count > 0)
+            {
             E_Vacuna.Editar = true;
             Form Vacunas = new Vacunas();
-            Vacunas.Show();
+            Vacunas.ShowDialog();
+
             E_Vacuna.Editar = false;
+            }
+            else
+                msj.MensajeAlerta("Debe seleccionar una vacuna.");
         }
 
 
@@ -121,5 +127,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             dgvVacunas.Refresh();
             dgvVacunas.Update();
         }
+
+     
     }
 }

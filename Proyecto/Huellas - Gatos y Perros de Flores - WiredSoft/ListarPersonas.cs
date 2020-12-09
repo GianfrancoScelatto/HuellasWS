@@ -39,7 +39,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Persona.Editar = true;
             Form Persona = new Persona();
             Persona.Show();
-            E_Vacuna.Editar = false;
+            E_Persona.Editar = false;
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

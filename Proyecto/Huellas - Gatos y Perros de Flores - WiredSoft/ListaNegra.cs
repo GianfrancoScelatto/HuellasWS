@@ -36,34 +36,34 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 {
                     msj.MensajeAlerta("Hay campos vacíos.");
                 }
-
-                if (Editar == true)
-                {
-                    try
+                    if (Editar == true)
                     {
-                        brLN.ModificarListaNegra(E_ListaNegra.IdPersona, E_ListaNegra.Motivo);
-                        Editar = false;
-                    }
+                        try
+                        {
+                            brLN.ModificarListaNegra(Convert.ToInt32(cmbPersona.SelectedValue), txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                            Editar = false;
+                        }
 
-                    catch (Exception ex)
+                        catch (Exception ex)
+                        {
+                         msj.MensajeError("Ha ocurrido un error" + ex);
+                        }
+                    }
+                    else
                     {
-                        msj.MensajeError("Ha ocurrido un error" + ex);
-                    }
-                }
-                else
-                {
-                    try
-                    {
-                        brLN.AltaListaNegra(E_ListaNegra.IdPersona, E_ListaNegra.Motivo);
-                    }
+                        try
+                        {
+                            
+                            brLN.AltaListaNegra(Convert.ToInt32(cmbPersona.SelectedValue), txtMotivo.Text, E_UsuarioAcceso.IdUsuario);
+                        }
 
-                    catch (Exception ex)
-                    {
-                        msj.MensajeError("Ha ocurrido un error" + ex);
+                        catch (Exception ex)
+                        {
+                            msj.MensajeError("Ha ocurrido un error" + ex);
+                        }
+
                     }
-
-                }
-
+                
                 Close();
 
             }

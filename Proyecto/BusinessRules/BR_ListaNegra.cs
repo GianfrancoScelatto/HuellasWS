@@ -13,6 +13,7 @@ namespace BusinessRules
     {
         DA_ListaNegra ObjListaNegra = new DA_ListaNegra();
         E_Mensaje msj = new E_Mensaje();
+        
 
         public DataTable ListarListaNegra()
         {
@@ -20,17 +21,26 @@ namespace BusinessRules
             tabla = ObjListaNegra.ListarListaNegra();
             return tabla;
         }
-        public void AltaListaNegra(int IdPersona, string Motivo)
+        public void AltaListaNegra(int IdPersona, string Motivo, int IdUsuario)
         {
-            ObjListaNegra.AltaListaNegra(IdPersona, Motivo);
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol)) 
+            { 
+                ObjListaNegra.AltaListaNegra(IdPersona, Motivo, IdUsuario);
+            }
         }
-        public void ModificarListaNegra(int IdPersona, string Motivo)
+        public void ModificarListaNegra(int IdPersona, string Motivo, int IdUsuario)
         {
-            ObjListaNegra.ModificarListaNegra(IdPersona, Motivo);
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol)) 
+            { 
+                ObjListaNegra.ModificarListaNegra(IdPersona, Motivo, IdUsuario);
+            }
         }
         public void BajaListaNegra(int IdPersona, int IdUsuario)
         {
-            ObjListaNegra.BajaListaNegra(IdPersona,IdUsuario);
+            if (msj.MensajeAcceso(E_UsuarioAcceso.Rol)) 
+            { 
+                ObjListaNegra.BajaListaNegra(IdPersona,IdUsuario);
+            }
         }
         public DataTable FiltrarListaNegra(string Busqueda)
         {

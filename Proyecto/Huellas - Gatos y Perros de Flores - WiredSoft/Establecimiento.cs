@@ -26,7 +26,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         }
 
         private void ListarCombos()
-        {
+        {   
+            
             cmbEstablecimiento.DataSource = brE.ComboEstablecimiento();
             cmbEstablecimiento.DisplayMember = "TipoEstablecimiento";
             cmbEstablecimiento.ValueMember = "IdTipoEstablecimiento";

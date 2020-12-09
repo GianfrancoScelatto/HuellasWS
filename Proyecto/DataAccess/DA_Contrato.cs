@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-        public void AltaContrato(int IdAdoptante, int IdAnimal, string NuevoNombre, int IdUsuario)
+        public void AltaContrato(int IdAnimal, string NuevoNombre, int IdUsuario, int IdPersona)
         {
             using (var connection = GetConnection())
             {
@@ -37,7 +37,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.Parameters.AddWithValue("@IdAdoptante", IdAdoptante);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
                     command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
                     command.Parameters.AddWithValue("@NuevoNombre", NuevoNombre);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
@@ -48,7 +48,7 @@ namespace DataAccess
                 }
             }
         }
-        public void BajaContrato(int IdContrato, int IdUsuario)
+        public void BajaContrato(int IdContrato, int IdUsuario, int IdAnimal, int IdPersona, string NuevoNombre)
         {
             using (var connection = GetConnection())
             {
@@ -58,6 +58,9 @@ namespace DataAccess
                     command.Connection = connection;
                     command.Parameters.AddWithValue("@IdContrato", IdContrato);
                     command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                    command.Parameters.AddWithValue("@IdAnimal", IdAnimal);
+                    command.Parameters.AddWithValue("@IdPersona", IdPersona);
+                    command.Parameters.AddWithValue("@NuevoNombre", NuevoNombre);
                     command.CommandText = "prc_BajaContrato";
                     command.CommandType = CommandType.StoredProcedure;
                     command.ExecuteNonQuery();

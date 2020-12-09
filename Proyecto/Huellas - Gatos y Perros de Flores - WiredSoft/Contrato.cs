@@ -26,7 +26,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
 
         private void CargarCombos()
         {
-            cmbAnimal.DataSource = brA.ListarAnimal();
+            cmbAnimal.DataSource = brA.ComboAnimal();
             cmbAnimal.DisplayMember = "NombreAnimal";
             cmbAnimal.ValueMember = "IdAnimal";
 
@@ -50,7 +50,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             {
                 try
                 {
-                    brC.AltaContrato(Convert.ToInt32(cmbPersona.SelectedValue), Convert.ToInt32(cmbAnimal.SelectedValue), txtNuevoNombre.Text, E_UsuarioAcceso.IdUsuario);
+                    brC.AltaContrato(Convert.ToInt32(cmbAnimal.SelectedValue), txtNuevoNombre.Text, E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbPersona.SelectedValue));
                 }
 
                 catch (Exception ex)
