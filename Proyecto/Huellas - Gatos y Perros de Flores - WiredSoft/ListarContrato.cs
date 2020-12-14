@@ -28,6 +28,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarContrato_Load(object sender, EventArgs e)
         {
             MostrarContrato();
+            dgvContrato.Columns["IdAnimal"].Visible = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {

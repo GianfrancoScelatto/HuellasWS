@@ -99,5 +99,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             E_Vacuna.IdVacuna = Convert.ToInt32(dgvVacunas.CurrentRow.Cells["IdVacuna"].Value);
             E_Vacuna.FechaVacunacion = Convert.ToDateTime(dgvVacunas.CurrentRow.Cells["Fecha revacunación"].Value).Date;
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            MostrarRegistrosVacuna();
+            dgvVacunas.Update();
+            dgvVacunas.Refresh();
+        }
     }
 }

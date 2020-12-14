@@ -66,7 +66,7 @@
             this.cmbVacunas.Location = new System.Drawing.Point(145, 78);
             this.cmbVacunas.Name = "cmbVacunas";
             this.cmbVacunas.Size = new System.Drawing.Size(278, 25);
-            this.cmbVacunas.TabIndex = 146;
+            this.cmbVacunas.TabIndex = 0;
             this.cmbVacunas.SelectedValueChanged += new System.EventHandler(this.cmbVacunas_SelectedValueChanged);
             // 
             // dtpAplicacion
@@ -74,7 +74,7 @@
             this.dtpAplicacion.Location = new System.Drawing.Point(145, 116);
             this.dtpAplicacion.Name = "dtpAplicacion";
             this.dtpAplicacion.Size = new System.Drawing.Size(278, 23);
-            this.dtpAplicacion.TabIndex = 149;
+            this.dtpAplicacion.TabIndex = 1;
             // 
             // label3
             // 
@@ -100,7 +100,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(189, 44);
-            this.btnGuardar.TabIndex = 158;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

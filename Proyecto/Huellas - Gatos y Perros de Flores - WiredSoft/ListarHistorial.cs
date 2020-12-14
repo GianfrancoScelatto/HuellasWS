@@ -22,6 +22,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarHistorial_Load(object sender, EventArgs e)
         {
             dgvHistorial.DataSource = brH.ListarHistorial();
+            dgvHistorial.Columns["IdHistorial"].Visible = false;
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

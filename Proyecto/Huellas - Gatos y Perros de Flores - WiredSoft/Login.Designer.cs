@@ -78,7 +78,7 @@
             this.txtUsuario.MaxLength = 100;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(207, 27);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // label3
@@ -101,7 +101,7 @@
             this.txtContraseña.MaxLength = 24;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(207, 27);
-            this.txtContraseña.TabIndex = 4;
+            this.txtContraseña.TabIndex = 1;
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
@@ -113,7 +113,7 @@
             this.BtnIngresar.Location = new System.Drawing.Point(327, 211);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(103, 46);
-            this.BtnIngresar.TabIndex = 5;
+            this.BtnIngresar.TabIndex = 3;
             this.BtnIngresar.Text = "Ingresar";
             this.BtnIngresar.UseVisualStyleBackColor = true;
             this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
@@ -125,7 +125,7 @@
             this.lklblContraseña.Location = new System.Drawing.Point(396, 284);
             this.lklblContraseña.Name = "lklblContraseña";
             this.lklblContraseña.Size = new System.Drawing.Size(106, 13);
-            this.lklblContraseña.TabIndex = 6;
+            this.lklblContraseña.TabIndex = 5;
             this.lklblContraseña.TabStop = true;
             this.lklblContraseña.Text = "Olvidé mi contraseña";
             this.lklblContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblContraseña_LinkClicked);
@@ -147,7 +147,7 @@
             this.chkContraseña.Location = new System.Drawing.Point(458, 153);
             this.chkContraseña.Name = "chkContraseña";
             this.chkContraseña.Size = new System.Drawing.Size(130, 19);
-            this.chkContraseña.TabIndex = 74;
+            this.chkContraseña.TabIndex = 2;
             this.chkContraseña.Text = "Mostrar contraseña";
             this.chkContraseña.UseVisualStyleBackColor = true;
             this.chkContraseña.CheckedChanged += new System.EventHandler(this.chkContraseña_CheckedChanged);
@@ -178,7 +178,7 @@
             this.btnSalir.Location = new System.Drawing.Point(467, 211);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 46);
-            this.btnSalir.TabIndex = 76;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Cerrar";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);

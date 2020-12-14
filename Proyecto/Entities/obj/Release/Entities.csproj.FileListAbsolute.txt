@@ -1,0 +1,6 @@
+D:\Proyecto\HuellasWS\Proyecto\Entities\bin\Release\Entities.dll
+D:\Proyecto\HuellasWS\Proyecto\Entities\bin\Release\Entities.pdb
+D:\Proyecto\HuellasWS\Proyecto\Entities\obj\Release\Entities.csprojAssemblyReference.cache
+D:\Proyecto\HuellasWS\Proyecto\Entities\obj\Release\Entities.csproj.CoreCompileInputs.cache
+D:\Proyecto\HuellasWS\Proyecto\Entities\obj\Release\Entities.dll
+D:\Proyecto\HuellasWS\Proyecto\Entities\obj\Release\Entities.pdb

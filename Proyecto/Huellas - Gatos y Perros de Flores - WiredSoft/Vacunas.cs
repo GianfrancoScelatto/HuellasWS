@@ -91,7 +91,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                         break;
             }
             
-            if (String.IsNullOrWhiteSpace(txtVacuna.Text) || String.IsNullOrWhiteSpace(txtRevacunacion.Text) || String.IsNullOrWhiteSpace(txtDescripcion.Text))
+            if (String.IsNullOrWhiteSpace(txtVacuna.Text) || String.IsNullOrWhiteSpace(txtRevacunacion.Text))
             {
                 msj.MensajeAlerta("Hay campos vacíos.");
             }

@@ -30,6 +30,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarVacunaT_Load(object sender, EventArgs e)
         {
             MostrarRegistroVacuna();
+            dgvVacunas.Columns["IdVacuna"].Visible = false;
             dgvVacunas.Columns["IdEspecie"].Visible = false;
             dgvVacunas.Columns["IdTiempo"].Visible = false;
         }

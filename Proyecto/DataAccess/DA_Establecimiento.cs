@@ -129,7 +129,7 @@ namespace DataAccess
             using (var connection = GetConnection())
             {
                 DataTable tabla = new DataTable();
-                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboEstablecimiento", connection);
+                SqlDataAdapter sdA = new SqlDataAdapter("prc_ListarComboTipoEstablecimiento", connection);
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
@@ -141,10 +141,5 @@ namespace DataAccess
                 }
             }
         }
-
-
-
-
-
     }
 }

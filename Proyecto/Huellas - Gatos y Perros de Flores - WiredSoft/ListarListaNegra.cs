@@ -24,6 +24,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         public void MostrarRegistroListaNegra()
         {
             dgvListaNegra.DataSource = brLN.ListarListaNegra();
+            dgvListaNegra.Columns["IdPersona"].Visible = false;
         }
 
         private void ListarListaNegra_Load(object sender, EventArgs e)

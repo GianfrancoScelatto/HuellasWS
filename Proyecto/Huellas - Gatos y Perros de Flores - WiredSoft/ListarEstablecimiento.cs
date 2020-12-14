@@ -32,6 +32,7 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarEstablecimient_Load(object sender, EventArgs e)
         {
             MostrarRegistroEstablecimiento();
+            dgvEstablecimiento.Columns["IdEstablecimiento"].Visible = false;
             dgvEstablecimiento.Columns["IdTipoEstablecimiento"].Visible = false;
         }
 
@@ -98,24 +99,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             }
         }
 
-
-
-
-
-        private void dgvEstablecimiento_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            E_Establecimiento.IdEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdEstablecimiento"].Value);
-            E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdTipoEstablecimiento"].Value);
-            E_Establecimiento.Nombre = dgvEstablecimiento.CurrentRow.Cells["Nombre"].Value.ToString();
-            E_Establecimiento.HorarioAtencion = dgvEstablecimiento.CurrentRow.Cells["HorarioAtencion"].Value.ToString();
-            E_Establecimiento.Calle = dgvEstablecimiento.CurrentRow.Cells["Calle"].Value.ToString();
-            E_Establecimiento.Altura = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["Altura"].Value);
-            E_Establecimiento.CodigoPostal = dgvEstablecimiento.CurrentRow.Cells["CodigoPostal"].Value.ToString();
-            E_Establecimiento.Localidad = dgvEstablecimiento.CurrentRow.Cells["Localidad"].Value.ToString();
-            E_Establecimiento.Internacion = Convert.ToBoolean(dgvEstablecimiento.CurrentRow.Cells["Internacion"].Value);
-
-        }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             if (txtBuscar.Text == String.Empty)
@@ -139,6 +122,19 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             MostrarRegistroEstablecimiento();
             dgvEstablecimiento.Refresh();
             dgvEstablecimiento.Update();
+        }
+
+        private void dgvEstablecimiento_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            E_Establecimiento.IdEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdEstablecimiento"].Value);
+            E_Establecimiento.IdTipoEstablecimiento = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["IdTipoEstablecimiento"].Value);
+            E_Establecimiento.Nombre = dgvEstablecimiento.CurrentRow.Cells["Nombre"].Value.ToString();
+            E_Establecimiento.HorarioAtencion = dgvEstablecimiento.CurrentRow.Cells["Horario atención"].Value.ToString();
+            E_Establecimiento.Calle = dgvEstablecimiento.CurrentRow.Cells["Calle"].Value.ToString();
+            E_Establecimiento.Altura = Convert.ToInt32(dgvEstablecimiento.CurrentRow.Cells["Altura"].Value);
+            E_Establecimiento.CodigoPostal = dgvEstablecimiento.CurrentRow.Cells["Código postal"].Value.ToString();
+            E_Establecimiento.Localidad = dgvEstablecimiento.CurrentRow.Cells["Localidad"].Value.ToString();
+            E_Establecimiento.Internacion = Convert.ToBoolean(dgvEstablecimiento.CurrentRow.Cells["Internacion"].Value);
         }
     }
 }

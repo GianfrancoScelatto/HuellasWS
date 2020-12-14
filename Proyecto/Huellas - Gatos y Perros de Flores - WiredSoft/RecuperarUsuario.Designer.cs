@@ -104,7 +104,7 @@
             this.txtUser.MaxLength = 100;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(209, 20);
-            this.txtUser.TabIndex = 66;
+            this.txtUser.TabIndex = 0;
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
@@ -115,7 +115,7 @@
             this.cmbPregunta.Location = new System.Drawing.Point(208, 103);
             this.cmbPregunta.Name = "cmbPregunta";
             this.cmbPregunta.Size = new System.Drawing.Size(209, 21);
-            this.cmbPregunta.TabIndex = 67;
+            this.cmbPregunta.TabIndex = 1;
             // 
             // txtRespuesta
             // 
@@ -123,7 +123,7 @@
             this.txtRespuesta.MaxLength = 100;
             this.txtRespuesta.Name = "txtRespuesta";
             this.txtRespuesta.Size = new System.Drawing.Size(209, 20);
-            this.txtRespuesta.TabIndex = 68;
+            this.txtRespuesta.TabIndex = 2;
             this.txtRespuesta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtContraseña
@@ -132,7 +132,7 @@
             this.txtContraseña.MaxLength = 25;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(209, 20);
-            this.txtContraseña.TabIndex = 69;
+            this.txtContraseña.TabIndex = 3;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContraseña.UseSystemPasswordChar = true;
             // 
@@ -142,7 +142,7 @@
             this.txtValidarContraseña.MaxLength = 50;
             this.txtValidarContraseña.Name = "txtValidarContraseña";
             this.txtValidarContraseña.Size = new System.Drawing.Size(209, 20);
-            this.txtValidarContraseña.TabIndex = 70;
+            this.txtValidarContraseña.TabIndex = 4;
             this.txtValidarContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtValidarContraseña.UseSystemPasswordChar = true;
             // 
@@ -166,7 +166,7 @@
             this.chkContraseña.Location = new System.Drawing.Point(278, 264);
             this.chkContraseña.Name = "chkContraseña";
             this.chkContraseña.Size = new System.Drawing.Size(139, 20);
-            this.chkContraseña.TabIndex = 73;
+            this.chkContraseña.TabIndex = 5;
             this.chkContraseña.Text = "Mostrar contraseña";
             this.chkContraseña.UseVisualStyleBackColor = true;
             this.chkContraseña.CheckedChanged += new System.EventHandler(this.chkContraseña_CheckedChanged);
@@ -184,7 +184,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(189, 41);
-            this.btnGuardar.TabIndex = 133;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

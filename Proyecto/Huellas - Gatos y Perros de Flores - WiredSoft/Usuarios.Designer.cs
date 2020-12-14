@@ -309,6 +309,7 @@
             this.MinimizeBox = false;
             this.Name = "Usuarios";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
             this.ResumeLayout(false);

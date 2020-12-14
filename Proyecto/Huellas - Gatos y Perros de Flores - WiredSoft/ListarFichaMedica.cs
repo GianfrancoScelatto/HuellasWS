@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
 using BusinessRules;
 
 namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
@@ -21,11 +22,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarFichaMedica_Load(object sender, EventArgs e)
         {
             dgvFichaMedica.DataSource = brFM.ListarFichaMedica2();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            dgvFichaMedica.Columns["IdFichaMedica"].Visible = false;
+            dgvFichaMedica.Columns["IdAnimal"].Visible = false;
+            dgvFichaMedica.Columns["IdEstablecimiento"].Visible = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -62,6 +61,20 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             exportarexcel.Visible = true;
         }
 
-        
+        private void dgvFichaMedica_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            E_FichaMedica.IdFichaMedica = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdFichaMedica"].Value);
+            E_FichaMedica.IdMascota = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdAnimal"].Value);
+            E_FichaMedica.Fecha = Convert.ToDateTime(dgvFichaMedica.CurrentRow.Cells["Fecha atención"].Value).Date;
+            E_FichaMedica.Informe = dgvFichaMedica.CurrentRow.Cells["Informe"].Value.ToString();
+            E_FichaMedica.Tratamiento = dgvFichaMedica.CurrentRow.Cells["Tratamiento"].Value.ToString();
+            E_FichaMedica.IdVeterinaria = Convert.ToInt32(dgvFichaMedica.CurrentRow.Cells["IdEstablecimiento"].Value);
+            E_FichaMedica.Costo = Convert.ToDecimal(dgvFichaMedica.CurrentRow.Cells["Costo"].Value);
+        }
+
+        private void dgvFichaMedica_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dgvFichaMedica.Columns["Costo"].DefaultCellStyle.Format = "N2";
+        }
     }
 }

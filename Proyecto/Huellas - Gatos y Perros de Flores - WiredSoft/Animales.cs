@@ -112,6 +112,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 txtDetalle.Enabled = false;
                 dtpAcontecimiento.Enabled = false;
                 btnGuardarSeg.Enabled = false;
+                btnExportarSeg.Enabled = false;
+                btnEliminarSeg.Enabled = false;
             }
 
         }
@@ -134,13 +136,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                                         E_Animal.FotoAdopcion, txtNombre.Text, Convert.ToInt32(txtEdad.Text), Convert.ToInt32(cmbSexo.SelectedValue), chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
                                         comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date, dtpFechaF.Value.Date);
 
-                    LimpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
                     msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
+                Close();
             }
             else
             {
@@ -151,12 +153,12 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     brA.AltaAnimal(E_UsuarioAcceso.IdUsuario, Convert.ToInt32(cmbPersona.SelectedValue), Convert.ToInt32(cmbEspecie.SelectedValue), txtUbicacion.Text, E_Animal.FotoIngreso,
                                     txtNombre.Text, Convert.ToInt32(txtEdad.Text), Convert.ToInt32(cmbSexo.SelectedValue), chkCasSi.Checked, txtColor.Text, Convert.ToDecimal(txtPeso.Text),
                                     comment, Convert.ToInt32(cmbEstado.SelectedValue), dtpCastracion.Value.Date, dtpIngreso.Value.Date, dtpFechaNac.Value.Date, dtpFechaF.Value.Date);
-                    LimpiarForm();
                 }
                 catch(Exception ex)
                 {
                     msj.MensajeError("Ha ocurrido un error: " + ex);
                 }
+                Close();
             }
         }
 
@@ -172,6 +174,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                     Close();
                 }
             }
+
+            Close();
         }
 
         private void btnGuardarSeg_Click(object sender, EventArgs e)
@@ -249,36 +253,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             Form VerMas = new DetalleTrAd();
             VerMas.Show();
-        }
-
-        private void LimpiarForm()
-        {
-            lblIdAnimal.Text = "-";
-            txtNombre.Clear();
-            txtUbicacion.Clear();
-            txtEdad.Clear();
-            txtPeso.Clear();
-            txtColor.Clear();
-            txtComentario.Clear();
-            txtBuscar.Clear();
-            txtDetalle.Clear();
-
-            cmbEspecie.SelectedIndex = 0;
-            cmbEstado.SelectedIndex = 0;
-            cmbSexo.SelectedIndex = 0;
-            cmbPersona.SelectedIndex = 0;
-
-            picB1.Image = null;
-            picB2.Image = null;
-
-            chkCasSi.Checked = false;
-
-            dtpFechaNac.Value = DateTime.Now;
-            dtpFechaF.Value = DateTime.Now;
-            dtpFichaMedica.Value = DateTime.Now;
-            dtpCastracion.Value = DateTime.Now;
-            dtpAcontecimiento.Value = DateTime.Now;
-            dtpFiltro.Value = DateTime.Now;
         }
 
         public void ExportarDatos(DataGridView DatoListado)
@@ -407,6 +381,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void dgvFichaMedica_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             dgvFichaMedica.Columns["Costo"].DefaultCellStyle.Format = "N2";
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            CargarGrillas();
+            dgvFichaMedica.Update();
+            dgvFichaMedica.Refresh();
         }
 
         private void dtpFichaMedica_ValueChanged(object sender, EventArgs e)

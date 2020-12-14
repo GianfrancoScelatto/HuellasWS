@@ -143,11 +143,11 @@
             // chxFallecidos
             // 
             this.chxFallecidos.AutoSize = true;
-            this.chxFallecidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxFallecidos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.chxFallecidos.ForeColor = System.Drawing.SystemColors.Control;
             this.chxFallecidos.Location = new System.Drawing.Point(371, 29);
             this.chxFallecidos.Name = "chxFallecidos";
-            this.chxFallecidos.Size = new System.Drawing.Size(90, 20);
+            this.chxFallecidos.Size = new System.Drawing.Size(90, 21);
             this.chxFallecidos.TabIndex = 43;
             this.chxFallecidos.Text = "Fallecidos";
             this.chxFallecidos.UseVisualStyleBackColor = true;
@@ -156,11 +156,11 @@
             // chxTransito
             // 
             this.chxTransito.AutoSize = true;
-            this.chxTransito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxTransito.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.chxTransito.ForeColor = System.Drawing.SystemColors.Control;
             this.chxTransito.Location = new System.Drawing.Point(371, 5);
             this.chxTransito.Name = "chxTransito";
-            this.chxTransito.Size = new System.Drawing.Size(89, 20);
+            this.chxTransito.Size = new System.Drawing.Size(94, 21);
             this.chxTransito.TabIndex = 42;
             this.chxTransito.Text = "En tránsito";
             this.chxTransito.UseVisualStyleBackColor = true;
@@ -169,11 +169,11 @@
             // chxInternado
             // 
             this.chxInternado.AutoSize = true;
-            this.chxInternado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxInternado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.chxInternado.ForeColor = System.Drawing.SystemColors.Control;
             this.chxInternado.Location = new System.Drawing.Point(235, 29);
             this.chxInternado.Name = "chxInternado";
-            this.chxInternado.Size = new System.Drawing.Size(90, 20);
+            this.chxInternado.Size = new System.Drawing.Size(95, 21);
             this.chxInternado.TabIndex = 41;
             this.chxInternado.Text = "Internados";
             this.chxInternado.UseVisualStyleBackColor = true;
@@ -182,11 +182,11 @@
             // chxAdoptados
             // 
             this.chxAdoptados.AutoSize = true;
-            this.chxAdoptados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxAdoptados.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.chxAdoptados.ForeColor = System.Drawing.SystemColors.Control;
             this.chxAdoptados.Location = new System.Drawing.Point(235, 5);
             this.chxAdoptados.Name = "chxAdoptados";
-            this.chxAdoptados.Size = new System.Drawing.Size(94, 20);
+            this.chxAdoptados.Size = new System.Drawing.Size(100, 21);
             this.chxAdoptados.TabIndex = 40;
             this.chxAdoptados.Text = "Adoptados";
             this.chxAdoptados.UseVisualStyleBackColor = true;
@@ -204,11 +204,11 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBuscar.Location = new System.Drawing.Point(17, 12);
+            this.lblBuscar.Location = new System.Drawing.Point(12, 8);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(53, 16);
+            this.lblBuscar.Size = new System.Drawing.Size(65, 21);
             this.lblBuscar.TabIndex = 38;
             this.lblBuscar.Text = "Buscar:";
             // 

@@ -58,7 +58,7 @@
             this.cmbAnimal.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAnimal.Name = "cmbAnimal";
             this.cmbAnimal.Size = new System.Drawing.Size(252, 24);
-            this.cmbAnimal.TabIndex = 1;
+            this.cmbAnimal.TabIndex = 0;
             // 
             // label2
             // 
@@ -80,7 +80,7 @@
             this.cmbPersona.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPersona.Name = "cmbPersona";
             this.cmbPersona.Size = new System.Drawing.Size(252, 24);
-            this.cmbPersona.TabIndex = 3;
+            this.cmbPersona.TabIndex = 1;
             // 
             // lblNuevoNombre
             // 
@@ -101,7 +101,7 @@
             this.txtNuevoNombre.MaxLength = 50;
             this.txtNuevoNombre.Name = "txtNuevoNombre";
             this.txtNuevoNombre.Size = new System.Drawing.Size(252, 22);
-            this.txtNuevoNombre.TabIndex = 91;
+            this.txtNuevoNombre.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -116,7 +116,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(160, 44);
-            this.btnCancelar.TabIndex = 95;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -134,7 +134,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(159, 44);
-            this.btnGuardar.TabIndex = 94;
+            this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Generar contrato";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

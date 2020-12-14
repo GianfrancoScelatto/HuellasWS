@@ -133,7 +133,7 @@
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 20);
-            this.txtNombre.TabIndex = 44;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtHoraAtencion
@@ -142,7 +142,7 @@
             this.txtHoraAtencion.MaxLength = 40;
             this.txtHoraAtencion.Name = "txtHoraAtencion";
             this.txtHoraAtencion.Size = new System.Drawing.Size(178, 20);
-            this.txtHoraAtencion.TabIndex = 45;
+            this.txtHoraAtencion.TabIndex = 2;
             this.txtHoraAtencion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoraAtencion_KeyPress);
             // 
             // txtLocalidad
@@ -151,7 +151,7 @@
             this.txtLocalidad.MaxLength = 100;
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(178, 20);
-            this.txtLocalidad.TabIndex = 46;
+            this.txtLocalidad.TabIndex = 3;
             this.txtLocalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLocalidad_KeyPress);
             // 
             // txtCP
@@ -160,7 +160,7 @@
             this.txtCP.MaxLength = 15;
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(178, 20);
-            this.txtCP.TabIndex = 47;
+            this.txtCP.TabIndex = 4;
             this.txtCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCP_KeyPress);
             // 
             // txtCalle
@@ -169,7 +169,7 @@
             this.txtCalle.MaxLength = 200;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(178, 20);
-            this.txtCalle.TabIndex = 48;
+            this.txtCalle.TabIndex = 5;
             this.txtCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalle_KeyPress);
             // 
             // txtAltura
@@ -178,7 +178,7 @@
             this.txtAltura.MaxLength = 8;
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(178, 20);
-            this.txtAltura.TabIndex = 49;
+            this.txtAltura.TabIndex = 6;
             this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress);
             // 
             // lblEstablecimiento
@@ -199,7 +199,7 @@
             this.cmbEstablecimiento.Location = new System.Drawing.Point(232, 67);
             this.cmbEstablecimiento.Name = "cmbEstablecimiento";
             this.cmbEstablecimiento.Size = new System.Drawing.Size(178, 21);
-            this.cmbEstablecimiento.TabIndex = 92;
+            this.cmbEstablecimiento.TabIndex = 0;
             // 
             // IdEstablecimiento
             // 
@@ -231,7 +231,7 @@
             this.chkInternacion.Location = new System.Drawing.Point(232, 322);
             this.chkInternacion.Name = "chkInternacion";
             this.chkInternacion.Size = new System.Drawing.Size(36, 21);
-            this.chkInternacion.TabIndex = 94;
+            this.chkInternacion.TabIndex = 7;
             this.chkInternacion.Text = "Si";
             this.chkInternacion.UseVisualStyleBackColor = true;
             // 
@@ -247,7 +247,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(260, 371);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(125, 36);
-            this.btnCancelar.TabIndex = 96;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -264,7 +264,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(104, 371);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(125, 36);
-            this.btnGuardar.TabIndex = 95;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

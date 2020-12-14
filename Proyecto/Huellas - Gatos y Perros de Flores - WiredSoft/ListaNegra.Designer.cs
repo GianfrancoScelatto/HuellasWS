@@ -64,15 +64,15 @@
             this.cmbPersona.FormattingEnabled = true;
             this.cmbPersona.Location = new System.Drawing.Point(107, 39);
             this.cmbPersona.Name = "cmbPersona";
-            this.cmbPersona.Size = new System.Drawing.Size(264, 21);
-            this.cmbPersona.TabIndex = 93;
+            this.cmbPersona.Size = new System.Drawing.Size(284, 21);
+            this.cmbPersona.TabIndex = 0;
             // 
             // txtMotivo
             // 
             this.txtMotivo.Location = new System.Drawing.Point(107, 87);
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(284, 108);
-            this.txtMotivo.TabIndex = 94;
+            this.txtMotivo.TabIndex = 1;
             this.txtMotivo.Text = "";
             // 
             // btnCancelar
@@ -87,7 +87,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(247, 230);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(125, 35);
-            this.btnCancelar.TabIndex = 96;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -104,7 +104,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(91, 230);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(125, 35);
-            this.btnGuardar.TabIndex = 95;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -123,6 +123,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ListaNegra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista negra";
             this.Load += new System.EventHandler(this.ListaNegra_Load);
             this.ResumeLayout(false);

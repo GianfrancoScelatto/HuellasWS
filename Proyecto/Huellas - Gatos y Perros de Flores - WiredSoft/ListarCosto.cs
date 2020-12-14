@@ -28,7 +28,9 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         {
             MostrarGastos();
             dgvCosto.Columns["IdEstablecimiento"].Visible = false;
+            dgvCosto.Columns["IdGasto"].Visible = false;
             dgvCosto.Columns["IdTipoGasto"].Visible = false;
+            dgvCosto.Columns["IdAnimal"].Visible = false;
         }
 
         public void ExportarDatos(DataGridView DatoListado)

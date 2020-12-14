@@ -1,0 +1,11 @@
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\bin\Release\BusinessRules.dll
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\bin\Release\BusinessRules.pdb
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\bin\Release\DataAccess.dll
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\bin\Release\Entities.dll
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\bin\Release\DataAccess.pdb
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\bin\Release\Entities.pdb
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\obj\Release\BusinessRules.csprojAssemblyReference.cache
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\obj\Release\BusinessRules.csproj.CoreCompileInputs.cache
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\obj\Release\BusinessRules.csproj.CopyComplete
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\obj\Release\BusinessRules.dll
+D:\Proyecto\HuellasWS\Proyecto\BusinessRules\obj\Release\BusinessRules.pdb

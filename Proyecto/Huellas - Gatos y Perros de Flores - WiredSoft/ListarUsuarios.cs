@@ -72,18 +72,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             ExportarDatos(dgvUsuarios);
         }
 
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            E_Usuario.IdUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
-            E_Usuario.IdRol = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdRol"].Value);
-            E_Usuario.Rol = dgvUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
-            E_Usuario.NombreUsuario = dgvUsuarios.CurrentRow.Cells["Nombre usuario"].Value.ToString();
-            E_Usuario.Nombre = dgvUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
-            E_Usuario.Apellido = dgvUsuarios.CurrentRow.Cells["Apellido"].Value.ToString();
-            E_Usuario.Dni = dgvUsuarios.CurrentRow.Cells["Dni"].Value.ToString();
-            E_Usuario.Telefono = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["Telefono"].Value);
-        }
-
         public void ExportarDatos(DataGridView DatoListado)
         {
             Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
@@ -136,6 +124,18 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             MostrarRegistroUsuarios();
             dgvUsuarios.Refresh();
             dgvUsuarios.Update();
+        }
+
+        private void dgvUsuarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            E_Usuario.IdUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
+            E_Usuario.IdRol = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdRol"].Value);
+            E_Usuario.Rol = dgvUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
+            E_Usuario.NombreUsuario = dgvUsuarios.CurrentRow.Cells["Nombre usuario"].Value.ToString();
+            E_Usuario.Nombre = dgvUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
+            E_Usuario.Apellido = dgvUsuarios.CurrentRow.Cells["Apellido"].Value.ToString();
+            E_Usuario.Dni = dgvUsuarios.CurrentRow.Cells["Dni"].Value.ToString();
+            E_Usuario.Telefono = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["Telefono"].Value);
         }
     }
 }

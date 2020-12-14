@@ -217,7 +217,7 @@
             this.dgvEstablecimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEstablecimiento.Size = new System.Drawing.Size(1083, 615);
             this.dgvEstablecimiento.TabIndex = 28;
-            this.dgvEstablecimiento.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstablecimiento_CellFormatting);
+            this.dgvEstablecimiento.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEstablecimiento_CellMouseClick);
             // 
             // ListarEstablecimiento
             // 

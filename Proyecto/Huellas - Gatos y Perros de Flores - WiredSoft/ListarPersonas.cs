@@ -27,6 +27,8 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
         private void ListarPersonas_Load(object sender, EventArgs e)
         {
             MostrarRegistroPersona();
+            dgvPersona.Columns["IdPersona"].Visible = false;
+            dgvPersona.Columns["IdSexo"].Visible = false;
             dgvPersona.Columns["IdTipoPersona"].Visible = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -95,40 +97,13 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             exportarexcel.Visible = true;
         }
 
-
-        
-
-        private void dgvPersona_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            E_Persona.IdPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdPersona"].Value);
-            E_Persona.IdTipoPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdTipoPersona"].Value);
-            E_Persona.NombrePersona = dgvPersona.CurrentRow.Cells["Nombre"].Value.ToString();
-            E_Persona.ApellidoPersona = dgvPersona.CurrentRow.Cells["Apellido"].Value.ToString();
-            E_Persona.Edad = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Edad"].Value);
-            E_Persona.DNI = dgvPersona.CurrentRow.Cells["Dni"].Value.ToString();
-            E_Persona.Domicilio = dgvPersona.CurrentRow.Cells["Domicilio"].Value.ToString();
-            E_Persona.Localidad = dgvPersona.CurrentRow.Cells["Localidad"].Value.ToString();
-            E_Persona.CodigoPostal = dgvPersona.CurrentRow.Cells["CodigoPostal"].Value.ToString();
-            E_Persona.Calles = dgvPersona.CurrentRow.Cells["Calles"].Value.ToString();
-            E_Persona.Altura = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Altura"].Value);
-            E_Persona.IdSexo = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdSexo"].Value);
-            E_Persona.Telefono = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Telefono"].Value);
-            E_Persona.Celular = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Celular"].Value);
-            E_Persona.Email = dgvPersona.CurrentRow.Cells["Email"].Value.ToString();
-            E_Persona.UsuarioFaceIg = dgvPersona.CurrentRow.Cells["UsuarioFaceIg"].Value.ToString();
-            E_Persona.ListaNegra = Convert.ToBoolean(dgvPersona.CurrentRow.Cells["ListaNegra"].Value);
-            E_Persona.Motivo = dgvPersona.CurrentRow.Cells["Motivo"].Value.ToString();
-
-        }
-
         private void chkAdoptante_CheckedChanged(object sender, EventArgs e)
         {
             if (chkAdoptante.Checked == true)
             {
                 chkTransitante.Checked = false;
                 filtro = "Adoptante";
-            }             
-                
+            }                   
         }
 
         private void chkTransitante_CheckedChanged(object sender, EventArgs e)
@@ -138,7 +113,6 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
                 chkAdoptante.Checked = false;
                 filtro = "Transitante";
             }
-
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -157,6 +131,28 @@ namespace Huellas___Gatos_y_Perros_de_Flores___WiredSoft
             MostrarRegistroPersona();
             dgvPersona.Refresh();
             dgvPersona.Update();
+        }
+
+        private void dgvPersona_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            E_Persona.IdPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdPersona"].Value);
+            E_Persona.IdTipoPersona = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdTipoPersona"].Value);
+            E_Persona.NombrePersona = dgvPersona.CurrentRow.Cells["Nombre"].Value.ToString();
+            E_Persona.ApellidoPersona = dgvPersona.CurrentRow.Cells["Apellido"].Value.ToString();
+            E_Persona.Edad = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Edad"].Value);
+            E_Persona.DNI = dgvPersona.CurrentRow.Cells["Dni"].Value.ToString();
+            E_Persona.Domicilio = dgvPersona.CurrentRow.Cells["Domicilio"].Value.ToString();
+            E_Persona.Localidad = dgvPersona.CurrentRow.Cells["Localidad"].Value.ToString();
+            E_Persona.CodigoPostal = dgvPersona.CurrentRow.Cells["Código postal"].Value.ToString();
+            E_Persona.Calles = dgvPersona.CurrentRow.Cells["Calles"].Value.ToString();
+            E_Persona.Altura = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Altura"].Value);
+            E_Persona.IdSexo = Convert.ToInt32(dgvPersona.CurrentRow.Cells["IdSexo"].Value);
+            E_Persona.Telefono = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Telefono"].Value);
+            E_Persona.Celular = Convert.ToInt32(dgvPersona.CurrentRow.Cells["Celular"].Value);
+            E_Persona.Email = dgvPersona.CurrentRow.Cells["Email"].Value.ToString();
+            E_Persona.UsuarioFaceIg = dgvPersona.CurrentRow.Cells["Red social"].Value.ToString();
+            E_Persona.ListaNegra = Convert.ToBoolean(dgvPersona.CurrentRow.Cells["Lista negra"].Value);
+            E_Persona.Motivo = dgvPersona.CurrentRow.Cells["Motivo"].Value.ToString();
         }
     }
 }

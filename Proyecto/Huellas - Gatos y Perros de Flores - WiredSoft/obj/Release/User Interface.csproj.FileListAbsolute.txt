@@ -1,0 +1,43 @@
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\Huellas - Gatos y Perros de Flores - WiredSoft.exe.config
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\Huellas - Gatos y Perros de Flores - WiredSoft.exe
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\Huellas - Gatos y Perros de Flores - WiredSoft.pdb
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\BusinessRules.dll
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\DataAccess.dll
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\Entities.dll
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\BusinessRules.pdb
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\DataAccess.pdb
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\bin\Release\Entities.pdb
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\User Interface.csprojAssemblyReference.cache
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\User Interface.csproj.ResolveComReference.cache
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Contrato.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Costos.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.DesparasitacionVacuna.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.FichaMedica.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListaNegra.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarContrato.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarCosto.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarFichaMedica.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarHistorial.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarListaNegra.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarPersonas.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarAnimales.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarEstablecimiento.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarUsuarios.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.ListarVacunas.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Login.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Animales.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.MenuInicial.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Properties.Resources.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.RecuperarUsuario.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Persona.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Splash.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Usuarios.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.VacunaAnimal.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Vacunas.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.DetalleTrAd.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas___Gatos_y_Perros_de_Flores___WiredSoft.Establecimiento.resources
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\User Interface.csproj.GenerateResource.cache
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\User Interface.csproj.CoreCompileInputs.cache
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\User Interface.csproj.CopyComplete
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas - Gatos y Perros de Flores - WiredSoft.exe
+D:\Proyecto\HuellasWS\Proyecto\Huellas - Gatos y Perros de Flores - WiredSoft\obj\Release\Huellas - Gatos y Perros de Flores - WiredSoft.pdb

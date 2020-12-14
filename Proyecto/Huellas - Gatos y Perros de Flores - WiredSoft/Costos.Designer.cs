@@ -93,7 +93,7 @@
             this.cmbTipoGasto.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoGasto.Name = "cmbTipoGasto";
             this.cmbTipoGasto.Size = new System.Drawing.Size(265, 24);
-            this.cmbTipoGasto.TabIndex = 94;
+            this.cmbTipoGasto.TabIndex = 1;
             // 
             // dtpFechaGasto
             // 
@@ -101,7 +101,7 @@
             this.dtpFechaGasto.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaGasto.Name = "dtpFechaGasto";
             this.dtpFechaGasto.Size = new System.Drawing.Size(265, 22);
-            this.dtpFechaGasto.TabIndex = 95;
+            this.dtpFechaGasto.TabIndex = 0;
             // 
             // label4
             // 
@@ -123,7 +123,7 @@
             this.cmbEstablecimiento.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstablecimiento.Name = "cmbEstablecimiento";
             this.cmbEstablecimiento.Size = new System.Drawing.Size(265, 24);
-            this.cmbEstablecimiento.TabIndex = 97;
+            this.cmbEstablecimiento.TabIndex = 2;
             // 
             // label5
             // 
@@ -192,7 +192,7 @@
             this.cmbAnimal.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAnimal.Name = "cmbAnimal";
             this.cmbAnimal.Size = new System.Drawing.Size(265, 24);
-            this.cmbAnimal.TabIndex = 103;
+            this.cmbAnimal.TabIndex = 3;
             // 
             // txtDetalle
             // 
@@ -201,7 +201,7 @@
             this.txtDetalle.Multiline = true;
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.Size = new System.Drawing.Size(265, 75);
-            this.txtDetalle.TabIndex = 110;
+            this.txtDetalle.TabIndex = 6;
             // 
             // lblID
             // 
@@ -222,7 +222,7 @@
             this.txtMonto.MaxLength = 10;
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(265, 22);
-            this.txtMonto.TabIndex = 115;
+            this.txtMonto.TabIndex = 4;
             this.txtMonto.Text = "  ";
             // 
             // txtPagado
@@ -232,7 +232,7 @@
             this.txtPagado.MaxLength = 10;
             this.txtPagado.Name = "txtPagado";
             this.txtPagado.Size = new System.Drawing.Size(265, 22);
-            this.txtPagado.TabIndex = 116;
+            this.txtPagado.TabIndex = 5;
             this.txtPagado.Text = "  ";
             // 
             // btnCancelarDatos
@@ -246,7 +246,7 @@
             this.btnCancelarDatos.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelarDatos.Name = "btnCancelarDatos";
             this.btnCancelarDatos.Size = new System.Drawing.Size(167, 54);
-            this.btnCancelarDatos.TabIndex = 120;
+            this.btnCancelarDatos.TabIndex = 8;
             this.btnCancelarDatos.Text = "Cancelar";
             this.btnCancelarDatos.UseVisualStyleBackColor = false;
             this.btnCancelarDatos.Click += new System.EventHandler(this.btnCancelarDatos_Click);
@@ -262,7 +262,7 @@
             this.btnGuardarDatos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarDatos.Name = "btnGuardarDatos";
             this.btnGuardarDatos.Size = new System.Drawing.Size(167, 54);
-            this.btnGuardarDatos.TabIndex = 119;
+            this.btnGuardarDatos.TabIndex = 7;
             this.btnGuardarDatos.Text = "Guardar";
             this.btnGuardarDatos.UseVisualStyleBackColor = false;
             this.btnGuardarDatos.Click += new System.EventHandler(this.btnGuardarDatos_Click);
